@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,13 +34,14 @@ Are you a developer? Want to customize the templates or the style of the plugin?
 
 = Support =
 
-If you're looking for how to install the plugins or how to use them within your Wordpress installations, which is the right way to ask support?
+Hi there, we have good news here: all our plugins are released for free. Wow!
+Already knew it, right?! Great, but maybe you do not know that: if you're looking for how to install the plugins or how to use them within your Wordpress installations, which is the right way to ask support?
 That's the way:
 
 * Register on http://yithemes.com
 * Go to Support > Get Support
 
-We provide support for our free plugins on our support desk and not here on wordpress.org website.
+Here we provide support, not on wordpress.org were, usually we do not read topics. It's better to follow us or write on our forum!
 
 == Installation ==
 
@@ -67,6 +68,11 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Optimized images
+* Updated internal framework
 
 = 1.0.0 =
 
