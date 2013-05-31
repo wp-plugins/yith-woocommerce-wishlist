@@ -48,7 +48,7 @@ if( ! function_exists( 'yit_get_plugin_basename_from_slug' ) ) {
     }
 }
 
-if( ! function_exists( 'yit_debug') ) {
+if( ! function_exists( 'yith_debug') ) {
     /**
      * Debug helper function.  This is a wrapper for var_dump() that adds
      * the <pre /> tags, cleans up newlines and indents, and runs
@@ -59,7 +59,7 @@ if( ! function_exists( 'yit_debug') ) {
      * @param  ...
      * @return string
      */
-    function yit_debug() {
+    function yith_debug() {
         $args = func_get_args();
         if( !empty( $args ) ) {
             foreach( $args as $k=>$arg ) {
