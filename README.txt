@@ -69,6 +69,10 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Fixed fatal error to yit_debug with yit themes
+
 = 1.0.1 =
 
 * Optimized images
