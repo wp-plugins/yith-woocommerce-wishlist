@@ -17,7 +17,12 @@ Offer to your visitors a chance to add the products of your woocommerce store to
 in order to add the products to the wishlist page. The plugin will create you the specific page and the products will be added in this page and
 afterwards add them to the cart or remove them.
 
-A working demo is available [here](http://demo.yithemes.com/room09/product/africa-style/). Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
+Working demo ara available:
+
+**[LIVE DEMO 1](http://demo.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://demo.yithemes.com/bazar/shop/ankle-shoes/)**
+
+
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
 
 
 = Installation =
