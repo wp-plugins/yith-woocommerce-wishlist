@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,10 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 1.0.3 =
+
+* Minor bugs fixes
 
 = 1.0.2 =
 

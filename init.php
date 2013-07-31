@@ -3,7 +3,7 @@
 * Plugin Name: YITH WooCommerce Wishlist
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Wishlist allows you to add Wishlist functionality to your e-commerce.
-* Version: 1.0.2
+* Version: 1.0.3
 * Author: Your Inspiration Themes
 * Author URI: http://yithemes.com/
 * Text Domain: yit
@@ -11,7 +11,7 @@
 * 
 * @author Your Inspiration Themes
 * @package YITH WooCommerce Wishlist
-* @version 1.0.2
+* @version 1.0.3
 */
 /*  Copyright 2013  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -36,25 +36,30 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 if( !defined('YITH_FUNCTIONS') ) {
     require_once( 'yit-common/yit-functions.php' );
 }
-if ( ! yit_is_woocommerce_active() ) return;
 
-load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
+function yith_wishlist_constructor() {
+    global $woocommerce;
+    if ( ! isset( $woocommerce ) ) return;
 
-define( 'YITH_WCWL', true );
-define( 'YITH_WCWL_URL', plugin_dir_url( __FILE__ ) );
-define( 'YITH_WCWL_DIR', plugin_dir_path( __FILE__ ) );
+    load_plugin_textdomain( 'yit', false, dirname( plugin_basename( __FILE__ ) ). '/languages/' );
 
-// Load required classes and functions
-require_once( 'functions.yith-wcwl.php' );
-require_once( 'class.yith-wcwl.php' );
-require_once( 'class.yith-wcwl-init.php' );
-require_once( 'class.yith-wcwl-install.php' );
+    define( 'YITH_WCWL', true );
+    define( 'YITH_WCWL_URL', plugin_dir_url( __FILE__ ) );
+    define( 'YITH_WCWL_DIR', plugin_dir_path( __FILE__ ) );
 
-if( get_option( 'yith_wcwl_enabled' ) == 'yes' ) {
-    require_once( 'class.yith-wcwl-ui.php' );
-    require_once( 'class.yith-wcwl-shortcode.php' );
+    // Load required classes and functions
+    require_once( 'functions.yith-wcwl.php' );
+    require_once( 'class.yith-wcwl.php' );
+    require_once( 'class.yith-wcwl-init.php' );
+    require_once( 'class.yith-wcwl-install.php' );
+
+    if( get_option( 'yith_wcwl_enabled' ) == 'yes' ) {
+        require_once( 'class.yith-wcwl-ui.php' );
+        require_once( 'class.yith-wcwl-shortcode.php' );
+    }
+
+    // Let's start the game!
+    global $yith_wcwl;
+    $yith_wcwl = new YITH_WCWL( $_REQUEST );
 }
-
-// Let's start the game!
-global $yith_wcwl;
-$yith_wcwl = new YITH_WCWL( $_REQUEST );
+add_action( 'plugins_loaded', 'yith_wishlist_constructor' );

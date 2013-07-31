@@ -63,13 +63,13 @@
     font-size: 12px!important;
     line-height: 6px;
     margin: -16px 0px 0px -105px;
-    padding: 3px 8px;
+    padding: 3px 19px;
     position:  absolute;
     text-shadow: rgba(255, 255, 255, 1) 0 1px 0;
     text-decoration: none;
     top: 50%;
     left: 50%;
-    width: 108px;
+    width: auto;
     height: 18px;
 }
 .typography_container button.refresh img {

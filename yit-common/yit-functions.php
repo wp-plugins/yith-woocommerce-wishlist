@@ -110,7 +110,7 @@ if( ! function_exists('yit_get_options_from_prefix') ) {
             $return[$option] = get_option( $option );
         }
 
-        return yit_debug($return);
+        return $return;
     }
 }
 
@@ -204,5 +204,28 @@ if( !function_exists('yit_typo_option_to_css') ) {
         yith_add_google_font( $family, $variant );
 
         return implode( "\n", $attrs ) . "\n";
+    }
+}
+
+
+if( !function_exists('yit_curPageURL') ) {
+    /**
+     * Retrieve the current complete url
+     *
+     * @since 1.0
+     */
+    function yit_curPageURL() {
+        $pageURL = 'http';
+        if ( isset( $_SERVER["HTTPS"] ) AND $_SERVER["HTTPS"] == "on" )
+            $pageURL .= "s";
+
+        $pageURL .= "://";
+
+        if ( isset( $_SERVER["SERVER_PORT"] ) AND $_SERVER["SERVER_PORT"] != "80" )
+            $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+        else
+            $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+
+        return $pageURL;
     }
 }

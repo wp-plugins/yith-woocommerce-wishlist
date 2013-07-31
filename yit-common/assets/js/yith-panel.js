@@ -42,6 +42,12 @@ jQuery(document).ready(function($){
         numberOfMonths: 2,
         minDate: 0
     });
+
+    //skin
+    $('select.skin').on('change', function(){
+        var img_path = $(this).data('path');
+        $(this).siblings('.skin-preview').html('<img src="'+ img_path + $(this).val() + '.jpg' +'" alt="preview" />');
+    }).change();
 });
 
 // typography

@@ -245,7 +245,7 @@ if( !class_exists( 'YITH_WCWL' ) ) {
          * @since 1.0.0
          */
         public function get_wishlist_url() {
-            return home_url() . '/?page_id=' . get_option( 'yith_wcwl_wishlist_page_id' );
+            return get_permalink( get_option( 'yith_wcwl_wishlist_page_id' ) );
         }
         
         /**
@@ -367,7 +367,7 @@ if( !class_exists( 'YITH_WCWL' ) ) {
             $count = yith_wcwl_count_products();
                 
             if( $this->remove( $_GET['wishlist_item_id'] ) )
-                { _e( 'Product successfully removed.', 'yit' ); }
+                { echo apply_filters( 'yith_wcwl_product_removed_text', __( 'Product successfully removed.', 'yit' ) ); }
             else {
                 echo '#' . $count . '#';
                 _e( 'Error. Unable to remove the product from the wishlist.', 'yit' );

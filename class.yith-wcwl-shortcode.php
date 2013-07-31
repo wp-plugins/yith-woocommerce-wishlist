@@ -21,7 +21,7 @@ if( !class_exists( 'YITH_WCWL_Shortcode' ) ) {
          * 
          * @since 1.0.0
          */
-        public function wishlist( $atts, $content = null ) {            
+        public static function wishlist( $atts, $content = null ) {
             $atts = shortcode_atts( array(
                 'per_page' => 10,
                 'pagination' => 'no' 
@@ -38,7 +38,7 @@ if( !class_exists( 'YITH_WCWL_Shortcode' ) ) {
          * 
          * @since 1.0.0
          */
-        public function add_to_wishlist( $atts, $content = null ) {
+        public static function add_to_wishlist( $atts, $content = null ) {
             global $product, $yith_wcwl;
             
             $html = YITH_WCWL_UI::add_to_wishlist_button( $yith_wcwl->get_wishlist_url(), $product->product_type, $yith_wcwl->is_product_in_wishlist( $product->id ) ); 

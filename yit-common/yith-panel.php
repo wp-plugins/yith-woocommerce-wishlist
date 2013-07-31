@@ -360,6 +360,16 @@ if( !class_exists('YITH_Panel') ) {
                     }
                     break;
 
+                case 'skin': $echo  = "<select name='{$name}' id='{$id}' class='skin' data-path='{$field['path']}'>";
+                    foreach( $field['options'] as $v=>$label ) {
+                        $echo .= "<option value='{$v}'". selected($value, $v, false) .">{$label}</option>";
+                    }
+                    $echo .= "</select>";
+                    if( isset($field['description']) && $field['description'] != '' ) {
+                        $echo .= "<p class='description'>{$field['description']}</p><div class='skin-preview'></div>";
+                    }
+                    break;
+
                 case 'number':
                     $mms = '';
                     if( isset( $field['min'] ) ) {
