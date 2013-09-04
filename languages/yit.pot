@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2013-05-21 17:11+0100\n"
-"PO-Revision-Date: 2013-05-21 17:11+0100\n"
+"POT-Creation-Date: 2013-09-04 16:30+0100\n"
+"PO-Revision-Date: 2013-09-04 16:30+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
@@ -13,14 +13,6 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: ./\n"
 "X-Poedit-SearchPath-0: ..\n"
-
-#: ../add-to-cart.php:31
-msgid "View Cart &rarr;"
-msgstr ""
-
-#: ../add-to-cart.php:31
-msgid "Product successfully added to the cart."
-msgstr ""
 
 #: ../class.yith-wcwl-init.php:105 ../class.yith-wcwl-install.php:137
 msgid "Wishlist"
@@ -42,11 +34,11 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:409 ../class.yith-wcwl-init.php:861
+#: ../class.yith-wcwl-init.php:409 ../class.yith-wcwl-init.php:885
 msgid "Styles"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:410 ../class.yith-wcwl-init.php:924
+#: ../class.yith-wcwl-init.php:410 ../class.yith-wcwl-init.php:948
 msgid "Socials &amp; Share"
 msgstr ""
 
@@ -151,7 +143,7 @@ msgid "Wishlist title"
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:804 ../class.yith-wcwl-init.php:805
-#: ../class.yith-wcwl-init.php:957 ../class.yith-wcwl-init.php:958
+#: ../class.yith-wcwl-init.php:981 ../class.yith-wcwl-init.php:982
 #, php-format
 msgid "My wishlist on %s"
 msgstr ""
@@ -216,81 +208,93 @@ msgstr ""
 msgid "Add to Cart"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:864
-msgid "Use buttons"
+#: ../class.yith-wcwl-init.php:857
+msgid "Show Unit price"
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:865
-msgid "Use buttons instead of a simple anchors."
+msgid "Show \"Add to Cart\" button"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:872
-msgid "Custom CSS"
-msgstr ""
-
-#: ../class.yith-wcwl-init.php:880
-msgid "Use theme style"
-msgstr ""
-
-#: ../class.yith-wcwl-init.php:881
-msgid "Use the theme style."
+#: ../class.yith-wcwl-init.php:873
+msgid "Show Stock status"
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:888
-msgid "Buttons rounded corners"
+msgid "Use buttons"
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:889
-msgid "Make buttons corner rounded"
+msgid "Use buttons instead of a simple anchors."
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:896
+msgid "Custom CSS"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:904
+msgid "Use theme style"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:905
+msgid "Use the theme style."
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:912
+msgid "Buttons rounded corners"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:913
+msgid "Make buttons corner rounded"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:920
 msgid "\"Add to Wishlist\" icon"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:897
+#: ../class.yith-wcwl-init.php:921
 msgid "Add an icon to the \"Add to Wishlist\" button"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:908
+#: ../class.yith-wcwl-init.php:932
 msgid "\"Add to Cart\" icon"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:909
+#: ../class.yith-wcwl-init.php:933
 msgid "Add an icon to the \"Add to Cart\" button"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:927
+#: ../class.yith-wcwl-init.php:951
 msgid "Share on Facebook"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:934
+#: ../class.yith-wcwl-init.php:958
 msgid "Tweet on Twitter"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:941
+#: ../class.yith-wcwl-init.php:965
 msgid "Pin on Pinterest"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:948
+#: ../class.yith-wcwl-init.php:972
 msgid "Share on Google+"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:955
+#: ../class.yith-wcwl-init.php:979
 msgid "Socials title"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:963
+#: ../class.yith-wcwl-init.php:987
 msgid "Socials text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:964
+#: ../class.yith-wcwl-init.php:988
 msgid ""
 "Will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url%</"
 "strong> where you want the URL of your wishlist to appear."
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:972
+#: ../class.yith-wcwl-init.php:996
 msgid "Socials image URL"
 msgstr ""
 
@@ -348,7 +352,7 @@ msgid "Error. Unable to remove the product from the wishlist."
 msgstr ""
 
 #: ../class.yith-wcwl.php:377 ../yith-wcwl-ajax.php:37
-#: ../templates/wishlist.php:139
+#: ../templates/wishlist.php:145
 msgid "No products were added to the wishlist"
 msgstr ""
 
@@ -368,10 +372,70 @@ msgstr ""
 msgid "Remove this product"
 msgstr ""
 
-#: ../templates/wishlist.php:123
+#: ../templates/wishlist.php:126
 msgid "Out of Stock"
 msgstr ""
 
-#: ../templates/wishlist.php:126
+#: ../templates/wishlist.php:129
 msgid "In Stock"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:406
+msgid "Select a date"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:407
+msgid "Hours"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
+msgid "Minutes"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:417
+msgid "Upload"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:444
+msgid "px"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:445
+msgid "em"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:446
+msgid "pt"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:447
+msgid "rem"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:457
+msgid "Select a font family"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:465
+msgid "Regular"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:466
+msgid "Bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:467
+msgid "Extra bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:468
+msgid "Italic"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:469
+msgid "Italic bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:481
+msgid "Click to preview"
 msgstr ""

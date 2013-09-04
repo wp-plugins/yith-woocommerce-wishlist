@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,13 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 1.0.4 =
+
+* Added: partial Ukrainian translation
+* Added: complete German translation. Thanks to Stephanie Schliesk
+* Added: options to show/hide button add to cart, unit price and stock status in the wishlist page
+* Added: Hebrew language (thanks to Gery Grinvald)
 
 = 1.0.3 =
 

@@ -73,9 +73,9 @@ $woocommerce->show_messages() ?>
     			<th class="product-remove"></th>
     			<th class="product-thumbnail"></th>
     			<th class="product-name"><span class="nobr"><?php _e( 'Product Name', 'yit' ) ?></span></th>
-    			<th class="product-price"><span class="nobr"><?php _e( 'Unit Price', 'yit' ) ?></span></th>
-    			<th><span class="nobr"><?php _e( 'Stock Status', 'yit' ) ?></span></th>
-                <th><span class="nobr"></th>
+                <?php if( get_option( 'yith_wcwl_price_show' ) == 'yes' ) : ?><th class="product-price"><span class="nobr"><?php _e( 'Unit Price', 'yit' ) ?></span></th><?php endif ?>
+    			<?php if( get_option( 'yith_wcwl_stock_show' ) == 'yes' ) : ?><th><span class="nobr"><?php _e( 'Stock Status', 'yit' ) ?></span></th><?php endif ?>
+                <?php if( get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes' ) : ?><th><span class="nobr"></th><?php endif ?>
     		</tr>
     	</thead>
         <tbody>
@@ -105,6 +105,7 @@ $woocommerce->show_messages() ?>
                         <td class="product-name">
                             <a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $values['prod_id'] ) ) ) ?>"><?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product_obj->get_title(), $product_obj ) ?></a>
                         </td>
+                        <?php if( get_option( 'yith_wcwl_price_show' ) == 'yes' ) : ?>
                         <td class="product-price">
                             <?php
                             if( get_option( 'woocommerce_display_cart_prices_excluding_tax' ) == 'yes' )
@@ -113,6 +114,8 @@ $woocommerce->show_messages() ?>
                                 { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price() ), $values, '' ); }    
                             ?>
                         </td>
+                        <?php endif ?>
+                        <?php if( get_option( 'yith_wcwl_stock_show' ) == 'yes' ) : ?>
                         <td class="product-stock-status">
                             <?php
                             $availability = $product_obj->get_availability();
@@ -127,9 +130,12 @@ $woocommerce->show_messages() ?>
                             }
                             ?>
                         </td>
+                        <?php endif ?>
+                        <?php if( get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes' ) : ?>
                         <td class="product-add-to-cart">
                             <?php echo YITH_WCWL_UI::add_to_cart_button( $values['prod_id'], $availability['class'] ) ?>
                         </td>
+                        <?php endif ?>
                     </tr>
                     <?php
                     endif;

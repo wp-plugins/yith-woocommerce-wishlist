@@ -853,6 +853,30 @@ if( !class_exists( 'YITH_WCWL_Init' ) ) {
             		'type' 		=> 'text',
             		'css' 		=> 'min-width:300px;',
                 ),
+                array(
+                    'name'      => __( 'Show Unit price', 'yit' ),
+                    'id' 		=> 'yith_wcwl_price_show',
+                    'std' 		=> 'yes',    // for woocommerce < 2.0
+                    'default' 	=> 'yes',         // for woocommerce >= 2.0
+                    'type' 		=> 'checkbox',
+                    'css' 		=> 'min-width:300px;',
+                ),
+                array(
+                    'name'      => __( 'Show "Add to Cart" button', 'yit' ),
+                    'id' 		=> 'yith_wcwl_add_to_cart_show',
+                    'std' 		=> 'yes',    // for woocommerce < 2.0
+                    'default' 	=> 'yes',         // for woocommerce >= 2.0
+                    'type' 		=> 'checkbox',
+                    'css' 		=> 'min-width:300px;',
+                ),
+                array(
+                    'name'      => __( 'Show Stock status', 'yit' ),
+                    'id' 		=> 'yith_wcwl_stock_show',
+                    'std' 		=> 'yes',    // for woocommerce < 2.0
+                    'default' 	=> 'yes',         // for woocommerce >= 2.0
+                    'type' 		=> 'checkbox',
+                    'css' 		=> 'min-width:300px;',
+                ),
                 
                 array( 'type' => 'sectionend', 'id' => 'yith_wcwl_general_settings' )
             );
