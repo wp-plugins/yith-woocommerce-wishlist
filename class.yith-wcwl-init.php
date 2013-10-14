@@ -218,7 +218,7 @@ if( !class_exists( 'YITH_WCWL_Init' ) ) {
         public function install() {
             if( $this->db_version != get_option( 'yith_wcwl_db_version' ) || !$this->_yith_wcwl_install->is_installed() ) {
                 register_activation_hook( YITH_WCWL_DIR, array( $this->_yith_wcwl_install, 'init' ) );
-                $this->_yith_wcwl_install->init();
+                //$this->_yith_wcwl_install->init();
                 $this->_yith_wcwl_install->default_options( $this->options );
                 
                 // Plugin installed

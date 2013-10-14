@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,9 +21,9 @@ Working demo are available:
 
 **[LIVE DEMO 1](http://demo.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://demo.yithemes.com/bazar/shop/ankle-shoes/)**
 
-
 Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
 
+This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_key=Qn1wDeBNTcZV)
 
 = Installation =
 
@@ -73,6 +73,12 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 1.0.5 =
+* Added: Shared wishlists can be seens also by not logged in users
+* Added: Support for WPML String translation
+* Updated: German translation by Stephanie Schlieske
+* Fixed: Add to cart button does not appear if the product is out of stock
 
 = 1.0.4 =
 
