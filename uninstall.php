@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.0.0
+ * @version 1.0.6
  */
 
 // If uninstall not called from WordPress exit

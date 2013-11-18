@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.0.0
+ * @version 1.0.6
  */
 
 global $wpdb, $yith_wcwl, $woocommerce;
@@ -108,10 +108,14 @@ $woocommerce->show_messages() ?>
                         <?php if( get_option( 'yith_wcwl_price_show' ) == 'yes' ) : ?>
                             <td class="product-price">
                                 <?php
-                                if( get_option( 'woocommerce_display_cart_prices_excluding_tax' ) == 'yes' )
-                                { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price_excluding_tax() ), $values, '' ); }
-                                else
-                                { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price() ), $values, '' ); }
+                                if( $product_obj->price != '0' ) {
+                                    if( get_option( 'woocommerce_tax_display_cart' ) == 'excl' )
+                                        { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price_excluding_tax() ), $values, '' ); }
+                                    else
+                                        { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price() ), $values, '' ); }
+                                } else {
+                                    echo apply_filters( 'yith_free_text', __( 'Free!', 'yit' ) );
+                                }
                                 ?>
                             </td>
                         <?php endif ?>

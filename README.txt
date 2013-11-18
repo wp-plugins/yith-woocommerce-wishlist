@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,7 +74,18 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 == Changelog ==
 
+= 1.0.6 =
+
+* Added: Spanish (Argentina) partial translation by Sebastian Jeremias
+* Added: Portuguese (Brazil) translation by Lincoln Lemos
+* Fixed: Share buttons show also when not logged in
+* Fixed: Price shows including or excluding tax based on WooCommerce settings
+* Fixed: Better compatibility for WPML 
+* Fixed: Price shows "Free!" if the product product price is without price
+* Fixed: DB Table creation on plugin activation
+
 = 1.0.5 =
+
 * Added: Shared wishlists can be seens also by not logged in users
 * Added: Support for WPML String translation
 * Updated: German translation by Stephanie Schlieske

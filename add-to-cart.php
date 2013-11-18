@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.0.0
+ * @version 1.0.6
  */
  
 // Handles all ajax requests pertaining to this plugin
@@ -19,7 +19,7 @@ $error_link_url = $yith_wcwl->get_wishlist_url();
 //determine to success link redirect url
 //handle redirect option chosen by admin
 if( isset( $_GET['redirect_to_cart'] ) && $_GET['redirect_to_cart'] == 'true' )
-    { $redirect_url = $woocommerce->cart->get_cart_url(); }
+    { $redirect_url = get_permalink( icl_object_id( woocommerce_get_page_id( 'cart' ) ), 'page', true ); }
 else
     { $redirect_url = $yith_wcwl->get_wishlist_url(); }
 
