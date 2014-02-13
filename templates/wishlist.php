@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.0.6
+ * @version 1.1.0
  */
 
 global $wpdb, $yith_wcwl, $woocommerce;
@@ -54,7 +54,12 @@ else
 { $wishlist = isset( $_SESSION['yith_wcwl_products'] ) ? $_SESSION['yith_wcwl_products'] : array(); }
 
 // Start wishlist page printing
-$woocommerce->show_messages() ?>
+if( function_exists('wc_print_notices') ) {
+    wc_print_notices();
+}else{
+    $woocommerce->show_messages();
+}
+ ?>
 <div id="yith-wcwl-messages"></div>
 
 <form id="yith-wcwl-form" action="<?php echo esc_url( $yith_wcwl->get_wishlist_url() ) ?>" method="post">
@@ -109,10 +114,12 @@ $woocommerce->show_messages() ?>
                             <td class="product-price">
                                 <?php
                                 if( $product_obj->price != '0' ) {
+                                    $wc_price = function_exists('wc_price') ? 'wc_price' : 'woocommerce_price';
+
                                     if( get_option( 'woocommerce_tax_display_cart' ) == 'excl' )
-                                        { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price_excluding_tax() ), $values, '' ); }
+                                        { echo apply_filters( 'woocommerce_cart_item_price_html', $wc_price( $product_obj->get_price_excluding_tax() ), $values, '' ); }
                                     else
-                                        { echo apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_obj->get_price() ), $values, '' ); }
+                                        { echo apply_filters( 'woocommerce_cart_item_price_html', $wc_price( $product_obj->get_price() ), $values, '' ); }
                                 } else {
                                     echo apply_filters( 'yith_free_text', __( 'Free!', 'yit' ) );
                                 }

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: YITH WooCommerce Wishlist v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-04 16:33+0100\n"
-"PO-Revision-Date: 2013-09-04 16:33+0100\n"
+"PO-Revision-Date: 2014-02-03 14:31+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "MIME-Version: 1.0\n"
@@ -26,8 +26,7 @@ msgstr "Lista dei desideri"
 # @ yit
 #: ../class.yith-wcwl-init.php:335
 msgid "Cannot add to the cart as product is Out of Stock!"
-msgstr ""
-"Impossibile aggiungere il prodotto nel carrello perché non é disponbile!"
+msgstr "Prodotto non disponibile! Impossibile aggiungerlo nel carrello"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:364
@@ -62,17 +61,17 @@ msgstr "Colori"
 # @ yit
 #: ../class.yith-wcwl-init.php:457
 msgid "\"Add to Wishlist\" button background"
-msgstr "Sfondo del bottone \"Aggiungi alla lista dei desideri\""
+msgstr "Sfondo del pulsante  \"Aggiungi alla lista dei desideri\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:458
 msgid "\"Add to Wishlist\" button text"
-msgstr "Testo del bottone \"Aggiungi alla lista dei desideri\""
+msgstr "Testo del pulsante \"Aggiungi alla lista dei desideri\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:459
 msgid "\"Add to Wishlist\" button border"
-msgstr "Bordo del bottone \"Aggiungi alla lista dei desideri\""
+msgstr "Bordo del pulsante \"Aggiungi alla lista dei desideri\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:464
@@ -93,17 +92,17 @@ msgstr "Colore bordo per \"Aggiungi alla lista dei desideri\"pulsante (hover)"
 # @ yit
 #: ../class.yith-wcwl-init.php:470
 msgid "\"Add to Cart\" button background"
-msgstr "Sfondo del bottone \"Aggiungi al carrello\""
+msgstr "Sfondo del pulsante\"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:471
 msgid "\"Add to Cart\" button text"
-msgstr "Testo del bottone \"Aggiungi al carrello\""
+msgstr "Testo del pulsante\"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:472
 msgid "\"Add to Cart\" button border"
-msgstr "Bordo del bottone \"Aggiungi al carrello\""
+msgstr "Bordo del pulsante\"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:477
@@ -143,7 +142,7 @@ msgstr "Impostazioni"
 # @ yit
 #: ../class.yith-wcwl-init.php:536
 msgid "Docs"
-msgstr "Docs"
+msgstr "Documenti"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:786
@@ -184,7 +183,7 @@ msgstr ""
 # @ yit
 #: ../class.yith-wcwl-init.php:802
 msgid "Wishlist title"
-msgstr "Titolo della tabella lista dei desideri"
+msgstr "Titolo della lista dei desideri"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:804 ../class.yith-wcwl-init.php:805
@@ -205,7 +204,7 @@ msgid ""
 "shortcode [yith_wcwl_add_to_wishlist]."
 msgstr ""
 "Per i prodotti variabili puoi utilizzare soltanto Dopo \"Aggiungi al Carrello"
-"\" o utilizza lo shortcode [yith_wcwl_add_to_wishlist]."
+"\" o utilizzare lo shortcode [yith_wcwl_add_to_wishlist]."
 
 # @ yit
 #: ../class.yith-wcwl-init.php:817
@@ -238,8 +237,8 @@ msgid ""
 "Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
 "page."
 msgstr ""
-"Reindirizza al carrello se il bottone \"Aggiungi al carrello\"  viene "
-"cliccano nella lista dei desideri"
+"Reindirizza al carrello se nella lista dei desideri viene cliccato il "
+"bottone \"Aggiungi al carrello\"  "
 
 # @ yit
 #: ../class.yith-wcwl-init.php:833
@@ -250,13 +249,13 @@ msgstr "Rimuovi se aggiunto al carrello"
 #: ../class.yith-wcwl-init.php:834
 msgid "Remove the product from the wishlist if is been added to the cart."
 msgstr ""
-"Rimuove il prodotto dalla lista dei desideri quando questo viene aggiunto al "
-"carrello."
+"Quando un prodotto viene aggiunto al carrello, viene rimosso dalla lista dei "
+"desideri."
 
 # @ yit
 #: ../class.yith-wcwl-init.php:841
 msgid "\"Add to Wishlist\" text"
-msgstr "Testo del bottone \"Aggiungi alla lista dei desideri\""
+msgstr "Testo del pulsante\"Aggiungi alla lista dei desideri\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:843 ../class.yith-wcwl-init.php:844
@@ -266,7 +265,7 @@ msgstr "Aggiungi alla lista dei desideri"
 # @ yit
 #: ../class.yith-wcwl-init.php:849
 msgid "\"Add to Cart\" text"
-msgstr "Testo del bottone \"Aggiungi al carrello\""
+msgstr "Testo del pulsante\"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:851 ../class.yith-wcwl-init.php:852
@@ -281,9 +280,8 @@ msgstr "Prezzo Unitario"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:865
-#, fuzzy
 msgid "Show \"Add to Cart\" button"
-msgstr "Testo del bottone \"Aggiungi al carrello\""
+msgstr "Mostra il pulsante \"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:873
@@ -294,12 +292,12 @@ msgstr "Disponibilitá"
 # @ yit
 #: ../class.yith-wcwl-init.php:888
 msgid "Use buttons"
-msgstr "Usa bottoni"
+msgstr "Usa pulsanti"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:889
 msgid "Use buttons instead of a simple anchors."
-msgstr "Utilizza bottoni al posto di semplici ancore testuali."
+msgstr "Utilizza dei pulsanti al posto delle ancore"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:896
@@ -319,12 +317,12 @@ msgstr "Usa lo stile del tema."
 # @ yit
 #: ../class.yith-wcwl-init.php:912
 msgid "Buttons rounded corners"
-msgstr "Bottoni con bordi arrotondati"
+msgstr "Pulsanti con bordi arrotondati"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:913
 msgid "Make buttons corner rounded"
-msgstr "Applica i bordi arrotondati ai bottoni"
+msgstr "Arrotonda i bordi dei pulsanti"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:920
@@ -334,7 +332,7 @@ msgstr "Icona \"Aggiungi alla lista dei desideri\""
 # @ yit
 #: ../class.yith-wcwl-init.php:921
 msgid "Add an icon to the \"Add to Wishlist\" button"
-msgstr "Aggiunge un'icona al bottone \"Aggiungi alla lista dei desideri\""
+msgstr "Aggiungi un'icona al pulsante \"Aggiungi alla lista dei desideri\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:932
@@ -344,7 +342,7 @@ msgstr "Icona \"Aggiungi al carrello\""
 # @ yit
 #: ../class.yith-wcwl-init.php:933
 msgid "Add an icon to the \"Add to Cart\" button"
-msgstr "Aggiunge un'icona al bottone \"Aggiungi al carrello\""
+msgstr "Aggiunge un'icona al pulsante \"Aggiungi al carrello\""
 
 # @ yit
 #: ../class.yith-wcwl-init.php:951
@@ -364,7 +362,7 @@ msgstr "Pin su Pinterest"
 # @ yit
 #: ../class.yith-wcwl-init.php:972
 msgid "Share on Google+"
-msgstr ""
+msgstr "Condividi su Google+"
 
 # @ yit
 #: ../class.yith-wcwl-init.php:979
@@ -383,12 +381,12 @@ msgid ""
 "strong> where you want the URL of your wishlist to appear."
 msgstr ""
 "Sará utilizzato da Facebook, Twitter e Pinterest. Utilizza <strong>"
-"%wishlist_url%</strong> dove vuoi che appaia l'URL della litsa dei desideri."
+"%wishlist_url%</strong> dove vuoi che appaia l'URL della lista dei desideri."
 
 # @ yit
 #: ../class.yith-wcwl-init.php:996
 msgid "Socials image URL"
-msgstr "URL immagine dei social"
+msgstr "URL immagine social"
 
 # @ yit
 #: ../class.yith-wcwl-install.php:136
@@ -405,7 +403,7 @@ msgstr "Prodotto aggiunto!"
 # @ yit
 #: ../class.yith-wcwl-ui.php:64 ../class.yith-wcwl-ui.php:65
 msgid "Browse Wishlist"
-msgstr "Naviga la lista dei desideri"
+msgstr "Esplora la lista dei desideri"
 
 # @ yit
 #: ../class.yith-wcwl-ui.php:65
@@ -499,15 +497,15 @@ msgstr ""
 
 #: ../yit-common/yith-panel.php:407
 msgid "Hours"
-msgstr ""
+msgstr "Ore"
 
 #: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
 msgid "Minutes"
-msgstr ""
+msgstr "Minuti"
 
 #: ../yit-common/yith-panel.php:417
 msgid "Upload"
-msgstr ""
+msgstr "Carica"
 
 #: ../yit-common/yith-panel.php:444
 msgid "px"
@@ -527,7 +525,7 @@ msgstr ""
 
 #: ../yit-common/yith-panel.php:457
 msgid "Select a font family"
-msgstr ""
+msgstr "Seleziona Font"
 
 #: ../yit-common/yith-panel.php:465
 msgid "Regular"
@@ -551,4 +549,4 @@ msgstr ""
 
 #: ../yit-common/yith-panel.php:481
 msgid "Click to preview"
-msgstr ""
+msgstr "Anteprima"

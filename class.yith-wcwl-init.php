@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.0.6
+ * @version 1.1.0
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -22,7 +22,7 @@ if( !class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.0.0';
+        public $version = '1.1.0';
         
         /**
          * Plugin database version
@@ -117,7 +117,7 @@ if( !class_exists( 'YITH_WCWL_Init' ) ) {
             add_action( 'init', array( $this, 'init' ), 0 );
             add_action( 'admin_init', array( $this, 'load_admin_style' ) );
 
-            add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_tab_woocommerce' ) );
+            add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_tab_woocommerce' ), 30 );
             add_filter( 'woocommerce_page_settings', array( $this, 'add_page_setting_woocommerce' ) );
             add_action( 'woocommerce_update_options_yith_wcwl', array( $this, 'update_options' ) );
             add_action( 'woocommerce_settings_tabs_yith_wcwl', array( $this, 'print_plugin_options' ) );

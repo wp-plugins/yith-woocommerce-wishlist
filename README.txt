@@ -3,12 +3,13 @@
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
 Requires at least: 3.5.1
-Tested up to: 3.5.1
-Stable tag: 1.0.6
+Tested up to: 3.8.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Wishlist add all Wishlist features to your website. Needs WooCommerce to work.
+WooCommerce 2.1.x compatible.
 
 
 == Description ==
@@ -74,6 +75,13 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 == Changelog ==
 
+= 1.1.0 =
+
+* Added: Support to WooCommerce 2.1.x
+* Added: Spanish (Mexico) translation by Gabriel Dzul
+* Added: French translation by Virginie Garcin
+* Fixed: Revision Italian Language po/mo files
+
 = 1.0.6 =
 
 * Added: Spanish (Argentina) partial translation by Sebastian Jeremias
@@ -81,7 +89,7 @@ Yes, you can change the colors of background, text and border or apply a custom 
 * Fixed: Share buttons show also when not logged in
 * Fixed: Price shows including or excluding tax based on WooCommerce settings
 * Fixed: Better compatibility for WPML 
-* Fixed: Price shows "Free!" if the product product price is without price
+* Fixed: Price shows "Free!" if the product is without price
 * Fixed: DB Table creation on plugin activation
 
 = 1.0.5 =
