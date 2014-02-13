@@ -562,17 +562,16 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             global $woocommerce;
 
             if ( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' ) ) {
-                $plugin_links = array(
-                    '<a href="' . admin_url( 'admin.php?page=woocommerce_settings&tab=yith_wcwl' ) . '">' . __( 'Settings', 'yit' ) . '</a>',
-                    '<a href="' . $this->doc_url . '">' . __( 'Docs', 'yit' ) . '</a>',
-                );
+                $wc_settings_page = "woocommerce_settings";
             }
             else {
-                $plugin_links = array(
-                    '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=yith_wcwl' ) . '">' . __( 'Settings', 'yit' ) . '</a>',
+                $wc_settings_page = "wc-settings";
+            }
+
+            $plugin_links = array(
+                    '<a href="' . admin_url( 'admin.php?page=' . $wc_settings_page . '&tab=yith_wcwl' ) . '">' . __( 'Settings', 'yit' ) . '</a>',
                     '<a href="' . $this->doc_url . '">' . __( 'Docs', 'yit' ) . '</a>',
                 );
-            }
 
             return array_merge( $plugin_links, $links );
         }
