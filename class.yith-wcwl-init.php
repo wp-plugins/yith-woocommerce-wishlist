@@ -4,7 +4,7 @@
  *
  * @author  Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.0';
+        public $version = '1.1.1';
 
         /**
          * Plugin database version
