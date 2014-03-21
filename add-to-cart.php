@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.1
+ * @version 1.1.2
  */
  
 // Handles all ajax requests pertaining to this plugin

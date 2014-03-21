@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.1
+ * @version 1.1.2
  */
 
 global $wpdb, $yith_wcwl, $woocommerce;
@@ -144,8 +144,8 @@ if( function_exists('wc_print_notices') ) {
                         <?php endif ?>
                         <?php if( get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes' ) : ?>
                             <td class="product-add-to-cart">
-                                <?php if($stock_status!='Out'): ?>
-                                    <?php echo YITH_WCWL_UI::add_to_cart_button( $values['prod_id'], $availability['class'] ) ?>
+                                <?php if(isset($stock_status) && $stock_status != 'Out'): ?>
+                                    <?php echo YITH_WCWL_UI::add_to_cart_button( $values['prod_id'], isset($availability['class']) ); ?>
                                 <?php endif ?>
                             </td>
                         <?php endif ?>

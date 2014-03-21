@@ -4,7 +4,7 @@
  *
  * @author  Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.1
+ * @version 1.1.2
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.1';
+        public $version = '1.1.2';
 
         /**
          * Plugin database version
@@ -104,6 +104,13 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             define( 'YITH_WCWL_VERSION', $this->version );
             define( 'YITH_WCWL_DB_VERSION', $this->db_version );
 
+            /**
+             * Support to WC 2.0.x
+             */
+            global $woocommerce;
+
+            $is_woocommerce_2_0 = version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' );
+
             $this->tab     = __( 'Wishlist', 'yit' );
             $this->options = $this->_plugin_options();
 
@@ -118,14 +125,19 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 $this->install();
             }
 
+
+
             add_action( 'init', array( $this, 'init' ), 0 );
             add_action( 'admin_init', array( $this, 'load_admin_style' ) );
 
             add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_tab_woocommerce' ), 30 );
-            add_filter( 'woocommerce_page_settings', array( $this, 'add_page_setting_woocommerce' ) );
             add_action( 'woocommerce_update_options_yith_wcwl', array( $this, 'update_options' ) );
             add_action( 'woocommerce_settings_tabs_yith_wcwl', array( $this, 'print_plugin_options' ) );
             add_filter( 'plugin_action_links_' . plugin_basename( plugin_basename( dirname( __FILE__ ) . '/init.php' ) ), array( $this, 'action_links' ) );
+
+            if( $is_woocommerce_2_0 ) {
+                add_filter( 'woocommerce_page_settings', array( $this, 'add_page_setting_woocommerce' ) );
+            }
 
             if ( get_option( 'yith_wcwl_enabled' ) == 'yes' ) {
                 add_action( 'wp_head', array( $this, 'add_button' ) );
@@ -380,17 +392,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
         public function add_page_setting_woocommerce( $settings ) {
             unset( $settings[count( $settings ) - 1] );
 
-            $settings[] = array(
-                'name'     => __( 'Wishlist Page', 'yit' ),
-                'desc'     => __( 'Page contents: [yith_wcwl_wishlist]', 'yit' ),
-                'id'       => 'yith_wcwl_wishlist_page_id',
-                'type'     => 'single_select_page',
-                'std'      => '', // for woocommerce < 2.0
-                'default'  => '', // for woocommerce >= 2.0
-                'class'    => 'chosen_select_nostd',
-                'css'      => 'min-width:300px;',
-                'desc_tip' => false,
-            );
+            $setting[] = $this->get_wcwl_page_option();
 
             $settings[] = array( 'type' => 'sectionend', 'id' => 'page_options' );
 
@@ -574,6 +576,28 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 );
 
             return array_merge( $plugin_links, $links );
+        }
+
+        /**
+         * Return the option to add the wishlist page
+         *
+         * @access public
+         * @return mxied array
+         * @since 1.1.2
+         */
+        public function get_wcwl_page_option(){
+
+            return array(
+                'name'     => __( 'Wishlist Page', 'yit' ),
+                'desc'     => __( 'Page contents: [yith_wcwl_wishlist]', 'yit' ),
+                'id'       => 'yith_wcwl_wishlist_page_id',
+                'type'     => 'single_select_page',
+                'std'      => '', // for woocommerce < 2.0
+                'default'  => '', // for woocommerce >= 2.0
+                'class'    => 'chosen_select_nostd',
+                'css'      => 'min-width:300px;',
+                'desc_tip' => false,
+            );
         }
 
 
@@ -816,12 +840,26 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 
             ksort( $icons );
 
-            $options['general_settings'] = array(
+            global $woocommerce;
+
+            $is_woocommerce_2_0 =version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' );
+
+            $options['general_settings'] = array();
+
+            if( $is_woocommerce_2_0 ){
+
+                $settings_page = 'WooCommerce &gt; Settings &gt; Pages' ;
+            }else{
+                $settings_page = 'in this settings page';
+            }
+
+            $general_settings_start = array(
+
                 array( 'name' => __( 'General Settings', 'yit' ), 'type' => 'title', 'desc' => '', 'id' => 'yith_wcwl_general_settings' ),
 
                 array(
                     'name'    => __( 'Enable YITH Wishlist', 'yit' ),
-                    'desc'    => sprintf( __( 'Enable all plugin features. <strong>Be sure that the wishlist page is selected in WooCommerce &gt; Settings &gt; Pages.</strong> Also, please read the plugin <a href="%s" target="_blank">documentation</a>.', 'yit' ), esc_url( $this->doc_url ) ),
+                    'desc'    => sprintf( __( 'Enable all plugin features. <strong>Be sure to select a voice in the wishlist page menu in %s.</strong> Also, please read the plugin <a href="%s" target="_blank">documentation</a>.', 'yit' ), $settings_page, esc_url( $this->doc_url ) ),
                     'id'      => 'yith_wcwl_enabled',
                     'std'     => 'yes', // for woocommerce < 2.0
                     'default' => 'yes', // for woocommerce >= 2.0
@@ -842,7 +880,11 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                     'default' => sprintf( __( 'My wishlist on %s', 'yit' ), get_bloginfo( 'name' ) ), // for woocommerce >= 2.0
                     'type'    => 'text',
                     'css'     => 'min-width:300px;',
-                ),
+                )
+            );
+
+
+            $general_settings_end = array(
                 array(
                     'name'     => __( 'Position', 'yit' ),
                     'desc'     => __( 'On variable products you can add it only After "Add to Cart" or use the shortcode [yith_wcwl_add_to_wishlist].', 'yit' ),
@@ -1040,6 +1082,15 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 
                 array( 'type' => 'sectionend', 'id' => 'yith_wcwl_styles' )
             );
+
+            if( $is_woocommerce_2_0 ) {
+
+                $options['general_settings'] = array_merge( $general_settings_start, $general_settings_end );
+
+            }else{
+
+                $options['general_settings'] = array_merge( $general_settings_start,  array( $this->get_wcwl_page_option() ), $general_settings_end );
+            }
 
             return apply_filters( 'yith_wcwl_tab_options', $options );
         }
