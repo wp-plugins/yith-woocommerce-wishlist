@@ -4,7 +4,7 @@
  *
  * @author  Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.2
+ * @version 1.1.3
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.2';
+        public $version = '1.1.3';
 
         /**
          * Plugin database version
@@ -442,6 +442,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                     </li>
                 </ul>-->
                 <br class="clear" />
+                <?php $this->options = apply_filters( 'yith_wcwl_tab_options', $this->options ); ?>
                 <?php foreach ( $this->options as $id => $tab ) : ?>
                     <!-- tab #<?php echo $id ?> -->
                     <div class="section" id="yith_wcwl_<?php echo $id ?>">
@@ -583,7 +584,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          *
          * @access public
          * @return mxied array
-         * @since 1.1.2
+         * @since 1.1.3
          */
         public function get_wcwl_page_option(){
 
@@ -1092,7 +1093,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 $options['general_settings'] = array_merge( $general_settings_start,  array( $this->get_wcwl_page_option() ), $general_settings_end );
             }
 
-            return apply_filters( 'yith_wcwl_tab_options', $options );
+            return $options;
         }
     }
 }

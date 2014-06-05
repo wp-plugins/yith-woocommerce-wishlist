@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.2
+ * @version 1.1.3
  */
 
 global $wpdb, $yith_wcwl, $woocommerce;

@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.2
+ * @version 1.1.3
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -136,13 +136,13 @@ public static function popup_message() {
         $html .= apply_filters( 'yith_wcwl_socials_share_title', '<h4>' . __( 'Share on:', 'yit' ) . '</h4>' );
         $html .= '<ul>';
 
-        if( get_option( 'yith_wcwl_share_fb' ) )
+        if( get_option( 'yith_wcwl_share_fb' ) == 'yes' )
         { $html .= '<li style="list-style-type: none; display: inline-block;"><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $url . '&amp;p[summary]=' . $summary . '&amp;p[images][0]=' . $imageurl . '" title="' . __( 'Facebook', 'yit' ) . '"></a></li>'; }
 
-        if( get_option( 'yith_wcwl_share_twitter' ) )
+        if( get_option( 'yith_wcwl_share_twitter' ) == 'yes' )
         { $html .= '<li style="list-style-type: none; display: inline-block;"><a target="_blank" class="twitter" href="https://twitter.com/share?url=' . $url . '&amp;text=' . $twitter_summary . '" title="' . __( 'Twitter', 'yit' ) . '"></a></li>'; }
 
-        if( get_option( 'yith_wcwl_share_pinterest' ) )
+        if( get_option( 'yith_wcwl_share_pinterest' ) == 'yes' )
         { $html .= '<li style="list-style-type: none; display: inline-block;"><a target="_blank" class="pinterest" href="http://pinterest.com/pin/create/button/?url=' . $url . '&amp;description=' . $summary . '&media=' . $imageurl . '" onclick="window.open(this.href); return false;"></a></li>'; }
 
         if( get_option( 'yith_wcwl_share_googleplus' ) == 'yes' )
