@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.3
+ * @version 1.1.4
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -101,7 +101,8 @@ public static function popup_message() {
             if( $product->product_type == 'external' ) {
                 $cartlink .= '<a target="_blank" class="add_to_cart button alt" href="' . $url . '"';
             } else {
-                $cartlink .= '<a class="add_to_cart button alt" onclick="check_for_stock(\'' . $url . '\',\'' . $stock_status . '\',\'' . $redirect_to_cart . '\');"';
+                $js_action = esc_attr( 'check_for_stock(\'' . $url . '\',\'' . $stock_status . '\',\'' . $redirect_to_cart . '\');' );
+                $cartlink .= '<a class="add_to_cart button alt" onclick="' . $js_action . '"';
             }
 
             $cartlink .= $style . '>' . $icon . $label . '</a>';
@@ -109,7 +110,8 @@ public static function popup_message() {
             if( $product->product_type == 'external' ) {
                 $cartlink .= '<a target="_blank" class="add_to_cart button alt" href="' . $url . '">' . $icon . $label . '</a>';
             } else {
-                $cartlink .= '<a class="add_to_cart button alt" href="javascript:void(0);" onclick="check_for_stock(\'' . $url . '\',\'' . $stock_status . '\',\'' . $redirect_to_cart . '\');">' . $icon . $label . '</a>';
+                $js_action = esc_attr( 'check_for_stock(\'' . $url . '\',\'' . $stock_status . '\',\'' . $redirect_to_cart . '\');' );
+                $cartlink .= '<a class="add_to_cart button alt" href="javascript:void(0);" onclick="' . $js_action . '">' . $icon . $label . '</a>';
             }
         }
 

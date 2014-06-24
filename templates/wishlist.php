@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.3
+ * @version 1.1.4
  */
 
 global $wpdb, $yith_wcwl, $woocommerce;
@@ -101,7 +101,8 @@ if( function_exists('wc_print_notices') ) {
 
                 if( $product_obj !== false && $product_obj->exists() ) : ?>
                     <tr id="yith-wcwl-row-<?php echo $values['ID'] ?>">
-                        <td class="product-remove"><div><a href="javascript:void(0)" onclick="remove_item_from_wishlist( '<?php echo esc_url( $yith_wcwl->get_remove_url( $values['ID'] ) )?>', 'yith-wcwl-row-<?php echo $values['ID'] ?>');" class="remove" title="<?php _e( 'Remove this product', 'yit' ) ?>">&times;</a></td>
+                        <?php $remove_wishlist = esc_attr( "remove_item_from_wishlist( '" . esc_url( $yith_wcwl->get_remove_url( $values['ID'] ) ) . "', 'yith-wcwl-row-" . $values['ID'] ."');" ); ?>
+                        <td class="product-remove"><div><a href="javascript:void(0)" onclick="<?php echo $remove_wishlist ?>" class="remove" title="<?php _e( 'Remove this product', 'yit' ) ?>">&times;</a></td>
                         <td class="product-thumbnail">
                             <a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $values['prod_id'] ) ) ) ?>">
                                 <?php echo $product_obj->get_image() ?>
