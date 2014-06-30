@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.4
+ * @version 1.1.5
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -149,6 +149,9 @@ public static function popup_message() {
 
         if( get_option( 'yith_wcwl_share_googleplus' ) == 'yes' )
         { $html .= '<li style="list-style-type: none; display: inline-block;"><a target="_blank" class="googleplus" href="https://plus.google.com/share?url=' . $url . '&amp;title="' . $title . '" onclick=\'javascript:window.open(this.href, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;\'></a></li>'; }
+
+        if( get_option( 'yith_wcwl_share_email' ) == 'yes' )
+        { $html .= '<li style="list-style-type: none; display: inline-block;"><a class="email" href="mailto:?subject=I wanted you to see this site&amp;body= ' . $url . '&amp;title="' . __('email', 'yit') . '" ></a></li>'; }
 
         $html .= '</ul>';
         $html .= '</div>';

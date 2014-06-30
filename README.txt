@@ -75,6 +75,10 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 == Changelog ==
 
+= 1.1.5 =
+
+* Added: Share wishlist by email 
+
 = 1.1.4 =
 
 * Fixed: wrong string for inline js on remove link

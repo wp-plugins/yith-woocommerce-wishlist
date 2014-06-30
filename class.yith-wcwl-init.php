@@ -4,7 +4,7 @@
  *
  * @author  Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.4
+ * @version 1.1.5
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.3';
+        public $version = '1.1.5';
 
         /**
          * Plugin database version
@@ -1051,6 +1051,13 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 array(
                     'name'    => __( 'Share on Google+', 'yit' ),
                     'id'      => 'yith_wcwl_share_googleplus',
+                    'std'     => 'yes', // for woocommerce < 2.0
+                    'default' => 'yes', // for woocommerce >= 2.0
+                    'type'    => 'checkbox'
+                ),
+                 array(
+                    'name'    => __( 'Share by Email', 'yit' ),
+                    'id'      => 'yith_wcwl_share_email',
                     'std'     => 'yes', // for woocommerce < 2.0
                     'default' => 'yes', // for woocommerce >= 2.0
                     'type'    => 'checkbox'
