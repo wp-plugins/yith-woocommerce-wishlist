@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.5';
+        public $version = '1.1.6';
 
         /**
          * Plugin database version

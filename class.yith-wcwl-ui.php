@@ -47,7 +47,10 @@ public static function popup_message() {
     public static function add_to_wishlist_button( $url, $product_type, $exists ) {
         global $yith_wcwl, $product;
 
-        $label = apply_filters( 'yith_wcwl_button_label', get_option( 'yith_wcwl_add_to_wishlist_text' ) );
+        $label_option = get_option( 'yith_wcwl_add_to_wishlist_text' );
+        $localize_label = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_wishlist_button', $label_option ) : $label_option;
+
+        $label = apply_filters( 'yith_wcwl_button_label', $localize_label );
         $icon = get_option( 'yith_wcwl_add_to_wishlist_icon' ) != 'none' ? '<i class="' . get_option( 'yith_wcwl_add_to_wishlist_icon' ) . '"></i>' : '';
 
         $classes = get_option( 'yith_wcwl_use_button' ) == 'yes' ? 'class="add_to_wishlist single_add_to_wishlist button alt"' : 'class="add_to_wishlist"';
@@ -90,7 +93,11 @@ public static function popup_message() {
             $product = new WC_Product( $product_id );
 
         $url = $product->product_type == 'external' ? $yith_wcwl->get_affiliate_product_url( $product_id ) : $yith_wcwl->get_addtocart_url( $product_id );
-        $label = $product->product_type == 'variable' ? apply_filters( 'variable_add_to_cart_text', __('Select options', 'yit') ) : apply_filters( 'yith_wcwl_add_to_cart_label', get_option( 'yith_wcwl_add_to_cart_text' ) );
+
+        $label_option = get_option( 'yith_wcwl_add_to_cart_text' );
+        $localize_label = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_wishlist_button', $label_option ) : $label_option;
+
+        $label = $product->product_type == 'variable' ? apply_filters( 'variable_add_to_cart_text', __('Select options', 'yit') ) : apply_filters( 'yith_wcwl_add_to_cart_label', $localize_label );
         $icon = get_option( 'yith_wcwl_use_button' ) == 'yes' && get_option( 'yith_wcwl_add_to_cart_icon' ) != 'none' ? '<i class="' . get_option( 'yith_wcwl_add_to_cart_icon' ) . '"></i>' : '';
 
         $cartlink = '';
@@ -129,7 +136,7 @@ public static function popup_message() {
     public static function get_share_links( $url ) {
         $normal_url = $url;
         $url = urlencode( $url );
-        $title = urlencode( get_option( 'yith_wcwl_socials_title' ) );
+        $title = apply_filters( 'plugin_text', urlencode( get_option( 'yith_wcwl_socials_title' ) ) );
         $twitter_summary = str_replace( '%wishlist_url%', '', get_option( 'yith_wcwl_socials_text' ) );
         $summary = urlencode( str_replace( '%wishlist_url%', $normal_url, get_option( 'yith_wcwl_socials_text' ) ) );
         $imageurl = urlencode( get_option( 'yith_wcwl_socials_image_url' ) );

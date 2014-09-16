@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2014-03-21 17:01+0100\n"
-"PO-Revision-Date: 2014-03-21 17:02+0100\n"
+"POT-Creation-Date: 2014-09-16 16:16+0100\n"
+"PO-Revision-Date: 2014-09-16 16:16+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
@@ -22,103 +22,103 @@ msgstr "רשימת משאלות"
 msgid "Cannot add to the cart as product is Out of Stock!"
 msgstr "לא ניתן להוסיף את המוצר לסל כי הוא אינו קיים במלאי!"
 
-#: ../class.yith-wcwl-init.php:430 ../class.yith-wcwl-init.php:858
+#: ../class.yith-wcwl-init.php:430 ../class.yith-wcwl-init.php:859
 msgid "General Settings"
 msgstr "הגדרות כלליות"
 
-#: ../class.yith-wcwl-init.php:431 ../class.yith-wcwl-init.php:964
+#: ../class.yith-wcwl-init.php:431 ../class.yith-wcwl-init.php:965
 msgid "Styles"
 msgstr "סגנונות עיצוב"
 
-#: ../class.yith-wcwl-init.php:432 ../class.yith-wcwl-init.php:1027
+#: ../class.yith-wcwl-init.php:432 ../class.yith-wcwl-init.php:1028
 msgid "Socials &amp; Share"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:452
+#: ../class.yith-wcwl-init.php:453
 msgid "Colors"
 msgstr "צבעים"
 
-#: ../class.yith-wcwl-init.php:482
+#: ../class.yith-wcwl-init.php:483
 msgid "\"Add to Wishlist\" button background"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:483
+#: ../class.yith-wcwl-init.php:484
 msgid "\"Add to Wishlist\" button text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:484
+#: ../class.yith-wcwl-init.php:485
 msgid "\"Add to Wishlist\" button border"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:490
+#: ../class.yith-wcwl-init.php:491
 msgid "\"Add to Wishlist\" button background (hover)"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:491
+#: ../class.yith-wcwl-init.php:492
 msgid "\"Add to Wishlist\" button text (hover)"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:492
+#: ../class.yith-wcwl-init.php:493
 msgid "\"Add to Wishlist\" button border (hover)"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:497
+#: ../class.yith-wcwl-init.php:498
 msgid "\"Add to Cart\" button background"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:498
+#: ../class.yith-wcwl-init.php:499
 msgid "\"Add to Cart\" button text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:499
+#: ../class.yith-wcwl-init.php:500
 msgid "\"Add to Cart\" button border"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:505
+#: ../class.yith-wcwl-init.php:506
 msgid "\"Add to Cart\" button background (hover)"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:506
+#: ../class.yith-wcwl-init.php:507
 msgid "\"Add to Cart\" button text (hover)"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../class.yith-wcwl-init.php:507
+#: ../class.yith-wcwl-init.php:508
 msgid "\"Add to Cart\" button border (hover)"
 msgstr "\"הוסף לסל\" גבול כפתור (hover)"
 
-#: ../class.yith-wcwl-init.php:512
+#: ../class.yith-wcwl-init.php:513
 msgid "Wishlist table background"
 msgstr "רקע טבלת הרשימה"
 
-#: ../class.yith-wcwl-init.php:513
+#: ../class.yith-wcwl-init.php:514
 msgid "Wishlist table text"
 msgstr "טקסט בטבלת הרשימה"
 
-#: ../class.yith-wcwl-init.php:514
+#: ../class.yith-wcwl-init.php:515
 msgid "Wishlist table border"
 msgstr "גבול טבלאות הרשימה"
 
-#: ../class.yith-wcwl-init.php:574
+#: ../class.yith-wcwl-init.php:575
 msgid "Settings"
 msgstr "הגדרות"
 
-#: ../class.yith-wcwl-init.php:575
+#: ../class.yith-wcwl-init.php:576
 msgid "Docs"
 msgstr "מסמכים"
 
-#: ../class.yith-wcwl-init.php:591
+#: ../class.yith-wcwl-init.php:592
 msgid "Wishlist Page"
 msgstr "עמוד רשימת המשאלות"
 
-#: ../class.yith-wcwl-init.php:592
+#: ../class.yith-wcwl-init.php:593
 msgid "Page contents: [yith_wcwl_wishlist]"
 msgstr "תוכן העמוד: [yith_wcwl_wishlist]"
 
-#: ../class.yith-wcwl-init.php:861
+#: ../class.yith-wcwl-init.php:862
 msgid "Enable YITH Wishlist"
 msgstr "אפשר שימוש ברשימת המשאלות של YITH"
 
-#: ../class.yith-wcwl-init.php:862
+#: ../class.yith-wcwl-init.php:863
 #, fuzzy, php-format
 msgid ""
 "Enable all plugin features. <strong>Be sure to select a voice in the "
@@ -129,11 +129,11 @@ msgstr ""
 "בהגדרות של WooCommerce &gt; Settings &gt; Pages.</strong> בנוסף, קרא את <a "
 "href=\"%s\" target=\"_blank\">הוראות השימוש</a> של התוסף."
 
-#: ../class.yith-wcwl-init.php:869
+#: ../class.yith-wcwl-init.php:870
 msgid "Use cookies"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:870
+#: ../class.yith-wcwl-init.php:871
 msgid ""
 "Use cookies instead of sessions. With this feature, the wishlist will be "
 "available for each not logged user for 30 days. Use the filter "
@@ -141,160 +141,164 @@ msgid ""
 "timestamp )."
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:877
+#: ../class.yith-wcwl-init.php:878
 msgid "Wishlist title"
 msgstr "כותרת רשימת משאלות"
 
-#: ../class.yith-wcwl-init.php:879 ../class.yith-wcwl-init.php:880
-#: ../class.yith-wcwl-init.php:1060 ../class.yith-wcwl-init.php:1061
+#: ../class.yith-wcwl-init.php:880 ../class.yith-wcwl-init.php:881
+#: ../class.yith-wcwl-init.php:1068 ../class.yith-wcwl-init.php:1069
 #, php-format
 msgid "My wishlist on %s"
 msgstr "רשימת המשאלות שלי ב-%s"
 
-#: ../class.yith-wcwl-init.php:889
+#: ../class.yith-wcwl-init.php:890
 msgid "Position"
 msgstr "מיקום"
 
-#: ../class.yith-wcwl-init.php:890
+#: ../class.yith-wcwl-init.php:891
 msgid ""
 "On variable products you can add it only After \"Add to Cart\" or use the "
 "shortcode [yith_wcwl_add_to_wishlist]."
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:896
+#: ../class.yith-wcwl-init.php:897
 msgid "After \"Add to cart\""
 msgstr "לאחר \"הוספה לסל\""
 
-#: ../class.yith-wcwl-init.php:897
+#: ../class.yith-wcwl-init.php:898
 msgid "After thumbnails"
 msgstr "אחרי התמונות המוקטנות"
 
-#: ../class.yith-wcwl-init.php:898
+#: ../class.yith-wcwl-init.php:899
 msgid "After summary"
 msgstr "אחרי תיאור מוצר"
 
-#: ../class.yith-wcwl-init.php:899
+#: ../class.yith-wcwl-init.php:900
 msgid "Use shortcode"
 msgstr "השתמש בקוד מקוצר"
 
-#: ../class.yith-wcwl-init.php:904
+#: ../class.yith-wcwl-init.php:905
 msgid "Redirect to cart"
 msgstr "הפנייה לסל הקניות"
 
-#: ../class.yith-wcwl-init.php:905
+#: ../class.yith-wcwl-init.php:906
 msgid ""
 "Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
 "page."
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:912
+#: ../class.yith-wcwl-init.php:913
 msgid "Remove if added to the cart"
 msgstr "הסר מהרשימה אם הוסף לסל"
 
-#: ../class.yith-wcwl-init.php:913
+#: ../class.yith-wcwl-init.php:914
 msgid "Remove the product from the wishlist if is been added to the cart."
 msgstr "הסר את המוצר מהרשימה אם הוא הוסף לסל."
 
-#: ../class.yith-wcwl-init.php:920
+#: ../class.yith-wcwl-init.php:921
 msgid "\"Add to Wishlist\" text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:922 ../class.yith-wcwl-init.php:923
+#: ../class.yith-wcwl-init.php:923 ../class.yith-wcwl-init.php:924
 msgid "Add to Wishlist"
 msgstr "הוסף לרשימת המשאלות"
 
-#: ../class.yith-wcwl-init.php:928
+#: ../class.yith-wcwl-init.php:929
 msgid "\"Add to Cart\" text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:930 ../class.yith-wcwl-init.php:931
+#: ../class.yith-wcwl-init.php:931 ../class.yith-wcwl-init.php:932
 msgid "Add to Cart"
 msgstr "הוסף לסל"
 
-#: ../class.yith-wcwl-init.php:936
+#: ../class.yith-wcwl-init.php:937
 #, fuzzy
 msgid "Show Unit price"
 msgstr "מחיר ליחידה"
 
-#: ../class.yith-wcwl-init.php:944
+#: ../class.yith-wcwl-init.php:945
 #, fuzzy
 msgid "Show \"Add to Cart\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../class.yith-wcwl-init.php:952
+#: ../class.yith-wcwl-init.php:953
 #, fuzzy
 msgid "Show Stock status"
 msgstr "מצב מלאי"
 
-#: ../class.yith-wcwl-init.php:967
+#: ../class.yith-wcwl-init.php:968
 msgid "Use buttons"
 msgstr "השתמש בכפתורים"
 
-#: ../class.yith-wcwl-init.php:968
+#: ../class.yith-wcwl-init.php:969
 msgid "Use buttons instead of a simple anchors."
 msgstr "השתמש בכפתורים במקום קישורים רגילים."
 
-#: ../class.yith-wcwl-init.php:975
+#: ../class.yith-wcwl-init.php:976
 msgid "Custom CSS"
 msgstr "הכנס שורות CSS משלך"
 
-#: ../class.yith-wcwl-init.php:983
+#: ../class.yith-wcwl-init.php:984
 msgid "Use theme style"
 msgstr "השתמש בעיצוב של התבנית שלך"
 
-#: ../class.yith-wcwl-init.php:984
+#: ../class.yith-wcwl-init.php:985
 msgid "Use the theme style."
 msgstr "השתמש בעיצוב של תבנית האתר."
 
-#: ../class.yith-wcwl-init.php:991
+#: ../class.yith-wcwl-init.php:992
 msgid "Buttons rounded corners"
 msgstr "כפתורים עם פינות מעוגלות"
 
-#: ../class.yith-wcwl-init.php:992
+#: ../class.yith-wcwl-init.php:993
 msgid "Make buttons corner rounded"
 msgstr "הצג את הכפתורים עם פינות מעוגלות"
 
-#: ../class.yith-wcwl-init.php:999
+#: ../class.yith-wcwl-init.php:1000
 msgid "\"Add to Wishlist\" icon"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1000
+#: ../class.yith-wcwl-init.php:1001
 msgid "Add an icon to the \"Add to Wishlist\" button"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1011
+#: ../class.yith-wcwl-init.php:1012
 msgid "\"Add to Cart\" icon"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1012
+#: ../class.yith-wcwl-init.php:1013
 msgid "Add an icon to the \"Add to Cart\" button"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1030
+#: ../class.yith-wcwl-init.php:1031
 msgid "Share on Facebook"
 msgstr "שתף בפייסבוק"
 
-#: ../class.yith-wcwl-init.php:1037
+#: ../class.yith-wcwl-init.php:1038
 msgid "Tweet on Twitter"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1044
+#: ../class.yith-wcwl-init.php:1045
 msgid "Pin on Pinterest"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1051
+#: ../class.yith-wcwl-init.php:1052
 msgid "Share on Google+"
 msgstr "שתף בגוגל+"
 
-#: ../class.yith-wcwl-init.php:1058
-msgid "Socials title"
+#: ../class.yith-wcwl-init.php:1059
+msgid "Share by Email"
 msgstr ""
 
 #: ../class.yith-wcwl-init.php:1066
+msgid "Socials title"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:1074
 msgid "Socials text"
 msgstr ""
 
-#: ../class.yith-wcwl-init.php:1067
+#: ../class.yith-wcwl-init.php:1075
 msgid ""
 "Will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url%</"
 "strong> where you want the URL of your wishlist to appear."
@@ -302,7 +306,7 @@ msgstr ""
 "יעשה שימוש על ידי Facebook, Twitter וגם Pinterest. השתמש ב-<strong>"
 "%wishlist_url%</strong> היכן שתרצה את ה-URL של רשימת המשאלות שלך שיופיע."
 
-#: ../class.yith-wcwl-init.php:1075
+#: ../class.yith-wcwl-init.php:1083
 msgid "Socials image URL"
 msgstr ""
 
@@ -310,34 +314,38 @@ msgstr ""
 msgid "wishlist"
 msgstr "רשימת משאלות"
 
-#: ../class.yith-wcwl-ui.php:64 ../class.yith-wcwl.php:351
+#: ../class.yith-wcwl-ui.php:67 ../class.yith-wcwl.php:351
 #: ../yith-wcwl-ajax.php:47
 msgid "Product added!"
 msgstr "המוצר נשמר!"
 
-#: ../class.yith-wcwl-ui.php:64 ../class.yith-wcwl-ui.php:65
+#: ../class.yith-wcwl-ui.php:67 ../class.yith-wcwl-ui.php:68
 msgid "Browse Wishlist"
 msgstr "צפה ברשימת השמורים שלך"
 
-#: ../class.yith-wcwl-ui.php:65
+#: ../class.yith-wcwl-ui.php:68
 msgid "The product is already in the wishlist!"
 msgstr "המוצר נשמר."
 
-#: ../class.yith-wcwl-ui.php:93
+#: ../class.yith-wcwl-ui.php:100
 msgid "Select options"
 msgstr "בחירת דגם"
 
-#: ../class.yith-wcwl-ui.php:136
+#: ../class.yith-wcwl-ui.php:145
 msgid "Share on:"
 msgstr "שתף ברשת:"
 
-#: ../class.yith-wcwl-ui.php:140
+#: ../class.yith-wcwl-ui.php:149
 msgid "Facebook"
 msgstr "פייסבוק"
 
-#: ../class.yith-wcwl-ui.php:143
+#: ../class.yith-wcwl-ui.php:152
 msgid "Twitter"
 msgstr "טוויטר"
+
+#: ../class.yith-wcwl-ui.php:161
+msgid "email"
+msgstr ""
 
 #: ../class.yith-wcwl.php:140
 msgid "Error occurred while adding product to wishlist."
@@ -360,35 +368,35 @@ msgid "Error. Unable to remove the product from the wishlist."
 msgstr "שגיאה. לא הצלחנו להסיר את המוצר מרשימת המשאלות."
 
 #: ../class.yith-wcwl.php:377 ../yith-wcwl-ajax.php:37
-#: ../templates/wishlist.php:158
+#: ../templates/wishlist.php:161
 msgid "No products were added to the wishlist"
 msgstr "אין מוצרים ברשימת המשאלות שלך."
 
-#: ../templates/wishlist.php:80
+#: ../templates/wishlist.php:82
 msgid "Product Name"
 msgstr "שם המוצר"
 
-#: ../templates/wishlist.php:81
+#: ../templates/wishlist.php:83
 msgid "Unit Price"
 msgstr "מחיר ליחידה"
 
-#: ../templates/wishlist.php:82
+#: ../templates/wishlist.php:84
 msgid "Stock Status"
 msgstr "מצב מלאי"
 
-#: ../templates/wishlist.php:104
+#: ../templates/wishlist.php:107
 msgid "Remove this product"
 msgstr "הסרת מוצר מהרשימה"
 
-#: ../templates/wishlist.php:124
+#: ../templates/wishlist.php:127
 msgid "Free!"
 msgstr ""
 
-#: ../templates/wishlist.php:137
+#: ../templates/wishlist.php:140
 msgid "Out of Stock"
 msgstr "לא קיים במלאי"
 
-#: ../templates/wishlist.php:140
+#: ../templates/wishlist.php:143
 msgid "In Stock"
 msgstr "קיים במלאי"
 

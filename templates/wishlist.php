@@ -67,6 +67,8 @@ if( function_exists('wc_print_notices') ) {
     do_action( 'yith_wcwl_before_wishlist_title' );
 
     $wishlist_title = get_option( 'yith_wcwl_wishlist_title' );
+    $wishlist_title = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_wishlist_title_text', $wishlist_title ) : $wishlist_title;
+
     if( !empty( $wishlist_title ) )
     { echo apply_filters( 'yith_wcwl_wishlist_title', '<h2>' . $wishlist_title . '</h2>' ); }
 
