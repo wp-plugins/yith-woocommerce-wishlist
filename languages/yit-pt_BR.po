@@ -1,0 +1,473 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WCWL\n"
+"POT-Creation-Date: 2014-09-16 16:16+0100\n"
+"PO-Revision-Date: 2014-09-16 16:16+0100\n"
+"Last-Translator: YIThemes <support@yithemes.com>\n"
+"Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../class.yith-wcwl-init.php:114 ../class.yith-wcwl-install.php:137
+msgid "Wishlist"
+msgstr "Lista de Desejos"
+
+#: ../class.yith-wcwl-init.php:365
+msgid "Cannot add to the cart as product is Out of Stock!"
+msgstr "Não foi possível adicionar ao carrinho. O produto esta esgotado."
+
+#: ../class.yith-wcwl-init.php:430 ../class.yith-wcwl-init.php:859
+msgid "General Settings"
+msgstr "Opções gerais"
+
+#: ../class.yith-wcwl-init.php:431 ../class.yith-wcwl-init.php:965
+msgid "Styles"
+msgstr "Estilos"
+
+#: ../class.yith-wcwl-init.php:432 ../class.yith-wcwl-init.php:1028
+msgid "Socials &amp; Share"
+msgstr "Social &amp; Compartilhamento"
+
+#: ../class.yith-wcwl-init.php:453
+msgid "Colors"
+msgstr "Cores"
+
+#: ../class.yith-wcwl-init.php:483
+msgid "\"Add to Wishlist\" button background"
+msgstr "Fundo do botão \"Adicionar aos meus desejos\""
+
+#: ../class.yith-wcwl-init.php:484
+msgid "\"Add to Wishlist\" button text"
+msgstr "Texto do botão \"Adicionar aos meus desejos\""
+
+#: ../class.yith-wcwl-init.php:485
+msgid "\"Add to Wishlist\" button border"
+msgstr "Borda do botão \"Adicionar aos meus desejos\""
+
+#: ../class.yith-wcwl-init.php:491
+msgid "\"Add to Wishlist\" button background (hover)"
+msgstr "Fundo do botão \"Adicionar aos meus desejos\" (Hover)"
+
+#: ../class.yith-wcwl-init.php:492
+msgid "\"Add to Wishlist\" button text (hover)"
+msgstr "Texto do botão \"Adicionar aos meus desejos\" (Hover)"
+
+#: ../class.yith-wcwl-init.php:493
+msgid "\"Add to Wishlist\" button border (hover)"
+msgstr "Borda do botão \"Adicionar aos meus desejos\" (hover)"
+
+#: ../class.yith-wcwl-init.php:498
+msgid "\"Add to Cart\" button background"
+msgstr "Fundo do do botão \"Adicionar ao carrinho \""
+
+#: ../class.yith-wcwl-init.php:499
+msgid "\"Add to Cart\" button text"
+msgstr "Texto do botão \"Adicionar ao carrinho \""
+
+#: ../class.yith-wcwl-init.php:500
+msgid "\"Add to Cart\" button border"
+msgstr "Borda do do botão \"Adicionar ao carrinho \""
+
+#: ../class.yith-wcwl-init.php:506
+msgid "\"Add to Cart\" button background (hover)"
+msgstr "Fundo do botão \"Adicionar ao carrinho \" (hover)"
+
+#: ../class.yith-wcwl-init.php:507
+msgid "\"Add to Cart\" button text (hover)"
+msgstr "Texto do botão \"Adicionar ao carrinho \" (hover)"
+
+#: ../class.yith-wcwl-init.php:508
+msgid "\"Add to Cart\" button border (hover)"
+msgstr "Borda do botão \"Adicionar ao carrinho \" (hover)"
+
+#: ../class.yith-wcwl-init.php:513
+msgid "Wishlist table background"
+msgstr "Fundo da tabela de desejos"
+
+#: ../class.yith-wcwl-init.php:514
+msgid "Wishlist table text"
+msgstr "Texto da tabela de desejos"
+
+#: ../class.yith-wcwl-init.php:515
+msgid "Wishlist table border"
+msgstr "Borda da tabela de desejos"
+
+#: ../class.yith-wcwl-init.php:575
+msgid "Settings"
+msgstr "Configurações"
+
+#: ../class.yith-wcwl-init.php:576
+msgid "Docs"
+msgstr "Documentos"
+
+#: ../class.yith-wcwl-init.php:592
+msgid "Wishlist Page"
+msgstr "Meus desejos"
+
+#: ../class.yith-wcwl-init.php:593
+msgid "Page contents: [yith_wcwl_wishlist]"
+msgstr "Conteúdo da página: [yith_wcwl_wishlist]"
+
+#: ../class.yith-wcwl-init.php:862
+msgid "Enable YITH Wishlist"
+msgstr "Ativar Lista de Desejos"
+
+#: ../class.yith-wcwl-init.php:863
+#, fuzzy, php-format
+msgid ""
+"Enable all plugin features. <strong>Be sure to select a voice in the "
+"wishlist page menu in %s.</strong> Also, please read the plugin <a href=\"%s"
+"\" target=\"_blank\">documentation</a>."
+msgstr ""
+"Ativar todas opções. <strong> Saiba que a página de desejos é selecionada na "
+"seção Páginas. </strong>. <a href=\"%s\" target=\"_blank\">Documentação</a>."
+
+#: ../class.yith-wcwl-init.php:870
+msgid "Use cookies"
+msgstr "Usar cookies"
+
+#: ../class.yith-wcwl-init.php:871
+msgid ""
+"Use cookies instead of sessions. With this feature, the wishlist will be "
+"available for each not logged user for 30 days. Use the filter "
+"yith_wcwl_cookie_expiration_time to change the expiration time ( needs "
+"timestamp )."
+msgstr ""
+"Usar cookies ao invés de sessões. Com essa opção, a lista de desejos vai "
+"estar disponível para todos os usuários não logados por até 30 dias. "
+
+#: ../class.yith-wcwl-init.php:878
+msgid "Wishlist title"
+msgstr "Titulo da lista de desejos"
+
+#: ../class.yith-wcwl-init.php:880 ../class.yith-wcwl-init.php:881
+#: ../class.yith-wcwl-init.php:1068 ../class.yith-wcwl-init.php:1069
+#, php-format
+msgid "My wishlist on %s"
+msgstr "Minha lista de desejos em %s"
+
+#: ../class.yith-wcwl-init.php:890
+msgid "Position"
+msgstr "Posição"
+
+#: ../class.yith-wcwl-init.php:891
+msgid ""
+"On variable products you can add it only After \"Add to Cart\" or use the "
+"shortcode [yith_wcwl_add_to_wishlist]."
+msgstr ""
+"Em produtos variáveis você pode adicionar isto somenteapós \"Adcionar ao "
+"Carrinho\" ou usar o shortcode [yith_wcwl_add_to_wishlist]."
+
+#: ../class.yith-wcwl-init.php:897
+msgid "After \"Add to cart\""
+msgstr "Após \" Adicionar ao carrinho \""
+
+#: ../class.yith-wcwl-init.php:898
+msgid "After thumbnails"
+msgstr "Após miniaturas"
+
+#: ../class.yith-wcwl-init.php:899
+msgid "After summary"
+msgstr "Após sumário"
+
+#: ../class.yith-wcwl-init.php:900
+msgid "Use shortcode"
+msgstr "Usar shortcode"
+
+#: ../class.yith-wcwl-init.php:905
+msgid "Redirect to cart"
+msgstr "Redirecionar para o carrinho"
+
+#: ../class.yith-wcwl-init.php:906
+msgid ""
+"Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
+"page."
+msgstr ""
+"Redirecionar para a página de carrinho se o botão \" Adcionar ao carrinho \" "
+"estiver clicado na página de lista de desejos."
+
+#: ../class.yith-wcwl-init.php:913
+msgid "Remove if added to the cart"
+msgstr "Remover se adcionado ao carrinho"
+
+#: ../class.yith-wcwl-init.php:914
+msgid "Remove the product from the wishlist if is been added to the cart."
+msgstr ""
+"Remover o produto da lista, se a mesma tiver sido adicionada ao carrinho."
+
+#: ../class.yith-wcwl-init.php:921
+msgid "\"Add to Wishlist\" text"
+msgstr "Texto \" Adcionar a Lista de Desejos\""
+
+#: ../class.yith-wcwl-init.php:923 ../class.yith-wcwl-init.php:924
+msgid "Add to Wishlist"
+msgstr "Adicionar aos meus desejos"
+
+#: ../class.yith-wcwl-init.php:929
+msgid "\"Add to Cart\" text"
+msgstr "Texto \" Adicionar ao Carrinho\""
+
+#: ../class.yith-wcwl-init.php:931 ../class.yith-wcwl-init.php:932
+msgid "Add to Cart"
+msgstr "Adcionar ao Carrinho"
+
+#: ../class.yith-wcwl-init.php:937
+#, fuzzy
+msgid "Show Unit price"
+msgstr "Preço unitário"
+
+#: ../class.yith-wcwl-init.php:945
+#, fuzzy
+msgid "Show \"Add to Cart\" button"
+msgstr "Texto do botão \"Adicionar ao carrinho \""
+
+#: ../class.yith-wcwl-init.php:953
+#, fuzzy
+msgid "Show Stock status"
+msgstr "Status do estoque"
+
+#: ../class.yith-wcwl-init.php:968
+msgid "Use buttons"
+msgstr "Usar botões"
+
+#: ../class.yith-wcwl-init.php:969
+msgid "Use buttons instead of a simple anchors."
+msgstr "Usar botões ao invés de simples âncoras."
+
+#: ../class.yith-wcwl-init.php:976
+msgid "Custom CSS"
+msgstr "CSS Customizado"
+
+#: ../class.yith-wcwl-init.php:984
+msgid "Use theme style"
+msgstr "Usar estilo do tema"
+
+#: ../class.yith-wcwl-init.php:985
+msgid "Use the theme style."
+msgstr "Usar o estilo do tema."
+
+#: ../class.yith-wcwl-init.php:992
+msgid "Buttons rounded corners"
+msgstr "Botões com cantos arredondados"
+
+#: ../class.yith-wcwl-init.php:993
+msgid "Make buttons corner rounded"
+msgstr "Faça botões do canto arredondado"
+
+#: ../class.yith-wcwl-init.php:1000
+msgid "\"Add to Wishlist\" icon"
+msgstr "Ícone \"Adcionar aos meus desejos\" "
+
+#: ../class.yith-wcwl-init.php:1001
+msgid "Add an icon to the \"Add to Wishlist\" button"
+msgstr "Adicionar um ícone ao botão \"Adcionar aos meus desejos\""
+
+#: ../class.yith-wcwl-init.php:1012
+msgid "\"Add to Cart\" icon"
+msgstr "Ícone \"Adicionar ao Carrinho\""
+
+#: ../class.yith-wcwl-init.php:1013
+msgid "Add an icon to the \"Add to Cart\" button"
+msgstr "Adicionar um ícone ao botão \"Adcionar ao carrinho\""
+
+#: ../class.yith-wcwl-init.php:1031
+msgid "Share on Facebook"
+msgstr "Compartilhar no Facebook"
+
+#: ../class.yith-wcwl-init.php:1038
+msgid "Tweet on Twitter"
+msgstr "Tweetar no Twitter"
+
+#: ../class.yith-wcwl-init.php:1045
+msgid "Pin on Pinterest"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:1052
+msgid "Share on Google+"
+msgstr "Comparilhar no Google+"
+
+#: ../class.yith-wcwl-init.php:1059
+msgid "Share by Email"
+msgstr ""
+
+#: ../class.yith-wcwl-init.php:1066
+msgid "Socials title"
+msgstr "Título Mídias Sociais"
+
+#: ../class.yith-wcwl-init.php:1074
+msgid "Socials text"
+msgstr "Texto Mídias Sociais"
+
+#: ../class.yith-wcwl-init.php:1075
+msgid ""
+"Will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url%</"
+"strong> where you want the URL of your wishlist to appear."
+msgstr ""
+"Vai ser usado por Facebook, Twitter e Pinterest. Use <strong>%wishlist_url%</"
+"strong> "
+
+#: ../class.yith-wcwl-init.php:1083
+msgid "Socials image URL"
+msgstr "Url para compartilhamento"
+
+#: ../class.yith-wcwl-install.php:136
+msgid "wishlist"
+msgstr "lista de desejos"
+
+#: ../class.yith-wcwl-ui.php:67 ../class.yith-wcwl.php:351
+#: ../yith-wcwl-ajax.php:47
+msgid "Product added!"
+msgstr "Produto adicionado!"
+
+#: ../class.yith-wcwl-ui.php:67 ../class.yith-wcwl-ui.php:68
+msgid "Browse Wishlist"
+msgstr "Veja sua lista de desejos!"
+
+#: ../class.yith-wcwl-ui.php:68
+msgid "The product is already in the wishlist!"
+msgstr "Esse produto já se encontra na sua lista de desejos!"
+
+#: ../class.yith-wcwl-ui.php:100
+msgid "Select options"
+msgstr "Selecione as opções"
+
+#: ../class.yith-wcwl-ui.php:145
+msgid "Share on:"
+msgstr "Compartilhar em:"
+
+#: ../class.yith-wcwl-ui.php:149
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../class.yith-wcwl-ui.php:152
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../class.yith-wcwl-ui.php:161
+msgid "email"
+msgstr ""
+
+#: ../class.yith-wcwl.php:140
+msgid "Error occurred while adding product to wishlist."
+msgstr "Oops! Ocorreu um erro ao adicionar o produto à lista de desejos."
+
+#: ../class.yith-wcwl.php:162
+msgid "Error occurred while removing product from wishlist"
+msgstr "Oops! Ocorreu um erro ao remover o produto à lista de desejos."
+
+#: ../class.yith-wcwl.php:353 ../yith-wcwl-ajax.php:49
+msgid "Product already in the wishlist."
+msgstr "Produto já na lista de desejos."
+
+#: ../class.yith-wcwl.php:370 ../yith-wcwl-ajax.php:30
+msgid "Product successfully removed."
+msgstr "Produto removida com sucesso."
+
+#: ../class.yith-wcwl.php:373 ../yith-wcwl-ajax.php:33
+msgid "Error. Unable to remove the product from the wishlist."
+msgstr "Erro. Não foi possível remover o produto da lista de desejos."
+
+#: ../class.yith-wcwl.php:377 ../yith-wcwl-ajax.php:37
+#: ../templates/wishlist.php:161
+msgid "No products were added to the wishlist"
+msgstr "Nenhum produto foi adicionado à lista de desejos"
+
+#: ../templates/wishlist.php:82
+msgid "Product Name"
+msgstr "Nome do Produto"
+
+#: ../templates/wishlist.php:83
+msgid "Unit Price"
+msgstr "Preço unitário"
+
+#: ../templates/wishlist.php:84
+msgid "Stock Status"
+msgstr "Status do estoque"
+
+#: ../templates/wishlist.php:107
+msgid "Remove this product"
+msgstr "Remover este produto"
+
+#: ../templates/wishlist.php:127
+msgid "Free!"
+msgstr ""
+
+#: ../templates/wishlist.php:140
+msgid "Out of Stock"
+msgstr "Sem estoque"
+
+#: ../templates/wishlist.php:143
+msgid "In Stock"
+msgstr "Em estoque"
+
+#: ../yit-common/yith-panel.php:406
+msgid "Select a date"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:407
+msgid "Hours"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
+msgid "Minutes"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:417
+msgid "Upload"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:444
+msgid "px"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:445
+msgid "em"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:446
+msgid "pt"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:447
+msgid "rem"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:457
+msgid "Select a font family"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:465
+msgid "Regular"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:466
+msgid "Bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:467
+msgid "Extra bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:468
+msgid "Italic"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:469
+msgid "Italic bold"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:481
+msgid "Click to preview"
+msgstr ""
+
+#~ msgid "View Cart &rarr;"
+#~ msgstr "Ver Carrinho"
+
+#~ msgid "Product successfully added to the cart."
+#~ msgstr "Produto adicionado ao carrinho."
