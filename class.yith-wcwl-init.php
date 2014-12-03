@@ -24,7 +24,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '1.1.6';
+        public $version = '1.1.7';
 
         /**
          * Plugin database version
@@ -259,6 +259,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 
             // Add the link "Add to wishlist"
             $position = get_option( 'yith_wcwl_button_position' );
+
             $position = empty( $position ) ? 'add-to-cart' : $position;
 
             if ( $position != 'shortcode' ) {

@@ -6,7 +6,7 @@
  * @package YITH WooCommerce Wishlist
  * @version 1.1.5
  */
- 
+
 // Handles all ajax requests pertaining to this plugin
 require_once( 'safe-wp-load.php' );
 require_once( 'functions.yith-wcwl.php' );
@@ -29,7 +29,7 @@ if ( isset( $_GET['redirect_to_cart'] ) && $_GET['redirect_to_cart'] == 'true' )
     }
 }
 else {
-    $redirect_url = $yith_wcwl->get_wishlist_url();
+    $redirect_url = apply_filters( 'yit_wcwl_add_to_cart_redirect_url', $yith_wcwl->get_wishlist_url() );
 }
 
 //get the details of the product
@@ -48,9 +48,9 @@ if( WC()->cart->add_to_cart( $details[0]['prod_id'], 1 ) ) {
 
     if( get_option( 'yith_wcwl_remove_after_add_to_cart' ) == 'yes' )
         { $yith_wcwl->remove( $details[0]['ID'] ); }
-    
+
 	header( "Location: $redirect_url" );
-	
+
 } else { //if failed, redirect to wishlist page with errors
     if ( function_exists('wc_get_notices') ) {
         $_SESSION['errors'] = wc_get_notices( "error" );
