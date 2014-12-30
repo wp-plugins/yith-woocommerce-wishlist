@@ -20,7 +20,7 @@ afterwards add them to the cart or remove them.
 
 Working demo are available:
 
-**[LIVE DEMO 1](http://demo.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://demo.yithemes.com/bazar/shop/ankle-shoes/)**
+**[LIVE DEMO 1](http://preview.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://preview.yithemes.com/bazar/shop/ankle-shoes/)**
 
 Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
 
