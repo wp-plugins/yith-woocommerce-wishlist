@@ -22,7 +22,7 @@ Working demo are available:
 
 **[LIVE DEMO 1](http://preview.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://preview.yithemes.com/bazar/shop/ankle-shoes/)**
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/).
 
 This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_key=Qn1wDeBNTcZV)
 
@@ -36,7 +36,7 @@ YITH WooCommerce Wishlist will add a new tab called "Wishlist" below the Woocomm
 
 = Developer =
 
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_wishlist/) and discover how to do that.
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/) and discover how to do that.
 
 = Support =
 
@@ -173,7 +173,7 @@ If you have created your own language pack, or have an update for an existing on
 
 == Documentation ==
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_wishlist/).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/).
 
 == Upgrade notice ==
 
