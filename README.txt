@@ -36,7 +36,7 @@ YITH WooCommerce Wishlist will add a new tab called "Wishlist" below the Woocomm
 
 = Developer =
 
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/) and discover how to do that.
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/) and discover how to do that. 
 
 = Support =
 
