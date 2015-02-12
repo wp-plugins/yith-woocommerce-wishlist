@@ -1,10 +1,10 @@
 === YITH WooCommerce Wishlist ===
 
 Contributors: yithemes
-Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop
+Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 1.1.7
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,8 @@ WooCommerce 2.2.x compatible.
 
 == Description ==
 
+What can really make the difference in conversions and amount of sales is without a doubt the freedom to share your own wishlist, even on social networks, increasing indirect sales: can you imagine the sales volume you can generate during holidays or birthdays, when relatives and friends will be looking for the wishlist of your clients to buy a gift?
+
 Offer to your visitors a chance to add the products of your woocommerce store to a wishlist page. With YITH WooCommerce Wishlist you can add a link in each product detail page,
 in order to add the products to the wishlist page. The plugin will create you the specific page and the products will be added in this page and
 afterwards add them to the cart or remove them.
@@ -22,7 +24,7 @@ Working demo are available:
 
 **[LIVE DEMO 1](http://preview.yithemes.com/room09/product/africa-style/)** - **[LIVE DEMO 2](http://preview.yithemes.com/bazar/shop/ankle-shoes/)**
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-wishlist).
 
 This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_key=Qn1wDeBNTcZV)
 
@@ -36,7 +38,7 @@ YITH WooCommerce Wishlist will add a new tab called "Wishlist" below the Woocomm
 
 = Developer =
 
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist/) and discover how to do that. 
+Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith-woocommerce-wishlist/) and discover how to do that. 
 
 = Support =
 
@@ -75,16 +77,28 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 == Changelog ==
 
+= 2.0.0 =
+
+* Added: Support to woocommerce 2.3
+* Added: New color options
+* Tweak: Add to cart button from woocommerce template
+* Tweak: Share links on template
+* Tweak: Code revision
+* Tweak: Use wordpress API in ajax call instead of custom script
+* Updated: Plugin core framework
+
+
 = 1.1.7 =
+
 * Added: Support to WooCommerce Endpoints (@use yit_wcwl_add_to_cart_redirect_url filter)
-* Add filter to shortcode html
-* Add title to share
+* Added: Filter to shortcode html
+* Added: Title to share
 
 = 1.1.6 =
 
 * Updated: Plugin Core Framework
-* Update: Languages file
-* Tweek: WPML Support Improved
+* Updated: Languages file
+* Tweek:   WPML Support Improved
 
 = 1.1.5 =
 
@@ -143,16 +157,16 @@ Yes, you can change the colors of background, text and border or apply a custom 
 
 = 1.0.3 =
 
-* Minor bugs fixes
+* Fixed: Minor bugs fixes
 
 = 1.0.2 =
 
-* Fixed fatal error to yit_debug with yit themes
+* Fixed: Fatal error to yit_debug with yit themes
 
 = 1.0.1 =
 
-* Optimized images
-* Updated internal framework
+* Tweak: Optimized images
+* Updated: internal framework
 
 = 1.0.0 =
 
@@ -173,10 +187,11 @@ If you have created your own language pack, or have an update for an existing on
 
 == Documentation ==
 
-Full documentation is available [here](http://yithemes.com/docs-plugins/yith_woocommerce_wishlist).
+Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woocommerce-wishlist).
 
 == Upgrade notice ==
 
-= 1.0.0 =
+= 2.0.0 =
 
-Initial release
+* Added: Support to woocommerce 2.3
+* Updated: Plugin core framework

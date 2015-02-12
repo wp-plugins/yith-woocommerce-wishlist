@@ -8,8 +8,9 @@
  */
 
 // If uninstall not called from WordPress exit
-if( !defined( 'WP_UNINSTALL_PLUGIN' ) )
-    { exit; }
+if( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+    exit;
+}
 
 global $wpdb;
 	
@@ -21,6 +22,8 @@ delete_option( 'yith_wcwl_db_version' );
 wp_delete_post( get_option( 'yith-wcwl-pageid' ), true );
 
 //remove any additional options and custom table
-$sql = "DROP TABLE `" . YITH_WCWL_TABLE . "`";
+$sql = "DROP TABLE `" . $wpdb->yith_wcwl_items . "`";
+$wpdb->query( $sql );
+$sql = "DROP TABLE `" . $wpdb->yith_wcwl_wishlists . "`";
 $wpdb->query( $sql );
 ?>
