@@ -336,6 +336,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 'multi_wishlist' => get_option( 'yith_wcwl_multi_wishlist_enable' ) == 'yes' ? true : false,
                 'hide_add_button' => apply_filters( 'yith_wcwl_hide_add_button', true ),
                 'is_user_logged_in' => is_user_logged_in(),
+                'ajax_loader_url' => YITH_WCWL_URL . 'assets/images/ajax-loader.gif',
                 'remove_from_wishlist_after_add_to_cart' => get_option( 'yith_wcwl_remove_after_add_to_cart' ),
                 'labels' => array(
                     'cookie_disabled' => __( 'We are sorry,but this feature is available only if cookies on your browser are enabled.', 'yit' )

@@ -68,8 +68,8 @@ if ( ! class_exists( 'YIT_Pointers' ) ) {
                     'content'  => sprintf( '<h3> %s </h3> <p> %s </p> <p> %s <a href="http://yithemes.com/product-category/plugins/" target="_blank">Yithemes.com</a> %s
                                   <a href="https://profiles.wordpress.org/yithemes/" target="_blank">Wordpress.org</a></p>',
                                 __( 'Plugins Activated', 'yit' ),
-                                __( 'From now on, you can find all the options of your plugins under the YIT Plugin menu voice.
-                                     For every installation of our new plugins, a new voice will be added to access to the customization settings.', 'yit' ),
+                                __( 'From now on, you can find all plugin options in YIT Plugin menu.
+                                     For each plugin installed, customization settings will be available as a new entry in YIT Plugin menu.', 'yit' ),
                                 __( 'Discover all our plugins available on:', 'yit' ),
                                 __( 'and', 'yit' )
                     ),
@@ -82,10 +82,10 @@ if ( ! class_exists( 'YIT_Pointers' ) ) {
                     'content'  => sprintf( '<h3> %s </h3> <p> %s </p> <p> %s <a href="http://yithemes.com/product-category/plugins/" target="_blank">Yithemes.com</a> %s
                                   <a href="https://profiles.wordpress.org/yithemes/" target="_blank">Wordpress.org</a></p>',
                                 __( 'Plugins Upgraded', 'yit' ),
-                                __( 'From now on, you can find all the options of your plugins under the YIT Plugin menu voice.
-                                    When one of our plugins updates, a new voice will be added to this menu.
-                                    For example, after the update, the options from the plugins (YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, etc.)
-                                    will be removed from the previous location and moved under the YIT Plugin tab.', 'yit' ),
+                                __( 'From now on, you can find all the options of your plugins in YIT Plugin menu.
+                                    Any time one of our plugins is updated, a new entry will be added to this menu.
+                                    For example, after update, plugin options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, etc.)
+                                    will be moved from previous location to YIT Plugin tab.', 'yit' ),
                                 __( 'Discover all our plugins available on:', 'yit' ),
                                 __( 'and', 'yit' )
                     ),

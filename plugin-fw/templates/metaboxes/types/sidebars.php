@@ -48,7 +48,7 @@ $sidebar_right = ! isset( $value['sidebar-right'] ) ? '-1' :  $value['sidebar-ri
     <div class="option" id="choose-sidebars">
         <div class="side">
             <div class="select-mask" <?php if ( $layout != 'sidebar-double' && $layout != 'sidebar-left' ) { echo 'style="display:none"'; } ?> id="<?php echo $id ?>-sidebar-left-container">
-                <label for ="<?php echo $id ?>-sidebar-left"><?php _e('Sidebar Left','yit') ?></label>
+                <label for ="<?php echo $id ?>-sidebar-left"><?php _e('Left Sidebar','yit') ?></label>
                 <select name="<?php echo  $name ?>[sidebar-left]" id="<?php echo $id ?>-sidebar-left">
                     <option value="-1"><?php _e( 'Choose a sidebar', 'yit' ) ?></option>
                     <?php foreach ( yit_registered_sidebars() as $val => $option ) { ?>
@@ -59,7 +59,7 @@ $sidebar_right = ! isset( $value['sidebar-right'] ) ? '-1' :  $value['sidebar-ri
         </div>
         <div class="side"  style="clear: both">
             <div class="select-mask"  <?php if ( $layout != 'sidebar-double' && $layout != 'sidebar-right' ) { echo 'style="display:none"'; } ?> id="<?php echo $id ?>-sidebar-right-container">
-                <label for ="<?php echo $id ?>-sidebar-right"><?php _e('Sidebar Right','yit') ?></label>
+                <label for ="<?php echo $id ?>-sidebar-right"><?php _e('Right Sidebar','yit') ?></label>
                 <select name="<?php echo  $name ?>[sidebar-right]" id="<?php echo $id ?>-sidebar-right">
                     <option value="-1"><?php _e( 'Choose a sidebar', 'yit' ) ?></option>
                     <?php foreach ( yit_registered_sidebars() as $val => $option ) { ?>

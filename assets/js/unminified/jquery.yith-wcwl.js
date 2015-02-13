@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ ){
 
-    var cart_redirect_after_add = wc_add_to_cart_params.cart_redirect_after_add,
+    var cart_redirect_after_add = typeof( wc_add_to_cart_params ) !== 'undefined' ? wc_add_to_cart_params.cart_redirect_after_add : '',
         this_page = window.location.toString();
 
     $(document).on( 'click', '.add_to_wishlist', function( ev ){
@@ -194,7 +194,7 @@ jQuery( document ).ready( function( $ ){
 
         $( '#yith-wcwl-message' ).html( '&nbsp;' );
 
-        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + wc_add_to_cart_params.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
 
         $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url, data, function(){
             table.stop( true ).css( 'opacity', '1' ).unblock();

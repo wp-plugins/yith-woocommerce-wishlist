@@ -50,7 +50,7 @@ extract($args);
 
 						<td rowspan="3">
 							<label><?php _e('Value', 'yit') ?>:</label>
-							<textarea name="<?php echo $name ?>[<?php echo $i ?>][value]" cols="5" rows="5" placeholder="<?php _e('The content of the tab. (HTML is supported)','yit') ?>"><?php echo $tab['value'] ?></textarea>
+							<textarea name="<?php echo $name ?>[<?php echo $i ?>][value]" cols="5" rows="5" placeholder="<?php _e('Content of the tab. (HTML is supported)','yit') ?>"><?php echo $tab['value'] ?></textarea>
 						</td>
 					</tr>
 				</tbody>
@@ -93,7 +93,7 @@ jQuery(document).ready(function($){
 									</td>\
 									<td rowspan="3">\
 										<label><?php _e('Value', 'yit') ?>:</label>\
-										<textarea name="<?php echo $name ?>[' + size + '][value]" cols="5" rows="5" placeholder="<?php echo addslashes( __('The content of the tab. (HTML is supported)','yit') ) ?>"></textarea>\
+										<textarea name="<?php echo $name ?>[' + size + '][value]" cols="5" rows="5" placeholder="<?php echo addslashes( __('Content of the tab. (HTML is supported)','yit') ) ?>"></textarea>\
 									</td>\
 								</tr>\
 							</tbody>\

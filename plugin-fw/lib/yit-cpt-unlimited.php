@@ -1049,44 +1049,44 @@ class YIT_CPT_Unlimited {
                     'fields' => apply_filters( 'yit_cptu_fields', array(
                         'type'      => array(
                             'label' => __( 'Type', 'yit' ),
-                            'desc'  => __( 'The layout for this '.strtolower( $this->_labels['singular'] ) , 'yit' ),
+                            'desc'  => __( 'Layout for this '.strtolower( $this->_labels['singular'] ) , 'yit' ),
                             'type'  => 'select',
                             'options' => isset( $layouts ) ? $layouts : array(),
                             'std'   => '' ),
 
                         'rewrite'     => array(
                             'label' => __( 'Rewrite', 'yit' ),
-                            'desc'  => __( 'The word used for the URL of each project (the slug of post if empty)', 'yit' ),
+                            'desc'  => __( 'Word used in the URL of each project (slug from post if empty)', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'label_singular' => array(
-                            'label' => __( 'Label Singular', 'yit' ),
-                            'desc'  => __( 'Set the label in singular to use for each label (the title of portfolio if empty)', 'yit' ),
+                            'label' => __( 'Label in Singular', 'yit' ),
+                            'desc'  => __( 'Set a label in singular (title of portfolio if empty)', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'label_plural' => array(
-                            'label' => __( 'Label Plural', 'yit' ),
-                            'desc'  => __( 'Set the label in plural to use for each label (the title of portfolio if empty)', 'yit' ),
+                            'label' => __( 'Label in Plural', 'yit' ),
+                            'desc'  => __( 'Set a label in plural (title of portfolio if empty)', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'taxonomy' => array(
                             'label' => __( 'Taxonomy', 'yit' ),
-                            'desc'  => __( 'If you want to use a category section for the portfolio, set the name of taxonomy. Name should be in slug form (must not contain capital letters or spaces) and not more than 32 characters long (database structure restriction).', 'yit' ),
+                            'desc'  => __( 'If you want to use categories in the portfolio, set a name for taxonomy. Name should be a slug (must not contain capital letters nor spaces) and must not be more than 32 characters long (database structure restriction).', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'taxonomy_rewrite' => array(
                             'label' => __( 'Taxonomy Rewrite', 'yit' ),
-                            'desc'  => __( 'Set the word to use in the URL for each category page.', 'yit' ),
+                            'desc'  => __( 'Set the word for each category page URL.', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'single_layout' => array(
                             'label' => __( 'Single layout', 'yit' ),
-                            'desc'  => __( 'The layout for single page of this portfolio', 'yit' ),
+                            'desc'  => __( 'Layout for single page of this portfolio', 'yit' ),
                             'type'  => 'select',
                             'options' => $single_layouts,
                             'std'   => '' ),
@@ -1472,7 +1472,7 @@ class YIT_CPT_Unlimited {
         $args = array(
             $this->_args['shortcode_name'] => array(
                 'title'       => $this->_labels['singular'],
-                'description' => sprintf( __( 'Show the frontend of the %s', 'yit' ), $this->_labels['main_name'] ),
+                'description' => sprintf( __( 'Show frontend of the %s', 'yit' ), $this->_labels['main_name'] ),
                 'tab'         => 'cpt',
                 'create'      => false,
                 'has_content' => false,

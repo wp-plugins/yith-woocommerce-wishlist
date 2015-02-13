@@ -32,7 +32,7 @@ $banned_products     = isset( $no_active_products[ '107' ] ) ? $no_active_produc
 
     <?php if( ! empty( $to_active_products ) ) : ?>
         <h3 class="to-active">
-            <?php _e( 'To Active', 'yit' ) ?>
+            <?php _e( 'Products to be activated', 'yit' ) ?>
             <span class="spinner"></span>
         </h3>
         <div class="to-active-wrapper">

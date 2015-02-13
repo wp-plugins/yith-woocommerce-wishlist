@@ -145,8 +145,8 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          */
         public function localize_script() {
             wp_localize_script( 'yit-licence', 'licence_message', array(
-                    'error'  => __( '%field% field can not be empty', 'yit' ),
-                    'errors' => __( '%field_1% and %field_2% fields can not be empty', 'yit' ),
+                    'error'  => __( '%field% field cannot be empty', 'yit' ),
+                    'errors' => __( '%field_1% and %field_2% fields cannot be empty', 'yit' ),
                     'server' => __( 'Unable to contact the remote server, please try again later. Thanks!', 'yit' )
                 )
             );
@@ -274,7 +274,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
                          *
                          * 100 -> Invalid Request
                          * 101 -> Invalid licence key
-                         * 102 -> Software has been deactive
+                         * 102 -> Software has been deactivate
                          * 103 -> Exceeded maximum number of activations
                          * 104 -> Invalid instance ID
                          * 105 -> Invalid security key
@@ -528,12 +528,12 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             $error_strings = array(
                 '100' => __( 'Invalid Request', 'yit' ),
                 '101' => __( 'Invalid licence key', 'yit' ),
-                '102' => __( 'Software has been deactive', 'yit' ),
+                '102' => __( 'Software has been deactivate', 'yit' ),
                 '103' => __( 'Exceeded maximum number of activations', 'yit' ),
                 '104' => __( 'Invalid instance ID', 'yit' ),
                 '105' => __( 'Invalid security key', 'yit' ),
                 '106' => __( 'Licence key has expired', 'yit' ),
-                '107' => __( 'Licence key has be banned', 'yit' )
+                '107' => __( 'Licence key has been banned', 'yit' )
             );
 
             return isset( $error_strings[$code] ) ? $error_strings[$code] : false;

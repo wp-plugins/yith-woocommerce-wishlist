@@ -271,7 +271,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                         <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yit' ) ?>" style="float:left;margin-right:10px;" />
                     </form>
                     <form method="post">
-                        <?php $warning = __( 'If you continue with this action, you will reset all options are in this page.', 'yit' ) ?>
+                        <?php $warning = __( 'If you go on with this action, you will reset all options in this page.', 'yit' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
                         <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure of it?', 'yit' ) ?>');" />
                     </form>
@@ -414,10 +414,10 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 'updated'          => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yit' ) . '</strong>', 'updated', false ),
                 'settings-updated' => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yit' ) . '</strong>', 'updated', false ),
                 'imported'         => $this->get_message( '<strong>' . __( 'Database imported correctly.', 'yit' ) . '</strong>', 'updated', false ),
-                'no-imported'      => $this->get_message( '<strong>' . __( 'An error encoured during during import. Please try again.', 'yit' ) . '</strong>', 'error', false ),
-                'file-not-valid'   => $this->get_message( '<strong>' . __( "The file you have insert doesn't valid.", 'yit' ) . '</strong>', 'error', false ),
-                'cant-import'      => $this->get_message( '<strong>' . __( "I'm sorry, the import featured is disabled.", 'yit' ) . '</strong>', 'error', false ),
-                'ord'              => $this->get_message( '<strong>' . __( "Sorting done correctly.", 'yit' ) . '</strong>', 'updated', false )
+                'no-imported'      => $this->get_message( '<strong>' . __( 'An error has occurred during import. Please try again.', 'yit' ) . '</strong>', 'error', false ),
+                'file-not-valid'   => $this->get_message( '<strong>' . __( 'The file inserted is not valid.', 'yit' ) . '</strong>', 'error', false ),
+                'cant-import'      => $this->get_message( '<strong>' . __( 'Sorry, import is disabled.', 'yit' ) . '</strong>', 'error', false ),
+                'ord'              => $this->get_message( '<strong>' . __( 'Sorting successful.', 'yit' ) . '</strong>', 'updated', false )
             );
 
             foreach ( $message as $key => $value ) {

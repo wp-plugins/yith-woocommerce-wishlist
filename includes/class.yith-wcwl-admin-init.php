@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
          * @var string
          * @since 1.0.0
          */
-        public $version = '2.0.0';
+        public $version = '2.0.1';
 
         /**
          * Plugin database version
@@ -196,6 +196,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 
             if( $stored_db_version == '1.0.0' ){
                 add_action( 'init', array( YITH_WCWL_Install(), 'update' ) );
+                add_action( 'init', 'flush_rewrite_rules' );
                 YITH_WCWL_Install()->default_options( $this->options );
 
                 // Plugin installed

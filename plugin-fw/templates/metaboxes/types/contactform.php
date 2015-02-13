@@ -75,7 +75,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['title'] ) ?>" id="<?php echo $id ?>_title_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][title]" />
-                        <span class="desc inline"><?php _e( 'Insert the title of field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert title for the field.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -84,7 +84,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['data_name'] ) ?>" id="<?php echo $id ?>_data_name_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][data_name]" />
-                        <span class="desc inline"><?php _e( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -97,7 +97,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                                 <option value="<?php echo esc_attr( $type ) ?>"<?php selected( $type, $value[$index]['type'] ) ?>><?php echo $name_type ?></option>
                             <?php endforeach; ?>
                         </select>
-                        <span class="desc inline"><?php _e( 'Select the type of this field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select type for this field.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -155,7 +155,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_reply_to_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][reply_to]" value="1"<?php checked( $value[$index]['reply_to'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this if it\'s the email where you can reply.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -164,7 +164,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['class'] ) ?>" id="<?php echo $id ?>_class_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][class]" />
-                        <span class="desc inline"><?php _e( 'Insert an additional class(es) (separateb by comma) for more personalization.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -241,7 +241,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                             }
                             ?>
                         </select>
-                        <span class="desc inline"><?php _e( 'Choose how much long will be the field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Set field length.', 'yit' ) ?></span>
                     </p>
                 </div>
             </div>
@@ -267,7 +267,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_title" name="<?php echo $name ?>[][title]" />
-                <span class="desc inline"><?php _e( 'Insert the title of field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert title for the field.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -276,7 +276,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_data_name" name="<?php echo $name ?>[][data_name]" />
-                <span class="desc inline"><?php _e( 'REQUIRED: The identification name of this field, that you can insert into body email configuration. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -289,7 +289,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                         <option value="<?php echo esc_attr( $type ) ?>"><?php echo $name_type ?></option>
                     <?php endforeach; ?>
                 </select>
-                <span class="desc inline"><?php _e( 'Select the type of this field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select type for this field.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -347,7 +347,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_reply_to" name="<?php echo $name ?>[][reply_to]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this if it\'s the email where you can reply.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -356,7 +356,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_class" name="<?php echo $name ?>[][class]" />
-                <span class="desc inline"><?php _e( 'Insert an additional class(es) (separateb by comma) for more personalization.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -415,7 +415,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                     }
                     ?>
                 </select>
-                <span class="desc inline"><?php _e( 'Choose how much long will be the field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Set field length.', 'yit' ) ?></span>
             </p>
         </div>
     </div>

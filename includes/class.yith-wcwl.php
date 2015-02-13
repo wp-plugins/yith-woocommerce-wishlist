@@ -82,19 +82,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function __construct( $details ) {
             $this->details = $details;                
             $this->wcwl_init = YITH_WCWL_Init();
-
-            $add_to_cart_redirect_hook = 'woocommerce_add_to_cart_redirect';
-
             if( is_admin() ){
                 $this->wcwl_admin_init = YITH_WCWL_Admin_Init();
-            }
-
-            /**
-             * WC Version < 2.3 Support
-             */
-            global $woocommerce;
-            if( version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.3', '<' ) ){
-                $add_to_cart_redirect_hook = 'add_to_cart_redirect ';
             }
 
             add_action( 'after_setup_theme', array( $this, 'plugin_fw_loader' ), 1 );
@@ -112,7 +101,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             add_action( 'wp_ajax_nopriv_remove_from_wishlist', array( $this, 'remove_from_wishlist_ajax' ) );
 
             add_action( 'woocommerce_add_to_cart', array( $this, 'remove_from_wishlist_after_add_to_cart' ) );
-            add_filter( $add_to_cart_redirect_hook, array( $this, 'redirect_to_cart' ) );
+            add_filter( 'woocommerce_product_add_to_cart_url', array( $this, 'redirect_to_cart' ), 10, 2 );
         }
 
         /* === PLUGIN FW LOADER === */
@@ -1118,12 +1107,19 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @return string Redirect url
          * @since 2.0.0
          */
-        public function redirect_to_cart( $url ) {
-            if( get_option( 'yith_wcwl_remove_after_add_to_cart' ) == 'yes' ){
+        public function redirect_to_cart( $url, $product ) {
+            if( $product->is_type( 'simple' ) && get_option( 'yith_wcwl_redirect_cart' ) == 'yes' ){
                 if( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) && yith_wcwl_is_wishlist() ){
-                    $url = WC()->cart->get_cart_url();
+                    $url = add_query_arg( 'add-to-cart', $product->id, WC()->cart->get_cart_url() );
                 }
             }
+
+            if( get_option( 'yith_wcwl_remove_after_add_to_cart' ) == 'yes' ){
+                if( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) && yith_wcwl_is_wishlist() ) {
+                    $url = add_query_arg( 'remove_from_wishlist_after_add_to_cart', $product->id, $url );
+                }
+            }
+
             return apply_filters( 'yit_wcwl_add_to_cart_redirect_url', $url );
         }
 

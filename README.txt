@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,12 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.1 =
+
+* Added: spinner image on loading
+* Added: flush rewrite rules on database upgrade
+* Fixed: wc_add_to_cart_params not defined issue
 
 = 2.0.0 =
 
@@ -191,7 +197,8 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.0 =
+= 2.0.1 =
 
-* Added: Support to woocommerce 2.3
-* Updated: Plugin core framework
+* Added: spinner image on loading
+* Added: flush rewrite rules on database upgrade
+* Fixed: wc_add_to_cart_params not defined issue

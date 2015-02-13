@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2015-02-12 13:14+0100\n"
-"PO-Revision-Date: 2015-02-12 13:14+0100\n"
+"POT-Creation-Date: 2015-02-13 12:37+0100\n"
+"PO-Revision-Date: 2015-02-13 12:37+0100\n"
 "Last-Translator: Gabriel Azarias Dzul Cocom <gabrieldzul@gmail.com>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: en\n"
@@ -645,7 +645,7 @@ msgid "Type"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1052
-msgid "The layout for this "
+msgid "Layout for this "
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1058
@@ -653,27 +653,23 @@ msgid "Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1059
-msgid "The word used for the URL of each project (the slug of post if empty)"
+msgid "Word used in the URL of each project (slug from post if empty)"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1064
-msgid "Label Singular"
+msgid "Label in Singular"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1065
-msgid ""
-"Set the label in singular to use for each label (the title of portfolio if "
-"empty)"
+msgid "Set a label in singular (title of portfolio if empty)"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1070
-msgid "Label Plural"
+msgid "Label in Plural"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1071
-msgid ""
-"Set the label in plural to use for each label (the title of portfolio if "
-"empty)"
+msgid "Set a label in plural (title of portfolio if empty)"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1076
@@ -682,10 +678,9 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1077
 msgid ""
-"If you want to use a category section for the portfolio, set the name of "
-"taxonomy. Name should be in slug form (must not contain capital letters or "
-"spaces) and not more than 32 characters long (database structure "
-"restriction)."
+"If you want to use categories in the portfolio, set a name for taxonomy. "
+"Name should be a slug (must not contain capital letters nor spaces) and must "
+"not be more than 32 characters long (database structure restriction)."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1082
@@ -693,7 +688,7 @@ msgid "Taxonomy Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1083
-msgid "Set the word to use in the URL for each category page."
+msgid "Set the word for each category page URL."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1088
@@ -701,7 +696,7 @@ msgid "Single layout"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1089
-msgid "The layout for single page of this portfolio"
+msgid "Layout for single page of this portfolio"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1130
@@ -716,7 +711,7 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1475
 #, php-format
-msgid "Show the frontend of the %s"
+msgid "Show frontend of the %s"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1482
@@ -735,7 +730,7 @@ msgid "Add with multiupload"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel-wc.php:303
-msgid "The changes you made will be lost if you navigate away from this page."
+msgid "The changes you made will be lost if you leave this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:61
@@ -757,9 +752,7 @@ msgstr ""
 #: ../plugin-fw/lib/yit-plugin-panel.php:274
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:145
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
-msgid ""
-"If you continue with this action, you will reset all options are in this "
-"page."
+msgid "If you go on with this action, you will reset all options in this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:276
@@ -803,19 +796,19 @@ msgid "Database imported correctly."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:417
-msgid "An error encoured during during import. Please try again."
+msgid "An error has occurred during import. Please try again."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:418
-msgid "The file you have insert doesn't valid."
+msgid "The file inserted is not valid."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:419
-msgid "I'm sorry, the import featured is disabled."
+msgid "Sorry, import is disabled."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:420
-msgid "Sorting done correctly."
+msgid "Sorting successful."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:70
@@ -824,10 +817,9 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:71
 msgid ""
-"From now on, you can find all the options of your plugins under the YIT "
-"Plugin menu voice.\n"
-"                                     For every installation of our new "
-"plugins, a new voice will be added to access to the customization settings."
+"From now on, you can find all plugin options in YIT Plugin menu.\n"
+"                                     For each plugin installed, "
+"customization settings will be available as a new entry in YIT Plugin menu."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:73 ../plugin-fw/lib/yit-pointers.php:89
@@ -844,15 +836,15 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:85
 msgid ""
-"From now on, you can find all the options of your plugins under the YIT "
-"Plugin menu voice.\n"
-"                                    When one of our plugins updates, a new "
-"voice will be added to this menu.\n"
-"                                    For example, after the update, the "
-"options from the plugins (YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
-"Search, etc.)\n"
-"                                    will be removed from the previous "
-"location and moved under the YIT Plugin tab."
+"From now on, you can find all the options of your plugins in YIT Plugin "
+"menu.\n"
+"                                    Any time one of our plugins is updated, "
+"a new entry will be added to this menu.\n"
+"                                    For example, after update, plugin "
+"options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, "
+"etc.)\n"
+"                                    will be moved from previous location to "
+"YIT Plugin tab."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:119
@@ -901,7 +893,7 @@ msgid ""
 "There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
 "yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. <em>You "
 "have to activate the plugin on a single site of the network to benefit from "
-"the automatic updates.</em>"
+"automatic updates.</em>"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:418
@@ -935,11 +927,11 @@ msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:148
 #, php-format
-msgid "%field% field can not be empty"
+msgid "%field% field cannot be empty"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:149
-msgid "%field_1% and %field_2% fields can not be empty"
+msgid "%field_1% and %field_2% fields cannot be empty"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:150
@@ -955,7 +947,7 @@ msgid "Invalid licence key"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:531
-msgid "Software has been deactive"
+msgid "Software has been deactivate"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:532
@@ -975,7 +967,7 @@ msgid "Licence key has expired"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:536
-msgid "Licence key has be banned"
+msgid "Licence key has been banned"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-plugin-licence.php:63
@@ -1008,7 +1000,7 @@ msgid "Update licence information"
 msgstr ""
 
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:35
-msgid "To Active"
+msgid "Products to be activated"
 msgstr ""
 
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:54
@@ -1150,7 +1142,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:78
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:270
-msgid "Insert the title of field."
+msgid "Insert title for the field."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:83
@@ -1161,9 +1153,8 @@ msgstr ""
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:87
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:279
 msgid ""
-"REQUIRED: The identification name of this field, that you can insert into "
-"body email configuration. <strong>Note:</strong>Use only lowercase "
-"characters and underscores."
+"REQUIRED: Field identification name to be entered into email body. "
+"<strong>Note:</strong>Use only lowercase characters and underscores."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:92
@@ -1173,8 +1164,9 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:100
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:292
-msgid "Select the type of this field."
-msgstr ""
+#, fuzzy
+msgid "Select type for this field."
+msgstr "Selecciona una familia de fuentes"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:105
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:297
@@ -1244,7 +1236,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:158
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:350
-msgid "Select this if it's the email where you can reply."
+msgid "Select this if it is the email you can reply to."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:163
@@ -1255,7 +1247,7 @@ msgstr ""
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:167
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:359
 msgid ""
-"Insert an additional class(es) (separateb by comma) for more personalization."
+"Insert additional class(es) (separated by commas) for more personalization."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:172
@@ -1293,7 +1285,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:244
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:418
-msgid "Choose how much long will be the field."
+msgid "Set field length."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:28
@@ -1311,7 +1303,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:53
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:96
-msgid "The content of the tab. (HTML is supported)"
+msgid "Content of the tab. (HTML is supported)"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:65
@@ -1391,11 +1383,11 @@ msgid "Choose a sidebar"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/sidebars.php:51
-msgid "Sidebar Left"
+msgid "Left Sidebar"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/sidebars.php:62
-msgid "Sidebar Right"
+msgid "Right Sidebar"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:42
