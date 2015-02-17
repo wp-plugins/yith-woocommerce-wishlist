@@ -266,18 +266,23 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                 'wishlist.css'
             ) );
 
-            wp_enqueue_style( 'woocommerce_prettyPhoto_css', $assets_path . 'css/prettyPhoto.css' );
-            wp_enqueue_style( 'jquery-selectBox', YITH_WCWL_URL . 'assets/css/jquery.selectBox.css' );
+            wp_register_style( 'woocommerce_prettyPhoto_css', $assets_path . 'css/prettyPhoto.css' );
+            wp_register_style( 'jquery-selectBox', YITH_WCWL_URL . 'assets/css/jquery.selectBox.css' );
+            wp_register_style( 'yith-wcwl-main', YITH_WCWL_URL . 'assets/css/style.css' );
+            wp_register_style( 'yith-wcwl-user-main', str_replace( get_template_directory(), get_template_directory_uri(), $located ) );
+            wp_register_style( 'yith-wcwl-font-awesome', YITH_WCWL_URL . 'assets/css/font-awesome.min.css' );
+
+            wp_enqueue_style( 'woocommerce_prettyPhoto_css' );
+            wp_enqueue_style( 'jquery-selectBox' );
 
             if ( ! $located ) {
-                wp_enqueue_style( 'yith-wcwl-main', YITH_WCWL_URL . 'assets/css/style.css' );
+                wp_enqueue_style( 'yith-wcwl-main' );
             }
             else {
-                wp_enqueue_style( 'yith-wcwl-user-main', str_replace( get_template_directory(), get_template_directory_uri(), $located ) );
+                wp_enqueue_style( 'yith-wcwl-user-main' );
             }
 
-            wp_enqueue_style( 'yith-wcwl-font-awesome', YITH_WCWL_URL . 'assets/css/font-awesome.css' );
-            wp_enqueue_style( 'yith-wcwl-font-awesome-ie7', YITH_WCWL_URL . 'assets/css/font-awesome-ie7.css' );
+            wp_enqueue_style( 'yith-wcwl-font-awesome' );
             
             // Add frontend CSS for buttons
             $colors_styles = array();
@@ -375,19 +380,21 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             $cookie = yith_getcookie( 'yith_wcwl_products' );
             $new_cookie = array();
 
-            foreach( $cookie as $item ){
-                if( ! isset( $item['add-to-wishlist'] ) ) {
-                    return;
-                }
+	        if( ! empty( $cookie ) ) {
+		        foreach ( $cookie as $item ) {
+			        if ( ! isset( $item['add-to-wishlist'] ) ) {
+				        return;
+			        }
 
-                $new_cookie[] = array(
-                    'prod_id'     => $item['add-to-wishlist'],
-                    'quantity'    => isset( $item['quantity'] ) ? $item['quantity'] : 1,
-                    'wishlist_id' => false
-                );
-            }
+			        $new_cookie[] = array(
+				        'prod_id'     => $item['add-to-wishlist'],
+				        'quantity'    => isset( $item['quantity'] ) ? $item['quantity'] : 1,
+				        'wishlist_id' => false
+			        );
+		        }
 
-            yith_setcookie( 'yith_wcwl_products', $new_cookie );
+		        yith_setcookie( 'yith_wcwl_products', $new_cookie );
+	        }
         }
     }
 }

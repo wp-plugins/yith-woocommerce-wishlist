@@ -1,10 +1,10 @@
-=== YITH WooCommerce Wishlist ===
+=== YITH WooCommerce Wishlist === 
 
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
 Tested up to: 4.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,15 @@ Yes, you can move the button to another default position or you can also use the
 = Can I change the style of "Add to wishlist" button? =
 Yes, you can change the colors of background, text and border or apply a custom css. You can also use a link or a button for the "Add to wishlist" feature.
 
+= Wishlist page returns a 404 error? =
+Try to regenerate permalinks from Settings -> Permalinks by simply saving them again.
+
+= Did icons of your theme disappear after update to Wishlist 2.0.x? =
+It might be a compatibility problem with the old version of font-awesome, which has been solved with version 2.0.2 of the plugin. Be sure that you are using a plugin version that is greater or equal to 2.0.2. If, after update, you cannot see icons in your theme yet, save again options of YITH WooCommerce Wishlist plugin (that you can find in YIT Plugin -> Wishlist).
+
+= Have you encountered anomalies after plugin update, that did not exist in the previous version? =
+This might depend on the fact that your theme overrides plugin templates. Check if the developer of your theme has released a compatibility update with version 2.0 or later of YITH WooCommerce Wishlist. As an alternative you can try the plugin in WordPress default theme to leave out any possible influences by the theme.
+
 == Screenshots ==
 
 1. The page with "Add to wishlist" button
@@ -76,6 +85,11 @@ Yes, you can change the colors of background, text and border or apply a custom 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.2 =
+
+* Updated: font-awesome library
+* Fixed: option with old font-awesome classes
 
 = 2.0.1 =
 
@@ -197,8 +211,7 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.1 =
+= 2.0.2 =
 
-* Added: spinner image on loading
-* Added: flush rewrite rules on database upgrade
-* Fixed: wc_add_to_cart_params not defined issue
+* Updated: font-awesome library
+* Fixed: option with old font-awesome classes

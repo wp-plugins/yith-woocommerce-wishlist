@@ -19,7 +19,7 @@
             <?php echo apply_filters( 'yith_wcwl_wishlist_title', '<h2>' . $page_title . '</h2>' ); ?>
             <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>
                 <a class="btn button show-title-form">
-                    <?php echo apply_filters( 'yith_wcwl_edit_title_icon', '<i class="icon-pencil"></i>' )?>
+                    <?php echo apply_filters( 'yith_wcwl_edit_title_icon', '<i class="fa fa-pencil"></i>' )?>
                     <?php _e( 'Edit title', 'yit' ) ?>
                 </a>
             <?php endif; ?>
@@ -28,11 +28,11 @@
             <div class="hidden-title-form">
                 <input type="text" value="<?php echo $page_title ?>" name="wishlist_name"/>
                 <button>
-                    <?php echo apply_filters( 'yith_wcwl_save_wishlist_title_icon', '<i class="icon-ok"></i>' )?>
+                    <?php echo apply_filters( 'yith_wcwl_save_wishlist_title_icon', '<i class="fa fa-check"></i>' )?>
                     <?php _e( 'Save', 'yit' )?>
                 </button>
                 <a class="hide-title-form btn button">
-                    <?php echo apply_filters( 'yith_wcwl_cancel_wishlist_title_icon', '<i class="icon-remove"></i>' )?>
+                    <?php echo apply_filters( 'yith_wcwl_cancel_wishlist_title_icon', '<i class="fa fa-remove"></i>' )?>
                     <?php _e( 'Cancel', 'yit' )?>
                 </a>
             </div>
@@ -83,7 +83,12 @@
         if( count( $wishlist_items ) > 0 ) :
             foreach( $wishlist_items as $item ) :
                 global $product;
-                $product = get_product( $item['prod_id'] );
+	            if( function_exists( 'wc_get_product' ) ) {
+		            $product = wc_get_product( $item['prod_id'] );
+	            }
+	            else{
+		            $product = get_product( $item['prod_id'] );
+	            }
 
                 if( $product !== false && $product->exists() ) : ?>
                     <tr id="yith-wcwl-row-<?php echo $item['prod_id'] ?>" data-row-id="<?php echo $item['prod_id'] ?>">
@@ -187,7 +192,7 @@
                 if ( $is_user_owner && $show_ask_estimate_button && $count > 0 ): ?>
                     <td colspan="<?php echo ( $is_user_owner && $wishlist_meta['wishlist_privacy'] != 2 && $share_enabled ) ? 2 : 6 ?>">
                         <a href="<?php echo $ask_estimate_url ?>" class="btn button ask-an-estimate-button">
-                            <?php echo apply_filters( 'yith_wcwl_ask_an_estimate_icon', '<i class="icon-shopping-cart"></i>' )?>
+                            <?php echo apply_filters( 'yith_wcwl_ask_an_estimate_icon', '<i class="fa fa-shopping-cart"></i>' )?>
                             <?php _e( 'Ask an estimate of costs', 'yit' ) ?>
                         </a>
                     </td>

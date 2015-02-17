@@ -62,7 +62,7 @@ if ( ! class_exists( 'YIT_Video' ) ) {
             $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id ); ?>
 
             <div class="post_video youtube">
-                <iframe wmode="transparent" width="<?php echo $width; ?>" height="<?php echo $height; ?>" src="http://www.youtube.com/embed/<?php echo $id; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+                <iframe wmode="transparent" width="<?php echo $width; ?>" height="<?php echo $height; ?>" src="https://www.youtube.com/embed/<?php echo $id; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <?php

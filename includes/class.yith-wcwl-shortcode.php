@@ -288,7 +288,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
             $template_part = 'button';
 
             $label_option = get_option( 'yith_wcwl_add_to_wishlist_text' );
-            $icon_option = get_option( 'yith_wcwl_add_to_wishlist_icon' ) != 'none' ? '<i class="' . get_option( 'yith_wcwl_add_to_wishlist_icon' ) . '"></i>' : '';
+            $icon_option = get_option( 'yith_wcwl_add_to_wishlist_icon' ) != 'none' ? '<i class="fa ' . get_option( 'yith_wcwl_add_to_wishlist_icon' ) . '"></i>' : '';
 
             $localize_label = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_wishlist_button', $label_option ) : $label_option;
 

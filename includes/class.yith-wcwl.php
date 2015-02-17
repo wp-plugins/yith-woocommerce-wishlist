@@ -102,6 +102,10 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 
             add_action( 'woocommerce_add_to_cart', array( $this, 'remove_from_wishlist_after_add_to_cart' ) );
             add_filter( 'woocommerce_product_add_to_cart_url', array( $this, 'redirect_to_cart' ), 10, 2 );
+
+	        // add filter for font-awesome compatibility
+	        add_filter( 'option_yith_wcwl_add_to_wishlist_icon', array( $this, 'update_font_awesome_classes' ) );
+	        add_filter( 'option_yith_wcwl_add_to_cart_icon', array( $this, 'update_font_awesome_classes' ) );
         }
 
         /* === PLUGIN FW LOADER === */
@@ -1043,6 +1047,100 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function get_nonce_url( $action, $url = '' ) {
             return add_query_arg( '_n', wp_create_nonce( 'yith-wcwl-' . $action ), $url );
         }
+
+	    /* === FONTAWESOME FIX === */
+	    /**
+	     * Modernize font-awesome class, for old wishlist users
+	     *
+	     * @param $class string Original font-awesome class
+	     * @return string Filtered font-awesome class
+	     * @since 2.0.2
+	     */
+	    public function update_font_awesome_classes( $class ) {
+		    $exceptions = array(
+			    'icon-envelope' => 'fa-envelope-o',
+			    'icon-star-empty' => 'fa-star-o',
+			    'icon-ok' => 'fa-check',
+			    'icon-zoom-in' => 'fa-search-plus',
+			    'icon-zoom-out' => 'fa-search-minus',
+			    'icon-off' => 'fa-power-off',
+			    'icon-trash' => 'fa-trash-o',
+			    'icon-share' => 'fa-share-square-o',
+			    'icon-check' => 'fa-check-square-o',
+			    'icon-move' => 'fa-arrows',
+			    'icon-file' => 'fa-file-o',
+			    'icon-time' => 'fa-clock-o',
+			    'icon-download-alt' => 'fa-download',
+			    'icon-download' => 'fa-arrow-circle-o-down',
+			    'icon-upload' => 'fa-arrow-circle-o-up',
+			    'icon-play-circle' => 'fa-play-circle-o',
+			    'icon-indent-left' => 'fa-dedent',
+			    'icon-indent-right' => 'fa-indent',
+			    'icon-facetime-video' => 'fa-video-camera',
+			    'icon-picture' => 'fa-picture-o',
+			    'icon-plus-sign' => 'fa-plus-circle',
+			    'icon-minus-sign' => 'fa-minus-circle',
+			    'icon-remove-sign' => 'fa-times-circle',
+			    'icon-ok-sign' => 'fa-check-circle',
+			    'icon-question-sign' => 'fa-question-circle',
+			    'icon-info-sign' => 'fa-info-circle',
+			    'icon-screenshot' => 'fa-crosshairs',
+			    'icon-remove-circle' => 'fa-times-circle-o',
+			    'icon-ok-circle' => 'fa-check-circle-o',
+			    'icon-ban-circle' => 'fa-ban',
+			    'icon-share-alt' => 'fa-share',
+			    'icon-resize-full' => 'fa-expand',
+			    'icon-resize-small' => 'fa-compress',
+			    'icon-exclamation-sign' => 'fa-exclamation-circle',
+			    'icon-eye-open' => 'fa-eye',
+			    'icon-eye-close' => 'fa-eye-slash',
+			    'icon-warning-sign' => 'fa-warning',
+			    'icon-folder-close' => 'fa-folder',
+			    'icon-resize-vertical' => 'fa-arrows-v',
+			    'icon-resize-horizontal' => 'fa-arrows-h',
+			    'icon-twitter-sign' => 'fa-twitter-square',
+			    'icon-facebook-sign' => 'fa-facebook-square',
+			    'icon-thumbs-up' => 'fa-thumbs-o-up',
+			    'icon-thumbs-down' => 'fa-thumbs-o-down',
+			    'icon-heart-empty' => 'fa-heart-o',
+			    'icon-signout' => 'fa-sign-out',
+			    'icon-linkedin-sign' => 'fa-linkedin-square',
+			    'icon-pushpin' => 'fa-thumb-tack',
+			    'icon-signin' => 'fa-sign-in',
+			    'icon-github-sign' => 'fa-github-square',
+			    'icon-upload-alt' => 'fa-upload',
+			    'icon-lemon' => 'fa-lemon-o',
+			    'icon-check-empty' => 'fa-square-o',
+			    'icon-bookmark-empty' => 'fa-bookmark-o',
+			    'icon-phone-sign' => 'fa-phone-square',
+			    'icon-hdd' => 'fa-hdd-o',
+			    'icon-hand-right' => 'fa-hand-o-right',
+			    'icon-hand-left' => 'fa-hand-o-left',
+			    'icon-hand-up' => 'fa-hand-o-up',
+			    'icon-hand-down' => 'fa-hand-o-down',
+			    'icon-circle-arrow-left' => 'fa-arrow-circle-left',
+			    'icon-circle-arrow-right' => 'fa-arrow-circle-right',
+			    'icon-circle-arrow-up' => 'fa-arrow-circle-up',
+			    'icon-circle-arrow-down' => 'fa-arrow-circle-down',
+			    'icon-fullscreen' => 'fa-arrows-alt',
+			    'icon-beaker' => 'fa-flask',
+			    'icon-paper-clip' => 'fa-paperclip',
+			    'icon-sign-blank' => 'fa-square',
+			    'icon-pinterest-sign' => 'fa-pinterest-square',
+			    'icon-google-plus-sign' => 'fa-google-plus-square',
+			    'icon-envelope-alt' => 'fa-envelope',
+			    'icon-comment-alt' => 'fa-comment-o',
+			    'icon-comments-alt' => 'fa-comments-o'
+		    );
+
+		    if( in_array( $class, array_keys( $exceptions ) ) ){
+			    $class = $exceptions[ $class ];
+		    }
+
+		    $class = str_replace( 'icon-', 'fa-', $class );
+
+		    return $class;
+	    }
 
         /* === REQUEST HANDLING METHODS === */
 
