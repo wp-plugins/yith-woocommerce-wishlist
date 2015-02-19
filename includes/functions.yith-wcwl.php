@@ -146,7 +146,7 @@ if( !function_exists( 'yith_setcookie' ) ) {
         $expiration = apply_filters( 'yith_wcwl_cookie_expiration_time', $time ); // Default 30 days
 
         $_COOKIE[ $name ] = $value;
-        return setcookie( $name, $value, $expiration, '/' );
+	    wc_setcookie( $name, $value, $expiration, false );
     }
 }
 

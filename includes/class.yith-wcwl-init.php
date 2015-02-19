@@ -336,7 +336,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             wp_enqueue_script( 'jquery-yith-wcwl' );
 
             $yith_wcwl_l10n = array(
-                'ajax_url' => admin_url( 'admin-ajax.php' ),
+                'ajax_url' => admin_url( 'admin-ajax.php', is_ssl() ? 'https' : 'http' ),
                 'redirect_to_cart' => get_option( 'yith_wcwl_redirect_cart' ),
                 'multi_wishlist' => get_option( 'yith_wcwl_multi_wishlist_enable' ) == 'yes' ? true : false,
                 'hide_add_button' => apply_filters( 'yith_wcwl_hide_add_button', true ),

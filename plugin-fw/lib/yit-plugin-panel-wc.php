@@ -63,6 +63,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_menu' ), 100 );
                 add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
                 add_action( 'admin_init', array( $this, 'woocommerce_update_options' ) );
+	            add_filter( 'woocommerce_screen_ids', array( $this, 'add_allowed_screen_id' ) );
 
                 add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'yit_boxinfo' ), 10, 1 );
                 add_action( 'woocommerce_admin_field_videobox', array( $this, 'yit_videobox' ), 10, 1 );
@@ -156,6 +157,27 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 include( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-upload.php' );
             }
         }
+
+	    /**
+	     * Add the plugin woocommerce page settings in the screen ids of woocommerce
+	     *
+	     * @param $screen_ids
+	     *
+	     * @return mixed
+	     * @since 1.0.0
+	     * @author   Antonino Scarfì      <antonino.scarfi@yithemes.com>
+	     */
+	    public function add_allowed_screen_id( $screen_ids ) {
+		    global $admin_page_hooks;
+
+		    if ( ! isset( $admin_page_hooks[ $this->settings['parent_page'] ] ) ) {
+			    return $screen_ids;
+		    }
+
+		    $screen_ids[] = $admin_page_hooks[ $this->settings['parent_page'] ] . '_page_' . $this->settings['page'];
+
+		    return $screen_ids;
+	    }
 
         /**
          * Returns current active tab slug

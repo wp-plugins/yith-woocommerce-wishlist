@@ -337,6 +337,10 @@ if ( ! function_exists( 'yit_enqueue_style' ) ) {
             $who     = YIT_Asset()->get_stylesheet_handle( get_stylesheet_uri(), 'style' );
             $where   = 'before';
 
+            if( false == $who ){
+                $who = '';
+            }
+
             YIT_Asset()->set( 'style', $handle, compact( 'src', 'deps', 'ver', 'media', 'enqueue' ), $where, $who );
         }
         else {

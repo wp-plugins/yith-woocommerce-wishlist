@@ -90,7 +90,10 @@
 		            $product = get_product( $item['prod_id'] );
 	            }
 
-                if( $product !== false && $product->exists() ) : ?>
+                if( $product !== false && $product->exists() ) :
+	                $availability = $product->get_availability();
+	                $stock_status = $availability['class'];
+	                ?>
                     <tr id="yith-wcwl-row-<?php echo $item['prod_id'] ?>" data-row-id="<?php echo $item['prod_id'] ?>">
                         <?php if( $is_user_owner ): ?>
                         <td class="product-remove">
@@ -133,9 +136,6 @@
                         <?php if( $show_stock_status ) : ?>
                             <td class="product-stock-status">
                                 <?php
-                                $availability = $product->get_availability();
-                                $stock_status = $availability['class'];
-
                                 if( $stock_status == 'out-of-stock' ) {
                                     $stock_status = "Out";
                                     echo '<span class="wishlist-out-of-stock">' . __( 'Out of Stock', 'yit' ) . '</span>';

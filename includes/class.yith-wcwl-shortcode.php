@@ -283,8 +283,6 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
         public static function add_to_wishlist( $atts, $content = null ) {
             global $product;
 
-            $atts = shortcode_atts( array(), $atts );
-
             $template_part = 'button';
 
             $label_option = get_option( 'yith_wcwl_add_to_wishlist_text' );
@@ -298,7 +296,16 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
             $classes = apply_filters( 'yith_wcwl_add_to_wishlist_button_classes', get_option( 'yith_wcwl_use_button' ) == 'yes' ? 'add_to_wishlist single_add_to_wishlist button alt' : 'add_to_wishlist' );
 
             $wishlist_url = YITH_WCWL()->get_wishlist_url();
-            $exists = YITH_WCWL()->is_product_in_wishlist( $product->id );
+	        $default_wishlists = is_user_logged_in() ? YITH_WCWL()->get_wishlists( array( 'is_default' => true ) ) : false;
+
+	        if( ! empty( $default_wishlists ) ){
+		        $default_wishlist = $default_wishlists[0]['ID'];
+	        }
+	        else{
+		        $default_wishlist = false;
+	        }
+
+            $exists = YITH_WCWL()->is_product_in_wishlist( $product->id, $default_wishlist );
             $product_type = $product->product_type;
 
             $additional_params = array(
@@ -315,9 +322,9 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
             $additional_params = apply_filters( 'yith_wcwl_add_to_wishlist_params', $additional_params );
             $additional_params['template_part'] = isset( $additional_params['template_part'] ) ? $additional_params['template_part'] : $template_part;
 
-            $atts = array_merge(
-                $atts,
-                $additional_params
+            $atts = shortcode_atts(
+	            $additional_params,
+                $atts
             );
 
             // adds attributes list to params to extract in template, so it can be passed through a new get_template()

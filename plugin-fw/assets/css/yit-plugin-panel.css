@@ -143,6 +143,21 @@
 .chosen .select_wrapper .chosen-container .chosen-drop .chosen-search input{
     width: 100%!important;
 }
+
+/* === Chosen Customizzation === */
+
+.yith-choosen .chosen-choices {
+    line-height: 27px;
+    min-height: 27px;
+    border: 1px solid #ddd;
+}
+
+.yith-choosen .chosen-container-active .chosen-choices{
+    border: 1px solid #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba(30,140,190,.8);
+    box-shadow: 0 0 2px rgba(30,140,190,.8);
+}
+
 .select_wrapper span {
     height: 26px;
     line-height: 26px;
