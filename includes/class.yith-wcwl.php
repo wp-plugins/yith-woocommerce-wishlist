@@ -182,7 +182,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             $wishlist_name = ( ! empty( $this->details['wishlist_name'] ) ) ? $this->details['wishlist_name'] : '';
 
             if ( $prod_id == false ) {
-                $this->errors[] = __( 'Error occurred while adding product to wishlist.', 'yit' );
+                $this->errors[] = __( 'Error occurred while adding products to the wishlist.', 'yit' );
                 return "error";
             }
 
@@ -315,7 +315,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                     return true;
                 }
                 else {
-                    $this->errors[] = __( 'Error occurred while removing product from wishlist', 'yit' );
+                    $this->errors[] = __( 'Error occurred while removing products from the wishlist', 'yit' );
                     return false;
                 }
             }

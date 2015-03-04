@@ -1056,7 +1056,7 @@ class YIT_CPT_Unlimited {
 
                         'rewrite'     => array(
                             'label' => __( 'Rewrite', 'yit' ),
-                            'desc'  => __( 'Word used in the URL of each project (slug from post if empty)', 'yit' ),
+                            'desc'  => __( 'Univocal identification name in the URL for each product (slug from post if empty)', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
@@ -1080,7 +1080,7 @@ class YIT_CPT_Unlimited {
 
                         'taxonomy_rewrite' => array(
                             'label' => __( 'Taxonomy Rewrite', 'yit' ),
-                            'desc'  => __( 'Set the word for each category page URL.', 'yit' ),
+                            'desc'  => __( 'Set univocal name for each category page URL.', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
@@ -1628,7 +1628,7 @@ class YIT_CPT_Unlimited {
                 var button = $('<a />', {
                     href: '#',
                     class: 'multi-uploader add-new-h2',
-                    'data-uploader_title': '<?php printf( __( 'Add %s by images', 'yit' ), $label_plural ) ?>',
+                    'data-uploader_title': '<?php printf( __( 'Add %s from images', 'yit' ), $label_plural ) ?>',
                     'data-uploader_button_text': '<?php printf( __( 'Add %s', 'yit' ), $label_plural ) ?>'
                 }).text('<?php _e( 'Add with multiupload', 'yit' ) ?>');
 

@@ -195,9 +195,8 @@ if( ! class_exists( 'YITH_WCWL_UI' ) ) {
 
             // retrieve options
             $label_option = get_option( 'yith_wcwl_add_to_cart_text' );
-            $localize_label = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_wishlist_button', $label_option ) : $label_option;
 
-            $label = $product->product_type == 'variable' ? apply_filters( 'variable_add_to_cart_text', __('Select options', 'yit') ) : apply_filters( 'yith_wcwl_add_to_cart_label', $localize_label );
+            $label = $product->product_type == 'variable' ? apply_filters( 'variable_add_to_cart_text', __('Select options', 'yit') ) : apply_filters( 'yith_wcwl_add_to_cart_label', $label_option );
             if( get_option( 'yith_wcwl_frontend_css' ) != 'yes' ) {
                 $icon = get_option( 'yith_wcwl_use_button' ) == 'yes' && get_option( 'yith_wcwl_add_to_cart_icon' ) != 'none' ? '<i class="fa ' . get_option( 'yith_wcwl_add_to_cart_icon' ) . '"></i>' : '';
             }

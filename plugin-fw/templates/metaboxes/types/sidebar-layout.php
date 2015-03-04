@@ -25,7 +25,7 @@ $sidebar = ! isset( $value['sidebar'] ) ? '' : $value['sidebar'];
         <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideleft.png" title="<?php _e( 'Left sidebar', 'yit' ) ?>" alt="<?php _e( 'Left sidebar', 'yit' ) ?>" />
 
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-no' ?>" value="sidebar-no" <?php checked( $layout, 'sidebar-no' ) ?> />
-        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/noside.png" title="<?php _e( 'No sidebar', 'yit' ) ?>" alt="<?php _e( 'No sideabr', 'yit' ) ?>" />
+        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/noside.png" title="<?php _e( 'No sidebar', 'yit' ) ?>" alt="<?php _e( 'No sidebar', 'yit' ) ?>" />
 
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-right' ?>" value="sidebar-right" <?php checked( $layout, 'sidebar-right' ) ?> />
         <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideright.png" title="<?php _e( 'Right sidebar', 'yit' ) ?>" alt="<?php _e( 'Right sidebar', 'yit' ) ?>" />

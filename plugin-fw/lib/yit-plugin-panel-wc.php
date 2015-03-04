@@ -121,7 +121,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          * @author   Emanuela Castorina      <emanuela.castorina@yithemes.com>
          */
         public function yit_videobox( $args = array() ) {
-            if ( !empty( $args ) ) {
+            if ( ! empty( $args ) ) {
                 extract( $args );
                 require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-videobox.php' );
             }
@@ -262,6 +262,26 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
             }
         }
 
+	    /**
+	     * Fire the action to print the custom tab
+	     *
+	     * @param $current_tab string
+	     *
+	     * @return void
+	     * @since    1.0
+	     * @author   Antonino Scarfì <antonino.scarfi@yithemes.com>
+	     */
+	    public function print_video_box() {
+		    $file = $this->settings['options-path'] . '/video-box.php';
+
+		    if ( ! file_exists( $file ) ) {
+			    return;
+		    }
+
+		    $args = include_once( $file );
+		    $this->yit_videobox( $args );
+	    }
+
         /**
          * Update options
          *
@@ -322,7 +342,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
             wp_enqueue_script( 'woocommerce_settings', $woocommerce->plugin_url() . '/assets/js/admin/settings.min.js', array( 'jquery', 'jquery-ui-datepicker','jquery-ui-dialog', 'jquery-ui-sortable', 'iris', 'chosen' ), $woocommerce->version, true );
             wp_enqueue_script( 'yit-plugin-panel', YIT_CORE_PLUGIN_URL . '/assets/js/yit-plugin-panel.min.js', array( 'jquery', 'jquery-chosen' ), $this->version, true );
             wp_localize_script( 'woocommerce_settings', 'woocommerce_settings_params', array(
-                'i18n_nav_warning' => __( 'The changes you made will be lost if you leave this page.', 'yit' )
+                'i18n_nav_warning' => __( 'The changes you have made will be lost if you leave this page.', 'yit' )
             ) );
         }
 

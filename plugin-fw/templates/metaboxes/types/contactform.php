@@ -75,7 +75,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['title'] ) ?>" id="<?php echo $id ?>_title_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][title]" />
-                        <span class="desc inline"><?php _e( 'Insert title for the field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -97,7 +97,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                                 <option value="<?php echo esc_attr( $type ) ?>"<?php selected( $type, $value[$index]['type'] ) ?>><?php echo $name_type ?></option>
                             <?php endforeach; ?>
                         </select>
-                        <span class="desc inline"><?php _e( 'Select type for this field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select the type for this field.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -106,7 +106,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_already_checked_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][already_checked]" value="1"<?php checked( $value[$index]['already_checked'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this if you want this field already checked.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -124,7 +124,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_error_<?php echo $index ?>"><?php _e( 'Message Error', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_error_<?php echo $index ?>"><?php _e( 'Error Message', 'yit' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['error'] ) ?>" id="<?php echo $id ?>_error_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][error]" />
@@ -137,7 +137,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_required_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][required]" value="1"<?php checked( $value[$index]['required'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this if it must be required.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -146,7 +146,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_is_email_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][is_email]" value="1"<?php checked( $value[$index]['is_email'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this if it must be a valid email.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yit' ) ?></span>
                     </p>
                 </div>
 
@@ -267,7 +267,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_title" name="<?php echo $name ?>[][title]" />
-                <span class="desc inline"><?php _e( 'Insert title for the field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -289,7 +289,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                         <option value="<?php echo esc_attr( $type ) ?>"><?php echo $name_type ?></option>
                     <?php endforeach; ?>
                 </select>
-                <span class="desc inline"><?php _e( 'Select type for this field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select the type for this field.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -298,7 +298,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_already_checked" name="<?php echo $name ?>[][already_checked]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this if you want this field already checked.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -316,7 +316,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_error"><?php _e( 'Message Error', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_error"><?php _e( 'Error Message', 'yit' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_error" name="<?php echo $name ?>[][error]" />
@@ -329,7 +329,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_required" name="<?php echo $name ?>[][required]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this if it must be required.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yit' ) ?></span>
             </p>
         </div>
 
@@ -338,7 +338,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_is_email" name="<?php echo $name ?>[][is_email]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this if it must be a valid email.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yit' ) ?></span>
             </p>
         </div>
 

@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
 Tested up to: 4.1.1
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,14 @@ This might depend on the fact that your theme overrides plugin templates. Check 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.4 =
+
+* Added: Options for browse wishlist/already in wishlist/product added strings
+* Added: rel nofollow to add to wishlist button
+* Tweak: moved wishlist response popup handling to separate js file
+* Updated: WPML xml configuration
+* Updated: string revision
 
 = 2.0.3 =
 
@@ -219,10 +227,10 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.3 =
+= 2.0.4 =
 
-* Tweak: set correct protocol for admin-ajax requests
-* Tweak: used wc core function to set cookie
-* Tweak: let customization of add_to_wishlist shortcodes
-* Fixed: show add to cart column when stock status disabled
-* Fixed: product existing in wishlist
+* Added: Options for browse wishlist/already in wishlist/product added strings
+* Added: rel nofollow to add to wishlist button
+* Tweak: moved wishlist response popup handling to separate js file
+* Updated: WPML xml configuration
+* Updated: string revision

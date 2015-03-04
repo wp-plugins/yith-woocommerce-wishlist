@@ -166,7 +166,7 @@
                     Upgrade to the <span class="highlight">premium version</span><br/>
                     of <span class="highlight">YITH wishlist</span> to benefit from all features!
                 </p>
-                <a href="http://yithemes.com/themes/plugins/yith-woocommerce-wishlist/" target="_blank" class="wishlist-cta-button button btn">
+                <a href="<?php echo YITH_WCWL_Admin_Init()->get_premium_landing_uri(); ?>" target="_blank" class="wishlist-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>
@@ -258,7 +258,7 @@
                     Upgrade to the <span class="highlight">premium version</span><br/>
                     of <span class="highlight">YITH wishlist</span> to benefit from all features!
                 </p>
-                <a href="http://yithemes.com/themes/plugins/yith-woocommerce-wishlist/" target="_blank" class="wishlist-cta-button button btn">
+                <a href="<?php echo YITH_WCWL_Admin_Init()->get_premium_landing_uri();?>" target="_blank" class="wishlist-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>

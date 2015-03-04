@@ -271,9 +271,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                         <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yit' ) ?>" style="float:left;margin-right:10px;" />
                     </form>
                     <form method="post">
-                        <?php $warning = __( 'If you go on with this action, you will reset all options in this page.', 'yit' ) ?>
+                        <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yit' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure of it?', 'yit' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>
@@ -407,7 +407,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
         public function message() {
 
             $message = array(
-                'element_exists'   => $this->get_message( '<strong>' . __( 'The element you have written is already exists. Please, add another name.', 'yit' ) . '</strong>', 'error', false ),
+                'element_exists'   => $this->get_message( '<strong>' . __( 'The element you have entered already exists. Please, enter another name.', 'yit' ) . '</strong>', 'error', false ),
                 'saved'            => $this->get_message( '<strong>' . __( 'Settings saved', 'yit' ) . '.</strong>', 'updated', false ),
                 'reset'            => $this->get_message( '<strong>' . __( 'Settings reset', 'yit' ) . '.</strong>', 'updated', false ),
                 'delete'           => $this->get_message( '<strong>' . __( 'Element deleted correctly.', 'yit' ) . '</strong>', 'updated', false ),
@@ -415,7 +415,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 'settings-updated' => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yit' ) . '</strong>', 'updated', false ),
                 'imported'         => $this->get_message( '<strong>' . __( 'Database imported correctly.', 'yit' ) . '</strong>', 'updated', false ),
                 'no-imported'      => $this->get_message( '<strong>' . __( 'An error has occurred during import. Please try again.', 'yit' ) . '</strong>', 'error', false ),
-                'file-not-valid'   => $this->get_message( '<strong>' . __( 'The file inserted is not valid.', 'yit' ) . '</strong>', 'error', false ),
+                'file-not-valid'   => $this->get_message( '<strong>' . __( 'The added file is not valid.', 'yit' ) . '</strong>', 'error', false ),
                 'cant-import'      => $this->get_message( '<strong>' . __( 'Sorry, import is disabled.', 'yit' ) . '</strong>', 'error', false ),
                 'ord'              => $this->get_message( '<strong>' . __( 'Sorting successful.', 'yit' ) . '</strong>', 'updated', false )
             );
@@ -467,6 +467,11 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
 
             foreach ( ( array ) glob( $option_files_path . '*.php' ) as $filename ) {
                 preg_match( '/(.*)-options\.(.*)/', basename( $filename ), $filename_parts );
+
+	            if ( ! isset( $filename_parts[1] ) ) {
+		            continue;
+	            }
+
                 $tab = $filename_parts[1];
 
                 $tabs[$tab] = $filename;

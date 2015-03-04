@@ -528,8 +528,8 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             $error_strings = array(
                 '100' => __( 'Invalid Request', 'yit' ),
                 '101' => __( 'Invalid licence key', 'yit' ),
-                '102' => __( 'Software has been deactivate', 'yit' ),
-                '103' => __( 'Exceeded maximum number of activations', 'yit' ),
+                '102' => __( 'Software has been deactivated', 'yit' ),
+                '103' => __( 'Maximum number of activations exceeded', 'yit' ),
                 '104' => __( 'Invalid instance ID', 'yit' ),
                 '105' => __( 'Invalid security key', 'yit' ),
                 '106' => __( 'Licence key has expired', 'yit' ),

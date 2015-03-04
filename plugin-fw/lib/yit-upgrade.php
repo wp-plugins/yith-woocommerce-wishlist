@@ -119,7 +119,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
                 'new_version'   => __( 'There is a new version of %plugin_name% available.', 'yit' ),
                 'latest'        => __( 'View version %latest% details.',  'yit' ),
                 'unavailable'   => __( 'Automatic update is unavailable for this plugin,',  'yit' ),
-                'activate'      => __( 'please <a href="%activate_link%"> activate </a> your copy of %plugin_name%.',  'yit' ),
+                'activate'      => __( 'please <a href="%activate_link%">activate</a> your copy of %plugin_name%.',  'yit' ),
                 'update_now'    => __( 'Update now.',  'yit' )
 
             );
@@ -490,11 +490,11 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
             $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
             if( 'upgrade-plugin-multisite' != $action ){
-                wp_die( __( 'You can\'t update plugins for this site.', 'yit' ) );
+                wp_die( __( 'You can\'t update the plugins for this site.', 'yit' ) );
             }
 
             if ( ! current_user_can( 'update_plugins' ) ) {
-                wp_die( __( 'You do not have sufficient permissions to update plugins for this site.', 'yit' ) );
+                wp_die( __( 'You do not have sufficient permissions to update the plugins for this site.', 'yit' ) );
             }
 
             $this->check_update( get_site_transient( 'update_plugins') , true );

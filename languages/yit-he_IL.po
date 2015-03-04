@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2015-02-13 12:37+0100\n"
-"PO-Revision-Date: 2015-02-13 12:37+0100\n"
+"POT-Creation-Date: 2015-03-04 16:39+0100\n"
+"PO-Revision-Date: 2015-03-04 16:39+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: ./\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -26,15 +26,15 @@ msgid ""
 "are using the premium one."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:177
-#: ../includes/class.yith-wcwl-admin-init.php:1054
-#: ../includes/class.yith-wcwl-admin-init.php:1055
+#: ../includes/class.yith-wcwl-admin-init.php:188
+#: ../includes/class.yith-wcwl-admin-init.php:1399
+#: ../includes/class.yith-wcwl-admin-init.php:1400
 #: ../includes/class.yith-wcwl-install.php:240
 msgid "Wishlist"
 msgstr "רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:179
-#: ../includes/class.yith-wcwl-admin-init.php:277
+#: ../includes/class.yith-wcwl-admin-init.php:190
+#: ../includes/class.yith-wcwl-admin-init.php:289
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
@@ -42,76 +42,76 @@ msgstr "רשימת משאלות"
 msgid "Settings"
 msgstr "הגדרות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:180
-#: ../includes/class.yith-wcwl-admin-init.php:244
+#: ../includes/class.yith-wcwl-admin-init.php:191
+#: ../includes/class.yith-wcwl-admin-init.php:256
 msgid "Colors"
 msgstr "צבעים"
 
-#: ../includes/class.yith-wcwl-admin-init.php:181
-#: ../includes/class.yith-wcwl-admin-init.php:281
+#: ../includes/class.yith-wcwl-admin-init.php:192
+#: ../includes/class.yith-wcwl-admin-init.php:293
 msgid "Premium Version"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:305
+#: ../includes/class.yith-wcwl-admin-init.php:317
 msgid ""
-"WARNING: This plugin requires at least WooCommerce 2.2! Plase, use this link "
-"to update it."
+"WARNING: This plugin requires at least WooCommerce 2.2! Please, use this "
+"link to update it."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:308
+#: ../includes/class.yith-wcwl-admin-init.php:320
 msgid "WARNING: This plugin requires at least WooCommerce 2.2!"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:313
+#: ../includes/class.yith-wcwl-admin-init.php:325
 msgid "Plugin Documentation"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:329
+#: ../includes/class.yith-wcwl-admin-init.php:341
 msgid "Wishlist Page"
 msgstr "עמוד רשימת המשאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:330
+#: ../includes/class.yith-wcwl-admin-init.php:342
 msgid "Page contents: [yith_wcwl_wishlist]"
 msgstr "תוכן העמוד: [yith_wcwl_wishlist]"
 
-#: ../includes/class.yith-wcwl-admin-init.php:596
+#: ../includes/class.yith-wcwl-admin-init.php:917
 msgid "Upgrade to the PREMIUM VERSION"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:599
+#: ../includes/class.yith-wcwl-admin-init.php:920
 msgid "YITH WooCommerce Wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:600
+#: ../includes/class.yith-wcwl-admin-init.php:921
 msgid "Discover the Advanced Features"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:601
+#: ../includes/class.yith-wcwl-admin-init.php:922
 msgid ""
 "Upgrade to the PREMIUM VERSION\n"
 "of YITH WOOCOMMERCE WISHLIST to benefit from all features!"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:608
+#: ../includes/class.yith-wcwl-admin-init.php:929
 msgid "Get Support and Pro Features"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:609
+#: ../includes/class.yith-wcwl-admin-init.php:930
 msgid ""
 "By purchasing the premium version of the plugin, you will take advantage of "
 "the advanced features of the product and you will get one year of free "
 "updates and support through our platform available 24h/24."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:619
+#: ../includes/class.yith-wcwl-admin-init.php:940
 msgid "General Settings"
 msgstr "הגדרות כלליות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:626
+#: ../includes/class.yith-wcwl-admin-init.php:947
 msgid "Enable YITH Wishlist"
 msgstr "אפשר שימוש ברשימת המשאלות של YITH"
 
-#: ../includes/class.yith-wcwl-admin-init.php:627
+#: ../includes/class.yith-wcwl-admin-init.php:948
 #, fuzzy, php-format
 msgid ""
 "Enable all plugin features. <strong>Be sure to select a voice in the "
@@ -122,307 +122,344 @@ msgstr ""
 "בהגדרות של WooCommerce &gt; Settings &gt; Pages.</strong> בנוסף, קרא את <a "
 "href=\"%s\" target=\"_blank\">הוראות השימוש</a> של התוסף."
 
-#: ../includes/class.yith-wcwl-admin-init.php:634
+#: ../includes/class.yith-wcwl-admin-init.php:955
 #, fuzzy
 msgid "Default wishlist title"
 msgstr "כותרת רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:636
-#: ../includes/class.yith-wcwl-admin-init.php:637
-#: ../includes/class.yith-wcwl-admin-init.php:854
-#: ../includes/class.yith-wcwl-admin-init.php:855
+#: ../includes/class.yith-wcwl-admin-init.php:957
+#: ../includes/class.yith-wcwl-admin-init.php:958
+#: ../includes/class.yith-wcwl-admin-init.php:1199
+#: ../includes/class.yith-wcwl-admin-init.php:1200
 #, php-format
 msgid "My wishlist on %s"
 msgstr "רשימת המשאלות שלי ב-%s"
 
-#: ../includes/class.yith-wcwl-admin-init.php:645
+#: ../includes/class.yith-wcwl-admin-init.php:966
 msgid "Position"
 msgstr "מיקום"
 
-#: ../includes/class.yith-wcwl-admin-init.php:646
+#: ../includes/class.yith-wcwl-admin-init.php:967
 msgid ""
-"On variable products you can add it only After \"Add to Cart\" or use the "
+"You can add it in variable products only After \"Add to Cart \" or using the "
 "shortcode [yith_wcwl_add_to_wishlist]."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:652
+#: ../includes/class.yith-wcwl-admin-init.php:973
 msgid "After \"Add to cart\""
 msgstr "לאחר \"הוספה לסל\""
 
-#: ../includes/class.yith-wcwl-admin-init.php:653
+#: ../includes/class.yith-wcwl-admin-init.php:974
 msgid "After thumbnails"
 msgstr "אחרי התמונות המוקטנות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:654
+#: ../includes/class.yith-wcwl-admin-init.php:975
 msgid "After summary"
 msgstr "אחרי תיאור מוצר"
 
-#: ../includes/class.yith-wcwl-admin-init.php:655
+#: ../includes/class.yith-wcwl-admin-init.php:976
 msgid "Use shortcode"
 msgstr "השתמש בקוד מקוצר"
 
-#: ../includes/class.yith-wcwl-admin-init.php:660
+#: ../includes/class.yith-wcwl-admin-init.php:981
 msgid "Redirect to cart"
 msgstr "הפנייה לסל הקניות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:661
+#: ../includes/class.yith-wcwl-admin-init.php:982
 msgid ""
 "Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
 "page."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:668
+#: ../includes/class.yith-wcwl-admin-init.php:989
 msgid "Remove if added to the cart"
 msgstr "הסר מהרשימה אם הוסף לסל"
 
-#: ../includes/class.yith-wcwl-admin-init.php:669
-msgid "Remove the product from the wishlist if is been added to the cart."
+#: ../includes/class.yith-wcwl-admin-init.php:990
+#, fuzzy
+msgid "Remove the product from the wishlist if it has been added to the cart."
 msgstr "הסר את המוצר מהרשימה אם הוא הוסף לסל."
 
-#: ../includes/class.yith-wcwl-admin-init.php:676
+#: ../includes/class.yith-wcwl-admin-init.php:997
 msgid "\"Add to Wishlist\" text"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:678
-#: ../includes/class.yith-wcwl-admin-init.php:679
+#: ../includes/class.yith-wcwl-admin-init.php:999
+#: ../includes/class.yith-wcwl-admin-init.php:1000
 msgid "Add to Wishlist"
 msgstr "הוסף לרשימת המשאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:684
+#: ../includes/class.yith-wcwl-admin-init.php:1005
+#, fuzzy
+msgid "\"Browse wishlist\" text"
+msgstr "צפה ברשימת השמורים שלך"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1007
+#: ../includes/class.yith-wcwl-admin-init.php:1008
+#: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl-ui.php:82
+msgid "Browse Wishlist"
+msgstr "צפה ברשימת השמורים שלך"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1013
+#, fuzzy
+msgid "\"Product already in wishlist\" text"
+msgstr "המוצר עדיין נמצא ברשימת המשאלות שלך."
+
+#: ../includes/class.yith-wcwl-admin-init.php:1015
+#: ../includes/class.yith-wcwl-admin-init.php:1016
+#: ../includes/class.yith-wcwl-ui.php:82
+msgid "The product is already in the wishlist!"
+msgstr "המוצר נשמר."
+
+#: ../includes/class.yith-wcwl-admin-init.php:1021
+#, fuzzy
+msgid "\"Product added\" text"
+msgstr "המוצר נשמר!"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1023
+#: ../includes/class.yith-wcwl-admin-init.php:1024
+#: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl.php:1237
+msgid "Product added!"
+msgstr "המוצר נשמר!"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1029
 msgid "\"Add to Cart\" text"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:686
-#: ../includes/class.yith-wcwl-admin-init.php:687
+#: ../includes/class.yith-wcwl-admin-init.php:1031
+#: ../includes/class.yith-wcwl-admin-init.php:1032
 msgid "Add to Cart"
 msgstr "הוסף לסל"
 
-#: ../includes/class.yith-wcwl-admin-init.php:692
+#: ../includes/class.yith-wcwl-admin-init.php:1037
 #, fuzzy
 msgid "Show Unit price"
 msgstr "מחיר ליחידה"
 
-#: ../includes/class.yith-wcwl-admin-init.php:693
+#: ../includes/class.yith-wcwl-admin-init.php:1038
 msgid "Show unit price for each product in wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:701
+#: ../includes/class.yith-wcwl-admin-init.php:1046
 #, fuzzy
 msgid "Show \"Add to Cart\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:702
+#: ../includes/class.yith-wcwl-admin-init.php:1047
 #, fuzzy
 msgid "Show \"Add to cart\" button for each product in wishlist"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:710
+#: ../includes/class.yith-wcwl-admin-init.php:1055
 #, fuzzy
 msgid "Show Stock status"
 msgstr "מצב מלאי"
 
-#: ../includes/class.yith-wcwl-admin-init.php:711
+#: ../includes/class.yith-wcwl-admin-init.php:1056
 msgid ""
 "Show \"In stock\" or \"Out of stock\" label for each product in wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:734
+#: ../includes/class.yith-wcwl-admin-init.php:1079
 msgid "Styles"
 msgstr "סגנונות עיצוב"
 
-#: ../includes/class.yith-wcwl-admin-init.php:741
+#: ../includes/class.yith-wcwl-admin-init.php:1086
 msgid "Use buttons"
 msgstr "השתמש בכפתורים"
 
-#: ../includes/class.yith-wcwl-admin-init.php:742
-msgid "Use buttons instead of a simple anchors."
+#: ../includes/class.yith-wcwl-admin-init.php:1087
+#, fuzzy
+msgid "Use buttons instead of simple anchors."
 msgstr "השתמש בכפתורים במקום קישורים רגילים."
 
-#: ../includes/class.yith-wcwl-admin-init.php:749
+#: ../includes/class.yith-wcwl-admin-init.php:1094
 msgid "Custom CSS"
 msgstr "הכנס שורות CSS משלך"
 
-#: ../includes/class.yith-wcwl-admin-init.php:757
+#: ../includes/class.yith-wcwl-admin-init.php:1102
 msgid "Use theme style"
 msgstr "השתמש בעיצוב של התבנית שלך"
 
-#: ../includes/class.yith-wcwl-admin-init.php:758
+#: ../includes/class.yith-wcwl-admin-init.php:1103
 msgid "Use the theme style."
 msgstr "השתמש בעיצוב של תבנית האתר."
 
-#: ../includes/class.yith-wcwl-admin-init.php:765
+#: ../includes/class.yith-wcwl-admin-init.php:1110
 #, fuzzy
-msgid "Button rounded corners"
-msgstr "כפתורים עם פינות מעוגלות"
+msgid "Rounded buttons"
+msgstr "השתמש בכפתורים"
 
-#: ../includes/class.yith-wcwl-admin-init.php:766
-msgid "Make buttons corner rounded"
+#: ../includes/class.yith-wcwl-admin-init.php:1111
+#, fuzzy
+msgid "Make button corners rounded"
 msgstr "הצג את הכפתורים עם פינות מעוגלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:773
+#: ../includes/class.yith-wcwl-admin-init.php:1118
 msgid "\"Add to Wishlist\" icon"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:774
+#: ../includes/class.yith-wcwl-admin-init.php:1119
 msgid "Add an icon to the \"Add to Wishlist\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:785
+#: ../includes/class.yith-wcwl-admin-init.php:1130
 msgid "\"Add to Cart\" icon"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:786
+#: ../includes/class.yith-wcwl-admin-init.php:1131
 msgid "Add an icon to the \"Add to Cart\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:805
+#: ../includes/class.yith-wcwl-admin-init.php:1150
 msgid "Socials &amp; Share"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:812
+#: ../includes/class.yith-wcwl-admin-init.php:1157
 msgid "Share on Facebook"
 msgstr "שתף בפייסבוק"
 
-#: ../includes/class.yith-wcwl-admin-init.php:813
-#: ../includes/class.yith-wcwl-admin-init.php:837
+#: ../includes/class.yith-wcwl-admin-init.php:1158
+#: ../includes/class.yith-wcwl-admin-init.php:1182
 #, fuzzy
 msgid "Show \"Share on Facebook\" button"
 msgstr "שתף בפייסבוק"
 
-#: ../includes/class.yith-wcwl-admin-init.php:820
+#: ../includes/class.yith-wcwl-admin-init.php:1165
 msgid "Tweet on Twitter"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:821
+#: ../includes/class.yith-wcwl-admin-init.php:1166
 #, fuzzy
 msgid "Show \"Tweet on Twitter\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:828
+#: ../includes/class.yith-wcwl-admin-init.php:1173
 msgid "Pin on Pinterest"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:829
+#: ../includes/class.yith-wcwl-admin-init.php:1174
 #, fuzzy
 msgid "Show \"Pin on Pinterest\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:836
+#: ../includes/class.yith-wcwl-admin-init.php:1181
 msgid "Share on Google+"
 msgstr "שתף בגוגל+"
 
-#: ../includes/class.yith-wcwl-admin-init.php:844
+#: ../includes/class.yith-wcwl-admin-init.php:1189
 msgid "Share by Email"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:845
+#: ../includes/class.yith-wcwl-admin-init.php:1190
 #, fuzzy
 msgid "Show \"Share by Email\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:852
+#: ../includes/class.yith-wcwl-admin-init.php:1197
 #, fuzzy
 msgid "Social title"
 msgstr "כותרת רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:860
+#: ../includes/class.yith-wcwl-admin-init.php:1205
 msgid "Social text"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:861
+#: ../includes/class.yith-wcwl-admin-init.php:1206
+#, fuzzy
 msgid ""
-"Will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url%</"
-"strong> where you want the URL of your wishlist to appear."
+"It will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url"
+"%</strong> where you want to show the URL of your wishlist."
 msgstr ""
 "יעשה שימוש על ידי Facebook, Twitter וגם Pinterest. השתמש ב-<strong>"
 "%wishlist_url%</strong> היכן שתרצה את ה-URL של רשימת המשאלות שלך שיופיע."
 
-#: ../includes/class.yith-wcwl-admin-init.php:869
+#: ../includes/class.yith-wcwl-admin-init.php:1214
 msgid "Social image URL"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:905
+#: ../includes/class.yith-wcwl-admin-init.php:1250
 #, fuzzy
 msgid "\"Add to wishlist\" button"
 msgstr "הוסף לרשימת המשאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:908
-#: ../includes/class.yith-wcwl-admin-init.php:926
-#: ../includes/class.yith-wcwl-admin-init.php:944
-#: ../includes/class.yith-wcwl-admin-init.php:962
-#: ../includes/class.yith-wcwl-admin-init.php:980
+#: ../includes/class.yith-wcwl-admin-init.php:1253
+#: ../includes/class.yith-wcwl-admin-init.php:1271
+#: ../includes/class.yith-wcwl-admin-init.php:1289
+#: ../includes/class.yith-wcwl-admin-init.php:1307
+#: ../includes/class.yith-wcwl-admin-init.php:1325
 msgid "Background"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:909
-#: ../includes/class.yith-wcwl-admin-init.php:927
-#: ../includes/class.yith-wcwl-admin-init.php:945
-#: ../includes/class.yith-wcwl-admin-init.php:963
-#: ../includes/class.yith-wcwl-admin-init.php:981
+#: ../includes/class.yith-wcwl-admin-init.php:1254
+#: ../includes/class.yith-wcwl-admin-init.php:1272
+#: ../includes/class.yith-wcwl-admin-init.php:1290
+#: ../includes/class.yith-wcwl-admin-init.php:1308
+#: ../includes/class.yith-wcwl-admin-init.php:1326
 msgid "Text"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:910
-#: ../includes/class.yith-wcwl-admin-init.php:928
-#: ../includes/class.yith-wcwl-admin-init.php:946
-#: ../includes/class.yith-wcwl-admin-init.php:964
-#: ../includes/class.yith-wcwl-admin-init.php:982
+#: ../includes/class.yith-wcwl-admin-init.php:1255
+#: ../includes/class.yith-wcwl-admin-init.php:1273
+#: ../includes/class.yith-wcwl-admin-init.php:1291
+#: ../includes/class.yith-wcwl-admin-init.php:1309
+#: ../includes/class.yith-wcwl-admin-init.php:1327
 msgid "Border"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:917
-#: ../includes/class.yith-wcwl-admin-init.php:935
-#: ../includes/class.yith-wcwl-admin-init.php:953
-#: ../includes/class.yith-wcwl-admin-init.php:971
+#: ../includes/class.yith-wcwl-admin-init.php:1262
+#: ../includes/class.yith-wcwl-admin-init.php:1280
+#: ../includes/class.yith-wcwl-admin-init.php:1298
+#: ../includes/class.yith-wcwl-admin-init.php:1316
 msgid "Background (hover)"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:918
-#: ../includes/class.yith-wcwl-admin-init.php:936
-#: ../includes/class.yith-wcwl-admin-init.php:954
-#: ../includes/class.yith-wcwl-admin-init.php:972
+#: ../includes/class.yith-wcwl-admin-init.php:1263
+#: ../includes/class.yith-wcwl-admin-init.php:1281
+#: ../includes/class.yith-wcwl-admin-init.php:1299
+#: ../includes/class.yith-wcwl-admin-init.php:1317
 msgid "Text (hover)"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:919
-#: ../includes/class.yith-wcwl-admin-init.php:937
-#: ../includes/class.yith-wcwl-admin-init.php:955
-#: ../includes/class.yith-wcwl-admin-init.php:973
+#: ../includes/class.yith-wcwl-admin-init.php:1264
+#: ../includes/class.yith-wcwl-admin-init.php:1282
+#: ../includes/class.yith-wcwl-admin-init.php:1300
+#: ../includes/class.yith-wcwl-admin-init.php:1318
 msgid "Border (hover)"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:923
+#: ../includes/class.yith-wcwl-admin-init.php:1268
 #, fuzzy
 msgid "\"Add to Cart\" button"
 msgstr "\"הוסף לסל\" כפתור טקסט (hover)"
 
-#: ../includes/class.yith-wcwl-admin-init.php:941
+#: ../includes/class.yith-wcwl-admin-init.php:1286
 msgid "\"Style 1\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:959
+#: ../includes/class.yith-wcwl-admin-init.php:1304
 msgid "\"Style 2\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:977
+#: ../includes/class.yith-wcwl-admin-init.php:1322
 #, fuzzy
 msgid "Wishlist table"
 msgstr "כותרת רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:986
+#: ../includes/class.yith-wcwl-admin-init.php:1331
 msgid "Headers"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:989
+#: ../includes/class.yith-wcwl-admin-init.php:1334
 msgid "Background color"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1116
+#: ../includes/class.yith-wcwl-admin-init.php:1461
 #, fuzzy
 msgid "Wishlist Activated"
 msgstr "כותרת רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1117
+#: ../includes/class.yith-wcwl-admin-init.php:1462
 #, php-format
 msgid ""
 "In the YIT Plugin tab you can find the Wishlist options. With this menu, you "
@@ -431,52 +468,38 @@ msgid ""
 "options, <a href=\"%s\">discover it now</a>."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1128
+#: ../includes/class.yith-wcwl-admin-init.php:1473
 #, fuzzy
 msgid "Wishlist Updated"
 msgstr "עמוד רשימת המשאלות"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1129
+#: ../includes/class.yith-wcwl-admin-init.php:1474
 #, php-format
 msgid ""
 "From now on, you can find all the options of Wishlist under YIT Plugin -> "
 "Wishlist instead of WooCommerce -> Settings -> Wishlist, as in the previous "
-"version. When one of our plugins updates, a new voice will be added to this "
-"menu. Wishlist renovates with new available options, <a href=\"%s\">discover "
-"the PREMIUM version.</a>"
+"version. When one of our plugins is updated, a new voice will be added to "
+"this menu. Wishlist has been updated with new available options, <a href=\"%s"
+"\">discover the PREMIUM version.</a>"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-init.php:341
+#: ../includes/class.yith-wcwl-init.php:347
 msgid ""
-"We are sorry,but this feature is available only if cookies on your browser "
-"are enabled."
+"We are sorry, but this feature is available only if cookies are enabled on "
+"your browser."
 msgstr ""
 
 #: ../includes/class.yith-wcwl-install.php:239
 msgid "wishlist"
 msgstr "רשימת משאלות"
 
-#: ../includes/class.yith-wcwl-shortcode.php:225
+#: ../includes/class.yith-wcwl-shortcode.php:224
 #: ../includes/class.yith-wcwl-ui.php:161
 msgid "Share on:"
 msgstr "שתף ברשת:"
 
-#: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl.php:1143
-#: ../templates/add-to-wishlist.php:21
-msgid "Product added!"
-msgstr "המוצר נשמר!"
-
-#: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl-ui.php:82
-#: ../templates/add-to-wishlist.php:23 ../templates/add-to-wishlist.php:30
-msgid "Browse Wishlist"
-msgstr "צפה ברשימת השמורים שלך"
-
-#: ../includes/class.yith-wcwl-ui.php:82 ../templates/add-to-wishlist.php:28
-msgid "The product is already in the wishlist!"
-msgstr "המוצר נשמר."
-
 #: ../includes/class.yith-wcwl-ui.php:116
-#: ../includes/class.yith-wcwl-ui.php:200
+#: ../includes/class.yith-wcwl-ui.php:199
 msgid "Select options"
 msgstr "בחירת דגם"
 
@@ -492,35 +515,41 @@ msgstr "טוויטר"
 msgid "email"
 msgstr ""
 
-#: ../includes/class.yith-wcwl.php:192 ../includes/class.yith-wcwl.php:276
+#: ../includes/class.yith-wcwl.php:185
+#, fuzzy
+msgid "Error occurred while adding products to the wishlist."
+msgstr "ארעה שגיאה בזמן הוספת המוצר לרשימה."
+
+#: ../includes/class.yith-wcwl.php:269
 msgid "Error occurred while adding product to wishlist."
 msgstr "ארעה שגיאה בזמן הוספת המוצר לרשימה."
 
-#: ../includes/class.yith-wcwl.php:291
+#: ../includes/class.yith-wcwl.php:284
 msgid "Remove now does not require any param"
 msgstr ""
 
-#: ../includes/class.yith-wcwl.php:325
-msgid "Error occurred while removing product from wishlist"
+#: ../includes/class.yith-wcwl.php:318
+#, fuzzy
+msgid "Error occurred while removing products from the wishlist"
 msgstr "ארעה שגיאה בזמן הסרת המוצר מהרשימה"
 
-#: ../includes/class.yith-wcwl.php:603
+#: ../includes/class.yith-wcwl.php:596
 msgid "You need to log in before creating a new wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl.php:1146
+#: ../includes/class.yith-wcwl.php:1240
 msgid "Product already in the wishlist."
 msgstr "המוצר עדיין נמצא ברשימת המשאלות שלך."
 
-#: ../includes/class.yith-wcwl.php:1178
+#: ../includes/class.yith-wcwl.php:1272
 msgid "Product successfully removed."
 msgstr "המוצר הוסר מהרשימה בהצלחה."
 
-#: ../includes/class.yith-wcwl.php:1182
+#: ../includes/class.yith-wcwl.php:1276
 msgid "Error. Unable to remove the product from the wishlist."
 msgstr "שגיאה. לא הצלחנו להסיר את המוצר מרשימת המשאלות."
 
-#: ../includes/class.yith-wcwl.php:1186 ../templates/wishlist-view.php:165
+#: ../includes/class.yith-wcwl.php:1280 ../templates/wishlist-view.php:170
 msgid "No products were added to the wishlist"
 msgstr "אין מוצרים ברשימת המשאלות שלך."
 
@@ -648,7 +677,9 @@ msgid "Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1059
-msgid "Word used in the URL of each project (slug from post if empty)"
+msgid ""
+"Univocal identification name in the URL for each product (slug from post if "
+"empty)"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1064
@@ -683,7 +714,7 @@ msgid "Taxonomy Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1083
-msgid "Set the word for each category page URL."
+msgid "Set univocal name for each category page URL."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1088
@@ -717,15 +748,15 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1631
 #, php-format
-msgid "Add %s by images"
+msgid "Add %s from images"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1633
 msgid "Add with multiupload"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel-wc.php:303
-msgid "The changes you made will be lost if you leave this page."
+#: ../plugin-fw/lib/yit-plugin-panel-wc.php:345
+msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:61
@@ -745,9 +776,9 @@ msgid "Save Changes"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:274
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
-msgid "If you go on with this action, you will reset all options in this page."
+msgid ""
+"If you continue with this action, you will reset all options in this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:276
@@ -759,12 +790,12 @@ msgstr ""
 #: ../plugin-fw/lib/yit-plugin-panel.php:276
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
-msgid "Are you sure of it?"
+msgid "Are you sure?"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:410
 msgid ""
-"The element you have written is already exists. Please, add another name."
+"The element you have entered already exists. Please, enter another name."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:411
@@ -795,7 +826,7 @@ msgid "An error has occurred during import. Please try again."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:418
-msgid "The file inserted is not valid."
+msgid "The added file is not valid."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:419
@@ -804,6 +835,12 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:420
 msgid "Sorting successful."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
+msgid ""
+"If you continue with this action, you will reset all the options in this "
+"page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:70
@@ -831,13 +868,12 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:85
 msgid ""
-"From now on, you can find all the options of your plugins in YIT Plugin "
-"menu.\n"
+"From now on, you can find all options of your plugins in YIT Plugin menu.\n"
 "                                    Any time one of our plugins is updated, "
 "a new entry will be added to this menu.\n"
-"                                    For example, after update, plugin "
-"options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, "
-"etc.)\n"
+"                                    For example, after the update, plugin "
+"options (such as for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+"Search, etc.)\n"
 "                                    will be moved from previous location to "
 "YIT Plugin tab."
 msgstr ""
@@ -856,7 +892,7 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:122
 msgid ""
-"please <a href=\"%activate_link%\"> activate </a> your copy of %plugin_name%."
+"please <a href=\"%activate_link%\">activate</a> your copy of %plugin_name%."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:123
@@ -909,11 +945,12 @@ msgid ""
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:493
-msgid "You can't update plugins for this site."
+msgid "You can't update the plugins for this site."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:497
-msgid "You do not have sufficient permissions to update plugins for this site."
+msgid ""
+"You do not have sufficient permissions to update the plugins for this site."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:504
@@ -942,11 +979,11 @@ msgid "Invalid licence key"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:531
-msgid "Software has been deactivate"
+msgid "Software has been deactivated"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:532
-msgid "Exceeded maximum number of activations"
+msgid "Maximum number of activations exceeded"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:533
@@ -1135,7 +1172,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:78
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:270
-msgid "Insert title for the field."
+msgid "Insert the title for the field."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:83
@@ -1157,7 +1194,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:100
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:292
-msgid "Select type for this field."
+msgid "Select the type for this field."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:105
@@ -1167,7 +1204,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:109
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:301
-msgid "Select this if you want this field already checked."
+msgid "Select this option if you want this field appears as already checked."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:114
@@ -1196,7 +1233,7 @@ msgstr "בחירת דגם"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:127
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:319
-msgid "Message Error"
+msgid "Error Message"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:131
@@ -1211,12 +1248,12 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:140
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:332
-msgid "Select this if it must be required."
+msgid "Select this option if it must be required."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:149
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:341
-msgid "Select this if it must be a valid email."
+msgid "Select this option if the email must be valid."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:154
@@ -1357,10 +1394,6 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:28
-msgid "No sideabr"
-msgstr ""
-
 #: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:31
 #: ../plugin-fw/templates/metaboxes/types/sidebars.php:39
 msgid "Right sidebar"
@@ -1464,23 +1497,23 @@ msgstr "מחיר ליחידה"
 msgid "Stock Status"
 msgstr "מצב מלאי"
 
-#: ../templates/wishlist-view.php:93
+#: ../templates/wishlist-view.php:101
 msgid "Remove this product"
 msgstr "הסרת מוצר מהרשימה"
 
-#: ../templates/wishlist-view.php:122
+#: ../templates/wishlist-view.php:130
 msgid "Free!"
 msgstr ""
 
-#: ../templates/wishlist-view.php:136
+#: ../templates/wishlist-view.php:141
 msgid "Out of Stock"
 msgstr "לא קיים במלאי"
 
-#: ../templates/wishlist-view.php:139
+#: ../templates/wishlist-view.php:144
 msgid "In Stock"
 msgstr "קיים במלאי"
 
-#: ../templates/wishlist-view.php:191
+#: ../templates/wishlist-view.php:196
 msgid "Ask an estimate of costs"
 msgstr ""
 
@@ -1503,6 +1536,10 @@ msgstr ""
 #: ../yit-common/yith-panel.php:481
 msgid "Click to preview"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Button rounded corners"
+#~ msgstr "כפתורים עם פינות מעוגלות"
 
 #~ msgid "Cannot add to the cart as product is Out of Stock!"
 #~ msgstr "לא ניתן להוסיף את המוצר לסל כי הוא אינו קיים במלאי!"

@@ -57,6 +57,8 @@ jQuery( document ).ready( function( $ ){
         }
     } );
 
+    add_wishlist_popup();
+
     /**
      * Adds selectbox where needed
      */
@@ -248,5 +250,24 @@ jQuery( document ).ready( function( $ ){
         document.cookie = "cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";
 
         return ret;
+    }
+
+    /**
+     * Add wishlist popup message
+     *
+     * @return void
+     * @since 2.0.0
+     */
+    function add_wishlist_popup() {
+        if( $('.yith-wcwl-add-to-wishlist').length != 0 && $( '#yith-wcwl-popup-message' ).length == 0 ) {
+            var message_div = $( '<div>' )
+                    .attr( 'id', 'yith-wcwl-message' ),
+                popup_div = $( '<div>' )
+                    .attr( 'id', 'yith-wcwl-popup-message' )
+                    .html( message_div )
+                    .hide();
+
+            $( 'body' ).prepend( popup_div );
+        }
     }
 });

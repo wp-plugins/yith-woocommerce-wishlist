@@ -142,9 +142,9 @@ if ( ! class_exists( 'YIT_Plugin_SubPanel' ) ) {
                         <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yit' ) ?>" style="float:left;margin-right:10px;" />
                     </form>
                     <form method="post">
-                        <?php $warning = __( 'If you go on with this action, you will reset all options in this page.', 'yit' ) ?>
+                        <?php $warning = __( 'If you continue with this action, you will reset all the options in this page.', 'yit' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure of it?', 'yit' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>

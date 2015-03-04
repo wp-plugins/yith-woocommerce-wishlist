@@ -18,16 +18,16 @@ global $product;
     </div>
 
     <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-        <span class="feedback"><?php _e( 'Product added!','yit' ) ?></span>
+        <span class="feedback"><?php echo $product_added_text ?></span>
         <a href="<?php echo esc_url( $wishlist_url )?>" >
-            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', __( 'Browse Wishlist', 'yit' ) )?>
+            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )?>
         </a>
     </div>
 
     <div class="yith-wcwl-wishlistexistsbrowse <?php echo ( $exists && ! $available_multi_wishlist ) ? 'show' : 'hide' ?>" style="display:<?php echo ( $exists && ! $available_multi_wishlist ) ? 'block' : 'none' ?>">
-        <span class="feedback"><?php _e( 'The product is already in the wishlist!', 'yit' )?></span>
+        <span class="feedback"><?php echo $already_in_wishslist_text ?></span>
         <a href="<?php echo esc_url( $wishlist_url ) ?>">
-            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', __( 'Browse Wishlist', 'yit' ) )?>
+            <?php echo apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )?>
         </a>
     </div>
 
@@ -37,16 +37,3 @@ global $product;
 </div>
 
 <div class="clear"></div>
-
-<script type="text/javascript">
-    if( jQuery( '#yith-wcwl-popup-message' ).length == 0 ) {
-        var message_div = jQuery( '<div>' )
-                .attr( 'id', 'yith-wcwl-message' ),
-            popup_div = jQuery( '<div>' )
-                .attr( 'id', 'yith-wcwl-popup-message' )
-                .html( message_div )
-                .hide();
-
-        jQuery( 'body' ).prepend( popup_div );
-    }
-</script>

@@ -144,7 +144,7 @@
     width: 100%!important;
 }
 
-/* === Chosen Customizzation === */
+/* === Multiple Chosen Customizzation === */
 
 .yith-choosen .chosen-choices {
     line-height: 27px;
@@ -178,6 +178,22 @@
     width: inherit;
     z-index: 4;
     background-color: #FAFAFA;
+}
+
+/* === Single Chosen Customizzation === */
+
+.yith-choosen .chosen-container-single .chosen-default {
+    background: transparent;
+    border-color: #ddd;
+}
+
+.yith-choosen .chosen-search > input[type=text]{
+    width: 100% !important;
+}
+
+.yith-choosen .chosen-container-single .chosen-single {
+    background: transparent;
+    border-color: #ddd;
 }
 
 

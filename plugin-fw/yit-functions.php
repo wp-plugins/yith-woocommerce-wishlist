@@ -272,7 +272,7 @@ if ( ! function_exists( 'yit_plugin_get_attachment_id' ) ) {
 
         foreach ( $ids as $id ) {
             $attachment_image = wp_get_attachment_image_src( $id, 'full' );
-            if ( $url == str_replace( 'https://', 'http://', array_shift( $attachment_image ) ) ) {
+            if ( $url == array_shift( $attachment_image ) || $url == str_replace( 'https://', 'http://', array_shift( $attachment_image ) ) ) {
                 return $id;
             }
         }
