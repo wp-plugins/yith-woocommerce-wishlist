@@ -1751,7 +1751,7 @@ class YIT_CPT_Unlimited {
 
 
         // check if we are in archive template
-        if ( !( ! is_admin() && is_archive() && isset( $wp_query->post->post_type ) && $this->_is_valid( $wp_query->post->post_type ) ) ) {
+         if ( !( ! is_admin() && is_archive() && isset($wp_query->post) && $this->_is_valid( $wp_query->post->post_type ) ) ) {
             return;
         }
 

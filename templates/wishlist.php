@@ -4,18 +4,11 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 2.0.0
+ * @version 2.0.5
  */
 
 global $wpdb, $woocommerce;
 
-// Start wishlist page printing
-if( function_exists( 'wc_print_notices' ) ) {
-    wc_print_notices();
-}
-else{
-    $woocommerce->show_messages();
-}
 ?>
 <div id="yith-wcwl-messages"></div>
 

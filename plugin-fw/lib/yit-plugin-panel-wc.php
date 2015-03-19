@@ -65,9 +65,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 add_action( 'admin_init', array( $this, 'woocommerce_update_options' ) );
 	            add_filter( 'woocommerce_screen_ids', array( $this, 'add_allowed_screen_id' ) );
 
-                add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'yit_boxinfo' ), 10, 1 );
-                add_action( 'woocommerce_admin_field_videobox', array( $this, 'yit_videobox' ), 10, 1 );
-
+                /* Add VideoBox and InfoBox */
+                add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'add_infobox' ), 10, 1 );
+                add_action( 'woocommerce_admin_field_videobox', array( $this, 'add_videobox' ), 10, 1 );
             }
         }
 
@@ -95,36 +95,6 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
 
             extract( $additional_info );
             require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-panel.php' );
-        }
-
-        /**
-         * Show a box panel with specific content in two columns as a new woocommerce type
-         *
-         *
-         * @return   void
-         * @since    1.0
-         * @author   Emanuela Castorina      <emanuela.castorina@yithemes.com>
-         */
-        public function yit_boxinfo( $args = array() ) {
-        if ( !empty( $args ) ) {
-            extract( $args );
-            require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-boxinfo.php' );
-        }
-    }
-
-        /**
-         * Show a box panel with specific content in two columns as a new woocommerce type
-         *
-         *
-         * @return   void
-         * @since    1.0
-         * @author   Emanuela Castorina      <emanuela.castorina@yithemes.com>
-         */
-        public function yit_videobox( $args = array() ) {
-            if ( ! empty( $args ) ) {
-                extract( $args );
-                require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-videobox.php' );
-            }
         }
 
         /**
@@ -261,26 +231,6 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 require_once( YIT_CORE_PLUGIN_TEMPLATE_PATH . '/panel/woocommerce/woocommerce-form.php' );
             }
         }
-
-	    /**
-	     * Fire the action to print the custom tab
-	     *
-	     * @param $current_tab string
-	     *
-	     * @return void
-	     * @since    1.0
-	     * @author   Antonino Scarfì <antonino.scarfi@yithemes.com>
-	     */
-	    public function print_video_box() {
-		    $file = $this->settings['options-path'] . '/video-box.php';
-
-		    if ( ! file_exists( $file ) ) {
-			    return;
-		    }
-
-		    $args = include_once( $file );
-		    $this->yit_videobox( $args );
-	    }
 
         /**
          * Update options

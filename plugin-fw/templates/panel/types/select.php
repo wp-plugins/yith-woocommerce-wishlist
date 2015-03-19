@@ -28,7 +28,7 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 <div id="<?php echo $id ?>-container" class="yit_options rm_option rm_input rm_text" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?>>
     <div class="option">
         <div class="select_wrapper">
-            <select name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" id="<?php echo $id ?>" <?php echo $multiple ?> >
+            <select name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" id="<?php echo $id ?>" <?php echo $multiple ?> <?php echo $custom_attributes ?> >
                 <?php foreach ( $option['options'] as $key => $value ) : ?>
                     <option value="<?php echo esc_attr( $key ) ?>"<?php ($is_multiple) ? selected( true, in_array( $key, $db_value) ) : selected( $key, $db_value ) ?>><?php echo $value ?></option>
                 <?php endforeach; ?>

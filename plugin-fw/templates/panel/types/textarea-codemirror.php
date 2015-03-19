@@ -26,7 +26,7 @@ $name = $this->get_name_field( $option['id'] );
 ?>
 <div id="<?php echo $id ?>-container" class="yit_options rm_option rm_input rm_text" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?>>
     <div class="option">
-        <textarea name="<?php echo $name ?>" class="codemirror" id="<?php echo $id ?>" rows="8" cols="50"><?php echo $db_value ?></textarea>
+        <textarea name="<?php echo $name ?>" class="codemirror" id="<?php echo $id ?>" rows="8" cols="50" <?php echo $custom_attributes ?>><?php echo $db_value ?></textarea>
     </div>
     <span class="description"><?php echo $option['desc'] ?></span>
 

@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly
 
-$id = $this->get_id_field( $option['id'] );
-$name = $this->get_name_field( $option['id'] );
+$id                 = $this->get_id_field( $option['id'] );
+$name               = $this->get_name_field( $option['id'] );
 
 ?>
 <div id="<?php echo $id ?>-container" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?> class="yit_options rm_option rm_input rm_text">
     <div class="option">
-        <input type="text" name="<?php echo $name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr( $db_value ) ?>" />
+        <input type="text" name="<?php echo $name ?>" id="<?php echo $id ?>" value="<?php echo esc_attr( $db_value ) ?>" <?php echo $custom_attributes ?> />
     </div>
     <span class="description"><?php echo $option['desc'] ?></span>
 

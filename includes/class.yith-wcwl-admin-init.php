@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 		 * @var string
 		 * @since 1.0.0
 		 */
-		public $version = '2.0.4';
+		public $version = '2.0.5';
 
 		/**
 		 * Plugin database version
@@ -194,6 +194,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 			$this->default_tab = apply_filters( 'yith_wcwl_default_admin_tab', $this->default_tab );
 
 			wp_register_style( 'yith-wcwl-admin', YITH_WCWL_URL . 'assets/css/admin.css' );
+			wp_register_script( 'yith-wcwl-admin', YITH_WCWL_URL . 'assets/js/admin/yith-wcwl.js' );
 		}
 
 		/**
@@ -1339,47 +1340,6 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 				<div class="clear"></div>
 			</div>
 			<div class="clear" style="height:30px;"></div>
-
-			<script type="text/javascript">
-				jQuery('input#yith_wcwl_frontend_css').on('change',function () {
-					if (jQuery(this).is(':checked')) {
-						jQuery('#yith_wcwl_styles_colors').hide();
-						jQuery('#yith_wcwl_rounded_corners').parents('tr').hide();
-						jQuery('#yith_wcwl_add_to_wishlist_icon').parents('tr').hide();
-						jQuery('#yith_wcwl_add_to_cart_icon').parents('tr').hide();
-					} else {
-						jQuery('#yith_wcwl_styles_colors').show();
-						if (jQuery('#yith_wcwl_use_button').is(':checked')) {
-							jQuery('#yith_wcwl_rounded_corners').parents('tr').show();
-							jQuery('#yith_wcwl_add_to_wishlist_icon').parents('tr').show();
-							jQuery('#yith_wcwl_add_to_cart_icon').parents('tr').show();
-						}
-					}
-				}).change();
-
-				jQuery('input#yith_wcwl_use_button').on('change',function () {
-					if (jQuery(this).is(':checked') && !jQuery('#yith_wcwl_frontend_css').is(':checked')) {
-						jQuery('#yith_wcwl_rounded_corners').parents('tr').show();
-						jQuery('#yith_wcwl_add_to_wishlist_icon').parents('tr').show();
-						jQuery('#yith_wcwl_add_to_cart_icon').parents('tr').show();
-					} else {
-						jQuery('#yith_wcwl_rounded_corners').parents('tr').hide();
-						jQuery('#yith_wcwl_add_to_wishlist_icon').parents('tr').hide();
-						jQuery('#yith_wcwl_add_to_cart_icon').parents('tr').hide();
-					}
-				}).change();
-
-				jQuery('#yith_wcwl_multi_wishlist_enable').on('change', function () {
-					if (jQuery(this).is(':checked')) {
-						jQuery('#yith_wcwl_wishlist_create_title').parents('tr').show();
-						jQuery('#yith_wcwl_wishlist_manage_title').parents('tr').show();
-					}
-					else{
-						jQuery('#yith_wcwl_wishlist_create_title').parents('tr').hide();
-						jQuery('#yith_wcwl_wishlist_manage_title').parents('tr').hide();
-					}
-				}).change();
-			</script>
 		<?php
 		}
 
@@ -1421,8 +1381,12 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 		 * @since 1.0.0
 		 */
 		public function enqueue() {
-			global $woocommerce;
-			wp_enqueue_style( 'yith-wcwl-admin' );
+			global $woocommerce, $pagenow;
+
+			if( $pagenow == 'admin.php' && isset( $_GET['page'] ) && $_GET['page'] == 'yith_wcwl_panel' ) {
+				wp_enqueue_style( 'yith-wcwl-admin' );
+				wp_enqueue_script( 'yith-wcwl-admin' );
+			}
 		}
 
 		/**

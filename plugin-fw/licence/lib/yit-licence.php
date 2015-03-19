@@ -99,8 +99,16 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          * @author Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function get_home_url() {
-            return is_ssl() ? str_replace( 'https://', '', home_url() ) : str_replace( 'http://', '', home_url() );
+            $home_url   = home_url();
+            $schemes    = apply_filters( 'yit_licence_url_schemes', array( 'https://', 'http://' ) );
+
+            foreach( $schemes as $scheme ){
+                $home_url = str_replace( $scheme, '', $home_url );
+            }
+
+            return $home_url;
         }
+
 
         /**
          * Check if the request is ajax

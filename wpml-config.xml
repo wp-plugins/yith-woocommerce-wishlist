@@ -12,5 +12,8 @@
       <key name="yith_wcwl_add_to_cart_text" />
       <key name="yith_wcwl_socials_title" />
       <key name="yith_wcwl_socials_text" />
+      <key name="yith_wcwl_show_login_notice" />
+      <key name="yith_wcwl_login_anchor_text" />
+      <key name="yith_wcwl_additional_info_textarea_label" />
     </admin-texts>
 </wpml-config>

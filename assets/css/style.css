@@ -207,10 +207,12 @@
     border-color: #e7e7e7;
 }
 
-.wishlist_table tr td, .wishlist_table tr th.wishlist-delete { text-align: center; }
+.wishlist_table tr td, .wishlist_table tr th.wishlist-delete, .wishlist_table tr th.product-checkbox { text-align: center; }
+.wishlist_table tr th.product-checkbox { vertical-align: middle }
 .wishlist_table tr td.product-thumbnail, .wishlist_table tr td.product-name, .wishlist_table tr td.wishlist-name, .wishlist_table tr td.wishlist-privacy, .woocommerce table.wishlist_table tfoot td { text-align: left; }
 .wishlist_table tr td.product-stock-status span.wishlist-in-stock { color: #297E29; }
 .wishlist_table tr td.product-stock-status span.wishlist-out-of-stock { color: #F00; }
+.wishlist_table tr td a.button { white-space: normal; }
 
 /* Wishlist buttons */
 .summary .single_add_to_wishlist.button,
@@ -328,6 +330,20 @@ div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
     float: right;
     padding: 7px 12px;
     line-height: normal;
+}
+
+#ask_an_estimate_popup{
+    display: none;
+}
+
+.ask-an-estimate-button-popup{
+    margin-top: 30px!important;
+    float: right;
+    text-transform: none;
+}
+
+#additional_notes{
+    min-height: 150px;
 }
 
 /* Create new wishlist*/

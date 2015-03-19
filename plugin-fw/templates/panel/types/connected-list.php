@@ -11,7 +11,7 @@ $name = $this->get_name_field( $option['id'] );
         <?php foreach( $lists as $list => $options ): ?>
             <div class="list_container">
                 <h4><?php echo $option['heads'][ $list ] ?></h4>
-                <ul id="list_<?php echo $list ?>" class="connectedSortable" data-list="<?php echo $list ?>">
+                <ul id="list_<?php echo $list ?>" class="connectedSortable" data-list="<?php echo $list ?>" <?php echo $custom_attributes ?>>
                     <?php foreach( $options as $value => $label ): ?>
                         <li data-option="<?php echo $value ?>" class="ui-state-default"><?php echo $label ?></li>
                     <?php endforeach ?>

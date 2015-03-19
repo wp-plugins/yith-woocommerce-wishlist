@@ -103,6 +103,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             add_action( 'woocommerce_add_to_cart', array( $this, 'remove_from_wishlist_after_add_to_cart' ) );
             add_filter( 'woocommerce_product_add_to_cart_url', array( $this, 'redirect_to_cart' ), 10, 2 );
 
+	        add_action( 'yith_wcwl_before_wishlist_title', array( $this, 'print_notices' ) );
+
 	        // add filter for font-awesome compatibility
 	        add_filter( 'option_yith_wcwl_add_to_wishlist_icon', array( $this, 'update_font_awesome_classes' ) );
 	        add_filter( 'option_yith_wcwl_add_to_cart_icon', array( $this, 'update_font_awesome_classes' ) );
@@ -885,19 +887,17 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function add_rewrite_rules() {
             global $wp_query;
             $wishlist_page_id = isset( $_POST['yith_wcwl_wishlist_page_id'] ) ? $_POST['yith_wcwl_wishlist_page_id'] : get_option( 'yith_wcwl_wishlist_page_id' );
+	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
 
             if( empty( $wishlist_page_id ) ){
                 return;
             }
 
             $wishlist_page = get_post( $wishlist_page_id );
-            $wishlist_page_slug = $wishlist_page->post_name;
+	        $wishlist_page_slug = $wishlist_page->post_name;
 
-            add_rewrite_rule( '^' . $wishlist_page_slug . '(/(.*))?/page/([0-9]{1,})/?$', 'index.php?pagename=' . $wishlist_page_slug . '&wishlist-action=$matches[2]&paged=$matches[3]', 'top' );
-            add_rewrite_rule( '^' . $wishlist_page_slug . '(/(.*))?/?$', 'index.php?pagename=' . $wishlist_page_slug . '&wishlist-action=$matches[2]', 'top' );
-
-            $matches = array();
-            preg_match( '^' . $wishlist_page_slug . '(/(.*))?/$^', $_SERVER['REQUEST_URI'], $matches );
+            add_rewrite_rule( '(([^/]+/)*' . $wishlist_page_slug . ')(/(.*))?/page/([0-9]{1,})/?$', 'index.php?pagename=$matches[1]&wishlist-action=$matches[4]&paged=$matches[5]', 'top' );
+            add_rewrite_rule( '(([^/]+/)*' . $wishlist_page_slug . ')(/(.*))?/?$', 'index.php?pagename=$matches[1]&wishlist-action=$matches[4]', 'top' );
         }
 
         /**
@@ -933,16 +933,11 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          */
         public function get_wishlist_url( $action = 'view' ) {
             $wishlist_page_id = get_option( 'yith_wcwl_wishlist_page_id' );
+	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
 
             if( get_option( 'permalink_structure' ) ) {
-
-                $wishlist_page      = get_post( $wishlist_page_id );
-                $wishlist_page_slug = $wishlist_page->post_name;
-
-                $wishlist_page_relative = '/' . $wishlist_page_slug . '/' . $action . '/';
-
-                $base_url = trailingslashit( home_url( $wishlist_page_relative ) );
-
+	            $wishlist_permalink = get_the_permalink( $wishlist_page_id );
+	            $base_url = trailingslashit( $wishlist_permalink . $action );
             }
             else{
                 $base_url = get_the_permalink( $wishlist_page_id );
@@ -967,9 +962,13 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 $base_url = add_query_arg( $params, $base_url );
             }
 
-            return $base_url;
+            if( defined( 'ICL_PLUGIN_PATH' ) ){
+		        $base_url = add_query_arg( 'lang', icl_get_current_language(), $base_url );
+	        }
+
+            return apply_filters( 'yith_wcwl_wishlist_page_url', $base_url );
         }
-        
+
         /**
          * Build the URL used to remove an item from the wishlist.
          *
@@ -1047,6 +1046,24 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function get_nonce_url( $action, $url = '' ) {
             return add_query_arg( '_n', wp_create_nonce( 'yith-wcwl-' . $action ), $url );
         }
+
+	    /**
+	     * Prints wc notice for wishlist pages
+	     *
+	     * @return void
+	     * @since 2.0.5
+	     */
+	    public function print_notices() {
+		    global $woocommerce;
+
+		    // Start wishlist page printing
+		    if( function_exists( 'wc_print_notices' ) ) {
+			    wc_print_notices();
+		    }
+		    else{
+			    $woocommerce->show_messages();
+		    }
+	    }
 
 	    /* === FONTAWESOME FIX === */
 	    /**
@@ -1206,6 +1223,11 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @since 2.0.0
          */
         public function redirect_to_cart( $url, $product ) {
+	        global $yith_wcwl_wishlist_token;
+
+	        $wishlist = $this->get_wishlist_detail_by_token( $yith_wcwl_wishlist_token );
+	        $wishlist_id = $wishlist['ID'];
+
             if( $product->is_type( 'simple' ) && get_option( 'yith_wcwl_redirect_cart' ) == 'yes' ){
                 if( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) && yith_wcwl_is_wishlist() ){
                     $url = add_query_arg( 'add-to-cart', $product->id, WC()->cart->get_cart_url() );
@@ -1214,7 +1236,14 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 
             if( get_option( 'yith_wcwl_remove_after_add_to_cart' ) == 'yes' ){
                 if( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) && yith_wcwl_is_wishlist() ) {
-                    $url = add_query_arg( 'remove_from_wishlist_after_add_to_cart', $product->id, $url );
+                    $url = add_query_arg(
+	                    array(
+		                    'remove_from_wishlist_after_add_to_cart' => $product->id,
+		                    'wishlist_id' => $wishlist_id,
+		                    'wishlist_token' => $yith_wcwl_wishlist_token
+	                    ),
+	                    $url
+                    );
                 }
             }
 
@@ -1234,10 +1263,10 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             $wishlists = array();
 
             if( $return == 'true' ){
-                $message = apply_filters( 'yith_wcwl_product_added_to_wishlist_message', __( 'Product added!', 'yit' ) );
+                $message = apply_filters( 'yith_wcwl_product_added_to_wishlist_message', get_option( 'yith_wcwl_product_added_text' ) );
             }
             elseif( $return == 'exists' ){
-                $message = apply_filters( 'yith_wcwl_product_already_in_wishlist_message', __( 'Product already in the wishlist.', 'yit' ) );
+                $message = apply_filters( 'yith_wcwl_product_already_in_wishlist_message', get_option( 'yith_wcwl_already_in_wishlist_text' ) );
             }
             elseif( count( $this->errors ) > 0 ){
                 $message = apply_filters( 'yith_wcwl_error_adding_to_wishlist_message', $this->get_errors() );
@@ -1282,7 +1311,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 
             wc_add_notice( $message );
 
-            $atts = array();
+            $atts = array( 'wishlist_id' => isset( $this->details['wishlist_token'] ) ? $this->details['wishlist_token'] : false );
             if( isset( $this->details['pagination'] ) ){
                 $atts['pagination'] = $this->details['pagination'];
             }

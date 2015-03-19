@@ -22,10 +22,11 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 		 * @since 1.0.0
 		 */
 		public static function wishlist( $atts, $content = null ) {
-			global $yith_wcwl_is_wishlist;
+			global $yith_wcwl_is_wishlist, $yith_wcwl_wishlist_token;
 			$atts = shortcode_atts( array(
 				'per_page' => 5,
-				'pagination' => 'no'
+				'pagination' => 'no',
+				'wishlist_id' => false
 			), $atts );
 
 			$available_views = apply_filters( 'yith_wcwl_available_wishlist_views', array( 'view', 'user' ) );
@@ -63,24 +64,26 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				 *   -if wishlist is of another user, checks if wishlist is public or shared, and shows it only in this case (if user is admin, can see all wishlists)
 				*/
 
-				if( ! empty( $action ) && $action == 'user' ){
-					$user_id = isset( $action_params[1] ) ? $action_params[1] : false;
-					$user_id = ( ! $user_id ) ? get_query_var( $user_id, false ) : $user_id;
-					$user_id = ( ! $user_id ) ? get_current_user_id() : false;
+				if( empty( $wishlist_id ) ) {
+					if ( ! empty( $action ) && $action == 'user' ) {
+						$user_id = isset( $action_params[1] ) ? $action_params[1] : false;
+						$user_id = ( ! $user_id ) ? get_query_var( $user_id, false ) : $user_id;
+						$user_id = ( ! $user_id ) ? get_current_user_id() : false;
 
-					$wishlists = YITH_WCWL()->get_wishlists( array( 'user_id' => $user_id, 'is_default' => 1 ) );
+						$wishlists = YITH_WCWL()->get_wishlists( array( 'user_id' => $user_id, 'is_default' => 1 ) );
 
-					if( ! empty( $wishlists ) && isset( $wishlists[0] ) ){
-						$wishlist_id = $wishlists[0]['wishlist_token'];
-					}
-					else{
-						$wishlist_id = false;
+						if ( ! empty( $wishlists ) && isset( $wishlists[0] ) ) {
+							$wishlist_id = $wishlists[0]['wishlist_token'];
+						} else {
+							$wishlist_id = false;
+						}
+					} else {
+						$wishlist_id = isset( $action_params[1] ) ? $action_params[1] : false;
+						$wishlist_id = ( ! $wishlist_id ) ? get_query_var( 'wishlist_id', false ) : $wishlist_id;
 					}
 				}
-				else {
-					$wishlist_id = isset( $action_params[1] ) ? $action_params[1] : false;
-					$wishlist_id = ( ! $wishlist_id ) ? get_query_var( 'wishlist_id', false ) : $wishlist_id;
-				}
+
+				$yith_wcwl_wishlist_token = $wishlist_id;
 
 				$is_user_owner = false;
 				$query_args = array();
@@ -215,9 +218,12 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 					'ask_estimate_url' => $ask_estimate_url,
 					'show_stock_status' => get_option( 'yith_wcwl_stock_show' ) == 'yes',
 					'show_add_to_cart' => get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes',
+					'add_to_cart_text' => get_option( 'yith_wcwl_add_to_cart_text' ),
 					'price_excl_tax' => get_option( 'woocommerce_tax_display_cart' ) == 'excl',
 					'template_part' => $template_part,
-					'share_enabled' => $share_enabled
+					'share_enabled' => $share_enabled,
+					'additional_info' => false,
+					'show_cb' => false
 				);
 
 				if( $share_enabled ){
@@ -267,6 +273,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 
 			// we're not in wishlist template anymore
 			$yith_wcwl_is_wishlist = false;
+			$yith_wcwl_wishlist_token = null;
 
 			// remove filters for add to cart buttons
 			remove_filter( 'woocommerce_loop_add_to_cart_link', array( 'YITH_WCWL_UI', 'alter_add_to_cart_button' ) );
@@ -323,6 +330,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				'icon' => $icon,
 				'link_classes' => $classes,
 				'available_multi_wishlist' => false,
+				'disable_wishlist' => false
 			);
 
 			$additional_params = apply_filters( 'yith_wcwl_add_to_wishlist_params', $additional_params );

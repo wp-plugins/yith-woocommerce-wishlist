@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <div id="<?php echo $this->get_id_field( $option['id'] ) ?>-container" class="yit_options rm_option rm_input rm_text" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?>>
     <div class="option">
         <div class="select_wrapper">
-            <select name="<?php echo $this->get_name_field( $option['id'] ) ?>" id="<?php echo $this->get_id_field( $option['id'] ) ?>">
+            <select name="<?php echo $this->get_name_field( $option['id'] ) ?>" id="<?php echo $this->get_id_field( $option['id'] ) ?>" <?php echo $custom_attributes ?>>
                 <?php foreach( $option['options'] as $key => $value ) : ?>
                     <option value="<?php echo esc_attr( $key ) ?>"<?php selected( $key, $db_value ) ?>><?php echo $value ?></option>
                 <?php endforeach; ?>

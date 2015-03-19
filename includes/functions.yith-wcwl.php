@@ -54,7 +54,6 @@ if( !function_exists( 'yith_wcwl_locate_template' ) ) {
     	$located = locate_template( array(
             $template_woocommerce_path, // Search in <theme>/woocommerce/
             $template_path,             // Search in <theme>/
-            $plugin_path                // Search in <plugin>/templates/
         ) );
 
         if( ! $located && file_exists( $plugin_path ) ){
