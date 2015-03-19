@@ -1293,7 +1293,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @since 1.0.0
          */
         public function remove_from_wishlist_ajax() {
-            $count = yith_wcwl_count_products();
+            $wishlist_token = isset( $this->details['wishlist_token'] ) ? $this->details['wishlist_token'] : false;
+            $count = yith_wcwl_count_products( $wishlist_token );
             $message = '';
 
             if( $count != 0 ) {
@@ -1311,7 +1312,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 
             wc_add_notice( $message );
 
-            $atts = array( 'wishlist_id' => isset( $this->details['wishlist_token'] ) ? $this->details['wishlist_token'] : false );
+            $atts = array( 'wishlist_id' => $wishlist_token );
             if( isset( $this->details['pagination'] ) ){
                 $atts['pagination'] = $this->details['pagination'];
             }

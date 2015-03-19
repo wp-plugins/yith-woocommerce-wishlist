@@ -94,12 +94,14 @@ if( !function_exists( 'yith_wcwl_get_template' ) ) {
 if( !function_exists( 'yith_wcwl_count_products' ) ) {
     /**
      * Retrieve the number of products in the wishlist.
+     *
+     * @param $wishlist_token string Optianl wishlist token
      * 
      * @return int
      * @since 1.0.0
      */
-    function yith_wcwl_count_products() {
-        return YITH_WCWL()->count_products();
+    function yith_wcwl_count_products( $wishlist_token = false ) {
+        return YITH_WCWL()->count_products( $wishlist_token );
     }
 }
 
