@@ -121,7 +121,9 @@ if ( ! class_exists( 'YIT_Video' ) ) {
          */
         public static function video_id_by_url( $url ) {
             $parsed = parse_url( esc_url( $url ) );
-
+            if ( ! isset( $parsed['host'] ) ) {
+                return false;
+            }
             switch ( $parsed['host'] ) {
 
                 case 'www.youtube.com' :

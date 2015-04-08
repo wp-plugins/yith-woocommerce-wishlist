@@ -18,6 +18,20 @@ $banned_products     = isset( $no_active_products[ '107' ] ) ? $no_active_produc
 <div class="yit-container product-licence-activation">
     <h2><?php _e( 'Yithemes Licence Activation', 'yit' ) ?></h2>
 
+    <?php if( is_a( $this, 'YIT_Theme_Licence' ) ) : ?>
+    <div class="activation-faq">
+        <h3><?php _e( 'I cannot find the license key for activating the theme I have bought some time ago. Where can I find it?', 'yit' ) ?></h3>
+        <p>
+            <?php
+            _e( 'If you have purchased one of our products before 27 January 2015, you can benefit from support and updates (the services offered with the license)
+            until 27 January 2016 and you do not have to purchase it again to get a new license key, because, before this date, your license used to be activated automatically by our system.
+            After 27 January 2016, instead, if you want to benefit from support and updates you have to buy a new license and activate it through the license key you will be
+            provided with and that you can find in your YIThemes account, in section "My licenses".', 'yit' )
+            ?>
+        </p>
+    </div>
+    <?php endif; ?>
+
     <div class="licence-check-section">
         <form method="post" id="licence-check-update" action="<?php echo admin_url( 'admin-ajax.php' ) ?>">
             <span class="licence-label" style="display: block;"><?php _e( 'Have you updated your licenses? Have you asked for an extension? Update information concerning your products.', 'yit' ); ?></span>

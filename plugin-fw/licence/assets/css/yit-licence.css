@@ -315,6 +315,19 @@
     outline: 0;
 }
 
+/* Licence FAQ */
+.yit-container.product-licence-activation .activation-faq {
+    background: #ffffff;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+.yit-container.product-licence-activation .activation-faq h3{
+    color: #808a97;
+}
+
 /* === Responsive === */
 
 @media (max-width: 767px) {}

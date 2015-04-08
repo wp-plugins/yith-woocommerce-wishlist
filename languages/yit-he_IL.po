@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2015-03-18 10:24+0100\n"
-"PO-Revision-Date: 2015-03-18 10:24+0100\n"
+"POT-Creation-Date: 2015-04-07 16:53+0100\n"
+"PO-Revision-Date: 2015-04-07 16:53+0100\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
@@ -483,7 +483,7 @@ msgid ""
 "\">discover the PREMIUM version.</a>"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-init.php:347
+#: ../includes/class.yith-wcwl-init.php:362
 msgid ""
 "We are sorry, but this feature is available only if cookies are enabled on "
 "your browser."
@@ -537,15 +537,15 @@ msgstr "ארעה שגיאה בזמן הסרת המוצר מהרשימה"
 msgid "You need to log in before creating a new wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl.php:1301
+#: ../includes/class.yith-wcwl.php:1307
 msgid "Product successfully removed."
 msgstr "המוצר הוסר מהרשימה בהצלחה."
 
-#: ../includes/class.yith-wcwl.php:1305
+#: ../includes/class.yith-wcwl.php:1311
 msgid "Error. Unable to remove the product from the wishlist."
 msgstr "שגיאה. לא הצלחנו להסיר את המוצר מרשימת המשאלות."
 
-#: ../includes/class.yith-wcwl.php:1309 ../templates/wishlist-view.php:181
+#: ../includes/class.yith-wcwl.php:1315 ../templates/wishlist-view.php:181
 msgid "No products were added to the wishlist"
 msgstr "אין מוצרים ברשימת המשאלות שלך."
 
@@ -751,7 +751,7 @@ msgstr ""
 msgid "Add with multiupload"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel-wc.php:315
+#: ../plugin-fw/lib/yit-plugin-panel-wc.php:295
 msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
@@ -760,76 +760,76 @@ msgstr ""
 msgid "Plugin Settings"
 msgstr "הגדרות"
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:94
+#: ../plugin-fw/lib/yit-plugin-panel.php:91
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:101
 msgid "YIT Plugins"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:273
+#: ../plugin-fw/lib/yit-plugin-panel.php:280
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:142
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
 msgid "Save Changes"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:276
+#: ../plugin-fw/lib/yit-plugin-panel.php:283
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
 msgid ""
 "If you continue with this action, you will reset all options in this page."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:278
+#: ../plugin-fw/lib/yit-plugin-panel.php:285
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #, fuzzy
 msgid "Reset to Default"
 msgstr "הפנייה לסל הקניות"
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:278
+#: ../plugin-fw/lib/yit-plugin-panel.php:285
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
 msgid "Are you sure?"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:412
+#: ../plugin-fw/lib/yit-plugin-panel.php:419
 msgid ""
 "The element you have entered already exists. Please, enter another name."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:413
+#: ../plugin-fw/lib/yit-plugin-panel.php:420
 #, fuzzy
 msgid "Settings saved"
 msgstr "הגדרות"
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:414
+#: ../plugin-fw/lib/yit-plugin-panel.php:421
 #, fuzzy
 msgid "Settings reset"
 msgstr "הגדרות"
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:415
+#: ../plugin-fw/lib/yit-plugin-panel.php:422
 msgid "Element deleted correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:416
-#: ../plugin-fw/lib/yit-plugin-panel.php:417
+#: ../plugin-fw/lib/yit-plugin-panel.php:423
+#: ../plugin-fw/lib/yit-plugin-panel.php:424
 msgid "Element updated correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:418
+#: ../plugin-fw/lib/yit-plugin-panel.php:425
 msgid "Database imported correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:419
+#: ../plugin-fw/lib/yit-plugin-panel.php:426
 msgid "An error has occurred during import. Please try again."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:420
+#: ../plugin-fw/lib/yit-plugin-panel.php:427
 msgid "The added file is not valid."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:421
+#: ../plugin-fw/lib/yit-plugin-panel.php:428
 msgid "Sorry, import is disabled."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:422
+#: ../plugin-fw/lib/yit-plugin-panel.php:429
 msgid "Sorting successful."
 msgstr ""
 

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2015-04-07 16:53+0100\n"
+"POT-Creation-Date: 2015-04-07 16:54+0100\n"
 "PO-Revision-Date: 2015-04-07 16:54+0100\n"
-"Last-Translator: YIThemes <support@yithemes.com>\n"
+"Last-Translator: 李明軒 <eggeggxuan@gmail.com>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: ../includes/class.yith-wcwl-admin-init.php:1360
 #: ../includes/class.yith-wcwl-install.php:240
 msgid "Wishlist"
-msgstr "Lista de Desejos"
+msgstr "愿望清单"
 
 #: ../includes/class.yith-wcwl-admin-init.php:190
 #: ../includes/class.yith-wcwl-admin-init.php:290
@@ -40,12 +40,12 @@ msgstr "Lista de Desejos"
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
 #: ../plugin-fw/lib/yit-plugin-panel.php:62
 msgid "Settings"
-msgstr "Configurações"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:191
 #: ../includes/class.yith-wcwl-admin-init.php:257
 msgid "Colors"
-msgstr "Cores"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:192
 #: ../includes/class.yith-wcwl-admin-init.php:294
@@ -68,11 +68,11 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:342
 msgid "Wishlist Page"
-msgstr "Meus desejos"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:343
 msgid "Page contents: [yith_wcwl_wishlist]"
-msgstr "Conteúdo da página: [yith_wcwl_wishlist]"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:918
 msgid "Upgrade to the PREMIUM VERSION"
@@ -105,26 +105,23 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:941
 msgid "General Settings"
-msgstr "Opções gerais"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:948
 msgid "Enable YITH Wishlist"
-msgstr "Ativar Lista de Desejos"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:949
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Enable all plugin features. <strong>Be sure to select a voice in the "
 "wishlist page menu in %s.</strong> Also, please read the plugin <a href=\"%s"
 "\" target=\"_blank\">documentation</a>."
 msgstr ""
-"Ativar todas opções. <strong> Saiba que a página de desejos é selecionada na "
-"seção Páginas. </strong>. <a href=\"%s\" target=\"_blank\">Documentação</a>."
 
 #: ../includes/class.yith-wcwl-admin-init.php:956
-#, fuzzy
 msgid "Default wishlist title"
-msgstr "Titulo da lista de desejos"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:958
 #: ../includes/class.yith-wcwl-admin-init.php:959
@@ -132,133 +129,122 @@ msgstr "Titulo da lista de desejos"
 #: ../includes/class.yith-wcwl-admin-init.php:1201
 #, php-format
 msgid "My wishlist on %s"
-msgstr "Minha lista de desejos em %s"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:967
 msgid "Position"
-msgstr "Posição"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:968
-#, fuzzy
 msgid ""
 "You can add it in variable products only After \"Add to Cart \" or using the "
 "shortcode [yith_wcwl_add_to_wishlist]."
 msgstr ""
-"Em produtos variáveis você pode adicionar isto somenteapós \"Adcionar ao "
-"Carrinho\" ou usar o shortcode [yith_wcwl_add_to_wishlist]."
 
 #: ../includes/class.yith-wcwl-admin-init.php:974
 msgid "After \"Add to cart\""
-msgstr "Após \" Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:975
 msgid "After thumbnails"
-msgstr "Após miniaturas"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:976
 msgid "After summary"
-msgstr "Após sumário"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:977
 msgid "Use shortcode"
-msgstr "Usar shortcode"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:982
 msgid "Redirect to cart"
-msgstr "Redirecionar para o carrinho"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:983
 msgid ""
 "Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
 "page."
 msgstr ""
-"Redirecionar para a página de carrinho se o botão \" Adcionar ao carrinho \" "
-"estiver clicado na página de lista de desejos."
 
 #: ../includes/class.yith-wcwl-admin-init.php:990
 msgid "Remove if added to the cart"
-msgstr "Remover se adcionado ao carrinho"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:991
-#, fuzzy
 msgid "Remove the product from the wishlist if it has been added to the cart."
 msgstr ""
-"Remover o produto da lista, se a mesma tiver sido adicionada ao carrinho."
 
 #: ../includes/class.yith-wcwl-admin-init.php:998
 msgid "\"Add to Wishlist\" text"
-msgstr "Texto \" Adcionar a Lista de Desejos\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1000
 #: ../includes/class.yith-wcwl-admin-init.php:1001
 msgid "Add to Wishlist"
-msgstr "Adicionar aos meus desejos"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1006
 #, fuzzy
 msgid "\"Browse wishlist\" text"
-msgstr "Veja sua lista de desejos!"
+msgstr "浏览「愿望清单」"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1008
 #: ../includes/class.yith-wcwl-admin-init.php:1009
 #: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl-ui.php:82
 msgid "Browse Wishlist"
-msgstr "Veja sua lista de desejos!"
+msgstr "浏览「愿望清单」"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1014
 #, fuzzy
 msgid "\"Product already in wishlist\" text"
-msgstr "Produto já na lista de desejos."
+msgstr "商品已经加入收藏在「愿望清单」裡面。"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1016
 #: ../includes/class.yith-wcwl-admin-init.php:1017
 #: ../includes/class.yith-wcwl-ui.php:82
 msgid "The product is already in the wishlist!"
-msgstr "Esse produto já se encontra na sua lista de desejos!"
+msgstr "这个商品已经加入收藏在「愿望清单」裡面！"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1022
 #, fuzzy
 msgid "\"Product added\" text"
-msgstr "Produto adicionado!"
+msgstr "加入收藏！"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1024
 #: ../includes/class.yith-wcwl-admin-init.php:1025
 #: ../includes/class.yith-wcwl-ui.php:81
 msgid "Product added!"
-msgstr "Produto adicionado!"
+msgstr "加入收藏！"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1030
 msgid "\"Add to Cart\" text"
-msgstr "Texto \" Adicionar ao Carrinho\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1032
 #: ../includes/class.yith-wcwl-admin-init.php:1033
 msgid "Add to Cart"
-msgstr "Adcionar ao Carrinho"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1038
-#, fuzzy
 msgid "Show Unit price"
-msgstr "Preço unitário"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1039
 msgid "Show unit price for each product in wishlist"
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1047
-#, fuzzy
 msgid "Show \"Add to Cart\" button"
-msgstr "Texto do botão \"Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1048
-#, fuzzy
 msgid "Show \"Add to cart\" button for each product in wishlist"
-msgstr "Fundo do do botão \"Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1056
-#, fuzzy
 msgid "Show Stock status"
-msgstr "Status do estoque"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1057
 msgid ""
@@ -267,128 +253,114 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1080
 msgid "Styles"
-msgstr "Estilos"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1087
 msgid "Use buttons"
-msgstr "Usar botões"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1088
-#, fuzzy
 msgid "Use buttons instead of simple anchors."
-msgstr "Usar botões ao invés de simples âncoras."
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1095
 msgid "Custom CSS"
-msgstr "CSS Customizado"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1103
 msgid "Use theme style"
-msgstr "Usar estilo do tema"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1104
 msgid "Use the theme style."
-msgstr "Usar o estilo do tema."
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1111
-#, fuzzy
 msgid "Rounded buttons"
-msgstr "Usar botões"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1112
-#, fuzzy
 msgid "Make button corners rounded"
-msgstr "Faça botões do canto arredondado"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1119
 msgid "\"Add to Wishlist\" icon"
-msgstr "Ícone \"Adcionar aos meus desejos\" "
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1120
 msgid "Add an icon to the \"Add to Wishlist\" button"
-msgstr "Adicionar um ícone ao botão \"Adcionar aos meus desejos\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1131
 msgid "\"Add to Cart\" icon"
-msgstr "Ícone \"Adicionar ao Carrinho\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1132
 msgid "Add an icon to the \"Add to Cart\" button"
-msgstr "Adicionar um ícone ao botão \"Adcionar ao carrinho\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1151
 msgid "Socials &amp; Share"
-msgstr "Social &amp; Compartilhamento"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1158
 msgid "Share on Facebook"
-msgstr "Compartilhar no Facebook"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1159
 #: ../includes/class.yith-wcwl-admin-init.php:1183
-#, fuzzy
 msgid "Show \"Share on Facebook\" button"
-msgstr "Compartilhar no Facebook"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1166
 msgid "Tweet on Twitter"
-msgstr "Tweetar no Twitter"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1167
-#, fuzzy
 msgid "Show \"Tweet on Twitter\" button"
-msgstr "Tweetar no Twitter"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1174
 msgid "Pin on Pinterest"
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1175
-#, fuzzy
 msgid "Show \"Pin on Pinterest\" button"
-msgstr "Texto do botão \"Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1182
 msgid "Share on Google+"
-msgstr "Comparilhar no Google+"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1190
 msgid "Share by Email"
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1191
-#, fuzzy
 msgid "Show \"Share by Email\" button"
-msgstr "Texto do botão \"Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1198
-#, fuzzy
 msgid "Social title"
-msgstr "Título Mídias Sociais"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1206
-#, fuzzy
 msgid "Social text"
-msgstr "Texto Mídias Sociais"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1207
-#, fuzzy
 msgid ""
 "It will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url"
 "%</strong> where you want to show the URL of your wishlist."
 msgstr ""
-"Vai ser usado por Facebook, Twitter e Pinterest. Use <strong>%wishlist_url%</"
-"strong> "
 
 #: ../includes/class.yith-wcwl-admin-init.php:1215
-#, fuzzy
 msgid "Social image URL"
-msgstr "Url para compartilhamento"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1251
-#, fuzzy
 msgid "\"Add to wishlist\" button"
-msgstr "Texto do botão \"Adicionar aos meus desejos\""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1254
 #: ../includes/class.yith-wcwl-admin-init.php:1272
@@ -436,9 +408,8 @@ msgid "Border (hover)"
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1269
-#, fuzzy
 msgid "\"Add to Cart\" button"
-msgstr "Texto do botão \"Adicionar ao carrinho \""
+msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1287
 msgid "\"Style 1\" button"
@@ -451,7 +422,7 @@ msgstr ""
 #: ../includes/class.yith-wcwl-admin-init.php:1323
 #, fuzzy
 msgid "Wishlist table"
-msgstr "Titulo da lista de desejos"
+msgstr "愿望清单"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1332
 msgid "Headers"
@@ -464,7 +435,7 @@ msgstr ""
 #: ../includes/class.yith-wcwl-admin-init.php:1425
 #, fuzzy
 msgid "Wishlist Activated"
-msgstr "Titulo da lista de desejos"
+msgstr "愿望清单"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1426
 #, php-format
@@ -478,7 +449,7 @@ msgstr ""
 #: ../includes/class.yith-wcwl-admin-init.php:1437
 #, fuzzy
 msgid "Wishlist Updated"
-msgstr "Meus desejos"
+msgstr "愿望清单"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1438
 #, php-format
@@ -498,25 +469,25 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-install.php:239
 msgid "wishlist"
-msgstr "lista de desejos"
+msgstr "愿望清单"
 
 #: ../includes/class.yith-wcwl-shortcode.php:230
 #: ../includes/class.yith-wcwl-ui.php:161
 msgid "Share on:"
-msgstr "Compartilhar em:"
+msgstr "分享："
 
 #: ../includes/class.yith-wcwl-ui.php:116
 #: ../includes/class.yith-wcwl-ui.php:199
 msgid "Select options"
-msgstr "Selecione as opções"
+msgstr "选择选项"
 
 #: ../includes/class.yith-wcwl-ui.php:165 ../templates/share.php:16
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-ui.php:168 ../templates/share.php:22
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: ../includes/class.yith-wcwl-ui.php:177
 msgid "email"
@@ -525,11 +496,11 @@ msgstr ""
 #: ../includes/class.yith-wcwl.php:187
 #, fuzzy
 msgid "Error occurred while adding products to the wishlist."
-msgstr "Oops! Ocorreu um erro ao adicionar o produto à lista de desejos."
+msgstr "商品加入收藏到「愿望清单」时，发生了错误。"
 
 #: ../includes/class.yith-wcwl.php:271
 msgid "Error occurred while adding product to wishlist."
-msgstr "Oops! Ocorreu um erro ao adicionar o produto à lista de desejos."
+msgstr "商品加入收藏到「愿望清单」时，发生了错误。"
 
 #: ../includes/class.yith-wcwl.php:286
 msgid "Remove now does not require any param"
@@ -538,7 +509,7 @@ msgstr ""
 #: ../includes/class.yith-wcwl.php:320
 #, fuzzy
 msgid "Error occurred while removing products from the wishlist"
-msgstr "Oops! Ocorreu um erro ao remover o produto à lista de desejos."
+msgstr "从「愿望清单」移除商品时，发生了错误。"
 
 #: ../includes/class.yith-wcwl.php:598
 msgid "You need to log in before creating a new wishlist"
@@ -546,15 +517,15 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl.php:1307
 msgid "Product successfully removed."
-msgstr "Produto removida com sucesso."
+msgstr "成功移除商品。"
 
 #: ../includes/class.yith-wcwl.php:1311
 msgid "Error. Unable to remove the product from the wishlist."
-msgstr "Erro. Não foi possível remover o produto da lista de desejos."
+msgstr "错误。无法从「愿望清单」移除这个商品。"
 
 #: ../includes/class.yith-wcwl.php:1315 ../templates/wishlist-view.php:181
 msgid "No products were added to the wishlist"
-msgstr "Nenhum produto foi adicionado à lista de desejos"
+msgstr "你目前没有加入收藏任何商品到「愿望清单」裡面"
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:460
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:574
@@ -663,9 +634,9 @@ msgid "Categories"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1042
-#, fuzzy, php-format
+#, php-format
 msgid "%s Settings"
-msgstr "Configurações"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1051
 msgid "Type"
@@ -729,9 +700,8 @@ msgid "Layout for single page of this portfolio"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1130
-#, fuzzy
 msgid "layout settings"
-msgstr "Configurações"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1222
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1235
@@ -763,9 +733,8 @@ msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:61
-#, fuzzy
 msgid "Plugin Settings"
-msgstr "Configurações"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:91
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:101
@@ -786,9 +755,8 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:285
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
-#, fuzzy
 msgid "Reset to Default"
-msgstr "Redirecionar para o carrinho"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:285
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
@@ -802,14 +770,12 @@ msgid ""
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:420
-#, fuzzy
 msgid "Settings saved"
-msgstr "Configurações"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:421
-#, fuzzy
 msgid "Settings reset"
-msgstr "Configurações"
+msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:422
 msgid "Element deleted correctly."
@@ -1051,7 +1017,7 @@ msgstr ""
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:133
 #: ../templates/wishlist-view.php:62
 msgid "Product Name"
-msgstr "Nome do Produto"
+msgstr "商品名称"
 
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:78
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:110
@@ -1120,7 +1086,7 @@ msgstr ""
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:7
 #, fuzzy
 msgid "Select"
-msgstr "Selecione as opções"
+msgstr "选择日期"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:8
 msgid "Textarea"
@@ -1135,17 +1101,17 @@ msgid "Password Field"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:11
+#, fuzzy
 msgid "File Upload"
-msgstr ""
+msgstr "上传"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:45
 msgid "Theme Icon"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:46
-#, fuzzy
 msgid "Custom Icon"
-msgstr "CSS Customizado"
+msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:47
 #: ../plugin-fw/templates/metaboxes/types/responsivesliders.php:24
@@ -1214,26 +1180,26 @@ msgstr ""
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:306
 #, fuzzy
 msgid "Add options "
-msgstr "Selecione as opções"
+msgstr "选择选项"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:115
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:307
-#, fuzzy
 msgid "Add option"
-msgstr "Ícone \"Adicionar ao Carrinho\""
+msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:118
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:310
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#, fuzzy
 msgid "Selected"
-msgstr ""
+msgstr "选择日期"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:121
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:313
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:432
 #, fuzzy
 msgid "Delete option"
-msgstr "Selecione as opções"
+msgstr "选择选项"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:127
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:319
@@ -1295,7 +1261,7 @@ msgstr ""
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-upload.php:35
 #: ../yit-common/yith-panel.php:417
 msgid "Upload"
-msgstr ""
+msgstr "上传"
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:206
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:394
@@ -1367,9 +1333,8 @@ msgid "Add Images to Gallery"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-#, fuzzy
 msgid "Add to gallery"
-msgstr "Adcionar ao Carrinho"
+msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
 msgid "Add images"
@@ -1485,9 +1450,8 @@ msgid "Google Plus"
 msgstr ""
 
 #: ../templates/wishlist-view.php:23
-#, fuzzy
 msgid "Edit title"
-msgstr "Titulo da lista de desejos"
+msgstr ""
 
 #: ../templates/wishlist-view.php:32
 msgid "Save"
@@ -1499,27 +1463,27 @@ msgstr ""
 
 #: ../templates/wishlist-view.php:68
 msgid "Unit Price"
-msgstr "Preço unitário"
+msgstr "单价"
 
 #: ../templates/wishlist-view.php:76
 msgid "Stock Status"
-msgstr "Status do estoque"
+msgstr "库存状态"
 
 #: ../templates/wishlist-view.php:112
 msgid "Remove this product"
-msgstr "Remover este produto"
+msgstr "移除这个商品"
 
 #: ../templates/wishlist-view.php:141
 msgid "Free!"
-msgstr ""
+msgstr "免费！"
 
 #: ../templates/wishlist-view.php:152
 msgid "Out of Stock"
-msgstr "Sem estoque"
+msgstr "缺货"
 
 #: ../templates/wishlist-view.php:155
 msgid "In Stock"
-msgstr "Em estoque"
+msgstr "有货"
 
 #: ../templates/wishlist-view.php:213 ../templates/wishlist-view.php:246
 msgid "Ask an estimate of costs"
@@ -1527,15 +1491,15 @@ msgstr ""
 
 #: ../yit-common/yith-panel.php:406
 msgid "Select a date"
-msgstr ""
+msgstr "选择日期"
 
 #: ../yit-common/yith-panel.php:407
 msgid "Hours"
-msgstr ""
+msgstr "小时"
 
 #: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
 msgid "Minutes"
-msgstr ""
+msgstr "分"
 
 #: ../yit-common/yith-panel.php:457
 msgid "Select a font family"
@@ -1545,69 +1509,5 @@ msgstr ""
 msgid "Click to preview"
 msgstr ""
 
-#~ msgid "Product already in the wishlist."
-#~ msgstr "Produto já na lista de desejos."
-
-#, fuzzy
-#~ msgid "Button rounded corners"
-#~ msgstr "Botões com cantos arredondados"
-
 #~ msgid "Cannot add to the cart as product is Out of Stock!"
-#~ msgstr "Não foi possível adicionar ao carrinho. O produto esta esgotado."
-
-#~ msgid "\"Add to Wishlist\" button background"
-#~ msgstr "Fundo do botão \"Adicionar aos meus desejos\""
-
-#~ msgid "\"Add to Wishlist\" button border"
-#~ msgstr "Borda do botão \"Adicionar aos meus desejos\""
-
-#~ msgid "\"Add to Wishlist\" button background (hover)"
-#~ msgstr "Fundo do botão \"Adicionar aos meus desejos\" (Hover)"
-
-#~ msgid "\"Add to Wishlist\" button text (hover)"
-#~ msgstr "Texto do botão \"Adicionar aos meus desejos\" (Hover)"
-
-#~ msgid "\"Add to Wishlist\" button border (hover)"
-#~ msgstr "Borda do botão \"Adicionar aos meus desejos\" (hover)"
-
-#~ msgid "\"Add to Cart\" button border"
-#~ msgstr "Borda do do botão \"Adicionar ao carrinho \""
-
-#~ msgid "\"Add to Cart\" button background (hover)"
-#~ msgstr "Fundo do botão \"Adicionar ao carrinho \" (hover)"
-
-#~ msgid "\"Add to Cart\" button text (hover)"
-#~ msgstr "Texto do botão \"Adicionar ao carrinho \" (hover)"
-
-#~ msgid "\"Add to Cart\" button border (hover)"
-#~ msgstr "Borda do botão \"Adicionar ao carrinho \" (hover)"
-
-#~ msgid "Wishlist table background"
-#~ msgstr "Fundo da tabela de desejos"
-
-#~ msgid "Wishlist table text"
-#~ msgstr "Texto da tabela de desejos"
-
-#~ msgid "Wishlist table border"
-#~ msgstr "Borda da tabela de desejos"
-
-#~ msgid "Docs"
-#~ msgstr "Documentos"
-
-#~ msgid "Use cookies"
-#~ msgstr "Usar cookies"
-
-#~ msgid ""
-#~ "Use cookies instead of sessions. With this feature, the wishlist will be "
-#~ "available for each not logged user for 30 days. Use the filter "
-#~ "yith_wcwl_cookie_expiration_time to change the expiration time ( needs "
-#~ "timestamp )."
-#~ msgstr ""
-#~ "Usar cookies ao invés de sessões. Com essa opção, a lista de desejos vai "
-#~ "estar disponível para todos os usuários não logados por até 30 dias. "
-
-#~ msgid "View Cart &rarr;"
-#~ msgstr "Ver Carrinho"
-
-#~ msgid "Product successfully added to the cart."
-#~ msgstr "Produto adicionado ao carrinho."
+#~ msgstr "无法新增缺货的商品到购物车！"

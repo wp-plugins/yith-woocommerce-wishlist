@@ -65,7 +65,9 @@ if ( ! function_exists( 'yit_plugin_get_template' ) ) {
         }
 
         // include file located
-        include( $located );
+        if( file_exists( $located ) ){
+            include( $located );
+        }
 
         if ( $return ) {
             return ob_get_clean();

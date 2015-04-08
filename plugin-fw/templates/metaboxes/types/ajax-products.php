@@ -38,9 +38,7 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 <script>
 
     (function ($) {
-
-        // Ajax Chosen Product Selectors
-
+        $(document).ready(function(){
             $("select.ajax_chosen_select_products").ajaxChosen({
                 method: 	'GET',
                 url: 		'<?php echo  admin_url('admin-ajax.php') ?>',
@@ -59,6 +57,7 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 
                 return terms;
             });
+        })
 
     })(jQuery);
 </script>

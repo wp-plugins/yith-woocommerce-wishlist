@@ -95,7 +95,7 @@ if( !function_exists( 'yith_wcwl_count_products' ) ) {
     /**
      * Retrieve the number of products in the wishlist.
      *
-     * @param $wishlist_token string Optianl wishlist token
+     * @param $wishlist_token string Optional wishlist token
      * 
      * @return int
      * @since 1.0.0

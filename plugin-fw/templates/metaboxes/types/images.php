@@ -27,7 +27,12 @@ if ( empty( $value ) || ! is_array( $value ) )
     <?php if ( ! empty( $value ) ) : foreach ( $value as $image_id ) : ?>
     <li>
         <a href="#">
-            <?php yit_image( "id=$image_id&size=admin-post-type-thumbnails" );//echo wp_get_attachment_image( $image_id, 'admin-post-type-thumbnails' ); ?> 
+            <?php
+            if( function_exists( 'yit_image' ) ) :
+                yit_image( "id=$image_id&size=admin-post-type-thumbnails" );
+            else:
+                echo wp_get_attachment_image( $image_id, array( 80, 80 ) );
+            endif; ?>
             <input type="hidden" name="<?php echo $name ?>[]" value="<?php echo esc_attr( $image_id ) ?>" />
         </a>
         <a href="#" title="<?php _e( 'Delete image', 'yit' ) ?>" class="delete">X</a>

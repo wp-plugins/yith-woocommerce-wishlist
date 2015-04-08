@@ -29,7 +29,12 @@ if ( !empty( $value ) ) {
                 <?php foreach ( $array_id as $image_id ) : ?>
                     <li class="image" data-attachment_id = <?php echo esc_attr($image_id) ?>>
                         <a href="#">
-                            <?php yit_image( "id=$image_id&size=admin-post-type-thumbnails" ); ?>
+                            <?php
+                            if( function_exists( 'yit_image' ) ) :
+                                yit_image( "id=$image_id&size=admin-post-type-thumbnails" );
+                            else:
+                                echo wp_get_attachment_image( $image_id, array( 80, 80 ) );
+                            endif; ?>
                         </a>
                         <ul class="actions">
                             <li><a href="#" class="delete" title="<?php _e( 'Delete image', 'yit' ); ?>">x</a></li>

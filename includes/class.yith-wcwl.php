@@ -667,7 +667,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 'orderby' => 'ID',
                 'order' => 'DESC',
                 'limit' =>  false,
-                'offset' => 0
+                'offset' => 0,
+	            'show_empty' => true
             );
 
             $args = wp_parse_args( $args, $default );
@@ -759,6 +760,10 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                         break;
                 }
             }
+
+	        if( ! $show_empty ){
+		        $sql .= " AND l.`ID` IN ( SELECT wishlist_id FROM {$wpdb->yith_wcwl_items} )";
+	        }
 
             $sql .= " ORDER BY " . $orderby . " " . $order;
 
@@ -936,7 +941,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
 
             if( get_option( 'permalink_structure' ) ) {
-	            $wishlist_permalink = get_the_permalink( $wishlist_page_id );
+	            $wishlist_permalink = trailingslashit( get_the_permalink( $wishlist_page_id ) );
 	            $base_url = trailingslashit( $wishlist_permalink . $action );
             }
             else{
@@ -1060,7 +1065,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		    if( function_exists( 'wc_print_notices' ) ) {
 			    wc_print_notices();
 		    }
-		    else{
+		    elseif( method_exists( $woocommerce, 'show_message' ) ){
 			    $woocommerce->show_messages();
 		    }
 	    }

@@ -325,7 +325,22 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
          * @since 1.0.0
          */
         public function enqueue_scripts() {
-            global $woocommerce;
+	        global $woocommerce;
+
+	        $assets_path = str_replace( array( 'http:', 'https:' ), '', $woocommerce->plugin_url() ) . '/assets/';
+
+	        if( function_exists( 'WC' ) ){
+		        $woocommerce_base = WC()->template_path();
+	        }
+	        else{
+		        $woocommerce_base = WC_TEMPLATE_PATH;
+	        }
+
+	        $located = locate_template( array(
+		        $woocommerce_base . 'wishlist.js',
+		        'wishlist.js'
+	        ) );
+
             $assets_path          = str_replace( array( 'http:', 'https:' ), '', $woocommerce->plugin_url() ) . '/assets/';
             $suffix               = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
@@ -333,7 +348,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
             wp_enqueue_script( 'prettyPhoto-init', $assets_path . 'js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery','prettyPhoto' ), defined( 'WC_VERSION' ) ? WC_VERSION : WOOCOMMERCE_VERSION, true );
             wp_enqueue_script( 'jquery-selectBox', YITH_WCWL_URL . 'assets/js/jquery.selectBox.min.js', array( 'jquery' ), false, true );
             wp_register_script( 'jquery-yith-wcwl', YITH_WCWL_URL . 'assets/js/jquery.yith-wcwl.js', array( 'jquery', 'jquery-selectBox' ), '2.0', true );
-            wp_enqueue_script( 'jquery-yith-wcwl' );
+            wp_register_script( 'jquery-yith-wcwl-user', str_replace( get_template_directory(), get_template_directory_uri(), $located ), array( 'jquery', 'jquery-selectBox' ), '2.0', true );
 
             $yith_wcwl_l10n = array(
                 'ajax_url' => admin_url( 'admin-ajax.php', is_ssl() ? 'https' : 'http' ),
@@ -351,7 +366,15 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
                     'remove_from_wishlist_action' => 'remove_from_wishlist'
                 )
             );
-            wp_localize_script( 'jquery-yith-wcwl', 'yith_wcwl_l10n', $yith_wcwl_l10n );
+
+	        if ( ! $located ) {
+		        wp_enqueue_script( 'jquery-yith-wcwl' );
+		        wp_localize_script( 'jquery-yith-wcwl', 'yith_wcwl_l10n', $yith_wcwl_l10n );
+	        }
+	        else {
+		        wp_enqueue_script( 'jquery-yith-wcwl-user' );
+		        wp_localize_script( 'jquery-yith-wcwl-user', 'yith_wcwl_l10n', $yith_wcwl_l10n );
+	        }
         }
 
         /**

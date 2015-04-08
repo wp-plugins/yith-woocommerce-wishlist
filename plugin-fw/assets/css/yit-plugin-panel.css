@@ -50,7 +50,8 @@
     top: -30px;
 }
 /*handle*/
-.yit-options .ui-slider-horizontal .ui-slider-handle {
+.yit-options .ui-slider-horizontal .ui-slider-handle,
+.yit_options .ui-slider-horizontal .ui-slider-handle {
     background: transparent url(../images/slider/handle.png) no-repeat left top !important;
     border: 0px !important;
     top: -.35em !important;
@@ -59,7 +60,8 @@
 }
 
 /*bg on the left:grey*/
-.yit-options .ui-slider.ui-widget-content {
+.yit-options .ui-slider.ui-widget-content,
+.yit_options .ui-slider.ui-widget-content {
     background: url(../images/slider/grey.gif) repeat-x left center !important;
     border-color: #c1c1c0 !important;
     height: 10px !important;
@@ -83,9 +85,11 @@
 .plugin-option tr{
     border-bottom: 1px solid #ccc;
 }
-.plugin-option .yit_options{
+.plugin-option .yit_options,
+.plugin-option .yit-options{
     border-bottom: 0px;
 }
+.plugin-option .yit-options .option,
 .plugin-option .yit_options .option {
     width: 600px;
     float: left;
@@ -95,6 +99,7 @@
     padding: 25px 10px;
 }
 
+.yit_options .select_wrapper,
 .yit-options .select_wrapper {
     background: url("../images/select.png") no-repeat scroll right center #FAFAFA;
     border-color: #CCCCCC #EEEEEE #EEEEEE #CCCCCC;
@@ -165,10 +170,11 @@
     position: absolute;
     z-index: 2;
 }
-.ie8 .yit_options select {
+.ie8 .yit_options select,
+.ie8 .yit-options select {
     height: 26px;
 }
-.yit_options select, .the-metabox .select_wrapper select {
+.yit_options select, .yit-options select, .the-metabox .select_wrapper select {
     cursor: pointer;
     height: 28px;
     margin: 0;

@@ -46,12 +46,14 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          */
         private $_main_array_options = array();
 
-        /**
-         * Constructor
-         *
-         * @since  1.0
-         * @author Emanuela Castorina <emanuela.castorina@yithemes.it>
-         */
+	    /**
+	     * Constructor
+	     *
+	     * @since  1.0
+	     * @author Emanuela Castorina <emanuela.castorina@yithemes.it>
+	     *
+	     * @param array $args
+	     */
         public function __construct( $args = array() ) {
 
             if ( ! empty( $args ) ) {
@@ -60,7 +62,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     'parent_slug' => 'edit.php?',
                     'page_title'  => __( 'Plugin Settings', 'yit' ),
                     'menu_title'  => __( 'Settings', 'yit' ),
-                    'capability'  => 'manage_options'
+                    'capability'  => 'manage_options',
+	                'icon_url'    => '',
+	                'position'    => null
                 );
 
                 $this->settings         = wp_parse_args( $args, $default_args );
@@ -70,10 +74,10 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     $this->add_menu_page();
                 }
 
-                add_action( 'admin_init', array( &$this, 'register_settings' ) );
-                add_action( 'admin_menu', array( &$this, 'add_setting_page' ) );
-                add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_menu' ), 100 );
-                add_action( 'admin_init', array( &$this, 'add_fields' ) );
+                add_action( 'admin_init', array( $this, 'register_settings' ) );
+                add_action( 'admin_menu', array( $this, 'add_setting_page' ), 20 );
+                add_action( 'admin_bar_menu', array( $this, 'add_admin_bar_menu' ), 100 );
+                add_action( 'admin_init', array( $this, 'add_fields' ) );
 
             }
 
@@ -154,7 +158,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
         public function register_settings() {
-            register_setting( 'yit_' . $this->settings['parent'] . '_options', 'yit_' . $this->settings['parent'] . '_options', array( &$this, 'options_validate' ) );
+            register_setting( 'yit_' . $this->settings['parent'] . '_options', 'yit_' . $this->settings['parent'] . '_options', array( $this, 'options_validate' ) );
         }
 
         /**
@@ -229,7 +233,15 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
         public function add_setting_page() {
-            add_submenu_page( $this->settings['parent_slug'] . $this->settings['parent_page'], $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( &$this, 'yit_panel' ) );
+	        $this->settings['icon_url'] = isset( $this->settings['icon_url'] ) ? $this->settings['icon_url'] : '';
+		    $this->settings['position'] = isset( $this->settings['position'] ) ? $this->settings['position'] : null;
+	        $parent = $this->settings['parent_slug'] . $this->settings['parent_page'];
+
+	        if ( ! empty( $parent ) ) {
+		        add_submenu_page( $parent, $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( $this, 'yit_panel' ) );
+	        } else {
+		        add_menu_page( $this->settings['page_title'], $this->settings['menu_title'], $this->settings['capability'], $this->settings['page'], array( $this, 'yit_panel' ), $this->settings['icon_url'], $this->settings['position'] );
+	        }
             /* === Duplicate Items Hack === */
             $this->remove_duplicate_submenu_page();
             do_action( 'yit_after_add_settings_page' );

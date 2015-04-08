@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
 Tested up to: 4.1.1
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,17 @@ This might depend on the fact that your theme overrides plugin templates. Check 
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.6 =
+
+* Added: system to overwrite wishlist js
+* Added: trailingslashit() to wishlist permalink
+* Added: chinese translation
+* Added: "show_empty" filter to get_wishlists() method
+* Fixed: count wishlist items
+* Fixed: problem with price inclusive of tax
+* Fixed: remove from wishlist for not logged user
+* Fixed: twitter share summary
 
 = 2.0.5 =
 
@@ -223,9 +234,20 @@ If you have suggestions about how to improve YITH WooCommerce Wishlist, you can 
 == Translators ==
 
 = Available Languages =
-* English (Default)
-* Italiano
+* English - UNITED KINGDOM (Default)
+* German - GERMANY
+* Spanish - ARGENTINA
+* Spanish - MEXICO
+* French - FRANCE
+* Hebrew - ISRAEL
+* Italian - ITALY
+* Portuguese - BRAZIL
+* Turkish - TURKEY
+* Ukrainian - UKRAINE
+* Chinese - CHINA
+* Chinese - TAIWAN
 
+Some of these translations are not complete.
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
 [use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Wishlist Languages.
 
@@ -235,10 +257,13 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.5 =
+= 2.0.6 =
 
-* Added: icl_object_id to wishlist page id, to translate pages
-* Tweak: updated rewrite rules, to include child pages as wishlist pages
-* Tweak: moved WC notices from wishlist template to yith_wcwl_before_wishlist_title hook
-* Tweak: added wishlist table id to .load(), to update only that part of template
-* Fixed: yith_wcwl_locate_template causing 500 Internal Server Error
+* Added: system to overwrite wishlist js
+* Added: trailingslashit() to wishlist permalink
+* Added: chinese translation
+* Added: "show_empty" filter to get_wishlists() method
+* Fixed: count wishlist items
+* Fixed: problem with price inclusive of tax
+* Fixed: remove from wishlist for not logged user
+* Fixed: twitter share summary

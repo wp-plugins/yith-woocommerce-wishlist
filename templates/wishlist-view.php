@@ -43,7 +43,7 @@
      do_action( 'yith_wcwl_before_wishlist' ); ?>
 
     <!-- WISHLIST TABLE -->
-    <table class="shop_table cart wishlist_table" cellspacing="0" data-pagination="<?php echo esc_attr( $pagination )?>" data-per-page="<?php echo esc_attr( $per_page )?>" data-page="<?php echo esc_attr( $current_page )?>" data-id="<?php echo esc_attr( $wishlist_meta['ID'] )?>" data-token="<?php echo ! empty( $wishlist_meta['wishlist_token'] ) ? esc_attr( $wishlist_meta['wishlist_token'] ) : '' ?>">
+    <table class="shop_table cart wishlist_table" cellspacing="0" data-pagination="<?php echo esc_attr( $pagination )?>" data-per-page="<?php echo esc_attr( $per_page )?>" data-page="<?php echo esc_attr( $current_page )?>" data-id="<?php echo ( is_user_logged_in() ) ? esc_attr( $wishlist_meta['ID'] ) : '' ?>" data-token="<?php echo ( ! empty( $wishlist_meta['wishlist_token'] ) && is_user_logged_in() ) ? esc_attr( $wishlist_meta['wishlist_token'] ) : '' ?>">
         <thead>
         <tr>
 	        <?php if( $show_cb ) : ?>
@@ -134,7 +134,7 @@
                                         echo apply_filters( 'woocommerce_cart_item_price_html', $wc_price( $product->get_price_excluding_tax() ), $item, '' );
                                     }
                                     else {
-                                        echo apply_filters( 'woocommerce_cart_item_price_html', $wc_price( $product->get_price() ), $item, '' );
+                                        echo apply_filters( 'woocommerce_cart_item_price_html', $wc_price( $product->get_price_including_tax() ), $item, '' );
                                     }
                                 }
                                 else {
