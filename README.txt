@@ -28,34 +28,28 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_key=Qn1wDeBNTcZV)
 
-= Installation =
+= Available Languages =
 
-Once you have installed the plugin, you just need to activate the plugin and have also woocommerce plugin active in order to enable it.
-
-= Configuration =
-
-YITH WooCommerce Wishlist will add a new tab called "Wishlist" below the Woocommerce -> Settings menu. Here you are able to configure all the plugin settings.
-
-= Developer =
-
-Are you a developer? Want to customize the templates or the style of the plugin? Read on the [documentation](http://yithemes.com/docs-plugins/yith-woocommerce-wishlist/) and discover how to do that. 
-
-= Support =
-
-Hi there, we have good news here: all our plugins are released for free. Wow!
-Already knew it, right?! Great, but maybe you do not know that: if you're looking for how to install the plugins or how to use them within your Wordpress installations, which is the right way to ask support?
-That's the way:
-
-* Register on http://yithemes.com
-* Go to Support > Get Support
-
-Here we provide support, not on wordpress.org were, usually we do not read topics. It's better to follow us or write on our forum!
+* English - UNITED KINGDOM (Default)
+* German - GERMANY
+* Spanish - ARGENTINA
+* Spanish - MEXICO
+* French - FRANCE
+* Hebrew - ISRAEL
+* Italian - ITALY
+* Portuguese - BRAZIL
+* Turkish - TURKEY
+* Ukrainian - UKRAINE
+* Chinese - CHINA
+* Chinese - TAIWAN
 
 == Installation ==
 
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
 3. Activate `YITH WooCommerce Wishlist` from Plugins page
+
+YITH WooCommerce Wishlist will add a new submenu called "Wishlist" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
 
 == Frequently Asked Questions ==
 
@@ -76,6 +70,9 @@ It might be a compatibility problem with the old version of font-awesome, which 
 
 = Have you encountered anomalies after plugin update, that did not exist in the previous version? =
 This might depend on the fact that your theme overrides plugin templates. Check if the developer of your theme has released a compatibility update with version 2.0 or later of YITH WooCommerce Wishlist. As an alternative you can try the plugin in WordPress default theme to leave out any possible influences by the theme.
+
+= I am currently using Wishlist plugin with Catalog Mode enabled in my site. Prices for products should disappear, yet they still appear in the wishlist page. Can I remove them? =
+Yes, of course you can. To avoid Wishlist page to show product prices, you can hide price column from wishlist table. Go to YIT plugins -> wishlist -> settings and disable option "Show Unit price".
 
 == Screenshots ==
 
