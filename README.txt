@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 2.0.6
+Tested up to: 4.2.1
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,7 @@ This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_
 * Hebrew - ISRAEL
 * Italian - ITALY
 * Portuguese - BRAZIL
+* Portuguese - PORTUGAL
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
 * Chinese - CHINA
@@ -82,6 +83,17 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.7 =
+
+* Added: WP 4.2.1 support
+* Added: WC 2.3.8 support
+* Added: "Added to cart" message in wishlist page
+* Added: Portuguese translation
+* Updated: revision of all templates
+* Fixed: vulnerability for unserialize of cookie content (Warning: in this way all the old serialized plugins will be deleted and all the wishlists of the non-logged users will be lost)
+* Fixed: Escaped add_query_arg() and remove_query_arg()
+* Removed: use of pretty permalinks if WPML enabled
 
 = 2.0.6 =
 
@@ -239,6 +251,7 @@ If you have suggestions about how to improve YITH WooCommerce Wishlist, you can 
 * Hebrew - ISRAEL
 * Italian - ITALY
 * Portuguese - BRAZIL
+* Portuguese - PORTUGAL
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
 * Chinese - CHINA
@@ -254,13 +267,13 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.6 =
+= 2.0.7 =
 
-* Added: system to overwrite wishlist js
-* Added: trailingslashit() to wishlist permalink
-* Added: chinese translation
-* Added: "show_empty" filter to get_wishlists() method
-* Fixed: count wishlist items
-* Fixed: problem with price inclusive of tax
-* Fixed: remove from wishlist for not logged user
-* Fixed: twitter share summary
+* Added: WP 4.2.1 support
+* Added: WC 2.3.8 support
+* Added: "Added to cart" message in wishlist page
+* Added: Portuguese translation
+* Updated: revision of all templates
+* Fixed: vulnerability for unserialize of cookie content (Warning: in this way all the old serialized plugins will be deleted and all the wishlists of the non-logged users will be lost)
+* Fixed: Escaped add_query_arg() and remove_query_arg()
+* Removed: use of pretty permalinks if WPML enabled

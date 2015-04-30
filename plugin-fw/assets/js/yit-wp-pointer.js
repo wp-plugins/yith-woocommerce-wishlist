@@ -23,7 +23,7 @@ jQuery(document).ready( function($) {
                     pointerClass: 'yit-wp-pointer',
                     content : options.content,
                     position: options.position,
-                    open    : function () { console.log( 'here' );
+                    open    : function () {
                         selected_plugin_row.toggleClass( 'yit-pointer-selected-row' );
                         top_level_menu.addClass( 'yit-pointer' );
                     },

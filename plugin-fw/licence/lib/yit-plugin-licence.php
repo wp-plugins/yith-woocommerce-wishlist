@@ -57,6 +57,7 @@ if ( ! class_exists( 'YIT_Plugin_Licence' ) ) {
          * @author   Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function __construct() {
+            parent::__construct();
 
             $this->_settings = array(
                 'parent_page' => 'yit_plugin_panel',

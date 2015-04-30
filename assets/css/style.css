@@ -16,6 +16,11 @@
     color: inherit;
 }
 
+.woocommerce a.selectBox,
+.woocommerce a.selectBox:hover{
+    border-bottom: 1px solid #bbb!important;
+}
+
 .woocommerce a.selectBox:hover{
     color: inherit;
 }
@@ -42,6 +47,7 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     padding: 5px;
+    font-size: 80%;
 }
 
 .selectBox-label.public-visibility:before,
@@ -77,6 +83,17 @@
 .selectBox-dropdown-menu a:hover{
     color: inherit;
     text-decoration: none;
+}
+
+/* Wishlist table */
+.woocommerce .wishlist_table td.product-add-to-cart a{
+    display: block!important;
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.woocommerce .wishlist_table td.product-add-to-cart span.dateadded{
+    display: block;
 }
 
 /* Popup add to wishlist */
@@ -193,6 +210,10 @@
 
 /* Wishlist table template */
 
+.woocommerce table.wishlist_table{
+    font-size: 80%;
+}
+
 .woocommerce table.wishlist_table thead th{
     border-top: 1px solid;
     padding: 16px 12px;
@@ -208,13 +229,22 @@
 }
 
 .wishlist_table tr td, .wishlist_table tr th.wishlist-delete, .wishlist_table tr th.product-checkbox { text-align: center; }
-.wishlist_table tr th.product-checkbox { vertical-align: middle }
+.wishlist_table tr th.product-checkbox { vertical-align: middle; width: 40px; }
+.wishlist_table tr th.product-remove { vertical-align: middle; width: 40px; }
+.wishlist_table tr th.product-thumbnail{ width: 80px; }
 .wishlist_table tr td.product-thumbnail, .wishlist_table tr td.product-name, .wishlist_table tr td.wishlist-name, .wishlist_table tr td.wishlist-privacy, .woocommerce table.wishlist_table tfoot td { text-align: left; }
+.woocommerce table.wishlist_table tr td.product-remove { padding: 16px 0 }
+.wishlist_table tr td.product-thumbnail a { display: block; border: none; max-width: 80px; }
+.wishlist_table tr td.product-thumbnail a img { width: 100%; }
 .wishlist_table tr td.product-stock-status span.wishlist-in-stock { color: #297E29; }
 .wishlist_table tr td.product-stock-status span.wishlist-out-of-stock { color: #F00; }
 .wishlist_table tr td a.button { white-space: normal; }
 
 /* Wishlist buttons */
+a.add_to_wishlist{
+    cursor: pointer;
+}
+
 .summary .single_add_to_wishlist.button,
 div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
     margin: 0px;
@@ -295,6 +325,7 @@ div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
 /* Remove buttons */
 .woocommerce #content table.wishlist_table.cart a.remove{
     color: #c3c3c3;
+    margin: 0 auto;
 }
 
 .woocommerce #content table.wishlist_table.cart a.remove:hover{
@@ -303,19 +334,28 @@ div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
 }
 
 /* Share buttons */
+.yith-wcwl-share{
+    margin-bottom: 35px;
+}
+
+.yith-wcwl-share h4.yith-wcwl-share-title{
+    margin: 10px 0;
+}
+
 .yith-wcwl-share ul {
     margin: 5px 0;
     padding: 0;
 }
 
 .yith-wcwl-share ul, .yith-wcwl-share li { height: 21px; }
-.yith-wcwl-share li, .entry-content .yith-wcwl-share li { margin-left: 0px; margin-right: 10px; }
+.yith-wcwl-share li, .entry-content .yith-wcwl-share li { margin-left: 0px; margin-right: 0px; }
 
 .yith-wcwl-share li a {
     background-position: left top;
     display: inline-block;
     width: 21px;
     height: 21px;
+    border: none;
 }
 
 .yith-wcwl-share li a:hover { background-position: left bottom; }
@@ -326,8 +366,13 @@ div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
 .yith-wcwl-share li a.email { background-image: url(../images/email.jpg ); }
 
 /* Ask an estimate button */
+.woocommerce .wishlist_table.cart .ask-an-estimate-button,
+.woocommerce .wishlist_table.cart #custom_add_to_cart{
+    margin: 10px 0;
+    display: inline-block;
+}
+
 .woocommerce .wishlist_table.cart .ask-an-estimate-button{
-    float: right;
     padding: 7px 12px;
     line-height: normal;
 }

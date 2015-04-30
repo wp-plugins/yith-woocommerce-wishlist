@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 		 * @var string
 		 * @since 1.0.0
 		 */
-		public $version = '2.0.6';
+		public $version = '2.0.7';
 
 		/**
 		 * Plugin database version
@@ -946,7 +946,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 
 				'wishlist_enable' => array(
 					'name'    => __( 'Enable YITH Wishlist', 'yit' ),
-					'desc'    => sprintf( __( 'Enable all plugin features. <strong>Be sure to select a voice in the wishlist page menu in %s.</strong> Also, please read the plugin <a href="%s" target="_blank">documentation</a>.', 'yit' ), $settings_page, esc_url( $this->doc_url ) ),
+					'desc'    => sprintf( __( 'Enable all plugin features. <strong>Be sure to select at least one option in the Wishlist page menu in %s.</strong> Also, please read the plugin <a href="%s" target="_blank">documentation</a>.', 'yit' ), $settings_page, esc_url( $this->doc_url ) ),
 					'id'      => 'yith_wcwl_enabled',
 					'std'     => 'yes', // for woocommerce < 2.0
 					'default' => 'yes', // for woocommerce >= 2.0
@@ -965,7 +965,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 			$general_settings_end = array(
 				'add_to_wishlist_position' => array(
 					'name'     => __( 'Position', 'yit' ),
-					'desc'     => __( 'You can add it in variable products only After "Add to Cart " or using the shortcode [yith_wcwl_add_to_wishlist].', 'yit' ),
+					'desc'     => __( 'You can add the button in variable products only after the "Add to Cart" button or using the shortcode [yith_wcwl_add_to_wishlist].', 'yit' ),
 					'id'       => 'yith_wcwl_button_position',
 					'type'     => 'select',
 					'class'    => 'chosen_select',
@@ -1045,7 +1045,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 				),
 				'show_add_to_cart' => array(
 					'name'    => __( 'Show "Add to Cart" button', 'yit' ),
-					'desc'    => __( 'Show "Add to cart" button for each product in wishlist', 'yit' ),
+					'desc'    => __( 'Show "Add to Cart" button for each product in wishlist', 'yit' ),
 					'id'      => 'yith_wcwl_add_to_cart_show',
 					'std'     => 'yes', // for woocommerce < 2.0
 					'default' => 'yes', // for woocommerce >= 2.0
@@ -1058,6 +1058,24 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 					'id'      => 'yith_wcwl_stock_show',
 					'std'     => 'yes', // for woocommerce < 2.0
 					'default' => 'yes', // for woocommerce >= 2.0
+					'type'    => 'checkbox',
+					'css'     => 'min-width:300px;',
+				),
+				'show_dateadded' => array(
+					'name'    => __( 'Show Date of addition', 'yit' ),
+					'desc'    => __( 'Show the date when users have added a product to the wishlist', 'yit' ),
+					'id'      => 'yith_wcwl_show_dateadded',
+					'std'     => 'no', // for woocommerce < 2.0
+					'default' => 'no', // for woocommerce >= 2.0
+					'type'    => 'checkbox',
+					'css'     => 'min-width:300px;',
+				),
+				'repeat_remove_button' => array(
+					'name'    => __( 'Add second remove button', 'yit' ),
+					'desc'    => __( 'Add a second remove button in the last column, with extended label', 'yit' ),
+					'id'      => 'yith_wcwl_repeat_remove_button',
+					'std'     => 'no', // for woocommerce < 2.0
+					'default' => 'no', // for woocommerce >= 2.0
 					'type'    => 'checkbox',
 					'css'     => 'min-width:300px;',
 				),
@@ -1148,7 +1166,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 
 			$options['socials_share'] = array(
 				'socials_section_start' => array(
-					'name' => __( 'Socials &amp; Share', 'yit' ),
+					'name' => __( 'Social Networks & Share', 'yit' ),
 					'type' => 'title',
 					'desc' => '',
 					'id' => 'yith_wcwl_socials_share'
@@ -1180,7 +1198,7 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 				),
 				'share_on_googleplus' => array(
 					'name'    => __( 'Share on Google+', 'yit' ),
-					'desc'    => __( 'Show "Share on Facebook" button', 'yit' ),
+					'desc'    => __( 'Show "Share on Google+" button', 'yit' ),
 					'id'      => 'yith_wcwl_share_googleplus',
 					'std'     => 'yes', // for woocommerce < 2.0
 					'default' => 'yes', // for woocommerce >= 2.0

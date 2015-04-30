@@ -146,7 +146,7 @@ if( !class_exists('YITH_Panel') ) {
             <div id="icon-themes" class="icon32"><br /></div>
             <h2 class="nav-tab-wrapper">
                 <?php foreach( $this->options as $k=>$tab ): ?>
-                    <a class="nav-tab<?php if( $page == $k ): ?> nav-tab-active<?php endif ?>" href="<?php echo add_query_arg('panel_page', $k) ?>"><?php echo $tab['label'] ?></a>
+                    <a class="nav-tab<?php if( $page == $k ): ?> nav-tab-active<?php endif ?>" href="<?php echo esc_url( add_query_arg('panel_page', $k) ) ?>"><?php echo $tab['label'] ?></a>
                 <?php endforeach ?>
                 <?php do_action('yith_panel_after_tabs'); ?>
             </h2>

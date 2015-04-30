@@ -353,6 +353,56 @@
             </div>
         </div>
     </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_WCWL_URL ?>assets/images/landing/11-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_WCWL_URL ?>assets/images/landing/11.png" alt="Screen Option" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_WCWL_URL?>assets/images/landing/11-icon.png" alt="Icon" />
+                    <h2>PROMOTIONAL EMAIL</h2>
+                </div>
+                <p>If you want to give the right input to your users to persuade them to <b>purchase the products</b> they have in their wishlists, you need to use this feature!
+                    <b>Send them an email</b>: customize its whole content from the option panel and add a coupon they can use in your shop, so that they will know you are offering a unique offer!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_WCWL_URL ?>assets/images/landing/12-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_WCWL_URL ?>assets/images/landing/12-icon.png" alt="Move product image" />
+                    <h2>FROM A WISHLIST TO ANOTHER</h2>
+                </div>
+                <p>Who said that a product has to remain forever in the same wishlist?
+                    With the option <b>"Show "Move to another wishlist" dropdown menu"</b>, with just one click users will be
+                    free to move a product from a wishlist to another one, managing as they want their lists.
+                </p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_WCWL_URL ?>assets/images/landing/12.png" alt="icon" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_WCWL_URL ?>assets/images/landing/13-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_WCWL_URL ?>assets/images/landing/13.png" alt="Date icon" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_WCWL_URL?>assets/images/landing/13-icon.png" alt="Date icon" />
+                    <h2>DATE OF ADDITION TO A WISHLIST</h2>
+                </div>
+                <p>
+                    Activating the <b>"Show date of addition"</b> option, users can see the date in which they have added a
+                    particular product to their list: a new way to keep you users informed about their operations.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section section-cta section-odd">
         <div class="landing-container">
             <div class="wishlist-cta">

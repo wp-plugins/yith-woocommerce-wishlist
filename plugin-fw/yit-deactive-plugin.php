@@ -26,7 +26,7 @@ if ( ! function_exists( 'yit_deactive_free_version' ) ) {
 
             global $status, $page, $s;
             $redirect    = 'plugins.php?action=activate&plugin=' . $to_active . '&plugin_status=' . $status . '&paged=' . $page . '&s=' . $s;
-            $redirect    = add_query_arg( '_wpnonce', wp_create_nonce( 'activate-plugin_' . $to_active ), $redirect );
+            $redirect    = esc_url_raw( add_query_arg( '_wpnonce', wp_create_nonce( 'activate-plugin_' . $to_active ), $redirect ) );
 
             header( 'Location: ' . $redirect );
             exit();

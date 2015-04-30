@@ -184,7 +184,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             $wishlist_name = ( ! empty( $this->details['wishlist_name'] ) ) ? $this->details['wishlist_name'] : '';
 
             if ( $prod_id == false ) {
-                $this->errors[] = __( 'Error occurred while adding products to the wishlist.', 'yit' );
+                $this->errors[] = __( 'An error occurred while adding products to the wishlist.', 'yit' );
                 return "error";
             }
 
@@ -268,7 +268,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 return "true";
             }
             else {
-                $this->errors[] = __( 'Error occurred while adding product to wishlist.', 'yit' );
+                $this->errors[] = __( 'An error occurred while adding products to wishlist.', 'yit' );
                 return "error";
             }
         }
@@ -283,7 +283,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             global $wpdb;
 
             if( ! empty( $id ) ) {
-                _deprecated_argument( 'YITH_WCWL->remove()', '2.0.0', __( 'Remove now does not require any param' ) );
+                _deprecated_argument( 'YITH_WCWL->remove()', '2.0.0', __( 'The "Remove" option now does not require any parameter' ) );
             }
 
             $prod_id = ( isset( $this->details['remove_from_wishlist'] ) && is_numeric( $this->details['remove_from_wishlist'] ) ) ? $this->details['remove_from_wishlist'] : false;
@@ -317,7 +317,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                     return true;
                 }
                 else {
-                    $this->errors[] = __( 'Error occurred while removing products from the wishlist', 'yit' );
+                    $this->errors[] = __( 'An error occurred while removing products from the wishlist', 'yit' );
                     return false;
                 }
             }
@@ -940,7 +940,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             $wishlist_page_id = get_option( 'yith_wcwl_wishlist_page_id' );
 	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
 
-            if( get_option( 'permalink_structure' ) ) {
+            if( get_option( 'permalink_structure' ) && ! defined( 'ICL_PLUGIN_PATH' ) ) {
 	            $wishlist_permalink = trailingslashit( get_the_permalink( $wishlist_page_id ) );
 	            $base_url = trailingslashit( $wishlist_permalink . $action );
             }
@@ -971,7 +971,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		        $base_url = add_query_arg( 'lang', icl_get_current_language(), $base_url );
 	        }
 
-            return apply_filters( 'yith_wcwl_wishlist_page_url', $base_url );
+            return apply_filters( 'yith_wcwl_wishlist_page_url', esc_url_raw( $base_url ) );
         }
 
         /**
@@ -982,7 +982,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @since 1.0.0
          */
         public function get_remove_url( $item_id ) {
-            return add_query_arg( 'remove_from_wishlist', $item_id );
+            return esc_url( add_query_arg( 'remove_from_wishlist', $item_id ) );
         }
         
         /**
@@ -994,7 +994,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function get_addtowishlist_url() {
             global $product;
             	
-            return add_query_arg( 'add_to_wishlist', $product->id );
+            return esc_url( add_query_arg( 'add_to_wishlist', $product->id ) );
         }
         
         /**
@@ -1049,7 +1049,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @since 1.0.0
          */
         public function get_nonce_url( $action, $url = '' ) {
-            return add_query_arg( '_n', wp_create_nonce( 'yith-wcwl-' . $action ), $url );
+            return esc_url( add_query_arg( '_n', wp_create_nonce( 'yith-wcwl-' . $action ), $url ) );
         }
 
 	    /**
@@ -1252,7 +1252,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 }
             }
 
-            return apply_filters( 'yit_wcwl_add_to_cart_redirect_url', $url );
+            return apply_filters( 'yit_wcwl_add_to_cart_redirect_url', esc_url( $url ) );
         }
 
         /**

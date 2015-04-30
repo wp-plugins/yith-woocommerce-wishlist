@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WCWL\n"
-"POT-Creation-Date: 2015-04-07 16:54+0100\n"
-"PO-Revision-Date: 2015-04-07 16:54+0100\n"
+"POT-Creation-Date: 2015-04-30 17:09+0100\n"
+"PO-Revision-Date: 2015-04-30 17:09+0100\n"
 "Last-Translator: Valentyn Zubenko <valentyn.zubenko@gmail.com>\n"
 "Language-Team: Your Inspiration Themes <support@yithemes.com>\n"
 "Language: English\n"
@@ -14,21 +14,21 @@ msgstr ""
 "X-Poedit-Basepath: ./\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../init.php:128
+#: ../init.php:129
 msgid ""
 "YITH WooCommerce Wishlist is enabled but not effective. It requires "
-"Woocommerce in order to work."
+"WooCommerce in order to work."
 msgstr ""
 
-#: ../init.php:138
+#: ../init.php:139
 msgid ""
 "You can't activate the free version of YITH WooCommerce Wishlist while you "
 "are using the premium one."
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:188
-#: ../includes/class.yith-wcwl-admin-init.php:1359
-#: ../includes/class.yith-wcwl-admin-init.php:1360
+#: ../includes/class.yith-wcwl-admin-init.php:1377
+#: ../includes/class.yith-wcwl-admin-init.php:1378
 #: ../includes/class.yith-wcwl-install.php:240
 msgid "Wishlist"
 msgstr ""
@@ -38,7 +38,7 @@ msgstr ""
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
-#: ../plugin-fw/lib/yit-plugin-panel.php:62
+#: ../plugin-fw/lib/yit-plugin-panel.php:64
 msgid "Settings"
 msgstr ""
 
@@ -114,9 +114,9 @@ msgstr ""
 #: ../includes/class.yith-wcwl-admin-init.php:949
 #, php-format
 msgid ""
-"Enable all plugin features. <strong>Be sure to select a voice in the "
-"wishlist page menu in %s.</strong> Also, please read the plugin <a href=\"%s"
-"\" target=\"_blank\">documentation</a>."
+"Enable all plugin features. <strong>Be sure to select at least one option in "
+"the Wishlist page menu in %s.</strong> Also, please read the plugin <a href="
+"\"%s\" target=\"_blank\">documentation</a>."
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:956
@@ -125,8 +125,8 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:958
 #: ../includes/class.yith-wcwl-admin-init.php:959
-#: ../includes/class.yith-wcwl-admin-init.php:1200
-#: ../includes/class.yith-wcwl-admin-init.php:1201
+#: ../includes/class.yith-wcwl-admin-init.php:1218
+#: ../includes/class.yith-wcwl-admin-init.php:1219
 #, php-format
 msgid "My wishlist on %s"
 msgstr "Мій обраний список в %s"
@@ -137,8 +137,8 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:968
 msgid ""
-"You can add it in variable products only After \"Add to Cart \" or using the "
-"shortcode [yith_wcwl_add_to_wishlist]."
+"You can add the button in variable products only after the \"Add to Cart\" "
+"button or using the shortcode [yith_wcwl_add_to_wishlist]."
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:974
@@ -241,7 +241,7 @@ msgstr "\"Додати в кошик\" button text"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1048
 #, fuzzy
-msgid "Show \"Add to cart\" button for each product in wishlist"
+msgid "Show \"Add to Cart\" button for each product in wishlist"
 msgstr "\"Додати в кошик\" button background"
 
 #: ../includes/class.yith-wcwl-admin-init.php:1056
@@ -254,197 +254,219 @@ msgid ""
 "Show \"In stock\" or \"Out of stock\" label for each product in wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1080
+#: ../includes/class.yith-wcwl-admin-init.php:1065
+msgid "Show Date of addition"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1066
+#, fuzzy
+msgid "Show the date when users have added a product to the wishlist"
+msgstr "Немає доданих продуктів до вибраного"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1074
+#, fuzzy
+msgid "Add second remove button"
+msgstr "\"Додати в кошик\" button text"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1075
+msgid "Add a second remove button in the last column, with extended label"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1098
 msgid "Styles"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1087
+#: ../includes/class.yith-wcwl-admin-init.php:1105
 msgid "Use buttons"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1088
+#: ../includes/class.yith-wcwl-admin-init.php:1106
 msgid "Use buttons instead of simple anchors."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1095
+#: ../includes/class.yith-wcwl-admin-init.php:1113
 msgid "Custom CSS"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1103
+#: ../includes/class.yith-wcwl-admin-init.php:1121
 msgid "Use theme style"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1104
+#: ../includes/class.yith-wcwl-admin-init.php:1122
 msgid "Use the theme style."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1111
+#: ../includes/class.yith-wcwl-admin-init.php:1129
 msgid "Rounded buttons"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1112
+#: ../includes/class.yith-wcwl-admin-init.php:1130
 msgid "Make button corners rounded"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1119
+#: ../includes/class.yith-wcwl-admin-init.php:1137
 msgid "\"Add to Wishlist\" icon"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1120
+#: ../includes/class.yith-wcwl-admin-init.php:1138
 msgid "Add an icon to the \"Add to Wishlist\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1131
+#: ../includes/class.yith-wcwl-admin-init.php:1149
 msgid "\"Add to Cart\" icon"
 msgstr "\"Додати в кошик\" icon"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1132
+#: ../includes/class.yith-wcwl-admin-init.php:1150
 msgid "Add an icon to the \"Add to Cart\" button"
 msgstr "Add an icon to the \"Додати в кошик\" button"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1151
-msgid "Socials &amp; Share"
+#: ../includes/class.yith-wcwl-admin-init.php:1169
+msgid "Social Networks & Share"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1158
+#: ../includes/class.yith-wcwl-admin-init.php:1176
 msgid "Share on Facebook"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1159
-#: ../includes/class.yith-wcwl-admin-init.php:1183
+#: ../includes/class.yith-wcwl-admin-init.php:1177
 #, fuzzy
 msgid "Show \"Share on Facebook\" button"
 msgstr "\"Додати в кошик\" button text"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1166
+#: ../includes/class.yith-wcwl-admin-init.php:1184
 msgid "Tweet on Twitter"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1167
+#: ../includes/class.yith-wcwl-admin-init.php:1185
 #, fuzzy
 msgid "Show \"Tweet on Twitter\" button"
 msgstr "\"Додати в кошик\" button text"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1174
+#: ../includes/class.yith-wcwl-admin-init.php:1192
 msgid "Pin on Pinterest"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1175
+#: ../includes/class.yith-wcwl-admin-init.php:1193
 #, fuzzy
 msgid "Show \"Pin on Pinterest\" button"
 msgstr "\"Додати в кошик\" button text"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1182
+#: ../includes/class.yith-wcwl-admin-init.php:1200
 msgid "Share on Google+"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1190
+#: ../includes/class.yith-wcwl-admin-init.php:1201
+#, fuzzy
+msgid "Show \"Share on Google+\" button"
+msgstr "\"Додати в кошик\" button text"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1208
 msgid "Share by Email"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1191
+#: ../includes/class.yith-wcwl-admin-init.php:1209
 #, fuzzy
 msgid "Show \"Share by Email\" button"
 msgstr "\"Додати в кошик\" button text"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1198
+#: ../includes/class.yith-wcwl-admin-init.php:1216
 msgid "Social title"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1206
+#: ../includes/class.yith-wcwl-admin-init.php:1224
 msgid "Social text"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1207
+#: ../includes/class.yith-wcwl-admin-init.php:1225
 msgid ""
 "It will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url"
 "%</strong> where you want to show the URL of your wishlist."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1215
+#: ../includes/class.yith-wcwl-admin-init.php:1233
 msgid "Social image URL"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1251
-#, fuzzy
-msgid "\"Add to wishlist\" button"
-msgstr "\"Додати в кошик\" button text"
-
-#: ../includes/class.yith-wcwl-admin-init.php:1254
-#: ../includes/class.yith-wcwl-admin-init.php:1272
-#: ../includes/class.yith-wcwl-admin-init.php:1290
-#: ../includes/class.yith-wcwl-admin-init.php:1308
-#: ../includes/class.yith-wcwl-admin-init.php:1326
-msgid "Background"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1255
-#: ../includes/class.yith-wcwl-admin-init.php:1273
-#: ../includes/class.yith-wcwl-admin-init.php:1291
-#: ../includes/class.yith-wcwl-admin-init.php:1309
-#: ../includes/class.yith-wcwl-admin-init.php:1327
-msgid "Text"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1256
-#: ../includes/class.yith-wcwl-admin-init.php:1274
-#: ../includes/class.yith-wcwl-admin-init.php:1292
-#: ../includes/class.yith-wcwl-admin-init.php:1310
-#: ../includes/class.yith-wcwl-admin-init.php:1328
-msgid "Border"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1263
-#: ../includes/class.yith-wcwl-admin-init.php:1281
-#: ../includes/class.yith-wcwl-admin-init.php:1299
-#: ../includes/class.yith-wcwl-admin-init.php:1317
-msgid "Background (hover)"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1264
-#: ../includes/class.yith-wcwl-admin-init.php:1282
-#: ../includes/class.yith-wcwl-admin-init.php:1300
-#: ../includes/class.yith-wcwl-admin-init.php:1318
-msgid "Text (hover)"
-msgstr ""
-
-#: ../includes/class.yith-wcwl-admin-init.php:1265
-#: ../includes/class.yith-wcwl-admin-init.php:1283
-#: ../includes/class.yith-wcwl-admin-init.php:1301
-#: ../includes/class.yith-wcwl-admin-init.php:1319
-msgid "Border (hover)"
 msgstr ""
 
 #: ../includes/class.yith-wcwl-admin-init.php:1269
 #, fuzzy
+msgid "\"Add to wishlist\" button"
+msgstr "\"Додати в кошик\" button text"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1272
+#: ../includes/class.yith-wcwl-admin-init.php:1290
+#: ../includes/class.yith-wcwl-admin-init.php:1308
+#: ../includes/class.yith-wcwl-admin-init.php:1326
+#: ../includes/class.yith-wcwl-admin-init.php:1344
+msgid "Background"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1273
+#: ../includes/class.yith-wcwl-admin-init.php:1291
+#: ../includes/class.yith-wcwl-admin-init.php:1309
+#: ../includes/class.yith-wcwl-admin-init.php:1327
+#: ../includes/class.yith-wcwl-admin-init.php:1345
+msgid "Text"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1274
+#: ../includes/class.yith-wcwl-admin-init.php:1292
+#: ../includes/class.yith-wcwl-admin-init.php:1310
+#: ../includes/class.yith-wcwl-admin-init.php:1328
+#: ../includes/class.yith-wcwl-admin-init.php:1346
+msgid "Border"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1281
+#: ../includes/class.yith-wcwl-admin-init.php:1299
+#: ../includes/class.yith-wcwl-admin-init.php:1317
+#: ../includes/class.yith-wcwl-admin-init.php:1335
+msgid "Background (hover)"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1282
+#: ../includes/class.yith-wcwl-admin-init.php:1300
+#: ../includes/class.yith-wcwl-admin-init.php:1318
+#: ../includes/class.yith-wcwl-admin-init.php:1336
+msgid "Text (hover)"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1283
+#: ../includes/class.yith-wcwl-admin-init.php:1301
+#: ../includes/class.yith-wcwl-admin-init.php:1319
+#: ../includes/class.yith-wcwl-admin-init.php:1337
+msgid "Border (hover)"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1287
+#, fuzzy
 msgid "\"Add to Cart\" button"
 msgstr "\"Додати в кошик\" button text"
 
-#: ../includes/class.yith-wcwl-admin-init.php:1287
+#: ../includes/class.yith-wcwl-admin-init.php:1305
 msgid "\"Style 1\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1305
+#: ../includes/class.yith-wcwl-admin-init.php:1323
 msgid "\"Style 2\" button"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1323
+#: ../includes/class.yith-wcwl-admin-init.php:1341
 msgid "Wishlist table"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1332
+#: ../includes/class.yith-wcwl-admin-init.php:1350
 msgid "Headers"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1335
+#: ../includes/class.yith-wcwl-admin-init.php:1353
 msgid "Background color"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1425
+#: ../includes/class.yith-wcwl-admin-init.php:1443
 msgid "Wishlist Activated"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1426
+#: ../includes/class.yith-wcwl-admin-init.php:1444
 #, php-format
 msgid ""
 "In the YIT Plugin tab you can find the Wishlist options. With this menu, you "
@@ -453,11 +475,11 @@ msgid ""
 "options, <a href=\"%s\">discover it now</a>."
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1437
+#: ../includes/class.yith-wcwl-admin-init.php:1455
 msgid "Wishlist Updated"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-admin-init.php:1438
+#: ../includes/class.yith-wcwl-admin-init.php:1456
 #, php-format
 msgid ""
 "From now on, you can find all the options of Wishlist under YIT Plugin -> "
@@ -467,17 +489,22 @@ msgid ""
 "\">discover the PREMIUM version.</a>"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-init.php:362
+#: ../includes/class.yith-wcwl-init.php:361
 msgid ""
 "We are sorry, but this feature is available only if cookies are enabled on "
 "your browser."
 msgstr ""
 
+#: ../includes/class.yith-wcwl-init.php:362
+#, fuzzy
+msgid "Product correctly added to cart"
+msgstr "Назва продукту"
+
 #: ../includes/class.yith-wcwl-install.php:239
 msgid "wishlist"
 msgstr ""
 
-#: ../includes/class.yith-wcwl-shortcode.php:230
+#: ../includes/class.yith-wcwl-shortcode.php:242
 #: ../includes/class.yith-wcwl-ui.php:161
 msgid "Share on:"
 msgstr "Поширити в:"
@@ -501,20 +528,22 @@ msgstr ""
 
 #: ../includes/class.yith-wcwl.php:187
 #, fuzzy
-msgid "Error occurred while adding products to the wishlist."
+msgid "An error occurred while adding products to the wishlist."
 msgstr "Немає доданих продуктів до вибраного"
 
 #: ../includes/class.yith-wcwl.php:271
-msgid "Error occurred while adding product to wishlist."
-msgstr ""
+#, fuzzy
+msgid "An error occurred while adding products to wishlist."
+msgstr "Немає доданих продуктів до вибраного"
 
 #: ../includes/class.yith-wcwl.php:286
-msgid "Remove now does not require any param"
+msgid "The \"Remove\" option now does not require any parameter"
 msgstr ""
 
 #: ../includes/class.yith-wcwl.php:320
-msgid "Error occurred while removing products from the wishlist"
-msgstr ""
+#, fuzzy
+msgid "An error occurred while removing products from the wishlist"
+msgstr "Немає доданих продуктів до вибраного"
 
 #: ../includes/class.yith-wcwl.php:598
 msgid "You need to log in before creating a new wishlist"
@@ -528,7 +557,7 @@ msgstr ""
 msgid "Error. Unable to remove the product from the wishlist."
 msgstr ""
 
-#: ../includes/class.yith-wcwl.php:1315 ../templates/wishlist-view.php:181
+#: ../includes/class.yith-wcwl.php:1315 ../templates/wishlist-view.php:268
 msgid "No products were added to the wishlist"
 msgstr "Немає доданих продуктів до вибраного"
 
@@ -737,77 +766,77 @@ msgstr ""
 msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:61
+#: ../plugin-fw/lib/yit-plugin-panel.php:63
 msgid "Plugin Settings"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:91
+#: ../plugin-fw/lib/yit-plugin-panel.php:95
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:101
 msgid "YIT Plugins"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:280
+#: ../plugin-fw/lib/yit-plugin-panel.php:292
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:142
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
 msgid "Save Changes"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:283
+#: ../plugin-fw/lib/yit-plugin-panel.php:295
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
 msgid ""
 "If you continue with this action, you will reset all options in this page."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:285
+#: ../plugin-fw/lib/yit-plugin-panel.php:297
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 msgid "Reset to Default"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:285
+#: ../plugin-fw/lib/yit-plugin-panel.php:297
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
 msgid "Are you sure?"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:419
+#: ../plugin-fw/lib/yit-plugin-panel.php:431
 msgid ""
 "The element you have entered already exists. Please, enter another name."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:420
+#: ../plugin-fw/lib/yit-plugin-panel.php:432
 msgid "Settings saved"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:421
+#: ../plugin-fw/lib/yit-plugin-panel.php:433
 msgid "Settings reset"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:422
+#: ../plugin-fw/lib/yit-plugin-panel.php:434
 msgid "Element deleted correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:423
-#: ../plugin-fw/lib/yit-plugin-panel.php:424
+#: ../plugin-fw/lib/yit-plugin-panel.php:435
+#: ../plugin-fw/lib/yit-plugin-panel.php:436
 msgid "Element updated correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:425
+#: ../plugin-fw/lib/yit-plugin-panel.php:437
 msgid "Database imported correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:426
+#: ../plugin-fw/lib/yit-plugin-panel.php:438
 msgid "An error has occurred during import. Please try again."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:427
+#: ../plugin-fw/lib/yit-plugin-panel.php:439
 msgid "The added file is not valid."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:428
+#: ../plugin-fw/lib/yit-plugin-panel.php:440
 msgid "Sorry, import is disabled."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:429
+#: ../plugin-fw/lib/yit-plugin-panel.php:441
 msgid "Sorting successful."
 msgstr ""
 
@@ -852,47 +881,47 @@ msgid ""
 "YIT Plugin tab."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:119
+#: ../plugin-fw/lib/yit-upgrade.php:123
 msgid "There is a new version of %plugin_name% available."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:120
+#: ../plugin-fw/lib/yit-upgrade.php:124
 msgid "View version %latest% details."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:121
+#: ../plugin-fw/lib/yit-upgrade.php:125
 msgid "Automatic update is unavailable for this plugin,"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:122
+#: ../plugin-fw/lib/yit-upgrade.php:126
 msgid ""
 "please <a href=\"%activate_link%\">activate</a> your copy of %plugin_name%."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:123
+#: ../plugin-fw/lib/yit-upgrade.php:127
 msgid "Update now."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:226
+#: ../plugin-fw/lib/yit-upgrade.php:230
 msgid "Yithemes Repository"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:260
+#: ../plugin-fw/lib/yit-upgrade.php:264
 msgid "Invalid URL Provided."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:273
+#: ../plugin-fw/lib/yit-upgrade.php:277
 msgid "Could not create Temporary file."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:414
+#: ../plugin-fw/lib/yit-upgrade.php:419
 #, php-format
 msgid ""
 "There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
 "yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:416
+#: ../plugin-fw/lib/yit-upgrade.php:421
 #, php-format
 msgid ""
 "There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
@@ -901,7 +930,7 @@ msgid ""
 "automatic updates.</em>"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:418
+#: ../plugin-fw/lib/yit-upgrade.php:423
 #, php-format
 msgid ""
 "There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
@@ -910,7 +939,7 @@ msgid ""
 "title=\"Licence activation\">activate</a> your copy of %6s.</em>"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:420
+#: ../plugin-fw/lib/yit-upgrade.php:425
 #, php-format
 msgid ""
 "There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
@@ -918,75 +947,75 @@ msgid ""
 "href=\"%5$s\">update now</a>."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:493
+#: ../plugin-fw/lib/yit-upgrade.php:498
 msgid "You can't update the plugins for this site."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:497
+#: ../plugin-fw/lib/yit-upgrade.php:502
 msgid ""
 "You do not have sufficient permissions to update the plugins for this site."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-upgrade.php:504
+#: ../plugin-fw/lib/yit-upgrade.php:509
 msgid "Update Plugin"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:156
+#: ../plugin-fw/licence/lib/yit-licence.php:161
 #, php-format
 msgid "%field% field cannot be empty"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:157
+#: ../plugin-fw/licence/lib/yit-licence.php:162
 msgid "%field_1% and %field_2% fields cannot be empty"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:158
+#: ../plugin-fw/licence/lib/yit-licence.php:163
 msgid "Unable to contact the remote server, please try again later. Thanks!"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:537
+#: ../plugin-fw/licence/lib/yit-licence.php:548
 msgid "Invalid Request"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:538
+#: ../plugin-fw/licence/lib/yit-licence.php:549
 msgid "Invalid licence key"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:539
+#: ../plugin-fw/licence/lib/yit-licence.php:550
 msgid "Software has been deactivated"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:540
+#: ../plugin-fw/licence/lib/yit-licence.php:551
 msgid "Maximum number of activations exceeded"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:541
+#: ../plugin-fw/licence/lib/yit-licence.php:552
 msgid "Invalid instance ID"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:542
+#: ../plugin-fw/licence/lib/yit-licence.php:553
 msgid "Invalid security key"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:543
+#: ../plugin-fw/licence/lib/yit-licence.php:554
 msgid "Licence key has expired"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-licence.php:544
+#: ../plugin-fw/licence/lib/yit-licence.php:555
 msgid "Licence key has been banned"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-plugin-licence.php:63
 #: ../plugin-fw/licence/lib/yit-plugin-licence.php:64
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:63
+#: ../plugin-fw/licence/lib/yit-plugin-licence.php:65
 #: ../plugin-fw/licence/lib/yit-theme-licence.php:64
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:106
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:65
 #: ../plugin-fw/licence/lib/yit-theme-licence.php:107
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:108
 msgid "Licence Activation"
 msgstr ""
 
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:114
 #: ../plugin-fw/licence/lib/yit-theme-licence.php:115
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:116
 #, php-format
 msgid "%s"
 msgstr ""
@@ -997,74 +1026,94 @@ msgstr ""
 
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:23
 msgid ""
+"I cannot find the license key for activating the theme I have bought some "
+"time ago. Where can I find it?"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:26
+msgid ""
+"If you have purchased one of our products before 27 January 2015, you can "
+"benefit from support and updates (the services offered with the license)\n"
+"            until 27 January 2016 and you do not have to purchase it again "
+"to get a new license key, because, before this date, your license used to be "
+"activated automatically by our system.\n"
+"            After 27 January 2016, instead, if you want to benefit from "
+"support and updates you have to buy a new license and activate it through "
+"the license key you will be\n"
+"            provided with and that you can find in your YIThemes account, in "
+"section \"My licenses\"."
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:37
+msgid ""
 "Have you updated your licenses? Have you asked for an extension? Update "
 "information concerning your products."
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:25
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:39
 msgid "Update licence information"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:35
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:49
 msgid "Products to be activated"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:54
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:68
 msgid "Activate"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:73
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:87
 msgid "Activated"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:77
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:133
-#: ../templates/wishlist-view.php:62
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:91
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:123
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:147
+#: ../templates/wishlist-view.php:86
 msgid "Product Name"
 msgstr "Назва продукту"
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:78
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:110
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:134
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:145
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:337
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:92
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:124
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:148
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:148
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:340
 #: ../templates/share.php:40
 msgid "Email"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:79
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:111
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:135
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:125
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:149
 msgid "Licence Key"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:80
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:136
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:94
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:150
 msgid "Expires"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:81
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
 msgid "Remaining"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:82
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:137
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:147
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:96
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:151
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:161
 msgid "Renew"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:107
 #, php-format
 msgid "%1s out of %2s"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:105
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:119
 msgid "Banned"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:129
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:143
 msgid "Expired"
 msgstr ""
 
@@ -1080,182 +1129,183 @@ msgstr ""
 msgid "+ Add New Category"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:5
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
 msgid "Text Input"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:6
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
 msgid "Checkbox"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
 msgid "Select"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
 msgid "Textarea"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
 msgid "Radio Input"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:12
 msgid "Password Field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:13
 msgid "File Upload"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:45
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
 msgid "Theme Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:46
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:48
 msgid "Custom Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:49
 #: ../plugin-fw/templates/metaboxes/types/responsivesliders.php:24
 msgid "None"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:57
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:60
 msgid "Add field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:66
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:258
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:69
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:261
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:37
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:82
+#: ../templates/wishlist-view.php:258
 msgid "Remove"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:67
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:259
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:70
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:262
 msgid "Click to toggle"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:74
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:266
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:77
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:269
 msgid "Title Field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:78
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:270
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:81
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:273
 msgid "Insert the title for the field."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:83
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:275
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:86
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:278
 msgid "Data Name"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:87
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:279
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:90
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:282
 msgid ""
 "REQUIRED: Field identification name to be entered into email body. "
 "<strong>Note:</strong>Use only lowercase characters and underscores."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:92
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:284
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:95
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:287
 msgid "Type field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:100
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:292
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:103
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:295
 msgid "Select the type for this field."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:105
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:297
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:108
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:300
 msgid "Checked"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:109
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:301
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:112
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:304
 msgid "Select this option if you want this field appears as already checked."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:114
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:306
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:117
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:309
 #, fuzzy
 msgid "Add options "
 msgstr "Додати в кошик"
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:115
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:307
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:118
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:310
 #, fuzzy
 msgid "Add option"
 msgstr "\"Додати в кошик\" icon"
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:118
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:310
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:121
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:313
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:436
 msgid "Selected"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:121
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:313
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:124
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:316
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:436
 msgid "Delete option"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:127
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:319
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:130
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:322
 msgid "Error Message"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:131
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:323
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:134
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:326
 msgid "Insert the error message for validation."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:136
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:328
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:139
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:331
 msgid "Required"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:140
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:332
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:143
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:335
 msgid "Select this option if it must be required."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:149
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:341
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:152
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:344
 msgid "Select this option if the email must be valid."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:154
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:346
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:157
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:349
 msgid "Reply To"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:158
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:350
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:161
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:353
 msgid "Select this if it is the email you can reply to."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:163
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:355
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:166
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:358
 msgid "Class"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:167
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:359
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:170
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:362
 msgid ""
 "Insert additional class(es) (separated by commas) for more personalization."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:172
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:364
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:175
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:367
 msgid "Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:200
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:388
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:203
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:391
 #: ../plugin-fw/templates/metaboxes/types/icon-list.php:69
 #: ../plugin-fw/templates/metaboxes/types/select-icon.php:33
 #: ../plugin-fw/templates/metaboxes/types/upload.php:21
@@ -1265,25 +1315,25 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:206
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:394
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:209
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:397
 #: ../plugin-fw/templates/metaboxes/types/icon-list.php:75
 #: ../plugin-fw/templates/metaboxes/types/select-icon.php:39
 msgid "Image preview"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:214
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:402
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:217
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:405
 msgid "Insert an icon for more personalization."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:219
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:406
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:222
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:409
 msgid "Width"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:244
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:418
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:247
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:421
 msgid "Set field length."
 msgstr ""
 
@@ -1323,35 +1373,35 @@ msgstr ""
 msgid "(Default: <i %s></i> )"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:35
 #: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-#: ../plugin-fw/templates/metaboxes/types/images.php:33
-#: ../plugin-fw/templates/metaboxes/types/images.php:59
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
+#: ../plugin-fw/templates/metaboxes/types/images.php:38
+#: ../plugin-fw/templates/metaboxes/types/images.php:64
 msgid "Delete image"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Add Images to Gallery"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 #, fuzzy
 msgid "Add to gallery"
 msgstr "Додати в кошик"
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Add images"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Delete"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/images.php:37
+#: ../plugin-fw/templates/metaboxes/types/images.php:42
 msgid "Upload new images"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/images.php:70
+#: ../plugin-fw/templates/metaboxes/types/images.php:75
 msgid "Are you sure you want to remove this image?"
 msgstr ""
 
@@ -1449,47 +1499,73 @@ msgid "Pinterest"
 msgstr ""
 
 #: ../templates/share.php:34
-msgid "Google Plus"
+msgid "Google+"
 msgstr ""
 
-#: ../templates/wishlist-view.php:23
+#: ../templates/wishlist-view.php:28
 msgid "Edit title"
 msgstr ""
 
-#: ../templates/wishlist-view.php:32
+#: ../templates/wishlist-view.php:37
 msgid "Save"
 msgstr ""
 
-#: ../templates/wishlist-view.php:36
+#: ../templates/wishlist-view.php:41
 msgid "Cancel"
 msgstr ""
 
-#: ../templates/wishlist-view.php:68
+#: ../templates/wishlist-view.php:93
 msgid "Unit Price"
 msgstr "Ціна"
 
-#: ../templates/wishlist-view.php:76
+#: ../templates/wishlist-view.php:106
 msgid "Stock Status"
 msgstr "Наявність на складі"
 
-#: ../templates/wishlist-view.php:112
+#: ../templates/wishlist-view.php:152 ../templates/wishlist-view.php:258
 msgid "Remove this product"
 msgstr ""
 
-#: ../templates/wishlist-view.php:141
+#: ../templates/wishlist-view.php:182
 msgid "Free!"
 msgstr ""
 
-#: ../templates/wishlist-view.php:152
+#: ../templates/wishlist-view.php:193
 msgid "Out of Stock"
 msgstr ""
 
-#: ../templates/wishlist-view.php:155
+#: ../templates/wishlist-view.php:196
 msgid "In Stock"
 msgstr "в наявності"
 
-#: ../templates/wishlist-view.php:213 ../templates/wishlist-view.php:246
-msgid "Ask an estimate of costs"
+#: ../templates/wishlist-view.php:207
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: ../templates/wishlist-view.php:226
+msgid "Move"
+msgstr ""
+
+#: ../templates/wishlist-view.php:238
+#, fuzzy
+msgid "Shared"
+msgstr "Поширити в:"
+
+#: ../templates/wishlist-view.php:241
+msgid "Private"
+msgstr ""
+
+#: ../templates/wishlist-view.php:244
+msgid "Public"
+msgstr ""
+
+#: ../templates/wishlist-view.php:285
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: ../templates/wishlist-view.php:293 ../templates/wishlist-view.php:333
+msgid "Ask for an estimate"
 msgstr ""
 
 #: ../yit-common/yith-panel.php:406

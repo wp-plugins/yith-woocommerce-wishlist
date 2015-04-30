@@ -717,7 +717,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     include $type;
                 }
                 else {
-                    do_action( "yit_panel_{$option['type']}", $option, $db_value );
+                    do_action( "yit_panel_{$option['type']}", $option, $db_value, $custom_attributes );
                 }
             }
         }

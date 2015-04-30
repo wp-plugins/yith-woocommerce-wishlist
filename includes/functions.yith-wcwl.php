@@ -143,7 +143,8 @@ if( !function_exists( 'yith_setcookie' ) ) {
     function yith_setcookie( $name, $value = array(), $time = null ) {
         $time = $time != null ? $time : time() + 60 * 60 * 24 * 30;
         
-        $value = maybe_serialize( stripslashes_deep( $value ) );
+        //$value = maybe_serialize( stripslashes_deep( $value ) );
+        $value = json_encode( stripslashes_deep( $value ) );
         $expiration = apply_filters( 'yith_wcwl_cookie_expiration_time', $time ); // Default 30 days
 
         $_COOKIE[ $name ] = $value;
@@ -160,8 +161,9 @@ if( !function_exists( 'yith_getcookie' ) ) {
      * @since 1.0.0
      */
     function yith_getcookie( $name ) {
-        if( isset( $_COOKIE[$name] ) )
-            { return maybe_unserialize( stripslashes( $_COOKIE[$name] ) ); }
+        if( isset( $_COOKIE[$name] ) ) {
+	        return json_decode( stripslashes( $_COOKIE[$name] ), true );
+        }
         
         return array();
     }

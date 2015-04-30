@@ -121,29 +121,78 @@
             }
         }).change();
 
-        $(document).on('click', '.plugin-option .upload_button', function (e) {
-            var send_attachment_bkp = wp.media.editor.send.attachment;
-            var button = $(this);
-            var id = button.attr('id').replace('-button', '');
-            _custom_media = true;
-            wp.media.editor.send.attachment = function (props, attachment) {
-                if (_custom_media) {
-                    if ($("#" + id).is('input[type=text]')) {
-                        $("#" + id).val(attachment.url);
-                    } else {
-                        $("#" + id + '_custom').val(attachment.url);
-                    }
+        //$(document).on('click', '.plugin-option .upload_button', function (e) {
+        //    var send_attachment_bkp = wp.media.editor.send.attachment;
+        //    var button = $(this);
+        //    var id = button.attr('id').replace('-button', '');
+        //    _custom_media = true;
+        //    wp.media.editor.send.attachment = function (props, attachment) {
+        //        if (_custom_media) {
+        //            if ($("#" + id).is('input[type=text]')) {
+        //                $("#" + id).val(attachment.url);
+        //            } else {
+        //                $("#" + id + '_custom').val(attachment.url);
+        //            }
+        //
+        //        } else {
+        //            return _orig_send_attachment.apply(this, [props, attachment]);
+        //        }
+        //        ;
+        //    }
+        //
+        //    wp.media.editor.open(button);
+        //    return false;
+        //});
 
-                } else {
-                    return _orig_send_attachment.apply(this, [props, attachment]);
-                }
-                ;
+        $( document ).on( 'click', '.plugin-option .upload_button', function(e) {
+            e.preventDefault();
+
+            var t = $(this),
+                custom_uploader,
+                id = t.attr('id').replace(/-button$/, '');
+
+            //If the uploader object has already been created, reopen the dialog
+            if (custom_uploader) {
+                custom_uploader.open();
+                return;
             }
 
-            wp.media.editor.open(button);
-            return false;
-        });
+            var custom_uploader_states = [
+                // Main states.
+                new wp.media.controller.Library({
+                    library:   wp.media.query(),
+                    multiple:  false,
+                    title:     'Choose Image',
+                    priority:  20,
+                    filterable: 'uploaded'
+                })
+            ];
 
+            // Create the media frame.
+            custom_uploader = wp.media.frames.downloadable_file = wp.media({
+                // Set the title of the modal.
+                title: 'Choose Image',
+                library: {
+                    type: ''
+                },
+                button: {
+                    text: 'Choose Image'
+                },
+                multiple: false,
+                states: custom_uploader_states
+            });
+
+
+            //When a file is selected, grab the URL and set it as the text field's value
+            custom_uploader.on( 'select' , function() {
+                var attachment = custom_uploader.state().get( 'selection' ).first().toJSON();
+
+                $("#" + id).val( attachment.url );
+            });
+
+            //Open the uploader dialog
+            custom_uploader.open();
+        });
     }
 
     $('.plugin-option .add_media').on('click', function () {

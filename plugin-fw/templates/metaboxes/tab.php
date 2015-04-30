@@ -56,7 +56,16 @@ do_action( 'yit_before_metaboxes_tab' ) ?>
                 $field['value'] = $value != '' ? $value : ( isset( $field['std'] ) ? $field['std'] : '' );
                 ?>
                 <div class="the-metabox <?php echo $field['type'] ?> clearfix<?php if ( empty( $field['label'] ) ) : ?> no-label<?php endif; ?>">
-                    <?php yit_plugin_get_template( YIT_CORE_PLUGIN_PATH, '/metaboxes/types/' . $field['type'] . '.php', array( 'args' => $field ) ) ?>
+                    <?php $args = apply_filters('yit_fw_metaboxes_type_args', array(
+                            'basename' => YIT_CORE_PLUGIN_PATH,
+                            'path' => '/metaboxes/types/',
+                            'type' => $field['type'],
+                            'args' => array('args' => $field)
+                        )
+                    );
+                    extract( $args );
+                    ?>
+                    <?php yit_plugin_get_template( $basename, $path . $type . '.php' , $args ) ?>
                 </div>
             <?php endforeach ?>
         </div>

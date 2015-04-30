@@ -1,4 +1,6 @@
 <?php
+
+
 extract( $args );
 
 $types = array(
@@ -51,7 +53,8 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
 /* End select Font Awesome */
 ?>
-
+<div id="<?php echo $id ?>-container" <?php if ( isset($deps) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $deps['ids'] ?>" data-value="<?php echo $deps['values'] ?>" <?php endif ?>>
+   <?php if( isset( $label ) ):?><label for="<?php echo $id ?>"><?php echo $label ?></label><?php endif;?>
 
 <p class="field-row">
     <a href="" class="button-secondary add-items"><?php _e( 'Add field', 'yit' ) ?></a>
@@ -419,6 +422,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
             </p>
         </div>
     </div>
+</div>
 </div>
 
 <script>

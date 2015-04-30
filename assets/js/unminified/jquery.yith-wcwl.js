@@ -41,11 +41,23 @@ jQuery( document ).ready( function( $ ){
         wishlist.find( '.added_to_cart' ).remove();
     } );
 
+    $(document).on( 'added_to_cart', 'body', print_add_to_cart_notice );
+
+    $(document).on( 'cart_page_refreshed', 'body', init_handling_after_ajax );
+
     $(document).on( 'click', '.show-title-form', show_title_form );
 
     $(document).on( 'click', '.wishlist-title-with-form h2', show_title_form );
 
     $(document).on( 'click', '.hide-title-form', hide_title_form );
+
+    $(document).on( 'change', '.change-wishlist', function( ev ){
+        var t = $(this);
+
+        move_item_to_another_wishlist( t );
+
+        return false;
+    } );
 
     $(document).on( 'change', '.yith-wcwl-popup-content .wishlist-select', function( ev ){
         var t = $(this);
@@ -96,6 +108,8 @@ jQuery( document ).ready( function( $ ){
             checkboxes.off('change');
             checkboxes = $( '.wishlist_table tbody input[type="checkbox"]');
 
+            $( 'select.selectBox' ).selectBox();
+
             handle_wishlist_checkbox();
         } );
     } );
@@ -110,10 +124,49 @@ jQuery( document ).ready( function( $ ){
     $( 'select.selectBox' ).selectBox();
 
     /**
+     * Init js handling on wishlist table items after ajax update
+     *
+     * @return void
+     * @since 2.0.7
+     */
+    function init_handling_after_ajax(){
+        $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
+            hook: 'data-rel',
+            social_tools: false,
+            theme: 'pp_woocommerce',
+            horizontal_padding: 20,
+            opacity: 0.8,
+            deeplinking: false
+        });
+
+        checkboxes.off('change');
+        checkboxes = $( '.wishlist_table tbody input[type="checkbox"]');
+
+        $( 'select.selectBox' ).selectBox();
+
+        handle_wishlist_checkbox();
+    }
+
+    /**
+     *
+     */
+    function print_add_to_cart_notice(){
+        var messages = $( '.woocommerce-message');
+
+        if( messages.length == 0 ){
+            $( '#yith-wcwl-form').prepend( yith_wcwl_l10n.labels.added_to_cart_message );
+        }
+        else{
+            messages.fadeOut( 300, function(){
+                $(this).replaceWith( yith_wcwl_l10n.labels.added_to_cart_message ).fadeIn();
+            } );
+        }
+    }
+
+    /**
      * Add a product in the wishlist.
      *
-     * @param string url
-     * @param string prod_type
+     * @param object el
      * @return void
      * @since 1.0.0
      */
@@ -218,8 +271,7 @@ jQuery( document ).ready( function( $ ){
     /**
      * Remove a product from the wishlist.
      *
-     * @param string url
-     * @param int rowid
+     * @param object el
      * @return void
      * @since 1.0.0
      */
@@ -250,19 +302,52 @@ jQuery( document ).ready( function( $ ){
         $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url + ' #yith-wcwl-form', data, function(){
             table.stop( true ).css( 'opacity', '1' ).unblock();
 
-            $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
-                hook: 'data-rel',
-                social_tools: false,
-                theme: 'pp_woocommerce',
-                horizontal_padding: 20,
-                opacity: 0.8,
-                deeplinking: false
-            });
+            init_handling_after_ajax();
 
-            checkboxes.off('change');
-            checkboxes = $( '.wishlist_table tbody input[type="checkbox"]');
+            $('body').trigger('removed_from_wishlist');
+        } );
+    }
 
-            handle_wishlist_checkbox();
+    /**
+     * Move item to another wishlist
+     *
+     * @param object el
+     * @return void
+     * @since 2.0.7
+     */
+    function move_item_to_another_wishlist( el ){
+        var table = el.parents( '.cart.wishlist_table'),
+            wishlist_token = table.data( 'token'),
+            wishlist_id = table.data( 'id' ),
+            item = el.parents( 'tr'),
+            item_id = item.data( 'row-id'),
+            to_token = el.val(),
+            pagination = table.data( 'pagination' ),
+            per_page = table.data( 'per-page' ),
+            current_page = table.data( 'page' ),
+            data = {
+                action: yith_wcwl_l10n.actions.move_to_another_wishlist_action,
+                wishlist_token: wishlist_token,
+                wishlist_id: wishlist_id,
+                destination_wishlist_token: to_token,
+                item_id: item_id,
+                pagination: pagination,
+                per_page: per_page,
+                current_page: current_page
+            };
+
+        if( to_token == '' ){
+            return;
+        }
+
+        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+
+        $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url + ' #yith-wcwl-form', data, function(){
+            table.stop( true ).css( 'opacity', '1' ).unblock();
+
+            init_handling_after_ajax();
+
+            $('body').trigger('moved_to_another_wishlist');
         } );
     }
 
@@ -345,7 +430,8 @@ jQuery( document ).ready( function( $ ){
             var ids = '',
                 table = $(this).parents( '.cart.wishlist_table'),
                 wishlist_id = table.data( 'id'),
-                wishlist_token = table.data( 'token' );
+                wishlist_token = table.data( 'token'),
+                url = document.URL;
 
             checkboxes.filter(':checked').each( function(){
                 var t = $(this);
@@ -353,7 +439,43 @@ jQuery( document ).ready( function( $ ){
                 ids += t.parents('tr').data( 'row-id' );
             } );
 
-            $('#custom_add_to_cart').attr( 'href', '?wishlist_products_to_add_to_cart=' + ids + '&wishlist_id=' + wishlist_id + '&wishlist_token=' + wishlist_token );
+            url = add_query_arg( url, 'wishlist_products_to_add_to_cart', ids );
+            url = add_query_arg( url, 'wishlist_token', wishlist_token );
+            url = add_query_arg( url, 'wishlist_id', wishlist_id );
+
+            $('#custom_add_to_cart').attr( 'href', url );
         } );
+    }
+
+    /**
+     * Add a query arg to an url
+     *
+     * @param purl  original url
+     * @param key   query argr key
+     * @param value query arg value
+     * @return string
+     * @since 2.0.7
+     */
+    function add_query_arg(purl, key,value){
+        var s = purl;
+        var pair = key+"="+value;
+
+        var r = new RegExp("(&|\\?)"+key+"=[^\&]*");
+
+        s = s.replace(r,"$1"+pair);
+
+        if(s.indexOf(key + '=')>-1){
+
+
+        }
+        else{
+            if(s.indexOf('?')>-1){
+                s+='&'+pair;
+            }else{
+                s+='?'+pair;
+            }
+        }
+
+        return s;
     }
 });

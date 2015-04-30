@@ -14,6 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 extract( $args );
 
+if ( !isset( $desc ) ) {
+    $desc='';
+}
+
 ?>
 <div id="<?php echo $id ?>-container" <?php if ( isset($deps) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $deps['ids'] ?>" data-value="<?php echo $deps['values'] ?>" <?php endif ?> class="rm_onoff onoff_container">
 

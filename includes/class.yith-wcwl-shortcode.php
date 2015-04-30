@@ -68,7 +68,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 					if ( ! empty( $action ) && $action == 'user' ) {
 						$user_id = isset( $action_params[1] ) ? $action_params[1] : false;
 						$user_id = ( ! $user_id ) ? get_query_var( $user_id, false ) : $user_id;
-						$user_id = ( ! $user_id ) ? get_current_user_id() : false;
+						$user_id = ( ! $user_id ) ? get_current_user_id() : $user_id;
 
 						$wishlists = YITH_WCWL()->get_wishlists( array( 'user_id' => $user_id, 'is_default' => 1 ) );
 
@@ -147,7 +147,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 
 					if( $pages > 1 ){
 						$page_links = paginate_links( array(
-							'base' => add_query_arg( array( 'paged' => '%#%' ), YITH_WCWL()->get_wishlist_url( 'view' . '/' . $wishlist_id ) ),
+							'base' => esc_url( add_query_arg( array( 'paged' => '%#%' ), YITH_WCWL()->get_wishlist_url( 'view' . '/' . $wishlist_id ) ) ),
 							'format' => '?paged=%#%',
 							'current' => $current_page,
 							'total' => $pages,
@@ -173,8 +173,10 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				$wishlist_meta = YITH_WCWL()->get_wishlist_detail_by_token( $wishlist_id );
 
 				// retireve wishlist title
+				$default_wishlist_title = get_option( 'yith_wcwl_wishlist_title' );
+
 				if( $wishlist_meta['is_default'] == 1 ) {
-					$wishlist_title = get_option( 'yith_wcwl_wishlist_title' );
+					$wishlist_title = $default_wishlist_title;
 				}
 				else{
 					$wishlist_title = $wishlist_meta['wishlist_name'];
@@ -184,7 +186,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				$show_ask_estimate_button = get_option( 'yith_wcwl_show_estimate_button' ) == 'yes';
 				$ask_estimate_url = false;
 				if( $show_ask_estimate_button ){
-					$ask_estimate_url = wp_nonce_url(
+					$ask_estimate_url = esc_url( wp_nonce_url(
 						add_query_arg(
 							'ask_an_estimate',
 							!empty( $wishlist_meta['wishlist_token'] ) ? $wishlist_meta['wishlist_token'] : 'false',
@@ -192,7 +194,7 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 						),
 						'ask_an_estimate',
 						'estimate_nonce'
-					);
+					) );
 				}
 
 				// retrieve share options
@@ -202,6 +204,10 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				$share_googleplus_enabled = get_option( 'yith_wcwl_share_googleplus' ) == 'yes';
 				$share_email_enabled = get_option( 'yith_wcwl_share_email' ) == 'yes';
 
+				$show_date_added = get_option( 'yith_wcwl_show_dateadded' ) == 'yes';
+				$show_add_to_cart = get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes';
+				$repeat_remove_button = get_option( 'yith_wcwl_repeat_remove_button' ) == 'yes';
+
 				$share_enabled = $share_facebook_enabled || $share_twitter_enabled || $share_pinterest_enabled || $share_googleplus_enabled || $share_email_enabled;
 
 				$additional_params = array(
@@ -209,21 +215,27 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 					'wishlist_items' => $wishlist_items,
 					'wishlist_meta' => $wishlist_meta,
 					'page_title' => $wishlist_title,
+					'default_wishlsit_title' => $default_wishlist_title,
 					'current_page' => $current_page,
 					'page_links' => isset( $page_links ) ? $page_links : false,
 					'is_user_logged_in' => is_user_logged_in(),
 					'is_user_owner' => $is_user_owner,
 					'show_price' => get_option( 'yith_wcwl_price_show' ) == 'yes',
+					'show_dateadded' => $show_date_added,
 					'show_ask_estimate_button' => $show_ask_estimate_button,
 					'ask_estimate_url' => $ask_estimate_url,
 					'show_stock_status' => get_option( 'yith_wcwl_stock_show' ) == 'yes',
-					'show_add_to_cart' => get_option( 'yith_wcwl_add_to_cart_show' ) == 'yes',
+					'show_add_to_cart' => $show_add_to_cart,
 					'add_to_cart_text' => get_option( 'yith_wcwl_add_to_cart_text' ),
 					'price_excl_tax' => get_option( 'woocommerce_tax_display_cart' ) == 'excl',
 					'template_part' => $template_part,
 					'share_enabled' => $share_enabled,
 					'additional_info' => false,
-					'show_cb' => false
+					'available_multi_wishlist' => false,
+					'show_cb' => false,
+					'repeat_remove_button' => $repeat_remove_button,
+					'show_last_column' => ( $show_date_added && is_user_logged_in() ) || $show_add_to_cart || $repeat_remove_button,
+					'users_wishlists' => array()
 				);
 
 				if( $share_enabled ){
@@ -305,7 +317,6 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 
 			$classes = apply_filters( 'yith_wcwl_add_to_wishlist_button_classes', get_option( 'yith_wcwl_use_button' ) == 'yes' ? 'add_to_wishlist single_add_to_wishlist button alt' : 'add_to_wishlist' );
 
-			$wishlist_url = YITH_WCWL()->get_wishlist_url();
 			$default_wishlists = is_user_logged_in() ? YITH_WCWL()->get_wishlists( array( 'is_default' => true ) ) : false;
 
 			if( ! empty( $default_wishlists ) ){
@@ -316,6 +327,8 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 			}
 
 			$exists = YITH_WCWL()->is_product_in_wishlist( $product->id, $default_wishlist );
+
+			$wishlist_url = YITH_WCWL()->get_wishlist_url();
 			$product_type = $product->product_type;
 
 			$additional_params = array(
