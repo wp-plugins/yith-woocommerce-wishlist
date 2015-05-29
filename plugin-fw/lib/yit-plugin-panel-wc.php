@@ -292,7 +292,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
             wp_enqueue_script( 'woocommerce_settings', $woocommerce->plugin_url() . '/assets/js/admin/settings.min.js', array( 'jquery', 'jquery-ui-datepicker','jquery-ui-dialog', 'jquery-ui-sortable', 'iris', 'chosen' ), $woocommerce->version, true );
             wp_enqueue_script( 'yit-plugin-panel', YIT_CORE_PLUGIN_URL . '/assets/js/yit-plugin-panel.min.js', array( 'jquery', 'jquery-chosen' ), $this->version, true );
             wp_localize_script( 'woocommerce_settings', 'woocommerce_settings_params', array(
-                'i18n_nav_warning' => __( 'The changes you have made will be lost if you leave this page.', 'yit' )
+                'i18n_nav_warning' => __( 'The changes you have made will be lost if you leave this page.', 'yith-plugin-fw' )
             ) );
         }
 

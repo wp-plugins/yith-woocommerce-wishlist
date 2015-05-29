@@ -28,7 +28,7 @@
 
             var t = $(this).attr('href');
             $(this).parent().addClass('tabs').siblings('li').removeClass('tabs');
-            $('.tabs-panel').slideUp('fast');
+            $(this).closest('.metaboxes-tab').find('.tabs-panel').slideUp('fast');
             $(t).delay(350).slideDown('fast');
 
             return false;

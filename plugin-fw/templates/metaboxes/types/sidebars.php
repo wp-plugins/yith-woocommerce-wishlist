@@ -33,24 +33,24 @@ $sidebar_right = ! isset( $value['sidebar-right'] ) ? '-1' :  $value['sidebar-ri
         <label for="_slider_name"><?php echo $label ?></label>
 
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-left' ?>" value="sidebar-left" <?php checked( $layout, 'sidebar-left' ) ?> />
-        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/sidebar-left.png" title="<?php _e( 'Left sidebar', 'yit' ) ?>" alt="<?php _e( 'Left sidebar', 'yit' ) ?>" class="<?php echo $id . '-left' ?>" />
+        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/sidebar-left.png" title="<?php _e( 'Left sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'Left sidebar', 'yith-plugin-fw' ) ?>" class="<?php echo $id . '-left' ?>" />
 
         <input type="radio" name="<?php echo  $name ?>[layout]" id="<?php echo $id . '-right' ?>" value="sidebar-right" <?php checked( $layout, 'sidebar-right' ) ?> />
-        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/sidebar-right.png" title="<?php _e( 'Right sidebar', 'yit' ) ?>" alt="<?php _e( 'Right sidebar', 'yit' ) ?>" class="<?php echo $id . '-right' ?>" />
+        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/sidebar-right.png" title="<?php _e( 'Right sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'Right sidebar', 'yith-plugin-fw' ) ?>" class="<?php echo $id . '-right' ?>" />
 
         <input type="radio" name="<?php echo  $name ?>[layout]" id="<?php echo $id . '-double' ?>" value="sidebar-double" <?php checked( $layout, 'sidebar-double' ) ?> />
-        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/double-sidebar.png" title="<?php _e( 'No sidebar', 'yit' ) ?>" alt="<?php _e( 'No sidebar', 'yit' ) ?>" class="<?php echo $id . '-double' ?>" />
+        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/double-sidebar.png" title="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" class="<?php echo $id . '-double' ?>" />
 
         <input type="radio" name="<?php echo  $name ?>[layout]" id="<?php echo $id . '-no' ?>" value="sidebar-no" <?php checked( $layout, 'sidebar-no' ) ?> />
-        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/no-sidebar.png" title="<?php _e( 'No sidebar', 'yit' ) ?>" alt="<?php _e( 'No sidebar', 'yit' ) ?>" class="<?php echo $id . '-no' ?>" />
+        <img src="<?php echo YIT_CORE_PLUGIN_URL ?>/assets/images/no-sidebar.png" title="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" class="<?php echo $id . '-no' ?>" />
     </div>
     <div class="clearfix"></div>
     <div class="option" id="choose-sidebars">
         <div class="side">
             <div class="select-mask" <?php if ( $layout != 'sidebar-double' && $layout != 'sidebar-left' ) { echo 'style="display:none"'; } ?> id="<?php echo $id ?>-sidebar-left-container">
-                <label for ="<?php echo $id ?>-sidebar-left"><?php _e('Left Sidebar','yit') ?></label>
+                <label for ="<?php echo $id ?>-sidebar-left"><?php _e('Left Sidebar','yith-plugin-fw') ?></label>
                 <select name="<?php echo  $name ?>[sidebar-left]" id="<?php echo $id ?>-sidebar-left">
-                    <option value="-1"><?php _e( 'Choose a sidebar', 'yit' ) ?></option>
+                    <option value="-1"><?php _e( 'Choose a sidebar', 'yith-plugin-fw' ) ?></option>
                     <?php foreach ( yit_registered_sidebars() as $val => $option ) { ?>
                         <option value="<?php echo esc_attr( $val ) ?>" <?php selected( $sidebar_left, $val ) ?>><?php echo $option; ?></option>
                     <?php } ?>
@@ -59,9 +59,9 @@ $sidebar_right = ! isset( $value['sidebar-right'] ) ? '-1' :  $value['sidebar-ri
         </div>
         <div class="side"  style="clear: both">
             <div class="select-mask"  <?php if ( $layout != 'sidebar-double' && $layout != 'sidebar-right' ) { echo 'style="display:none"'; } ?> id="<?php echo $id ?>-sidebar-right-container">
-                <label for ="<?php echo $id ?>-sidebar-right"><?php _e('Right Sidebar','yit') ?></label>
+                <label for ="<?php echo $id ?>-sidebar-right"><?php _e('Right Sidebar','yith-plugin-fw') ?></label>
                 <select name="<?php echo  $name ?>[sidebar-right]" id="<?php echo $id ?>-sidebar-right">
-                    <option value="-1"><?php _e( 'Choose a sidebar', 'yit' ) ?></option>
+                    <option value="-1"><?php _e( 'Choose a sidebar', 'yith-plugin-fw' ) ?></option>
                     <?php foreach ( yit_registered_sidebars() as $val => $option ) { ?>
                         <option value="<?php echo esc_attr( $val ) ?>" <?php selected( $sidebar_right, $val ) ?>><?php echo $option; ?></option>
                     <?php } ?>

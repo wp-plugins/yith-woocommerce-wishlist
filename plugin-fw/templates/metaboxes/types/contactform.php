@@ -4,13 +4,13 @@
 extract( $args );
 
 $types = array(
-    'text'     => __( 'Text Input', 'yit' ),
-    'checkbox' => __( 'Checkbox', 'yit' ),
-    'select'   => __( 'Select', 'yit' ),
-    'textarea' => __( 'Textarea', 'yit' ),
-    'radio'    => __( 'Radio Input', 'yit' ),
-    'password' => __( 'Password Field', 'yit' ),
-    'file'     => __( 'File Upload', 'yit' ),
+    'text'     => __( 'Text Input', 'yith-plugin-fw' ),
+    'checkbox' => __( 'Checkbox', 'yith-plugin-fw' ),
+    'select'   => __( 'Select', 'yith-plugin-fw' ),
+    'textarea' => __( 'Textarea', 'yith-plugin-fw' ),
+    'radio'    => __( 'Radio Input', 'yith-plugin-fw' ),
+    'password' => __( 'Password Field', 'yith-plugin-fw' ),
+    'file'     => __( 'File Upload', 'yith-plugin-fw' ),
 );
 
 $defaults = array(
@@ -44,9 +44,9 @@ $index = 1;
 /* Select Font Awesome */
 
 $options["select"]=array(
-    'icon'   => __( 'Theme Icon', 'yit' ),
-    'custom' => __( 'Custom Icon', 'yit' ),
-    'none'   => __( 'None', 'yit' )
+    'icon'   => __( 'Theme Icon', 'yith-plugin-fw' ),
+    'custom' => __( 'Custom Icon', 'yith-plugin-fw' ),
+    'none'   => __( 'None', 'yith-plugin-fw' )
 );
 
 $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
@@ -57,7 +57,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
    <?php if( isset( $label ) ):?><label for="<?php echo $id ?>"><?php echo $label ?></label><?php endif;?>
 
 <p class="field-row">
-    <a href="" class="button-secondary add-items"><?php _e( 'Add field', 'yit' ) ?></a>
+    <a href="" class="button-secondary add-items"><?php _e( 'Add field', 'yith-plugin-fw' ) ?></a>
     <img src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" class="ajax-loading" id="add-items-ajax-loading" alt="" />
 </p>
 
@@ -66,33 +66,33 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
     <?php while ( $index <= count( $value ) ): ?>
         <div class="contactform_item closed">
             <h3>
-                <button type="button" class="remove_item button" rel=""><?php _e( 'Remove', 'yit' ) ?></button>
-                <div class="handlediv" title="<?php _e( 'Click to toggle', 'yit' ) ?>"></div>
+                <button type="button" class="remove_item button" rel=""><?php _e( 'Remove', 'yith-plugin-fw' ) ?></button>
+                <div class="handlediv" title="<?php _e( 'Click to toggle', 'yith-plugin-fw' ) ?>"></div>
                 <strong><?php echo $value[$index]['title'] ?> <?php yit_string( '(', $types[$value[$index]['type']], ')' ) ?></strong>
                 <input type="hidden" class="contactform_menu_order" name="<?php echo $name ?>[<?php echo $index ?>][order]" value="<?php echo esc_attr( $index ) ?>" />
             </h3>
             <div class="inside">
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_title_<?php echo $index ?>"><?php _e( 'Title Field', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_title_<?php echo $index ?>"><?php _e( 'Field Title', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['title'] ) ?>" id="<?php echo $id ?>_title_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][title]" />
-                        <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_data_name_<?php echo $index ?>"><?php _e( 'Data Name', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_data_name_<?php echo $index ?>"><?php _e( 'Data Name', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['data_name'] ) ?>" id="<?php echo $id ?>_data_name_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][data_name]" />
-                        <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox select clearfix text-field-type">
-                    <label for="<?php echo $id ?>_type_<?php echo $index ?>"><?php _e( 'Type field', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_type_<?php echo $index ?>"><?php _e( 'Field Type', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <select id="<?php echo $id ?>_type_<?php echo $index ?>" name="<?php echo $name . '[' . $index . ']' ?>[type]">
@@ -100,79 +100,79 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                                 <option value="<?php echo esc_attr( $type ) ?>"<?php selected( $type, $value[$index]['type'] ) ?>><?php echo $name_type ?></option>
                             <?php endforeach; ?>
                         </select>
-                        <span class="desc inline"><?php _e( 'Select the type for this field.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select the type for this field.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox checkbox clearfix deps_checkbox deps">
-                    <label for="<?php echo $id ?>_already_checked_<?php echo $index ?>"><?php _e( 'Checked', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_already_checked_<?php echo $index ?>"><?php _e( 'Checked', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_already_checked_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][already_checked]" value="1"<?php checked( $value[$index]['already_checked'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div id="<?php echo $id ?>_addoptions" class="the-metabox addoptions clearfix deps_radio deps_select deps">
-                    <label for=""><?php _e( 'Add options ', 'yit' ) ?></label>
-                    <a href="#" class="add-field-option button-secondary" data-index="<?php echo $index ?>"><?php _e( 'Add option', 'yit' ) ?></a><br /><br />
+                    <label for=""><?php _e( 'Add options ', 'yith-plugin-fw' ) ?></label>
+                    <a href="#" class="add-field-option button-secondary" data-index="<?php echo $index ?>"><?php _e( 'Add option', 'yith-plugin-fw' ) ?></a><br /><br />
                     <?php foreach ( $value[$index]['options'] as $key => $option ) : ?>
                         <p class="option">
-                            <label><input type="radio" name="<?php echo $name ?>[<?php echo $index ?>][option_selected]" value="<?php echo esc_attr( $key ) ?>"<?php checked( $value[$index]['option_selected'], $key ) ?> /> <?php _e( 'Selected', 'yit' ) ?>
+                            <label><input type="radio" name="<?php echo $name ?>[<?php echo $index ?>][option_selected]" value="<?php echo esc_attr( $key ) ?>"<?php checked( $value[$index]['option_selected'], $key ) ?> /> <?php _e( 'Selected', 'yith-plugin-fw' ) ?>
                             </label>
                             <input type="text" name="<?php echo $name ?>[<?php echo $index ?>][options][]" value="<?php echo $option ?>" style="width:200px" />
-                            <a href="#" class="del-field-option button-secondary"><?php _e( 'Delete option', 'yit' ) ?></a>
+                            <a href="#" class="del-field-option button-secondary"><?php _e( 'Delete option', 'yith-plugin-fw' ) ?></a>
                         </p>
                     <?php endforeach; ?>
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_error_<?php echo $index ?>"><?php _e( 'Error Message', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_error_<?php echo $index ?>"><?php _e( 'Error Message', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['error'] ) ?>" id="<?php echo $id ?>_error_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][error]" />
-                        <span class="desc inline"><?php _e( 'Insert the error message for validation.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert the error message for validation.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox checkbox clearfix">
-                    <label for="<?php echo $id ?>_required_<?php echo $index ?>"><?php _e( 'Required', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_required_<?php echo $index ?>"><?php _e( 'Required', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_required_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][required]" value="1"<?php checked( $value[$index]['required'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox checkbox clearfix">
-                    <label for="<?php echo $id ?>_is_email_<?php echo $index ?>"><?php _e( 'Email', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_is_email_<?php echo $index ?>"><?php _e( 'Email', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_is_email_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][is_email]" value="1"<?php checked( $value[$index]['is_email'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox checkbox clearfix">
-                    <label for="<?php echo $id ?>_reply_to_<?php echo $index ?>"><?php _e( 'Reply To', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_reply_to_<?php echo $index ?>"><?php _e( 'Reply To', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="checkbox" id="<?php echo $id ?>_reply_to_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][reply_to]" value="1"<?php checked( $value[$index]['reply_to'] ) ?> />
-                        <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_class_<?php echo $index ?>"><?php _e( 'Class', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_class_<?php echo $index ?>"><?php _e( 'Class', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['class'] ) ?>" id="<?php echo $id ?>_class_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][class]" />
-                        <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_icon_<?php echo $index ?>"><?php _e( 'Icon', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_icon_<?php echo $index ?>"><?php _e( 'Icon', 'yith-plugin-fw' ) ?></label>
 
                     <p>
 
@@ -200,13 +200,13 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                         <div class="input_wrapper custom_icon">
                             <input type="text" name="<?php echo $name ?>[<?php echo $index ?>][custom]" id="<?php echo $id ?>_icon_<?php echo $index ?>[custom-icon]" value="<?php echo esc_attr( $value[$index]['custom'] ); ?>" class="upload_img_url upload_custom_icon" />
-                            <input type="button" name="<?php echo $name ?>[<?php echo $index ?>][custom]-button" value="<?php _e( 'Upload', 'yit' ) ?>" id="<?php echo $id ?>_icon_<?php echo $index ?>[custom-icon]-button" class="upload_button button" />
+                            <input type="button" name="<?php echo $name ?>[<?php echo $index ?>][custom]-button" value="<?php _e( 'Upload', 'yith-plugin-fw' ) ?>" id="<?php echo $id ?>_icon_<?php echo $index ?>[custom-icon]-button" class="upload_button button" />
 
                             <div class="upload_img_preview" style="margin-top:10px;">
                                 <?php
                                 $file = $current_options['custom'];
                                 if ( preg_match( '/(jpg|jpeg|png|gif|ico)$/', $file ) ) {
-                                    echo __('Image preview', 'yit') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
+                                    echo __('Image preview', 'yith-plugin-fw') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
                                 }
                                 ?>
                             </div>
@@ -214,12 +214,12 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                         </div>
                     </div>
 
-                        <span class="desc inline"><?php _e( 'Insert an icon for more personalization.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Insert an icon for more personalization.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_width_<?php echo $index ?>"><?php _e( 'Width', 'yit' ) ?></label>
+                    <label for="<?php echo $id ?>_width_<?php echo $index ?>"><?php _e( 'Width', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <select id="<?php echo $id ?>_width_<?php echo $index ?>" name="<?php echo $name . '[' . $index . ']' ?>[width]">
@@ -244,7 +244,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                             }
                             ?>
                         </select>
-                        <span class="desc inline"><?php _e( 'Set field length.', 'yit' ) ?></span>
+                        <span class="desc inline"><?php _e( 'Set field length.', 'yith-plugin-fw' ) ?></span>
                     </p>
                 </div>
             </div>
@@ -258,33 +258,33 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
 <div class="contactform_item closed" id="stamp_form" style="display:none;">
     <h3>
-        <button type="button" class="remove_item button" rel=""><?php _e( 'Remove', 'yit' ) ?></button>
-        <div class="handlediv" title="<?php _e( 'Click to toggle', 'yit' ) ?>"></div>
+        <button type="button" class="remove_item button" rel=""><?php _e( 'Remove', 'yith-plugin-fw' ) ?></button>
+        <div class="handlediv" title="<?php _e( 'Click to toggle', 'yith-plugin-fw' ) ?>"></div>
         <strong></strong>
         <input disabled type="hidden" class="contactform_menu_order" name="<?php echo $name ?>[][order]" value=""/>
     </h3>
     <div class="inside">
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_title"><?php _e( 'Title Field', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_title"><?php _e( 'Field Title', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_title" name="<?php echo $name ?>[][title]" />
-                <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert the title for the field.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_data_name"><?php _e( 'Data Name', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_data_name"><?php _e( 'Data Name', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_data_name" name="<?php echo $name ?>[][data_name]" />
-                <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'REQUIRED: Field identification name to be entered into email body. <strong>Note:</strong>Use only lowercase characters and underscores.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox select clearfix text-field-type">
-            <label for="<?php echo $id ?>_type"><?php _e( 'Type field', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_type"><?php _e( 'Field Type', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <select disabled id="<?php echo $id ?>_type" name="<?php echo $name ?>[][type]">
@@ -292,79 +292,79 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                         <option value="<?php echo esc_attr( $type ) ?>"><?php echo $name_type ?></option>
                     <?php endforeach; ?>
                 </select>
-                <span class="desc inline"><?php _e( 'Select the type for this field.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select the type for this field.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox checkbox clearfix deps_checkbox deps">
-            <label for="<?php echo $id ?>_already_checked"><?php _e( 'Checked', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_already_checked"><?php _e( 'Checked', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_already_checked" name="<?php echo $name ?>[][already_checked]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if you want this field appears as already checked.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div id="<?php echo $id ?>_addoptions" class="the-metabox addoptions clearfix deps_radio deps_select deps">
-            <label for=""><?php _e( 'Add options ', 'yit' ) ?></label>
-            <a href="#" class="add-field-option button-secondary"><?php _e( 'Add option', 'yit' ) ?></a><br /><br />
+            <label for=""><?php _e( 'Add options ', 'yith-plugin-fw' ) ?></label>
+            <a href="#" class="add-field-option button-secondary"><?php _e( 'Add option', 'yith-plugin-fw' ) ?></a><br /><br />
 
                 <p class="option">
-                    <label><input disabled type="radio" name="<?php echo $name ?>[][option_selected]" value="" /> <?php _e( 'Selected', 'yit' ) ?>
+                    <label><input disabled type="radio" name="<?php echo $name ?>[][option_selected]" value="" /> <?php _e( 'Selected', 'yith-plugin-fw' ) ?>
                     </label>
                     <input disabled type="text" name="<?php echo $name ?>[][options][]" value="" style="width:200px" />
-                    <a href="#" class="del-field-option button-secondary"><?php _e( 'Delete option', 'yit' ) ?></a>
+                    <a href="#" class="del-field-option button-secondary"><?php _e( 'Delete option', 'yith-plugin-fw' ) ?></a>
                 </p>
 
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_error"><?php _e( 'Error Message', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_error"><?php _e( 'Error Message', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_error" name="<?php echo $name ?>[][error]" />
-                <span class="desc inline"><?php _e( 'Insert the error message for validation.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert the error message for validation.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox checkbox clearfix">
-            <label for="<?php echo $id ?>_required"><?php _e( 'Required', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_required"><?php _e( 'Required', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_required" name="<?php echo $name ?>[][required]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if it must be required.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox checkbox clearfix">
-            <label for="<?php echo $id ?>_is_email"><?php _e( 'Email', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_is_email"><?php _e( 'Email', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_is_email" name="<?php echo $name ?>[][is_email]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this option if the email must be valid.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox checkbox clearfix">
-            <label for="<?php echo $id ?>_reply_to"><?php _e( 'Reply To', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_reply_to"><?php _e( 'Reply To', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="checkbox" id="<?php echo $id ?>_reply_to" name="<?php echo $name ?>[][reply_to]" value="1" />
-                <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Select this if it is the email you can reply to.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_class"><?php _e( 'Class', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_class"><?php _e( 'Class', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_class" name="<?php echo $name ?>[][class]" />
-                <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Insert additional class(es) (separated by commas) for more personalization.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_icon"><?php _e( 'Icon', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_icon"><?php _e( 'Icon', 'yith-plugin-fw' ) ?></label>
 
             <div class="option">
 
@@ -388,13 +388,13 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
                 <div class="input_wrapper custom_icon">
                     <input disabled type="text" name="<?php echo $name ?>[][custom]" id="<?php echo $id ?>_icon[custom-icon]" value="" class="upload_img_url upload_custom_icon" />
-                    <input disabled type="button" name="<?php echo $name ?>[][custom]-button" value="<?php _e( 'Upload', 'yit' ) ?>" id="<?php echo $id ?>_icon[custom-icon]-button" class="upload_button button" />
+                    <input disabled type="button" name="<?php echo $name ?>[][custom]-button" value="<?php _e( 'Upload', 'yith-plugin-fw' ) ?>" id="<?php echo $id ?>_icon[custom-icon]-button" class="upload_button button" />
 
                     <div class="upload_img_preview" style="margin-top:10px;">
                         <?php
                         $file = '';
                         if ( preg_match( '/(jpg|jpeg|png|gif|ico)$/', $file ) ) {
-                            echo __('Image preview', 'yit') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
+                            echo __('Image preview', 'yith-plugin-fw') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
                         }
                         ?>
                     </div>
@@ -402,11 +402,11 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                 </div>
             </div>
 
-            <span class="desc inline"><?php _e( 'Insert an icon for more personalization.', 'yit' ) ?></span>
+            <span class="desc inline"><?php _e( 'Insert an icon for more personalization.', 'yith-plugin-fw' ) ?></span>
         </div>
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_width"><?php _e( 'Width', 'yit' ) ?></label>
+            <label for="<?php echo $id ?>_width"><?php _e( 'Width', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <select disabled id="<?php echo $id ?>_width" name="<?php echo $name?>[][width]">
@@ -418,7 +418,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                     }
                     ?>
                 </select>
-                <span class="desc inline"><?php _e( 'Set field length.', 'yit' ) ?></span>
+                <span class="desc inline"><?php _e( 'Set field length.', 'yith-plugin-fw' ) ?></span>
             </p>
         </div>
     </div>
@@ -433,7 +433,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
 
         $(document).on('click', '#<?php echo $id ?>_addoptions .add-field-option', function(){
             var select_index = $(this).data('index');
-            var option = "<p class='option'><label><input type='radio' name='<?php echo $name ?>[option_selected]' value='' /> <?php _e( 'Selected', 'yit' ) ?></label><input type='text' name='<?php echo $name ?>[" + select_index + "][options][]' style='width:200px' /> <a href='#' class='del-field-option button-secondary'><?php _e( 'Delete option', 'yit' ) ?></a></p>";
+            var option = "<p class='option'><label><input type='radio' name='<?php echo $name ?>[option_selected]' value='' /> <?php _e( 'Selected', 'yith-plugin-fw' ) ?></label><input type='text' name='<?php echo $name ?>[" + select_index + "][options][]' style='width:200px' /> <a href='#' class='del-field-option button-secondary'><?php _e( 'Delete option', 'yith-plugin-fw' ) ?></a></p>";
 
             $(option).appendTo( $(this).parents('#<?php echo $id ?>_addoptions') );
             return false;

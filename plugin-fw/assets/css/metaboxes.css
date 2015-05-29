@@ -596,3 +596,14 @@
 .ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br{border-bottom-right-radius:0}
 .ui-widget-overlay{background:#aaa 50% 50% repeat-x;opacity:.3;filter:Alpha(Opacity=30)}
 .ui-widget-shadow{margin:-8px 0 0 -8px;padding:8px;background:#aaa 50% 50% repeat-x;opacity:.3;filter:Alpha(Opacity=30);border-radius:8px}
+
+
+.the-metabox.preview{
+    float: none;
+}
+.metaboxes-tab .the-metabox.no-label.preview{
+    margin-left: 184px;
+}
+.metaboxes-tab .the-metabox.no-label.preview img{
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}

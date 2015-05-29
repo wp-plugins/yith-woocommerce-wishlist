@@ -30,13 +30,13 @@ $current_options = wp_parse_args( $args['value'], $args['std'] );
 
         <div class="input_wrapper custom_icon">
             <input type="text" name="<?php echo $name ?>[custom]" id="<?php echo $id ?>[custom]" value="<?php echo $current_options['custom'] ?>" class="upload_img_url upload_custom_icon" />
-            <input type="button" value="<?php _e( 'Upload', 'yit' ) ?>" id="<?php echo $id; ?>-custom-button" class="upload_button button" />
+            <input type="button" value="<?php _e( 'Upload', 'yith-plugin-fw' ) ?>" id="<?php echo $id; ?>-custom-button" class="upload_button button" />
 
             <div class="upload_img_preview" style="margin-top:10px;">
                 <?php
                 $file = $current_options['custom'];
                 if ( preg_match( '/(jpg|jpeg|png|gif|ico)$/', $file ) ) {
-                    echo __( 'Image preview', 'yit' ) . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
+                    echo __( 'Image preview', 'yith-plugin-fw' ) . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
                 }
                 ?>
             </div>

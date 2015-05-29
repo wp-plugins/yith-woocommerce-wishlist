@@ -16,19 +16,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 *  Example to call this template
 *
 *  'section_general_settings_videobox'         => array(
-*      'name' => __( 'Title of box', 'yit' ),
+*      'name' => __( 'Title of box', 'yith-plugin-fw' ),
 *      'type' => 'videobox',
 *      'default' => array(
-*          'plugin_name'        => __( 'Plugin Name', 'yit' ),
-*          'title_first_column' => __( 'Title first column', 'yit' ),
-*          'description_first_column' => __('Lorem ipsum ... ', 'yit'),
+*          'plugin_name'        => __( 'Plugin Name', 'yith-plugin-fw' ),
+*          'title_first_column' => __( 'Title first column', 'yith-plugin-fw' ),
+*          'description_first_column' => __('Lorem ipsum ... ', 'yith-plugin-fw'),
 *          'video' => array(
 *              'video_id'           => 'vimeo_code',
 *              'video_image_url'    => '#',
-*              'video_description'  => __( 'Lorem ipsum dolor sit amet....', 'yit' ),
+*              'video_description'  => __( 'Lorem ipsum dolor sit amet....', 'yith-plugin-fw' ),
 *          ),
-*          'title_second_column' => __( 'Title first column', 'yit' ),
-*          'description_second_column' => __('Lorem ipsum dolor sit amet.... ', 'yit'),
+*          'title_second_column' => __( 'Title first column', 'yith-plugin-fw' ),
+*          'description_second_column' => __('Lorem ipsum dolor sit amet.... ', 'yith-plugin-fw'),
 *          'button' => array(
 *              'href' => 'http://www.yithemes.com',
 *              'title' => 'Get Support and Pro Features'

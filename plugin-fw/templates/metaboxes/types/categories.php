@@ -33,13 +33,13 @@ $categories = yit_get_model('cpt_unlimited')->get_setting( 'categories', $post->
                 </li>
                 <?php endforeach; ?>
             <?php else : ?>
-                <li class="remove-after-add"><i><?php _e( 'No categories.', 'yit' ); ?></i></li>
+                <li class="remove-after-add"><i><?php _e( 'No categories.', 'yith-plugin-fw' ); ?></i></li>
             <?php endif; ?>
     	</ul>
     </div>
 	<div class="wp-hidden-children">
 		<h4>
-			<a tabindex="3" class="hide-if-no-js" href="#category-add" id="<?php echo $id ?>-category-add"><?php _e( '+ Add New Category', 'yit' ); ?></a>
+			<a tabindex="3" class="hide-if-no-js" href="#category-add" id="<?php echo $id ?>-category-add"><?php _e( '+ Add New Category', 'yith-plugin-fw' ); ?></a>
 		</h4>   
 		<p class="category-add-field" id="<?php echo $id ?>-category-field">
 		    <input type="text" class="newcategory" name="newcategory" style="width:100%;" id="<?php echo $id ?>-new-category" />

@@ -98,7 +98,7 @@ if ( ! class_exists( 'YIT_Plugin_SubPanel' ) ) {
                     $logo = $admin_logo;
                 }
 
-                add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yit' ), 'nosuchcapability', 'yit_plugin_panel', NULL, $logo, 62 );
+                add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yith-plugin-fw' ), 'nosuchcapability', 'yit_plugin_panel', NULL, $logo, 62 );
                 add_submenu_page( 'yit_plugin_panel', $this->settings['label'], $this->settings['label'], 'manage_options', $this->settings['page'], array( $this, 'yit_panel' ) );
                 remove_submenu_page( 'yit_plugin_panel', 'yit_plugin_panel' );
 
@@ -139,12 +139,12 @@ if ( ! class_exists( 'YIT_Plugin_SubPanel' ) ) {
                         <p>&nbsp;</p>
                         <?php settings_fields( 'yit_' . $this->settings['page'] . '_options' ); ?>
                         <input type="hidden" name="<?php echo $this->get_name_field( 'current_tab' ) ?>" value="<?php echo esc_attr( $current_tab ) ?>" />
-                        <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yit' ) ?>" style="float:left;margin-right:10px;" />
+                        <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yith-plugin-fw' ) ?>" style="float:left;margin-right:10px;" />
                     </form>
                     <form method="post">
-                        <?php $warning = __( 'If you continue with this action, you will reset all the options in this page.', 'yit' ) ?>
+                        <?php $warning = __( 'If you continue with this action, you will reset all the options in this page.', 'yith-plugin-fw' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>

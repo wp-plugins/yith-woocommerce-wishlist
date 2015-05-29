@@ -59,7 +59,8 @@ if ( ! class_exists( 'YIT_Video' ) ) {
 
             if( ! $echo ) ob_start();
 
-            $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id ); ?>
+            $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id );
+            $id = preg_replace( '/(youtube|vimeo):/', '', $id ); ?>
 
             <div class="post_video youtube">
                 <iframe wmode="transparent" width="<?php echo $width; ?>" height="<?php echo $height; ?>" src="https://www.youtube.com/embed/<?php echo $id; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe>
@@ -98,7 +99,8 @@ if ( ! class_exists( 'YIT_Video' ) ) {
 
             if( ! $echo ) ob_start();
 
-            $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id ) ?>
+            $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id );
+            $id = preg_replace( '/(youtube|vimeo):/', '', $id ); ?>
 
             <div class="post_video vimeo">
                 <iframe wmode="transparent" src="http://player.vimeo.com/video/<?php echo $id; ?>?title=0&amp;byline=0&amp;portrait=0" width="<?php echo $width; ?>" height="<?php echo $height; ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -124,16 +126,20 @@ if ( ! class_exists( 'YIT_Video' ) ) {
             if ( ! isset( $parsed['host'] ) ) {
                 return false;
             }
-            switch ( $parsed['host'] ) {
 
+
+            switch ( $parsed['host'] ) {
+                case 'youtube.com' :
                 case 'www.youtube.com' :
                 case 'youtu.be' :
+                case 'www.youtu.be' :
                     $id = self::youtube_id_by_url( $url );
                     return "youtube:$id";
 
+                case 'www.vimeo.com' :
                 case 'vimeo.com' :
-                    preg_match( '/http:\/\/(\w+.)?vimeo\.com\/(.*)/', $url, $matches );
-                    $id = $matches[2];
+                    preg_match( '/http(s)?:\/\/(\w+.)?vimeo\.com\/(.*)?(\/[0-9]+)/', $url, $matches );
+                    $id = trim( $matches[4], '/' );
                     return "vimeo:$id";
 
                 default :
@@ -154,7 +160,7 @@ if ( ! class_exists( 'YIT_Video' ) ) {
          * @author Antonino Scarfi' <antonino.scarfi@yithemes.com>
          */
         protected static function youtube_id_by_url( $url ) {
-            if ( preg_match( '/http:\/\/youtu.be/', $url, $matches) ) {
+            if ( preg_match( '/http(s)?:\/\/youtu.be/', $url, $matches) ) {
                 $url = parse_url($url, PHP_URL_PATH);
                 $url = str_replace( '/', '', $url);
                 return $url;
@@ -164,12 +170,12 @@ if ( ! class_exists( 'YIT_Video' ) ) {
                 $url = str_replace( 'v=', '', $arr['query'] );
                 return $url;
 
-            } elseif ( preg_match( '/http:\/\/www.youtube.com\/v/', $url, $matches) ) {
+            } elseif ( preg_match( '/http(s)?:\/\/(\w+.)?youtube.com\/v/', $url, $matches) ) {
                 $arr = parse_url($url);
                 $url = str_replace( '/v/', '', $arr['path'] );
                 return $url;
 
-            } elseif ( preg_match( '/http:\/\/www.youtube.com\/embed/', $url, $matches) ) {
+            } elseif ( preg_match( '/http(s)?:\/\/(\w+.)?youtube.com\/embed/', $url, $matches) ) {
                 $arr = parse_url($url);
                 $url = str_replace( '/embed/', '', $arr['path'] );
                 return $url;

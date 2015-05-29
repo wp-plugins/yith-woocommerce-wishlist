@@ -25,7 +25,7 @@ extract($args);
 <div id="<?php echo $id ?>-container" <?php if ( isset($deps) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $deps['ids'] ?>" data-value="<?php echo $deps['values'] ?>" <?php endif ?>>
 <div id="yit_custom_tabs" class="panel wc-metaboxes-wrapper" style="display: block;">
 	<p class="toolbar">
-		<a href="#" class="close_all"><?php _e('Close all', 'yit') ?></a><a href="#" class="expand_all"><?php _e('Expand all', 'yit') ?></a>
+		<a href="#" class="close_all"><?php _e('Close all', 'yith-plugin-fw') ?></a><a href="#" class="expand_all"><?php _e('Expand all', 'yith-plugin-fw') ?></a>
 	</p>
 
 	<div class="yit_custom_tabs wc-metaboxes ui-sortable" style="">
@@ -34,7 +34,7 @@ extract($args);
 		<?php foreach( $value as $i=>$tab ): ?>
 		<div class="yit_custom_tab wc-metabox closed" rel="0">
 			<h3>
-				<button type="button" class="remove_row button"><?php _e('Remove', 'yit') ?></button>
+				<button type="button" class="remove_row button"><?php _e('Remove', 'yith-plugin-fw') ?></button>
 				<div class="handlediv" title="Click to toggle"></div>
 				<strong class="attribute_name"><?php echo $tab['name'] ?></strong>
 			</h3>
@@ -43,14 +43,14 @@ extract($args);
 				<tbody>
 					<tr>
 						<td class="attribute_name">
-							<label><?php _e('Name', 'yit') ?>:</label>
+							<label><?php _e('Name', 'yith-plugin-fw') ?>:</label>
 							<input type="text" class="attribute_name" name="<?php echo $name ?>[<?php echo $i ?>][name]" value="<?php echo esc_attr( $tab['name'] ) ?>">
 							<input type="hidden" name="<?php echo $name ?>[<?php echo $i ?>][position]" class="attribute_position" value="<?php echo $i ?>">
 						</td>
 
 						<td rowspan="3">
-							<label><?php _e('Value', 'yit') ?>:</label>
-							<textarea name="<?php echo $name ?>[<?php echo $i ?>][value]" cols="5" rows="5" placeholder="<?php _e('Content of the tab. (HTML is supported)','yit') ?>"><?php echo $tab['value'] ?></textarea>
+							<label><?php _e('Value', 'yith-plugin-fw') ?>:</label>
+							<textarea name="<?php echo $name ?>[<?php echo $i ?>][value]" cols="5" rows="5" placeholder="<?php _e('Content of the tab. (HTML is supported)','yith-plugin-fw') ?>"><?php echo $tab['value'] ?></textarea>
 						</td>
 					</tr>
 				</tbody>
@@ -62,7 +62,7 @@ extract($args);
 	</div>
 
 	<p class="toolbar">
-		<button type="button" class="button button-primary add_custom_tab"><?php _e( 'Add custom product tab', 'yit' ) ?></button>
+		<button type="button" class="button button-primary add_custom_tab"><?php _e( 'Add custom product tab', 'yith-plugin-fw' ) ?></button>
 	</p>
 
 	<div class="clear"></div>
@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
 				// Add custom attribute row
 				$('.yit_custom_tabs').append('<div class="yit_custom_tab wc-metabox">\
 						<h3>\
-							<button type="button" class="remove_row button"><?php _e('Remove', 'yit') ?></button>\
+							<button type="button" class="remove_row button"><?php _e('Remove', 'yith-plugin-fw') ?></button>\
 							<div class="handlediv" title="Click to toggle"></div>\
 							<strong class="attribute_name"></strong>\
 						</h3>\
@@ -87,13 +87,13 @@ jQuery(document).ready(function($){
 							<tbody>\
 								<tr>\
 									<td class="attribute_name">\
-										<label><?php _e('Name', 'yit') ?>:</label>\
+										<label><?php _e('Name', 'yith-plugin-fw') ?>:</label>\
 										<input type="text" class="attribute_name" name="<?php echo $name ?>[' + size + '][name]" />\
 										<input type="hidden" name="<?php echo $name ?>[' + size + '][position]" class="attribute_position" value="' + size + '" />\
 									</td>\
 									<td rowspan="3">\
-										<label><?php _e('Value', 'yit') ?>:</label>\
-										<textarea name="<?php echo $name ?>[' + size + '][value]" cols="5" rows="5" placeholder="<?php echo addslashes( __('Content of the tab. (HTML is supported)','yit') ) ?>"></textarea>\
+										<label><?php _e('Value', 'yith-plugin-fw') ?>:</label>\
+										<textarea name="<?php echo $name ?>[' + size + '][value]" cols="5" rows="5" placeholder="<?php echo addslashes( __('Content of the tab. (HTML is supported)','yith-plugin-fw') ) ?>"></textarea>\
 									</td>\
 								</tr>\
 							</tbody>\
@@ -104,7 +104,7 @@ jQuery(document).ready(function($){
 		
 		
 		$('.yit_custom_tabs').on('click', 'button.remove_row', function() {
-			var answer = confirm("<?php _e('Do you want to remove the custom tab?', 'yit') ?>");
+			var answer = confirm("<?php _e('Do you want to remove the custom tab?', 'yith-plugin-fw') ?>");
 			if (answer){
 				var $parent = $(this).parent().parent();
 

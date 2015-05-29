@@ -8,6 +8,8 @@
  */
 ?>
 
+<?php do_action( 'yith_wcwl_before_wishlist_form', $wishlist_meta ); ?>
+
 <form
 	id="yith-wcwl-form"
 	action="<?php echo esc_url( YITH_WCWL()->get_wishlist_url( 'view' . ( $wishlist_meta['is_default'] != 1 ? '/' . $wishlist_meta['wishlist_token'] : '' ) ) ) ?>"
@@ -319,6 +321,8 @@
     <?php do_action( 'yith_wcwl_after_wishlist' ); ?>
 
 </form>
+
+<?php do_action( 'yith_wcwl_after_wishlist_form', $wishlist_meta ); ?>
 
 <?php if( $additional_info ): ?>
 	<div id="ask_an_estimate_popup">

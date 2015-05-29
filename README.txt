@@ -2,14 +2,14 @@
 
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
-Requires at least: 3.5.1
+Requires at least: 4.0
 Tested up to: 4.2.1
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Wishlist add all Wishlist features to your website. Needs WooCommerce to work.
-WooCommerce 2.3.x compatible
+WooCommerce 2.3.x compatible.
 
 
 == Description ==
@@ -30,6 +30,8 @@ This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_
 
 = Available Languages =
 
+* Chinese - CHINA
+* Chinese - TAIWAN
 * English - UNITED KINGDOM (Default)
 * German - GERMANY
 * Spanish - ARGENTINA
@@ -37,12 +39,11 @@ This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_
 * French - FRANCE
 * Hebrew - ISRAEL
 * Italian - ITALY
+* Persian - IRAN, ISLAMIC REPUBLIC OF
 * Portuguese - BRAZIL
 * Portuguese - PORTUGAL
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
-* Chinese - CHINA
-* Chinese - TAIWAN
 
 == Installation ==
 
@@ -83,6 +84,16 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.8 =
+
+* Added: support WP 4.2.2
+* Added: Persian translation
+* Added: check on cookie content
+* Added: Frequently Bought Together integration
+* Tweak: moved cookie update before first cookie usage
+* Updated: Italian translation
+* Removed: login_redirect_url variable
 
 = 2.0.7 =
 
@@ -243,6 +254,8 @@ If you have suggestions about how to improve YITH WooCommerce Wishlist, you can 
 == Translators ==
 
 = Available Languages =
+* Chinese - CHINA
+* Chinese - TAIWAN
 * English - UNITED KINGDOM (Default)
 * German - GERMANY
 * Spanish - ARGENTINA
@@ -250,12 +263,11 @@ If you have suggestions about how to improve YITH WooCommerce Wishlist, you can 
 * French - FRANCE
 * Hebrew - ISRAEL
 * Italian - ITALY
+* Persian - IRAN, ISLAMIC REPUBLIC OF
 * Portuguese - BRAZIL
 * Portuguese - PORTUGAL
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
-* Chinese - CHINA
-* Chinese - TAIWAN
 
 Some of these translations are not complete.
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
@@ -267,13 +279,12 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.7 =
+= 2.0.8 =
 
-* Added: WP 4.2.1 support
-* Added: WC 2.3.8 support
-* Added: "Added to cart" message in wishlist page
-* Added: Portuguese translation
-* Updated: revision of all templates
-* Fixed: vulnerability for unserialize of cookie content (Warning: in this way all the old serialized plugins will be deleted and all the wishlists of the non-logged users will be lost)
-* Fixed: Escaped add_query_arg() and remove_query_arg()
-* Removed: use of pretty permalinks if WPML enabled
+* Added: support WP 4.2.2
+* Added: Persian translation
+* Added: check on cookie content
+* Added: Frequently Bought Together integration
+* Tweak: moved cookie update before first cookie usage
+* Updated: Italian translation
+* Removed: login_redirect_url variable

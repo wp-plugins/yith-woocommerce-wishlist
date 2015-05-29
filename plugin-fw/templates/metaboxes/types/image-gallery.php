@@ -37,12 +37,12 @@ if ( !empty( $value ) ) {
                             endif; ?>
                         </a>
                         <ul class="actions">
-                            <li><a href="#" class="delete" title="<?php _e( 'Delete image', 'yit' ); ?>">x</a></li>
+                            <li><a href="#" class="delete" title="<?php _e( 'Delete image', 'yith-plugin-fw' ); ?>">x</a></li>
                         </ul>
                     </li>
                 <?php endforeach; endif; ?>
         </ul>
-        <input type="button" data-choose="<?php _e( 'Add Images to Gallery', 'yit' ); ?>" data-update="<?php _e( 'Add to gallery', 'yit' ); ?>" value="<?php _e( 'Add images', 'yit' ) ?>" data-delete="<?php _e( 'Delete image', 'yit' ); ?>" data-text="<?php _e( 'Delete', 'yit' ); ?>" id="<?php echo $id ?>-button" class="image-gallery-button button" />
+        <input type="button" data-choose="<?php _e( 'Add Images to Gallery', 'yith-plugin-fw' ); ?>" data-update="<?php _e( 'Add to gallery', 'yith-plugin-fw' ); ?>" value="<?php _e( 'Add images', 'yith-plugin-fw' ) ?>" data-delete="<?php _e( 'Delete image', 'yith-plugin-fw' ); ?>" data-text="<?php _e( 'Delete', 'yith-plugin-fw' ); ?>" id="<?php echo $id ?>-button" class="image-gallery-button button" />
         <input type="hidden" class="image_gallery_ids" id="image_gallery_ids" name="<?php echo $name ?>" value="<?php echo esc_attr( $value ); ?>" />
     </p>
 </div>

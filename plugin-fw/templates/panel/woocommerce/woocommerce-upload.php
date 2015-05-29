@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div id="<?php echo $id ?>-container" class="yit_options rm_option rm_input rm_text rm_upload" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?>>
             <div class="option">
                 <input type="text" name="<?php echo $id ?>" id="<?php echo $id ?>" value="<?php echo $value == '1' ? '' : esc_attr( $value ) ?>" class="upload_img_url" />
-                <input type="button" value="<?php _e( 'Upload', 'yit' ) ?>" id="<?php echo $id ?>-button" class="upload_button button" />
+                <input type="button" value="<?php _e( 'Upload', 'yith-plugin-fw' ) ?>" id="<?php echo $id ?>-button" class="upload_button button" />
             </div>
             <div class="clear"></div>
             <span class="description"><?php echo $desc ?></span>

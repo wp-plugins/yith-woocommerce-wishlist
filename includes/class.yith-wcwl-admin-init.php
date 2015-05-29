@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 		 * @var string
 		 * @since 1.0.0
 		 */
-		public $version = '2.0.7';
+		public $version = '2.0.8';
 
 		/**
 		 * Plugin database version
@@ -1242,6 +1242,35 @@ of YITH WOOCOMMERCE WISHLIST to benefit from all features!', 'yit' ),
 					'type' => 'sectionend',
 					'id' => 'yith_wcwl_styles'
 				)
+			);
+
+			$yith_wfbt_thickbox = YITH_WCWL_URL . 'assets/images/landing/yith-wfbt-slider.jpg';
+			$yith_wfbt_promo = sprintf( __( 'If you want to take advantage of this feature, you could consider to purchase the %s.', 'yit' ), '<a href="https://yithemes.com/themes/plugins/yith-woocommerce-frequently-bought-together/">YITH WooCommerce Frequently Bought Together Plugin</a>' );
+
+			$options['yith_wfbt_integration'] = array(
+
+				'yith_wfbt_start' => array(
+					'name' => __( 'YITH WooCommerce Frequently Bought Together Integration', 'yit' ),
+					'type' => 'title',
+					'desc' => '',
+					'id' => 'yith_wcwl_yith_wfbt'
+				),
+
+				'yith_wfbt_enable_integration' => array(
+					'name'    => __( 'Enable slider in wishlist', 'yit' ),
+					'desc'    => sprintf( __( 'Choose to enable product slider in wishlist page with linked products (<a href="%s" class="thickbox">Example</a>). %s', 'yit' ), $yith_wfbt_thickbox,  ( ! ( defined( 'YITH_WFBT' ) && YITH_WFBT ) ) ? $yith_wfbt_promo : '' ),
+					'id'      => 'yith_wfbt_enable_integration',
+					'std'     => 'yes', // for woocommerce < 2.0
+					'default' => 'yes', // for woocommerce >= 2.0
+					'type'    => 'checkbox',
+					'custom_attributes' => ( ! ( defined( 'YITH_WFBT' ) && YITH_WFBT ) ) ? array( 'disabled' => 'disabled' ) : false
+				),
+
+				'yith_wfbt_end' => array(
+					'type' => 'sectionend',
+					'id' => 'yith_wcwl_yith_wfbt'
+				)
+
 			);
 
 			return apply_filters( 'yith_wcwl_admin_options', $options );

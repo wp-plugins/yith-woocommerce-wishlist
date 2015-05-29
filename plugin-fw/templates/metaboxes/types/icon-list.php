@@ -66,13 +66,13 @@ $options['icon'] =  YIT_Plugin_Common::get_icon_list();
 
         <div class="input_wrapper custom_icon_wrapper upload" style="clear:both;">
             <input type="text" name="<?php echo $name ?>[custom]" id="<?php echo $id ?>[custom]" value="<?php echo $current_options['custom'] ?>" class="upload_img_url upload_custom_icon" />
-            <input type="button" value="<?php _e( 'Upload', 'yit' ) ?>" id="<?php echo $id; ?>-custom-button" class="upload_button button" />
+            <input type="button" value="<?php _e( 'Upload', 'yith-plugin-fw' ) ?>" id="<?php echo $id; ?>-custom-button" class="upload_button button" />
 
             <div class="upload_img_preview" style="margin-top:10px;">
                 <?php
                 $file = $current_options['custom'];
                 if ( preg_match( '/(jpg|jpeg|png|gif|ico)$/', $file ) ) {
-                    echo __('Image preview', 'yit') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
+                    echo __('Image preview', 'yith-plugin-fw') . ': ' . "<img src=\"" . YIT_CORE_ASSETS_URL . "/images/sleep.png\" data-src=\"$file\" />";
                 }
                 ?>
             </div>
@@ -86,9 +86,9 @@ $options['icon'] =  YIT_Plugin_Common::get_icon_list();
     <div class="description">
         <?php echo $desc ?>
         <?php if( $std['select'] == 'custom' ) : ?>
-            <?php printf( __( '(Default: %s <img src="%s"/>)', 'yit' ), $options['select']['custom'], $std['custom'] ) ?>
+            <?php printf( __( '(Default: %s <img src="%s"/>)', 'yith-plugin-fw' ), $options['select']['custom'], $std['custom'] ) ?>
         <?php else: ?>
-            <?php printf( __( '(Default: <i %s></i> )', 'yit' ), $current_icon  ) ?>
+            <?php printf( __( '(Default: <i %s></i> )', 'yith-plugin-fw' ), $current_icon  ) ?>
         <?php endif; ?>
     </div>
 

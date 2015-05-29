@@ -120,11 +120,11 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
             $update_url = array();
             $changelogs = array();
             $strings    = array(
-                'new_version'   => __( 'There is a new version of %plugin_name% available.', 'yit' ),
-                'latest'        => __( 'View version %latest% details.',  'yit' ),
-                'unavailable'   => __( 'Automatic update is unavailable for this plugin,',  'yit' ),
-                'activate'      => __( 'please <a href="%activate_link%">activate</a> your copy of %plugin_name%.',  'yit' ),
-                'update_now'    => __( 'Update now.',  'yit' )
+                'new_version'   => __( 'There is a new version of %plugin_name% available.', 'yith-plugin-fw' ),
+                'latest'        => __( 'View version %latest% details.',  'yith-plugin-fw' ),
+                'unavailable'   => __( 'Automatic update is unavailable for this plugin,',  'yith-plugin-fw' ),
+                'activate'      => __( 'please <a href="%activate_link%">activate</a> your copy of %plugin_name%.',  'yith-plugin-fw' ),
+                'update_now'    => __( 'Update now.',  'yith-plugin-fw' )
 
             );
 
@@ -227,7 +227,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
                 return new WP_Error( 'no_package', $upgrader->strings['no_package'] );
             }
 
-            $upgrader->skin->feedback( 'downloading_package', __( 'Yithemes Repository', 'yit' ) );
+            $upgrader->skin->feedback( 'downloading_package', __( 'Yithemes Repository', 'yith-plugin-fw' ) );
 
             $download_file = $this->_download_url( $package, $args );
 
@@ -416,13 +416,13 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
                 echo '<tr class="plugin-update-tr"><td colspan="' . $wp_list_table->get_column_count() . '" class="plugin-update colspanchange"><div class="update-message">';
 
                 if( ! current_user_can( 'update_plugins' ) ){
-                    printf( __('There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>.', 'yit'), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version );
+                    printf( __('There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>.', 'yith-plugin-fw'), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version );
                 }elseif( is_plugin_active_for_network( $init ) ){
-                    printf( __( 'There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>. <em>You have to activate the plugin on a single site of the network to benefit from automatic updates.</em>', 'yit' ), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version );
+                    printf( __( 'There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>. <em>You have to activate the plugin on a single site of the network to benefit from automatic updates.</em>', 'yith-plugin-fw' ), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version );
                 }elseif ( empty( $r->package ) ) {
-                    printf( __( 'There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>. <em>Automatic update is unavailable for this plugin, please <a href="%5$s" title="Licence activation">activate</a> your copy of %6s.</em>', 'yit' ), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version, YIT_Plugin_Licence()->get_licence_activation_page_url(), $this->_plugins[ $init ]['info']['Name'] );
+                    printf( __( 'There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a>. <em>Automatic update is unavailable for this plugin, please <a href="%5$s" title="Licence activation">activate</a> your copy of %6s.</em>', 'yith-plugin-fw' ), $this->_plugins[ $init ]['info']['Name'], esc_url( $details_url ), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version, YIT_Plugin_Licence()->get_licence_activation_page_url(), $this->_plugins[ $init ]['info']['Name'] );
                 } else {
-                    printf( __('There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a> or <a href="%5$s">update now</a>.', 'yit'), $this->_plugins[ $init ]['info']['Name'], esc_url($details_url), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version, wp_nonce_url( self_admin_url('update.php?action=upgrade-plugin&plugin=') . $init, 'upgrade-plugin_' . $init ) );
+                    printf( __('There is a new version of %1$s available. <a href="%2$s" class="thickbox yit-changelog-button" title="%3$s">View version %4$s details</a> or <a href="%5$s">update now</a>.', 'yith-plugin-fw'), $this->_plugins[ $init ]['info']['Name'], esc_url($details_url), esc_attr( $this->_plugins[ $init ]['info']['Name'] ), $r->new_version, wp_nonce_url( self_admin_url('update.php?action=upgrade-plugin&plugin=') . $init, 'upgrade-plugin_' . $init ) );
                 }
 
                 /**
@@ -495,11 +495,11 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
             $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
             if( 'upgrade-plugin-multisite' != $action ){
-                wp_die( __( 'You can\'t update the plugins for this site.', 'yit' ) );
+                wp_die( __( 'You can\'t update the plugins for this site.', 'yith-plugin-fw' ) );
             }
 
             if ( ! current_user_can( 'update_plugins' ) ) {
-                wp_die( __( 'You do not have sufficient permissions to update the plugins for this site.', 'yit' ) );
+                wp_die( __( 'You do not have sufficient permissions to update the plugins for this site.', 'yith-plugin-fw' ) );
             }
 
             $this->check_update( get_site_transient( 'update_plugins') , true );

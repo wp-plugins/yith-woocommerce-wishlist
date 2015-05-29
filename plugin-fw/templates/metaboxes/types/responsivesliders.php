@@ -21,7 +21,7 @@ $options = yit_get_responsive_sliders();
     <div class="select_wrapper">
         <select id="<?php echo $id ?>" name="<?php echo $name ?>" <?php if ( isset( $std ) ) : ?>data-std="<?php echo $std ?>"<?php endif ?>>
             <option></option>
-            <option value="none"><?php _e( 'None', 'yit' ) ?></option>
+            <option value="none"><?php _e( 'None', 'yith-plugin-fw' ) ?></option>
             <?php foreach ( $options as $key => $item ) : ?>
                 <option value="<?php echo esc_attr( $key ) ?>"<?php selected( $key, $value ) ?>><?php echo $item ?></option>
             <?php endforeach; ?>

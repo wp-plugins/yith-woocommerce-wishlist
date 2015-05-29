@@ -100,10 +100,15 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             add_action( 'wp_ajax_remove_from_wishlist', array( $this, 'remove_from_wishlist_ajax' ) );
             add_action( 'wp_ajax_nopriv_remove_from_wishlist', array( $this, 'remove_from_wishlist_ajax' ) );
 
+	        add_action( 'wp_ajax_reload_wishlist_and_adding_elem', array( $this, 'reload_wishlist_and_adding_elem_ajax' ) );
+	        add_action( 'wp_ajax_nopriv_reload_wishlist_and_adding_elem', array( $this, 'reload_wishlist_and_adding_elem_ajax' ) );
+
             add_action( 'woocommerce_add_to_cart', array( $this, 'remove_from_wishlist_after_add_to_cart' ) );
             add_filter( 'woocommerce_product_add_to_cart_url', array( $this, 'redirect_to_cart' ), 10, 2 );
 
 	        add_action( 'yith_wcwl_before_wishlist_title', array( $this, 'print_notices' ) );
+
+	        add_filter( 'woocommerce_add_to_cart_redirect', array( $this, 'yith_wfbt_redirect_after_add_to_cart' ), 10, 1 );
 
 	        // add filter for font-awesome compatibility
 	        add_filter( 'option_yith_wcwl_add_to_wishlist_icon', array( $this, 'update_font_awesome_classes' ) );
@@ -1329,7 +1334,72 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             echo YITH_WCWL_Shortcode::wishlist( $atts );
             die();
         }
-    }   
+
+	    /*******************************************
+	     * INTEGRATION WC Frequently Bought Together
+	     *******************************************/
+
+	    /**
+	     * AJAX: reload wishlist and adding elem action
+	     *
+	     * @return void
+	     * @since 1.0.0
+	     */
+	    public function reload_wishlist_and_adding_elem_ajax() {
+
+		    $return     = $this->add();
+		    $message    = '';
+		    $type_msg   = 'success';
+
+		    if( $return == 'true' ){
+			    $message = apply_filters( 'yith_wcwl_product_added_to_wishlist_message', get_option( 'yith_wcwl_product_added_text' ) );
+		    }
+		    elseif( $return == 'exists' ){
+			    $message = apply_filters( 'yith_wcwl_product_already_in_wishlist_message', get_option( 'yith_wcwl_already_in_wishlist_text' ) );
+			    $type_msg = 'error';
+		    }
+		    else {
+			    $message = apply_filters( 'yith_wcwl_product_removed_text', __( 'An error as occurred.', 'yit' ) );
+			    $type_msg = 'error';
+		    }
+
+		    $wishlist_token = isset( $this->details['wishlist_token'] ) ? $this->details['wishlist_token'] : false;
+
+		    $atts = array( 'wishlist_id' => $wishlist_token );
+		    if( isset( $this->details['pagination'] ) ){
+			    $atts['pagination'] = $this->details['pagination'];
+		    }
+
+		    if( isset( $this->details['per_page'] ) ){
+			    $atts['per_page'] = $this->details['per_page'];
+		    }
+
+		    ob_start();
+
+		    wc_add_notice( $message, $type_msg );
+
+		    echo '<div>'. YITH_WCWL_Shortcode::wishlist( $atts ) . '</div>';
+
+		    echo ob_get_clean();
+		    die();
+
+	    }
+
+	    /**
+	     * redirect after add to cart from YITH WooCommerce Frequently Bought Together Premium shortcode
+	     *
+	     * @since 1.0.0
+	     */
+	    public function yith_wfbt_redirect_after_add_to_cart( $url ){
+		    if( ! isset( $_REQUEST['yith_wfbt_shortcode'] ) ) {
+			    return $url;
+		    }
+
+		    return get_option( 'yith_wcwl_redirect_cart' ) == 'yes' ? WC()->cart->get_cart_url() : $this->get_wishlist_url();
+	    }
+
+
+    }
 }
 
 /**

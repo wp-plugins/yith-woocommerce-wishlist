@@ -457,15 +457,15 @@ class YIT_CPT_Unlimited {
         $labels = array(
             'name'               => ucfirst( $this->_labels['main_name'] ),
             'singular_name'      => ucfirst( $this->_labels['singular'] ),
-            'add_new'            => sprintf( __( 'Add %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ),
-            'add_new_item'       => sprintf( __( 'Add New %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ),
-            'edit_item'          => sprintf( __( 'Edit %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ),
-            'new_item'           => sprintf( __( 'New %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ),
-            'all_items'          => sprintf( __( 'All %s', 'yit' ), ucfirst( $this->_labels['plural'] ) ),
-            'view_item'          => sprintf( __( 'View %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ),
-            'search_items'       => sprintf( __( 'Search %s', 'yit' ), ucfirst( $this->_labels['plural'] ) ),
-            'not_found'          => sprintf( __( 'No %s found', 'yit' ), ucfirst( $this->_labels['plural'] ) ),
-            'not_found_in_trash' => sprintf( __( 'No %s found in Trash', 'yit' ), ucfirst( $this->_labels['plural'] ) ),
+            'add_new'            => sprintf( __( 'Add %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ),
+            'add_new_item'       => sprintf( __( 'Add New %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ),
+            'edit_item'          => sprintf( __( 'Edit %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ),
+            'new_item'           => sprintf( __( 'New %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ),
+            'all_items'          => sprintf( __( 'All %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['plural'] ) ),
+            'view_item'          => sprintf( __( 'View %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ),
+            'search_items'       => sprintf( __( 'Search %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['plural'] ) ),
+            'not_found'          => sprintf( __( 'No %s found', 'yith-plugin-fw' ), ucfirst( $this->_labels['plural'] ) ),
+            'not_found_in_trash' => sprintf( __( 'No %s found in Trash', 'yith-plugin-fw' ), ucfirst( $this->_labels['plural'] ) ),
             'parent_item_colon'  => '',
             'menu_name'          => ucfirst( $this->_labels['menu'] )
         );
@@ -571,15 +571,15 @@ class YIT_CPT_Unlimited {
             $labels = array(
                 'name'               => $title,
                 'singular_name'      => $label_singular,
-                'add_new'            => sprintf( __( 'Add %s', 'yit' ), $label_singular ),
-                'add_new_item'       => sprintf( __( 'Add New %s', 'yit' ), $label_singular ),
-                'edit_item'          => sprintf( __( 'Edit %s', 'yit' ), $label_singular ),
-                'new_item'           => sprintf( __( 'New %s', 'yit' ), $label_singular ),
-                'all_items'          => sprintf( __( 'All %s', 'yit' ), $label_plural ),
-                'view_item'          => sprintf( __( 'View %s', 'yit' ), $label_singular ),
-                'search_items'       => sprintf( __( 'Search %s', 'yit' ), $label_plural ),
-                'not_found'          => sprintf( __( 'No %s found', 'yit' ), $label_plural ),
-                'not_found_in_trash' => sprintf( __( 'No %s found in Trash', 'yit' ), $label_plural ),
+                'add_new'            => sprintf( __( 'Add %s', 'yith-plugin-fw' ), $label_singular ),
+                'add_new_item'       => sprintf( __( 'Add New %s', 'yith-plugin-fw' ), $label_singular ),
+                'edit_item'          => sprintf( __( 'Edit %s', 'yith-plugin-fw' ), $label_singular ),
+                'new_item'           => sprintf( __( 'New %s', 'yith-plugin-fw' ), $label_singular ),
+                'all_items'          => sprintf( __( 'All %s', 'yith-plugin-fw' ), $label_plural ),
+                'view_item'          => sprintf( __( 'View %s', 'yith-plugin-fw' ), $label_singular ),
+                'search_items'       => sprintf( __( 'Search %s', 'yith-plugin-fw' ), $label_plural ),
+                'not_found'          => sprintf( __( 'No %s found', 'yith-plugin-fw' ), $label_plural ),
+                'not_found_in_trash' => sprintf( __( 'No %s found in Trash', 'yith-plugin-fw' ), $label_plural ),
                 'parent_item_colon'  => '',
                 'menu_name'          => $title
             );
@@ -622,17 +622,17 @@ class YIT_CPT_Unlimited {
             if ( $this->_args['has_taxonomy'] && ! empty( $taxonomy ) ) {
 
                 $labels = array(
-                    'name'              => sprintf( _x( '%s Categories', 'taxonomy general name', 'yit' ), $label_singular ),
-                    'singular_name'     => _x( 'Category', 'taxonomy singular name', 'yit' ),
-                    'search_items'      => __( 'Search Categories', 'yit' ),
-                    'all_items'         => __( 'All Categories', 'yit' ),
-                    'parent_item'       => __( 'Parent Category', 'yit' ),
-                    'parent_item_colon' => __( 'Parent Category:', 'yit' ),
-                    'edit_item'         => __( 'Edit Category', 'yit' ),
-                    'update_item'       => __( 'Update Category', 'yit' ),
-                    'add_new_item'      => __( 'Add New Category', 'yit' ),
-                    'new_item_name'     => __( 'New Category Name', 'yit' ),
-                    'menu_name'         => __( 'Category', 'yit' ),
+                    'name'              => sprintf( _x( '%s Categories', 'taxonomy general name', 'yith-plugin-fw' ), $label_singular ),
+                    'singular_name'     => _x( 'Category', 'taxonomy singular name', 'yith-plugin-fw' ),
+                    'search_items'      => __( 'Search Categories', 'yith-plugin-fw' ),
+                    'all_items'         => __( 'All Categories', 'yith-plugin-fw' ),
+                    'parent_item'       => __( 'Parent Category', 'yith-plugin-fw' ),
+                    'parent_item_colon' => __( 'Parent Category:', 'yith-plugin-fw' ),
+                    'edit_item'         => __( 'Edit Category', 'yith-plugin-fw' ),
+                    'update_item'       => __( 'Update Category', 'yith-plugin-fw' ),
+                    'add_new_item'      => __( 'Add New Category', 'yith-plugin-fw' ),
+                    'new_item_name'     => __( 'New Category Name', 'yith-plugin-fw' ),
+                    'menu_name'         => __( 'Category', 'yith-plugin-fw' ),
                 );
 
                 $args = array(
@@ -716,12 +716,12 @@ class YIT_CPT_Unlimited {
             }
 
             $submenu[ $item ][15] = array( ucfirst( $label_plural ), 'edit_posts', 'edit.php?post_type=' . $post_type );
-            $submenu[ $item ][20] = array( sprintf( __('Add %s', 'yit'), ucfirst( $label_singular ) ), 'edit_posts', 'post-new.php?post_type=' . $post_type );
+            $submenu[ $item ][20] = array( sprintf( __('Add %s', 'yith-plugin-fw'), ucfirst( $label_singular ) ), 'edit_posts', 'post-new.php?post_type=' . $post_type );
 
             global $wp_taxonomies;
             $taxonomy = get_post_meta( $portfolio->ID, '_taxonomy', true );
             if ( isset( $wp_taxonomies[ $taxonomy ] ) ) {
-                $submenu[ $item ][25] = array( __('Categories', 'yit'), 'edit_posts', 'edit-tags.php?taxonomy=' . $taxonomy . '&post_type=' . $post_type );
+                $submenu[ $item ][25] = array( __('Categories', 'yith-plugin-fw'), 'edit_posts', 'edit-tags.php?taxonomy=' . $taxonomy . '&post_type=' . $post_type );
             }
         }
 
@@ -1039,54 +1039,54 @@ class YIT_CPT_Unlimited {
         $single_layouts = apply_filters( 'yit_cptu_' . $this->_name . '_single_layout_values', array() );
 
         $metabox_args = array(
-            'label'    => sprintf( __( '%s Settings', 'yit' ), $this->_labels['singular'] ),
+            'label'    => sprintf( __( '%s Settings', 'yith-plugin-fw' ), $this->_labels['singular'] ),
             'pages'    => $this->_name, //or array( 'post-type1', 'post-type2')
             'context'  => 'normal', //('normal', 'advanced', or 'side')
             'priority' => 'default',
             'tabs'     => array(
                 'settings' => array(
-                    'label'  => __( 'Settings', 'yit' ),
+                    'label'  => __( 'Settings', 'yith-plugin-fw' ),
                     'fields' => apply_filters( 'yit_cptu_fields', array(
                         'type'      => array(
-                            'label' => __( 'Type', 'yit' ),
-                            'desc'  => __( 'Layout for this '.strtolower( $this->_labels['singular'] ) , 'yit' ),
+                            'label' => __( 'Type', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Layout for this '.strtolower( $this->_labels['singular'] ) , 'yith-plugin-fw' ),
                             'type'  => 'select',
                             'options' => isset( $layouts ) ? $layouts : array(),
                             'std'   => '' ),
 
                         'rewrite'     => array(
-                            'label' => __( 'Rewrite', 'yit' ),
-                            'desc'  => __( 'Univocal identification name in the URL for each product (slug from post if empty)', 'yit' ),
+                            'label' => __( 'Rewrite', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Univocal identification name in the URL for each product (slug from post if empty)', 'yith-plugin-fw' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'label_singular' => array(
-                            'label' => __( 'Label in Singular', 'yit' ),
-                            'desc'  => __( 'Set a label in singular (title of portfolio if empty)', 'yit' ),
+                            'label' => __( 'Label in Singular', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Set a label in singular (title of portfolio if empty)', 'yith-plugin-fw' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'label_plural' => array(
-                            'label' => __( 'Label in Plural', 'yit' ),
-                            'desc'  => __( 'Set a label in plural (title of portfolio if empty)', 'yit' ),
+                            'label' => __( 'Label in Plural', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Set a label in plural (title of portfolio if empty)', 'yith-plugin-fw' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'taxonomy' => array(
-                            'label' => __( 'Taxonomy', 'yit' ),
-                            'desc'  => __( 'If you want to use categories in the portfolio, set a name for taxonomy. Name should be a slug (must not contain capital letters nor spaces) and must not be more than 32 characters long (database structure restriction).', 'yit' ),
+                            'label' => __( 'Taxonomy', 'yith-plugin-fw' ),
+                            'desc'  => __( 'If you want to use categories in the portfolio, set a name for taxonomy. Name should be a slug (must not contain capital letters nor spaces) and must not be more than 32 characters long (database structure restriction).', 'yith-plugin-fw' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'taxonomy_rewrite' => array(
-                            'label' => __( 'Taxonomy Rewrite', 'yit' ),
-                            'desc'  => __( 'Set univocal name for each category page URL.', 'yit' ),
+                            'label' => __( 'Taxonomy Rewrite', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Set univocal name for each category page URL.', 'yith-plugin-fw' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
                         'single_layout' => array(
-                            'label' => __( 'Single layout', 'yit' ),
-                            'desc'  => __( 'Layout for single page of this portfolio', 'yit' ),
+                            'label' => __( 'Single layout', 'yith-plugin-fw' ),
+                            'desc'  => __( 'Layout for single page of this portfolio', 'yith-plugin-fw' ),
                             'type'  => 'select',
                             'options' => $single_layouts,
                             'std'   => '' ),
@@ -1127,7 +1127,7 @@ class YIT_CPT_Unlimited {
 
                 // Section title
                 $metabox_args['tabs']['settings']['fields'][ $layout . '_title' ] = array(
-                    'desc' => $args['name'] . ' ' . __( 'layout settings', 'yit' ),
+                    'desc' => $args['name'] . ' ' . __( 'layout settings', 'yith-plugin-fw' ),
                     'type' => 'title',
                     'deps' => array(
                         'ids' => '_type',
@@ -1193,13 +1193,13 @@ class YIT_CPT_Unlimited {
         }
 
         $metabox_args = array(
-            'label'    => __( 'Settings', 'yit' ),
+            'label'    => __( 'Settings', 'yith-plugin-fw' ),
             'pages'    => $post_type, //or array( 'post-type1', 'post-type2')
             'context'  => 'normal', //('normal', 'advanced', or 'side')
             'priority' => 'default',
             'tabs'     => array(
                 'settings' => array(
-                    'label'  => __( 'Settings', 'yit' ),
+                    'label'  => __( 'Settings', 'yith-plugin-fw' ),
                     'fields' => $this->layouts[ $layout ]['item_fields']
                 )
             )
@@ -1219,7 +1219,7 @@ class YIT_CPT_Unlimited {
      */
     public function add_quick_links_metaboxes() {
         // CPTU
-        add_meta_box( $this->_name . '_quick_links', __( 'Quick links', 'yit' ), array( $this, 'quick_links_cptu_inner' ), $this->_name, 'side', 'high' );
+        add_meta_box( $this->_name . '_quick_links', __( 'Quick links', 'yith-plugin-fw' ), array( $this, 'quick_links_cptu_inner' ), $this->_name, 'side', 'high' );
 
         // CPTs
         $args = array(
@@ -1232,7 +1232,7 @@ class YIT_CPT_Unlimited {
         foreach ( $post_types as $post ) {
             $post_type = get_post_meta( $post->ID, '_post_type', true );
             extract( $this->_cpt_args( $post ) );
-            add_meta_box( $post->post_type . '_quick_links', __( 'Quick links', 'yit' ), array( $this, 'quick_links_cpt_inner' ), $post_type, 'side', 'high' );
+            add_meta_box( $post->post_type . '_quick_links', __( 'Quick links', 'yith-plugin-fw' ), array( $this, 'quick_links_cpt_inner' ), $post_type, 'side', 'high' );
         }
     }
 
@@ -1248,7 +1248,7 @@ class YIT_CPT_Unlimited {
     public function quick_links_cptu_inner( $post ) {
         extract( $this->_cpt_args( $post ) );
         ?>
-        <a href="<?php echo admin_url( 'edit.php?post_type=' . get_post_meta( $post->ID, '_post_type', true ) ) ?>"><?php printf( __( 'View %s', 'yit' ), $label_plural ) ?></a>
+        <a href="<?php echo admin_url( 'edit.php?post_type=' . get_post_meta( $post->ID, '_post_type', true ) ) ?>"><?php printf( __( 'View %s', 'yith-plugin-fw' ), $label_plural ) ?></a>
         <?php
     }
 
@@ -1264,7 +1264,7 @@ class YIT_CPT_Unlimited {
     public function quick_links_cpt_inner( $post ) {
         $post = get_post( $this->_get_id_by_name( $post->post_type ) );
         ?>
-        <a href="<?php echo admin_url( "post.php?post={$post->ID}&action=edit" ) ?>"><?php printf( __( 'Edit %s', 'yit' ), $post->post_title ) ?></a>
+        <a href="<?php echo admin_url( "post.php?post={$post->ID}&action=edit" ) ?>"><?php printf( __( 'Edit %s', 'yith-plugin-fw' ), $post->post_title ) ?></a>
         <?php
     }
 
@@ -1301,8 +1301,8 @@ class YIT_CPT_Unlimited {
 
         switch ( $column ) {
             case 'actions' :
-                echo '<a href="' . admin_url( "post.php?post={$post_id}&action=edit" ) . '" class="button-secondary">' . sprintf( __( 'Edit %s', 'yit' ), ucfirst( $this->_labels['singular'] ) ) . '</a> ';
-                echo '<a href="' . admin_url( 'edit.php?post_type=' . get_post_meta( $post_id, '_post_type', true ) ) . '" class="button-secondary">' . sprintf( __( 'View %s', 'yit' ), $label_plural ) . '</a> ';
+                echo '<a href="' . admin_url( "post.php?post={$post_id}&action=edit" ) . '" class="button-secondary">' . sprintf( __( 'Edit %s', 'yith-plugin-fw' ), ucfirst( $this->_labels['singular'] ) ) . '</a> ';
+                echo '<a href="' . admin_url( 'edit.php?post_type=' . get_post_meta( $post_id, '_post_type', true ) ) . '" class="button-secondary">' . sprintf( __( 'View %s', 'yith-plugin-fw' ), $label_plural ) . '</a> ';
                 break;
         }
     }
@@ -1472,14 +1472,14 @@ class YIT_CPT_Unlimited {
         $args = array(
             $this->_args['shortcode_name'] => array(
                 'title'       => $this->_labels['singular'],
-                'description' => sprintf( __( 'Show frontend of the %s', 'yit' ), $this->_labels['main_name'] ),
+                'description' => sprintf( __( 'Show frontend of the %s', 'yith-plugin-fw' ), $this->_labels['main_name'] ),
                 'tab'         => 'cpt',
                 'create'      => false,
                 'has_content' => false,
                 'in_visual_composer' => true,
                 'attributes'  => array(
                     'name'        => array(
-                        'title'   => __( 'Name', 'yit' ),
+                        'title'   => __( 'Name', 'yith-plugin-fw' ),
                         'type'    => 'select',
                         'options' => $post_types,
                         'std'     => ''
@@ -1628,9 +1628,9 @@ class YIT_CPT_Unlimited {
                 var button = $('<a />', {
                     href: '#',
                     class: 'multi-uploader add-new-h2',
-                    'data-uploader_title': '<?php printf( __( 'Add %s from images', 'yit' ), $label_plural ) ?>',
-                    'data-uploader_button_text': '<?php printf( __( 'Add %s', 'yit' ), $label_plural ) ?>'
-                }).text('<?php _e( 'Add with multiupload', 'yit' ) ?>');
+                    'data-uploader_title': '<?php printf( __( 'Add %s from images', 'yith-plugin-fw' ), $label_plural ) ?>',
+                    'data-uploader_button_text': '<?php printf( __( 'Add %s', 'yith-plugin-fw' ), $label_plural ) ?>'
+                }).text('<?php _e( 'Add with multiupload', 'yith-plugin-fw' ) ?>');
 
                 var spinner = $('<span />', {
                     class: 'spinner',

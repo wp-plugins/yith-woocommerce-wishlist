@@ -160,6 +160,9 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 				add_filter( 'body_class', array( $this, 'add_body_class' ) );
 
+				// add YITH WooCommerce Frequently Bought Together Premium shortcode
+				add_action( 'yith_wcwl_after_wishlist_form', array( $this, 'yith_wcfbt_shortcode' ), 10, 1 );
+
 				// YITH WCWL Loaded
 				do_action( 'yith_wcwl_loaded' );
 			}
@@ -172,26 +175,28 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 		 * @since 1.0.0
 		 */
 		public function init() {
+			// update cookie from old version to new one
+			$this->_update_cookies();
+			$this->_destroy_serialized_cookies();
+
 			if ( is_user_logged_in() ) {
 				YITH_WCWL()->details['user_id'] = get_current_user_id();
 
 				//check whether any products are added to wishlist, then after login add to the wishlist if not added
 				$cookie = yith_getcookie( 'yith_wcwl_products' );
-				foreach ( $cookie as $details ) {
-					YITH_WCWL()->details['add_to_wishlist'] = $details['prod_id'];
-					YITH_WCWL()->details['wishlist_id'] = $details['wishlist_id'];
-					YITH_WCWL()->details['quantity'] = $details['quantity'];
-					YITH_WCWL()->details['user_id'] = get_current_user_id();
+				if( ! empty( $cookie ) && is_array( $cookie ) ) {
+					foreach ( $cookie as $details ) {
+						YITH_WCWL()->details['add_to_wishlist'] = $details['prod_id'];
+						YITH_WCWL()->details['wishlist_id']     = $details['wishlist_id'];
+						YITH_WCWL()->details['quantity']        = $details['quantity'];
+						YITH_WCWL()->details['user_id']         = get_current_user_id();
 
-					$ret_val = YITH_WCWL()->add();
+						$ret_val = YITH_WCWL()->add();
+					}
 				}
 
 				yith_destroycookie( 'yith_wcwl_products' );
 			}
-
-			// update cookie from old version to new one
-			$this->_update_cookies();
-			$this->_destroy_serialized_cookies();
 		}
 
 		/**
@@ -314,7 +319,6 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 			</style>
 			<script type="text/javascript">
 				var yith_wcwl_plugin_ajax_web_url = '<?php echo admin_url('admin-ajax.php') ?>';
-				var login_redirect_url = '<?php echo wp_login_url() . '?redirect_to=' . urlencode( $_SERVER['REQUEST_URI'] ) ?>';
 			</script>
 		<?php
 		}
@@ -364,7 +368,8 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 				'actions' => array(
 					'add_to_wishlist_action' => 'add_to_wishlist',
 					'remove_from_wishlist_action' => 'remove_from_wishlist',
-					'move_to_another_wishlist_action' => 'move_to_another_wishlsit'
+					'move_to_another_wishlist_action' => 'move_to_another_wishlsit',
+					'reload_wishlist_and_adding_elem_action'  => 'reload_wishlist_and_adding_elem'
 				)
 			);
 
@@ -434,6 +439,36 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 
 				yith_setcookie( 'yith_wcwl_products', $new_cookie );
 			}
+		}
+
+		/**
+		 * Add Frequently Bought Together shortcode to wishlist page
+		 *
+		 * @param mixed $meta
+		 * @author Francesco Licandro
+		 */
+		public function yith_wcfbt_shortcode( $meta ){
+
+			if( ! ( defined( 'YITH_WFBT' ) && YITH_WFBT ) || get_option( 'yith_wfbt_enable_integration' ) == 'no' ) {
+				return;
+			}
+
+			$products = YITH_WCWL()->get_products(
+				array(
+					'wishlist_id' => is_user_logged_in() ? $meta['ID'] : ''
+				));
+
+			$ids   = array();
+			// take id of products in wishlist
+			foreach( $products as $product ) {
+				$ids[] = $product['prod_id'];
+			}
+
+			if( empty( $ids ) ) {
+				return;
+			}
+
+			do_shortcode( '[yith_wfbt products="' . implode( ',', $ids ) . '"]' );
 		}
 	}
 }

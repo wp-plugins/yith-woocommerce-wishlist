@@ -20,7 +20,7 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 
     <label for="<?php echo $id ?>"><?php echo $label ?></label>
 
-    <select id="<?php echo $id ?>" name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" class="ajax_chosen_select_products" multiple="multiple" data-placeholder="<?php _e('Search for a product','yit') ?>">
+    <select id="<?php echo $id ?>" name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" class="ajax_chosen_select_products" multiple="multiple" data-placeholder="<?php _e('Search for a product','yith-plugin-fw') ?>">
         <?php
             if ( $value ) {
                 foreach ( $value as $product_id ) {

@@ -44,3 +44,9 @@ include_once( 'licence/lib/yit-theme-licence.php');
 include_once( 'lib/yit-video.php');
 include_once( 'lib/yit-upgrade.php');
 include_once( 'lib/yit-pointers.php');
+
+// load from theme folder...
+load_textdomain( 'yith-plugin-fw', get_template_directory() . '/core/plugin-fw/yith-plugin-fw-' . apply_filters( 'plugin_locale', get_locale(), 'yith-plugin-fw' ) . '.mo' )
+
+// ...or from plugin folder
+|| load_textdomain( 'yith-plugin-fw', dirname(__FILE__) . '/languages/yith-plugin-fw-' . apply_filters( 'plugin_locale', get_locale(), 'yith-plugin-fw' ) . '.mo' );

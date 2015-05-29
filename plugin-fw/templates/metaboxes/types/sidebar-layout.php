@@ -22,16 +22,16 @@ $sidebar = ! isset( $value['sidebar'] ) ? '' : $value['sidebar'];
 
     <p class="yit-sidebar-layout">
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-left' ?>" value="sidebar-left" <?php checked( $layout, 'sidebar-left' ) ?> />
-        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideleft.png" title="<?php _e( 'Left sidebar', 'yit' ) ?>" alt="<?php _e( 'Left sidebar', 'yit' ) ?>" />
+        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideleft.png" title="<?php _e( 'Left sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'Left sidebar', 'yith-plugin-fw' ) ?>" />
 
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-no' ?>" value="sidebar-no" <?php checked( $layout, 'sidebar-no' ) ?> />
-        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/noside.png" title="<?php _e( 'No sidebar', 'yit' ) ?>" alt="<?php _e( 'No sidebar', 'yit' ) ?>" />
+        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/noside.png" title="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'No sidebar', 'yith-plugin-fw' ) ?>" />
 
         <input type="radio" name="<?php echo $name ?>[layout]" id="<?php echo $id . '-right' ?>" value="sidebar-right" <?php checked( $layout, 'sidebar-right' ) ?> />
-        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideright.png" title="<?php _e( 'Right sidebar', 'yit' ) ?>" alt="<?php _e( 'Right sidebar', 'yit' ) ?>" />
+        <img src="<?php echo YIT_CORE_ASSETS_URL ?>/images/sideright.png" title="<?php _e( 'Right sidebar', 'yith-plugin-fw' ) ?>" alt="<?php _e( 'Right sidebar', 'yith-plugin-fw' ) ?>" />
 
         <select name="<?php echo $name ?>[sidebar]" id="<?php echo $id ?>-sidebar">
-            <option value="-1"><?php _e( 'Choose a sidebar', 'yit' ) ?></option>
+            <option value="-1"><?php _e( 'Choose a sidebar', 'yith-plugin-fw' ) ?></option>
             <?php foreach ( yit_registered_sidebars() as $val => $option ) { ?>
                 <option value="<?php echo esc_attr( $val ) ?>" <?php selected( $sidebar, $val ) ?>><?php echo $option; ?></option>
             <?php } ?>

@@ -39,10 +39,10 @@ $value = wp_parse_args( $value, $defaults );
                 <!-- Unit -->
                 <div class="select_wrapper font-unit">
                     <select name="<?php echo $name ?>[unit]" id="<?php echo $id ?>-unit">
-                        <option value="px" <?php selected( $value['unit'], 'px' ) ?>><?php _e( 'px', 'yit' ) ?></option>
-                        <option value="em" <?php selected( $value['unit'], 'em' ) ?>><?php _e( 'em', 'yit' ) ?></option>
-                        <option value="pt" <?php selected( $value['unit'], 'pt' ) ?>><?php _e( 'pt', 'yit' ) ?></option>
-                        <option value="rem" <?php selected( $value['unit'], 'rem' ) ?>><?php _e( 'rem', 'yit' ) ?></option>
+                        <option value="px" <?php selected( $value['unit'], 'px' ) ?>><?php _e( 'px', 'yith-plugin-fw' ) ?></option>
+                        <option value="em" <?php selected( $value['unit'], 'em' ) ?>><?php _e( 'em', 'yith-plugin-fw' ) ?></option>
+                        <option value="pt" <?php selected( $value['unit'], 'pt' ) ?>><?php _e( 'pt', 'yith-plugin-fw' ) ?></option>
+                        <option value="rem" <?php selected( $value['unit'], 'rem' ) ?>><?php _e( 'rem', 'yith-plugin-fw' ) ?></option>
                     </select>
                 </div>
             <?php endif; ?>
@@ -56,7 +56,7 @@ $value = wp_parse_args( $value, $defaults );
                         $google_fonts = yit_get_google_fonts();
 
                         if ( ! empty( $web_fonts ) ) {
-                            echo '<optgroup label="' . __( 'Web fonts', 'yit' ) . '">';
+                            echo '<optgroup label="' . __( 'Web fonts', 'yith-plugin-fw' ) . '">';
 
                             foreach ( $web_fonts as $font_name => $rule ) {
                                 ?>
@@ -68,7 +68,7 @@ $value = wp_parse_args( $value, $defaults );
                         }
 
                         if ( ! empty( $google_fonts ) ) {
-                            echo '<optgroup label="' . __( 'Google fonts', 'yit' ) . '">';
+                            echo '<optgroup label="' . __( 'Google fonts', 'yith-plugin-fw' ) . '">';
 
                             foreach ( $google_fonts->items as $font ) {
 //                     $font_human = trim( stripslashes( end( array_slice( explode( ',', $font ), 0, 1 ) ) ), "'" );
@@ -93,11 +93,11 @@ $value = wp_parse_args( $value, $defaults );
                 <!-- Style -->
                 <div class="select_wrapper font-style">
                     <select name="<?php echo $name ?>[style]" id="<?php echo $id ?>-style">
-                        <option value="regular" <?php selected( $value['style'], 'regular' ) ?>><?php _e( 'Regular', 'yit' ) ?></option>
-                        <option value="bold" <?php selected( $value['style'], 'bold' ) ?>><?php _e( 'Bold', 'yit' ) ?></option>
-                        <option value="extra-bold" <?php selected( $std['style'], 'extra-bold' ) ?>><?php _e( 'Extra bold', 'yit' ) ?></option>
-                        <option value="italic" <?php selected( $value['style'], 'italic' ) ?>><?php _e( 'Italic', 'yit' ) ?></option>
-                        <option value="bold-italic" <?php selected( $value['style'], 'bold-italic' ) ?>><?php _e( 'Italic bold', 'yit' ) ?></option>
+                        <option value="regular" <?php selected( $value['style'], 'regular' ) ?>><?php _e( 'Regular', 'yith-plugin-fw' ) ?></option>
+                        <option value="bold" <?php selected( $value['style'], 'bold' ) ?>><?php _e( 'Bold', 'yith-plugin-fw' ) ?></option>
+                        <option value="extra-bold" <?php selected( $std['style'], 'extra-bold' ) ?>><?php _e( 'Extra bold', 'yith-plugin-fw' ) ?></option>
+                        <option value="italic" <?php selected( $value['style'], 'italic' ) ?>><?php _e( 'Italic', 'yith-plugin-fw' ) ?></option>
+                        <option value="bold-italic" <?php selected( $value['style'], 'bold-italic' ) ?>><?php _e( 'Italic bold', 'yith-plugin-fw' ) ?></option>
                     </select>
                 </div>
             <?php endif; ?>
@@ -150,7 +150,7 @@ $value = wp_parse_args( $value, $defaults );
         var group = $('#<?php echo $id ?>-family').find('option:selected').parent().attr('label');
 
         if ($('#<?php echo $id ?>-family').length > 0) {
-            if (group == '<?php _e( 'Web fonts', 'yit' ) ?>') {
+            if (group == '<?php _e( 'Web fonts', 'yith-plugin-fw' ) ?>') {
                 //Web font
                 preview.css('font-family', $('#<?php echo $id ?>-family').val());
             } else {
@@ -214,7 +214,7 @@ $value = wp_parse_args( $value, $defaults );
         $('#<?php echo $id ?>-family').change(function () {
             var group = $(this).find('option:selected').parent().attr('label');
 
-            if (group == '<?php _e( 'Web fonts', 'yit' ) ?>') {
+            if (group == '<?php _e( 'Web fonts', 'yith-plugin-fw' ) ?>') {
                 //Web font
                 preview.css('font-family', $(this).val());
             } else {

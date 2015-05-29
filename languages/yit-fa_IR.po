@@ -1,0 +1,1403 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YITH WooCommerce Wishlist\n"
+"POT-Creation-Date: 2015-05-18 11:07+0100\n"
+"PO-Revision-Date: 2015-05-18 11:07+0100\n"
+"Last-Translator: Am!n <amin.pe94@gmail.com>\n"
+"Language-Team: YITH - translated to persian by dornaweb <info@dornaweb.com>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8beta3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
+
+#: ../includes/class.yith-wcwl-admin-init.php:188
+#: ../includes/class.yith-wcwl-admin-init.php:1406
+#: ../includes/class.yith-wcwl-admin-init.php:1407
+#: ../includes/class.yith-wcwl-install.php:240
+msgid "Wishlist"
+msgstr "لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:190
+#: ../includes/class.yith-wcwl-admin-init.php:290
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: ../includes/class.yith-wcwl-admin-init.php:191
+#: ../includes/class.yith-wcwl-admin-init.php:257
+msgid "Colors"
+msgstr "رنگ ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:192
+#: ../includes/class.yith-wcwl-admin-init.php:294
+msgid "Premium Version"
+msgstr "نسخه پولی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:318
+msgid ""
+"WARNING: This plugin requires at least WooCommerce 2.2! Please, use this "
+"link to update it."
+msgstr ""
+"اخطار :  برای نصب این افزونه حد اقل به نسخه 2.2 ووکامرس نیاز است، لطفا از "
+"این لینک برای آپدیت استفاده کنید"
+
+#: ../includes/class.yith-wcwl-admin-init.php:321
+msgid "WARNING: This plugin requires at least WooCommerce 2.2!"
+msgstr "اخطار : این افزونه حد اقل به نسخه 2.2 ووکامرس نیاز دارد."
+
+#: ../includes/class.yith-wcwl-admin-init.php:326
+msgid "Plugin Documentation"
+msgstr "مستندات افزونه"
+
+#: ../includes/class.yith-wcwl-admin-init.php:342
+msgid "Wishlist Page"
+msgstr "صفحه لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:343
+msgid "Page contents: [yith_wcwl_wishlist]"
+msgstr "محتوای صفحه :  [yith_wcwl_wishlist] باشد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:918
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr "ارتقا به نسخه پرمیوم"
+
+#: ../includes/class.yith-wcwl-admin-init.php:921
+msgid "YITH WooCommerce Wishlist"
+msgstr "YITH WooCommerce Wishlist"
+
+#: ../includes/class.yith-wcwl-admin-init.php:922
+msgid "Discover the Advanced Features"
+msgstr "امکانات پیشرفته را مشاهده کنید"
+
+#: ../includes/class.yith-wcwl-admin-init.php:923
+msgid ""
+"Upgrade to the PREMIUM VERSION\n"
+"of YITH WOOCOMMERCE WISHLIST to benefit from all features!"
+msgstr ""
+"افزونه را به نسخه حرفه ای ارتقا دهید \n"
+"تا از تمام امکانات YITH WooCommerce Wishlist بهره ببرید"
+
+#: ../includes/class.yith-wcwl-admin-init.php:930
+msgid "Get Support and Pro Features"
+msgstr "رفتن به پشتیبانی و امکانات پیشرفته"
+
+#: ../includes/class.yith-wcwl-admin-init.php:931
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
+"با خرید نسخه حرفه ای این افزونه میتوانید از امکانات پیشرفته این محصول بهره "
+"ببرید، همچنین به مدت 1 سال آپدیت های این افزونه را بطور رایگان دریافت کنید و "
+"از پشتیبانی 24 ساعته ما استفاده کنید"
+
+#: ../includes/class.yith-wcwl-admin-init.php:941
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:948
+msgid "Enable YITH Wishlist"
+msgstr "فعال کردن YITH Wishlist"
+
+#: ../includes/class.yith-wcwl-admin-init.php:949
+#, php-format
+msgid ""
+"Enable all plugin features. <strong>Be sure to select at least one option in "
+"the Wishlist page menu in %s.</strong> Also, please read the plugin <a href="
+"\"%s\" target=\"_blank\">documentation</a>."
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:956
+msgid "Default wishlist title"
+msgstr "عنوان پیشفرض لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:958
+#: ../includes/class.yith-wcwl-admin-init.php:959
+#: ../includes/class.yith-wcwl-admin-init.php:1218
+#: ../includes/class.yith-wcwl-admin-init.php:1219
+#, php-format
+msgid "My wishlist on %s"
+msgstr "لیست علاقه مندی های من در %s"
+
+#: ../includes/class.yith-wcwl-admin-init.php:967
+msgid "Position"
+msgstr "موقعیت"
+
+#: ../includes/class.yith-wcwl-admin-init.php:968
+msgid ""
+"You can add the button in variable products only after the \"Add to Cart\" "
+"button or using the shortcode [yith_wcwl_add_to_wishlist]."
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:974
+msgid "After \"Add to cart\""
+msgstr "بعد از  \"افزودن به سبد\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:975
+msgid "After thumbnails"
+msgstr "بعد از تصاویر محصول"
+
+#: ../includes/class.yith-wcwl-admin-init.php:976
+msgid "After summary"
+msgstr "بعد از خلاصه محصول"
+
+#: ../includes/class.yith-wcwl-admin-init.php:977
+msgid "Use shortcode"
+msgstr "استفاده از شورتکد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:982
+msgid "Redirect to cart"
+msgstr "انتقال به سبد خرید"
+
+#: ../includes/class.yith-wcwl-admin-init.php:983
+msgid ""
+"Redirect to cart page if \"Add to cart\" button is clicked in the wishlist "
+"page."
+msgstr ""
+"اگر در صفحه علاقه مندی ها روی \"افزودن به سبد\" کلیک شد، کاربر را به صفحه "
+"سبد خرید منتقل کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:990
+msgid "Remove if added to the cart"
+msgstr "حذف محصول در صورت افزودن به سبد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:991
+msgid "Remove the product from the wishlist if it has been added to the cart."
+msgstr "اگر محصول به سبد خرید اضافه شد آن را از لیست علاقه مندی ها حذف کن."
+
+#: ../includes/class.yith-wcwl-admin-init.php:998
+msgid "\"Add to Wishlist\" text"
+msgstr "متن \"افزودن به علاقه مندی ها\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1000
+#: ../includes/class.yith-wcwl-admin-init.php:1001
+msgid "Add to Wishlist"
+msgstr "افزودن به علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1006
+msgid "\"Browse wishlist\" text"
+msgstr "متن \"مشاهده علاقه مندی ها\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1008
+#: ../includes/class.yith-wcwl-admin-init.php:1009
+#: ../includes/class.yith-wcwl-ui.php:81 ../includes/class.yith-wcwl-ui.php:82
+msgid "Browse Wishlist"
+msgstr "مشاهده لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1014
+msgid "\"Product already in wishlist\" text"
+msgstr "متن \"محصول از قبل اضافه شده\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1016
+#: ../includes/class.yith-wcwl-admin-init.php:1017
+#: ../includes/class.yith-wcwl-ui.php:82
+msgid "The product is already in the wishlist!"
+msgstr "محصول از قبل به علاقه مندی ها اضافه شده!"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1022
+msgid "\"Product added\" text"
+msgstr "متن \"محصول اضافه شد\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1024
+#: ../includes/class.yith-wcwl-admin-init.php:1025
+#: ../includes/class.yith-wcwl-ui.php:81
+msgid "Product added!"
+msgstr "اضافه شد!"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1030
+msgid "\"Add to Cart\" text"
+msgstr "متن \"افزودن به سبد خرید\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1032
+#: ../includes/class.yith-wcwl-admin-init.php:1033
+msgid "Add to Cart"
+msgstr "افزودن به سبد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1038
+msgid "Show Unit price"
+msgstr "مشاهده واحدهای پولی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1039
+msgid "Show unit price for each product in wishlist"
+msgstr "مشاهده واحدهای پولی برای محصولات اضافه شده به لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1047
+msgid "Show \"Add to Cart\" button"
+msgstr "مشاهده دکمه \"افزودن به سبد\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1048
+msgid "Show \"Add to Cart\" button for each product in wishlist"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1056
+msgid "Show Stock status"
+msgstr "مشاهده موجودی محصول"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1057
+msgid ""
+"Show \"In stock\" or \"Out of stock\" label for each product in wishlist"
+msgstr "مشاهده \"موجودی\" یا \"ناموجودی\" محصولات موجود در لیست علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1065
+msgid "Show Date of addition"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1066
+msgid "Show the date when users have added a product to the wishlist"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1074
+msgid "Add second remove button"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1075
+msgid "Add a second remove button in the last column, with extended label"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1098
+msgid "Styles"
+msgstr "استایل ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1105
+msgid "Use buttons"
+msgstr "استفاده از دکمه ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1106
+msgid "Use buttons instead of simple anchors."
+msgstr "به جای لینک های ساده از دکمه ها استفاده کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1113
+msgid "Custom CSS"
+msgstr "CSS دستی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1121
+msgid "Use theme style"
+msgstr "استفاده از استایل قالب"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1122
+msgid "Use the theme style."
+msgstr "از استایل قالب استفاده کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1129
+msgid "Rounded buttons"
+msgstr "دکمه های گرد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1130
+msgid "Make button corners rounded"
+msgstr "گوشه های دکمه را گرد کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1137
+msgid "\"Add to Wishlist\" icon"
+msgstr "آیکون \"افزودن به علاقه مندی ها\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1138
+msgid "Add an icon to the \"Add to Wishlist\" button"
+msgstr "یک آیکون به دکمه \"افزودن به لیست علاقه مندی ها\" اضافه کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1149
+msgid "\"Add to Cart\" icon"
+msgstr "آیکون \"افزودن به سبد\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1150
+msgid "Add an icon to the \"Add to Cart\" button"
+msgstr "یک آیکون به دکمه \"افزودن به سبد\" اضافه کن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1169
+msgid "Social Networks & Share"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1176
+msgid "Share on Facebook"
+msgstr "اشتراک در فیس بوک"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1177
+msgid "Show \"Share on Facebook\" button"
+msgstr "نمایش دکمه \"اشتراک در فیس بوک\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1184
+msgid "Tweet on Twitter"
+msgstr "توییت در توییتر"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1185
+msgid "Show \"Tweet on Twitter\" button"
+msgstr "نمایش دکمه \"توییت در توییتر\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1192
+msgid "Pin on Pinterest"
+msgstr "پین به پینترست"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1193
+msgid "Show \"Pin on Pinterest\" button"
+msgstr "نمایش دکمه \"پین درپینترست\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1200
+msgid "Share on Google+"
+msgstr "اشتراک گذاری در گوگل+"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1201
+msgid "Show \"Share on Google+\" button"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1208
+msgid "Share by Email"
+msgstr "اشتراک با ایمیل"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1209
+msgid "Show \"Share by Email\" button"
+msgstr "نمایش دکمه \"اشتراک با ایمیل\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1216
+msgid "Social title"
+msgstr "عنوان اجتماعی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1224
+msgid "Social text"
+msgstr "متن اجتماعی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1225
+msgid ""
+"It will be used by Facebook, Twitter and Pinterest. Use <strong>%wishlist_url"
+"%</strong> where you want to show the URL of your wishlist."
+msgstr ""
+"این متن توسط فیس بوک,توییتر و پینترست مورد استفاده قرار میگیرد ، جایی که "
+"میخاهید url مربوط به لیست علاقه مندی هایتان را نشان دهید از <strong>"
+"%wishlist_url%</strong> استفاده کنید!"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1233
+msgid "Social image URL"
+msgstr "آدرس تصویر اجتماعی"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1248
+#, php-format
+msgid ""
+"If you want to take advantage of this feature, you could consider to "
+"purchase the %s."
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1253
+msgid "YITH WooCommerce Frequently Bought Together Integration"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1260
+msgid "Enable slider in wishlist"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1261
+#, php-format
+msgid ""
+"Choose to enable product slider in wishlist page with linked products (<a "
+"href=\"%s\" class=\"thickbox\">Example</a>). %s"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1298
+msgid "\"Add to wishlist\" button"
+msgstr "دکمه \" افزودن به علاقه مندیها\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1301
+#: ../includes/class.yith-wcwl-admin-init.php:1319
+#: ../includes/class.yith-wcwl-admin-init.php:1337
+#: ../includes/class.yith-wcwl-admin-init.php:1355
+#: ../includes/class.yith-wcwl-admin-init.php:1373
+msgid "Background"
+msgstr "پس زمینه"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1302
+#: ../includes/class.yith-wcwl-admin-init.php:1320
+#: ../includes/class.yith-wcwl-admin-init.php:1338
+#: ../includes/class.yith-wcwl-admin-init.php:1356
+#: ../includes/class.yith-wcwl-admin-init.php:1374
+msgid "Text"
+msgstr "متن"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1303
+#: ../includes/class.yith-wcwl-admin-init.php:1321
+#: ../includes/class.yith-wcwl-admin-init.php:1339
+#: ../includes/class.yith-wcwl-admin-init.php:1357
+#: ../includes/class.yith-wcwl-admin-init.php:1375
+msgid "Border"
+msgstr "کادر"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1310
+#: ../includes/class.yith-wcwl-admin-init.php:1328
+#: ../includes/class.yith-wcwl-admin-init.php:1346
+#: ../includes/class.yith-wcwl-admin-init.php:1364
+msgid "Background (hover)"
+msgstr "پس زمینه ( حالت هاور)"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1311
+#: ../includes/class.yith-wcwl-admin-init.php:1329
+#: ../includes/class.yith-wcwl-admin-init.php:1347
+#: ../includes/class.yith-wcwl-admin-init.php:1365
+msgid "Text (hover)"
+msgstr "متن (حالت هاور)"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1312
+#: ../includes/class.yith-wcwl-admin-init.php:1330
+#: ../includes/class.yith-wcwl-admin-init.php:1348
+#: ../includes/class.yith-wcwl-admin-init.php:1366
+msgid "Border (hover)"
+msgstr "کادر (حالت هاور)"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1316
+msgid "\"Add to Cart\" button"
+msgstr "دکمه \"افزودن به سبد\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1334
+msgid "\"Style 1\" button"
+msgstr "دکمه \"استایل 1\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1352
+msgid "\"Style 2\" button"
+msgstr "دکمه \"استایل 2\""
+
+#: ../includes/class.yith-wcwl-admin-init.php:1370
+msgid "Wishlist table"
+msgstr "جدول علاقه مندی ها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1379
+msgid "Headers"
+msgstr "هدرها"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1382
+msgid "Background color"
+msgstr "زنگ زمینه"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1472
+msgid "Wishlist Activated"
+msgstr "لیست علاقه مندی ها فعال شد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1473
+#, php-format
+msgid ""
+"In the YIT Plugin tab you can find the Wishlist options. With this menu, you "
+"can access to all the settings of our plugins that you have activated. "
+"Wishlist is available in an outstanding PREMIUM version with many new "
+"options, <a href=\"%s\">discover it now</a>."
+msgstr ""
+"در تب افزونه های YIT میتوانید تنظیمات افزونه لیست علاقه مندی ها را پیدا "
+"کنید. در این منو به تمام تنظیمات افزونه ای که فعال کردید دسترسی دارید ، "
+"همچنین افزونه لیست علاقه مندی ها در نسخه حرفه ای نیز موجود است که امکانات "
+"بسیار بیشتر و جدیدتری دارد , <a href=\"%s\">این امکانات را ببینید</a>."
+
+#: ../includes/class.yith-wcwl-admin-init.php:1484
+msgid "Wishlist Updated"
+msgstr "لیست علاقه مندی ها به روز شد"
+
+#: ../includes/class.yith-wcwl-admin-init.php:1485
+#, php-format
+msgid ""
+"From now on, you can find all the options of Wishlist under YIT Plugin -> "
+"Wishlist instead of WooCommerce -> Settings -> Wishlist, as in the previous "
+"version. When one of our plugins is updated, a new voice will be added to "
+"this menu. Wishlist has been updated with new available options, <a href=\"%s"
+"\">discover the PREMIUM version.</a>"
+msgstr ""
+"از این پس تنظیمات افزونه لیست علاقه مندی ها را در افزونه های YIT -> لیست "
+"علاقه مندی ها ، پیدا کنید ، در نسخه های قبلی این تنظیمات در ووکامرس -> "
+"تنظیمات -> لیست علاقه مندی ها بود که اکنون دسترسی به آنها راحتتر شده است ، "
+"زمانی که یکی از پلاگین های ما بروز شود ، یک اعلانیه جدید مبنی بر انتشار نسخه "
+"جدید اضافه خواهد شد، <a href=\"%s\">امکانات نسخه حرفه ای این افزونه را "
+"مشاهده کنید.</a>"
+
+#: ../includes/class.yith-wcwl-init.php:365
+msgid ""
+"We are sorry, but this feature is available only if cookies are enabled on "
+"your browser."
+msgstr ""
+"متاسفیم! این امکان فقط در صورتی که کوکی های مرورگر شما فعال باشد در دسترس "
+"است."
+
+#: ../includes/class.yith-wcwl-init.php:366
+msgid "Product correctly added to cart"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-install.php:239
+msgctxt "page_slug"
+msgid "wishlist"
+msgstr ""
+
+#: ../includes/class.yith-wcwl-shortcode.php:242
+#: ../includes/class.yith-wcwl-ui.php:161
+msgid "Share on:"
+msgstr "اشتراک در : "
+
+#: ../includes/class.yith-wcwl-ui.php:116
+#: ../includes/class.yith-wcwl-ui.php:199
+msgid "Select options"
+msgstr "انتخاب گزینه ها"
+
+#: ../includes/class.yith-wcwl-ui.php:165 ../templates/share.php:16
+msgid "Facebook"
+msgstr "فیسبوک"
+
+#: ../includes/class.yith-wcwl-ui.php:168 ../templates/share.php:22
+msgid "Twitter"
+msgstr "توییتر"
+
+#: ../includes/class.yith-wcwl-ui.php:177
+msgid "email"
+msgstr "ایمیل"
+
+#: ../includes/class.yith-wcwl.php:192
+msgid "An error occurred while adding products to the wishlist."
+msgstr ""
+
+#: ../includes/class.yith-wcwl.php:276
+msgid "An error occurred while adding products to wishlist."
+msgstr ""
+
+#: ../includes/class.yith-wcwl.php:291
+msgid "The \"Remove\" option now does not require any parameter"
+msgstr ""
+
+#: ../includes/class.yith-wcwl.php:325
+msgid "An error occurred while removing products from the wishlist"
+msgstr ""
+
+#: ../includes/class.yith-wcwl.php:603
+msgid "You need to log in before creating a new wishlist"
+msgstr "قبل از این که لیست علاقه مندی ایجاد کنید باید وارد شوید"
+
+#: ../includes/class.yith-wcwl.php:1312
+msgid "Product successfully removed."
+msgstr "محصول با موفقیت حذف شد."
+
+#: ../includes/class.yith-wcwl.php:1316
+msgid "Error. Unable to remove the product from the wishlist."
+msgstr "خطا : محصول از لیست علاقه مندی ها حذف نشد."
+
+#: ../includes/class.yith-wcwl.php:1320 ../templates/wishlist-view.php:270
+msgid "No products were added to the wishlist"
+msgstr "هیچ محصولی به لیست علاقه مندی ها افزوده نشده"
+
+#: ../includes/class.yith-wcwl.php:1362
+msgid "An error as occurred."
+msgstr ""
+
+#: ../init.php:129
+msgid ""
+"YITH WooCommerce Wishlist is enabled but not effective. It requires "
+"WooCommerce in order to work."
+msgstr ""
+
+#: ../init.php:139
+msgid ""
+"You can't activate the free version of YITH WooCommerce Wishlist while you "
+"are using the premium one."
+msgstr ""
+"شما نمیتوانید نسخه رایگان افزونه را فعال کنید در حالی که در حال حاضر از نسخه "
+"پولی استفاده می کنید."
+
+#: ../templates/share.php:28
+msgid "Pinterest"
+msgstr "پینترست"
+
+#: ../templates/share.php:34
+msgid "Google+"
+msgstr ""
+
+#: ../templates/share.php:40
+msgid "Email"
+msgstr "ایمیل"
+
+#: ../templates/wishlist-view.php:30
+msgid "Edit title"
+msgstr "ویرایش عنوان"
+
+#: ../templates/wishlist-view.php:39
+msgid "Save"
+msgstr "ذخیره"
+
+#: ../templates/wishlist-view.php:43
+msgid "Cancel"
+msgstr "لغو"
+
+#: ../templates/wishlist-view.php:88
+msgid "Product Name"
+msgstr "نام محصول"
+
+#: ../templates/wishlist-view.php:95
+msgid "Unit Price"
+msgstr "قیمت"
+
+#: ../templates/wishlist-view.php:108
+msgid "Stock Status"
+msgstr "وضعیت موجودی"
+
+#: ../templates/wishlist-view.php:154 ../templates/wishlist-view.php:260
+msgid "Remove this product"
+msgstr "حذف این محصول"
+
+#: ../templates/wishlist-view.php:184
+msgid "Free!"
+msgstr "رایگان!"
+
+#: ../templates/wishlist-view.php:195
+msgid "Out of Stock"
+msgstr "ناموجود"
+
+#: ../templates/wishlist-view.php:198
+msgid "In Stock"
+msgstr "موجود"
+
+#: ../templates/wishlist-view.php:209
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: ../templates/wishlist-view.php:228
+msgid "Move"
+msgstr ""
+
+#: ../templates/wishlist-view.php:240
+msgid "Shared"
+msgstr ""
+
+#: ../templates/wishlist-view.php:243
+msgid "Private"
+msgstr ""
+
+#: ../templates/wishlist-view.php:246
+msgid "Public"
+msgstr ""
+
+#: ../templates/wishlist-view.php:260
+msgid "Remove"
+msgstr "حذف"
+
+#: ../templates/wishlist-view.php:287
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: ../templates/wishlist-view.php:295 ../templates/wishlist-view.php:337
+msgid "Ask for an estimate"
+msgstr ""
+
+#: ../yit-common/yith-panel.php:406
+msgid "Select a date"
+msgstr "یک تاریخ انتخاب کنید"
+
+#: ../yit-common/yith-panel.php:407
+msgid "Hours"
+msgstr "ساعت ها"
+
+#: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
+msgid "Minutes"
+msgstr "دقیقه ها"
+
+#: ../yit-common/yith-panel.php:417
+msgid "Upload"
+msgstr "آپلود"
+
+#: ../yit-common/yith-panel.php:444
+msgid "px"
+msgstr "px"
+
+#: ../yit-common/yith-panel.php:445
+msgid "em"
+msgstr "em"
+
+#: ../yit-common/yith-panel.php:446
+msgid "pt"
+msgstr "pt"
+
+#: ../yit-common/yith-panel.php:447
+msgid "rem"
+msgstr "rem"
+
+#: ../yit-common/yith-panel.php:457
+msgid "Select a font family"
+msgstr "یک فونت انتخاب کنید"
+
+#: ../yit-common/yith-panel.php:465
+msgid "Regular"
+msgstr "معمولی"
+
+#: ../yit-common/yith-panel.php:466
+msgid "Bold"
+msgstr "توپُر"
+
+#: ../yit-common/yith-panel.php:467
+msgid "Extra bold"
+msgstr "بیش از اندازه توپُر"
+
+#: ../yit-common/yith-panel.php:468
+msgid "Italic"
+msgstr "کج"
+
+#: ../yit-common/yith-panel.php:469
+msgid "Italic bold"
+msgstr "کج و توپُر"
+
+#: ../yit-common/yith-panel.php:481
+msgid "Click to preview"
+msgstr "برای پیشنمایش کلیک کنید"
+
+#~ msgid ""
+#~ "YITH WooCommerce Wishlist is enabled but not effective. It requires "
+#~ "Woocommerce in order to work."
+#~ msgstr ""
+#~ "YITH WooCommerce Wishlist فعال شده اما برای عملکرد ابتدا باید پلاگین "
+#~ "woocommerce را نصب کنید"
+
+#~ msgid ""
+#~ "Enable all plugin features. <strong>Be sure to select a voice in the "
+#~ "wishlist page menu in %s.</strong> Also, please read the plugin <a href="
+#~ "\"%s\" target=\"_blank\">documentation</a>."
+#~ msgstr ""
+#~ "فعال کردن تمام امکانات افزونه. <strong>حتما صفحه مربوط به لیست علاقه مندی "
+#~ "ها را در %s انتخاب کنید.</strong> همچنین <a href=\"%s\" target=\"_blank"
+#~ "\">مستندات</a> افزونه را ببینید."
+
+#~ msgid ""
+#~ "You can add it in variable products only After \"Add to Cart \" or using "
+#~ "the shortcode [yith_wcwl_add_to_wishlist]."
+#~ msgstr ""
+#~ "برای محصولات متغیر فقط میتوانید بعد از \"افزودن به سبد \" را انتخاب کنید "
+#~ "یا از شورتکد [yith_wcwl_add_to_wishlist] استفاده کنید"
+
+#~ msgid "Show \"Add to cart\" button for each product in wishlist"
+#~ msgstr ""
+#~ "مشاهده دکمه  \"افزودن به سبد\" برای محصولات موجود در لیست علاقه مندی"
+
+#~ msgid "Socials &amp; Share"
+#~ msgstr "امکانات اجتماعی و به اشتراک گذاری"
+
+#~ msgid "wishlist"
+#~ msgstr "لیست علاقه مندی ها"
+
+#~ msgid "Error occurred while adding products to the wishlist."
+#~ msgstr "در افزودن محصولات به لیست علاقه مندی ها خطایی رخ داده است."
+
+#~ msgid "Error occurred while adding product to wishlist."
+#~ msgstr "در افزودن محصول به لیست علاقه مندیها خطایی رخ داده است."
+
+#~ msgid "Remove now does not require any param"
+#~ msgstr "اکنون حذف کن هیچ پارامتری نیاز ندارد"
+
+#~ msgid "Error occurred while removing products from the wishlist"
+#~ msgstr "در حذف محصول از لیست علاقه مندیها خطایی رخ داده است"
+
+#~ msgid "Add %s"
+#~ msgstr "افزودن %s"
+
+#~ msgid "Add New %s"
+#~ msgstr "افزودن %s جدید"
+
+#~ msgid "Edit %s"
+#~ msgstr "ویرایش %s"
+
+#~ msgid "New %s"
+#~ msgstr "%s جدید"
+
+#~ msgid "All %s"
+#~ msgstr "تمام %s"
+
+#~ msgid "View %s"
+#~ msgstr "مشاهده %s"
+
+#~ msgid "Search %s"
+#~ msgstr "جستجو %s"
+
+#~ msgid "No %s found"
+#~ msgstr "هیچ %s یافت نشد"
+
+#~ msgid "No %s found in Trash"
+#~ msgstr "هیچ %s در سطل آشغال یافت نشد"
+
+#~ msgid "%s Categories"
+#~ msgstr "دسته بندی های %s"
+
+#~ msgid "Category"
+#~ msgstr "دسته بندی"
+
+#~ msgid "Search Categories"
+#~ msgstr "جستجو در دسته بندی ها"
+
+#~ msgid "All Categories"
+#~ msgstr "همه دسته بندی ها"
+
+#~ msgid "Parent Category"
+#~ msgstr "دسته بندی مادر"
+
+#~ msgid "Parent Category:"
+#~ msgstr "دسته بندی مادر:"
+
+#~ msgid "Edit Category"
+#~ msgstr "ویرایش دسته بندی"
+
+#~ msgid "Update Category"
+#~ msgstr "به روز رسانی دسته بندی"
+
+#~ msgid "Add New Category"
+#~ msgstr "افزودن دسته بندی"
+
+#~ msgid "New Category Name"
+#~ msgstr "نام دسته بندی جدید"
+
+#~ msgid "Categories"
+#~ msgstr "دسته بندی ها"
+
+#~ msgid "%s Settings"
+#~ msgstr "تنظیمات %s"
+
+#~ msgid "Type"
+#~ msgstr "نوع"
+
+#~ msgid "Layout for this "
+#~ msgstr "صفحه ها آرایی برای این"
+
+#~ msgid "Rewrite"
+#~ msgstr "Rewrite"
+
+#~ msgid ""
+#~ "Univocal identification name in the URL for each product (slug from post "
+#~ "if empty)"
+#~ msgstr ""
+#~ "نام شناسایی هم خو در url هر محصول ( درصورت خالی بودن از نامک محصول "
+#~ "استفاده میشود )"
+
+#~ msgid "Label in Singular"
+#~ msgstr "برچسب منفرد ( 1عدد)"
+
+#~ msgid "Set a label in singular (title of portfolio if empty)"
+#~ msgstr ""
+#~ "برچسب برای هنگامی که 1 عدد است انتخاب کنید ( در صورت خالی بودن از عنوان "
+#~ "پورتفولیو استفاده می شود)"
+
+#~ msgid "Label in Plural"
+#~ msgstr "برچسب جمع ( بیش از 1عدد )"
+
+#~ msgid "Set a label in plural (title of portfolio if empty)"
+#~ msgstr ""
+#~ "برچسب برای هنگامی که بیش از 1 عدد است انتخاب کنید ( در صورت خالی بودن از "
+#~ "عنوان پورتفولیو استفاده می شود )"
+
+#~ msgid "Taxonomy"
+#~ msgstr "taxonomy"
+
+#~ msgid ""
+#~ "If you want to use categories in the portfolio, set a name for taxonomy. "
+#~ "Name should be a slug (must not contain capital letters nor spaces) and "
+#~ "must not be more than 32 characters long (database structure restriction)."
+#~ msgstr ""
+#~ "اگر در این پورتفولیو میخاهید از دسته بندی استفاده کنید یک نامک برای "
+#~ "taxonomy انتخاب کنید ، این نامک باید فقط شامل کلمات کوچک لاتین باشد و "
+#~ "بدون فاصله باشند ( خط تیره مجاز است ) و نباید بیشتر از 32 کاراکتر باشد"
+
+#~ msgid "Taxonomy Rewrite"
+#~ msgstr "Taxonomy Rewrite"
+
+#~ msgid "Set univocal name for each category page URL."
+#~ msgstr "یک نامک برای استفاده در url صفحات دسته بندی انتخاب کنید"
+
+#~ msgid "Single layout"
+#~ msgstr "طرح بندی سینگل ( ادامه مطلب )"
+
+#~ msgid "Layout for single page of this portfolio"
+#~ msgstr "طرح بندی برای صفحه سینگل پورتفولیو"
+
+#~ msgid "layout settings"
+#~ msgstr "تنظیمات طرح بندی"
+
+#~ msgid "Quick links"
+#~ msgstr "لینک های سریع"
+
+#~ msgid "Show frontend of the %s"
+#~ msgstr "مشاهده ظاهر %s"
+
+#~ msgid "Name"
+#~ msgstr "نام"
+
+#~ msgid "Add %s from images"
+#~ msgstr "افزودن %s از تصاویر"
+
+#~ msgid "Add with multiupload"
+#~ msgstr "افزودن با آپلود چندگانه"
+
+#~ msgid "The changes you have made will be lost if you leave this page."
+#~ msgstr "اگر این صفحه را ترک کنید تنظیمات شما از بین خواهند رفت."
+
+#~ msgid "Plugin Settings"
+#~ msgstr "تنظیمات پلاگین"
+
+#~ msgid "YIT Plugins"
+#~ msgstr "افزونه های YIT"
+
+#~ msgid "Save Changes"
+#~ msgstr "ذخیره تنظیمات"
+
+#~ msgid ""
+#~ "If you continue with this action, you will reset all options in this page."
+#~ msgstr ""
+#~ "اگر این عمل را ادامه دهید تمام تنظیمات این افزونه به حالت پیشفرض باز "
+#~ "خواهند گشت"
+
+#~ msgid "Reset to Default"
+#~ msgstr "بازگردانی حالت پیشفرش"
+
+#~ msgid "Are you sure?"
+#~ msgstr "مطمئنید؟"
+
+#~ msgid ""
+#~ "The element you have entered already exists. Please, enter another name."
+#~ msgstr ""
+#~ "المنتی که وارد کرده این از قبل موجود است لطفا نام یک لینک دیگر وارد کنید."
+
+#~ msgid "Settings saved"
+#~ msgstr "تنظیمات ذخیره شد"
+
+#~ msgid "Settings reset"
+#~ msgstr "تنظیمات به حالت پیشفرض باز گشتند"
+
+#~ msgid "Element deleted correctly."
+#~ msgstr "المنت حذف شد."
+
+#~ msgid "Element updated correctly."
+#~ msgstr "المنت به روز رسانی شد."
+
+#~ msgid "Database imported correctly."
+#~ msgstr "دیتابیس فراخانی شد"
+
+#~ msgid "An error has occurred during import. Please try again."
+#~ msgstr "در فراخانی یک خطا رخ داده است لطفا دوباره امتحان کنید"
+
+#~ msgid "The added file is not valid."
+#~ msgstr "فایل مورد نظر معتبر نیست"
+
+#~ msgid "Sorry, import is disabled."
+#~ msgstr "متاسفم ، فرخوانی غیر فعال است"
+
+#~ msgid "Sorting successful."
+#~ msgstr "مرتب سازی موفقیت امیز بود."
+
+#~ msgid ""
+#~ "If you continue with this action, you will reset all the options in this "
+#~ "page."
+#~ msgstr ""
+#~ "اگر این عمل را ادامه دهید تمام تنظیمات این افزونه به حالت پیشفرض باز "
+#~ "خواهند گشت"
+
+#~ msgid "Plugins Activated"
+#~ msgstr "پلاگین فعال شد"
+
+#~ msgid ""
+#~ "From now on, you can find all plugin options in YIT Plugin menu.\n"
+#~ "                                     For each plugin installed, "
+#~ "customization settings will be available as a new entry in YIT Plugin "
+#~ "menu."
+#~ msgstr ""
+#~ "از این پس تنظیمات افزونه در منو YIT قابل دسترسی خواهند بود. \n"
+#~ "                                      اگر پلاگین دیگری از محصولات ما را "
+#~ "نصب کنید تنظیمات آن به منو YIT افزوده خواهند شد"
+
+#~ msgid "Discover all our plugins available on:"
+#~ msgstr "تمام افزونه های ما را مشاهده کنید : "
+
+#~ msgid "and"
+#~ msgstr "و"
+
+#~ msgid "Plugins Upgraded"
+#~ msgstr "افزونه به روز شد"
+
+#~ msgid ""
+#~ "From now on, you can find all options of your plugins in YIT Plugin "
+#~ "menu.\n"
+#~ "                                    Any time one of our plugins is "
+#~ "updated, a new entry will be added to this menu.\n"
+#~ "                                    For example, after the update, plugin "
+#~ "options (such as for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+#~ "Search, etc.)\n"
+#~ "                                    will be moved from previous location "
+#~ "to YIT Plugin tab."
+#~ msgstr ""
+#~ "از این پس تنظیمات افزونه در منو YIT قابل دسترسی خواهند بود. \n"
+#~ "                                    هر زمان که نسخه جدید یکی از افزونه "
+#~ "های ما منتشر شود ، میتوانید از منو YIT مشاهده کنید.  \n"
+#~ "                                    برای مثال بعد از به روز رسانی ، "
+#~ "تنظیمات افزونه ها ( به عنوان مثال YITH WooCommerce Wishlist, YITH "
+#~ "WooCommerce Ajax Search و غیره )   \n"
+#~ "                                    حذف خواهند شد و به منو YIT اضافه "
+#~ "خواهند شد"
+
+#~ msgid "There is a new version of %plugin_name% available."
+#~ msgstr "یک نسخه جدید از افزونه %plugin_name% در دسترس است!"
+
+#~ msgid "View version %latest% details."
+#~ msgstr "مشاهده جزییات نسخه %latest%"
+
+#~ msgid "Automatic update is unavailable for this plugin,"
+#~ msgstr "به روزسانی خودکار برای این افزونه در دسترس نیست,"
+
+#~ msgid ""
+#~ "please <a href=\"%activate_link%\">activate</a> your copy of %plugin_name"
+#~ "%."
+#~ msgstr ""
+#~ "لطفا نسخه %plugin_name% خود را <a href=\"%activate_link%\">فعال کنید</a>."
+
+#~ msgid "Update now."
+#~ msgstr "اکنون به روزرسانی شود."
+
+#~ msgid "Yithemes Repository"
+#~ msgstr "مخزن Yithemes"
+
+#~ msgid "Invalid URL Provided."
+#~ msgstr "url مورد نظر نامعتبر است."
+
+#~ msgid "Could not create Temporary file."
+#~ msgstr "ایجاد فایل های موقت با شکست روبرو شد."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>."
+#~ msgstr ""
+#~ "یک نسخه جدید برای %1$s در دسترس است. <a href=\"%2$s\" class=\"thickbox "
+#~ "yit-changelog-button\" title=\"%3$s\">مشاهده جزییات نسخه  %4$s details</"
+#~ "a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>You have to activate the plugin on a single site of the "
+#~ "network to benefit from automatic updates.</em>"
+#~ msgstr ""
+#~ "یک نسخه جدید برای %1$s در دسترس است. <a href=\"%2$s\" class=\"thickbox "
+#~ "yit-changelog-button\" title=\"%3$s\">مشاهده جزییات نسخه  %4$s details</"
+#~ "a>. <em>شما باید این افزونه را روی یک سایت در شبکه فعال کنید تا از مزایای "
+#~ "به روز رسانی خودکار بهره مند شوید.</em>"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>Automatic update is unavailable for this plugin, please "
+#~ "<a href=\"%5$s\" title=\"Licence activation\">activate</a> your copy of "
+#~ "%6s.</em>"
+#~ msgstr ""
+#~ "یک نسخه جدید برای %1$s در دسترس است. <a href=\"%2$s\" class=\"thickbox "
+#~ "yit-changelog-button\" title=\"%3$s\">مشاهده جزییات نسخه  %4$s details</"
+#~ "a>. <em>به روز رسانی خودکار برای این افزونه در دسترس نیست , لطفا   "
+#~ "افزونه  %6s خود را <a href=\"%5$s\" title=\"Licence activation\">فعال "
+#~ "کنید</a>.</em>"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a> or <a href=\"%5$s\">update now</a>."
+#~ msgstr ""
+#~ "یک نسخه جدید برای %1$s در دسترس است. <a href=\"%2$s\" class=\"thickbox "
+#~ "yit-changelog-button\" title=\"%3$s\">مشاهده جزییات نسخه  %4$s details</"
+#~ "a> یا  <a href=\"%5$s\">هم اکنون به روزرسانی کنید</a>."
+
+#~ msgid "You can't update the plugins for this site."
+#~ msgstr "این افزونه باری این سایت نمیتواند به روز شود."
+
+#~ msgid ""
+#~ "You do not have sufficient permissions to update the plugins for this "
+#~ "site."
+#~ msgstr "شما دسترسی لازم برای به روز رسانی این افزونه را ندارید."
+
+#~ msgid "Update Plugin"
+#~ msgstr "به روزرسانی افزونه"
+
+#~ msgid "%field% field cannot be empty"
+#~ msgstr "%field% field نمیتواند خالی باشد"
+
+#~ msgid "%field_1% and %field_2% fields cannot be empty"
+#~ msgstr "فیلد های %field_1% و %field_2% نمیتوانند خالی باشند"
+
+#~ msgid "Unable to contact the remote server, please try again later. Thanks!"
+#~ msgstr ""
+#~ "اتصال به سرور موفقیت امیز نبود ، لطفا بعدا دوباره امتحان کنید ، باتشکر!"
+
+#~ msgid "Invalid Request"
+#~ msgstr "درخواست نامعتبر است"
+
+#~ msgid "Invalid licence key"
+#~ msgstr "کلید لایسنس نامعتبر است "
+
+#~ msgid "Software has been deactivated"
+#~ msgstr "نرم افزار غیر فعال شده است"
+
+#~ msgid "Maximum number of activations exceeded"
+#~ msgstr "تعداد دفعات تلاش شما برای فعال سازی بیش از حد مجاز است"
+
+#~ msgid "Invalid instance ID"
+#~ msgstr "instance ID نامعتبر است"
+
+#~ msgid "Invalid security key"
+#~ msgstr "کلید امنیتی نامعتبر است"
+
+#~ msgid "Licence key has expired"
+#~ msgstr "کلید لایسنس منقضی شده است"
+
+#~ msgid "Licence key has been banned"
+#~ msgstr "کلید لایسنس محروم( بن )  شده است"
+
+#~ msgid "Licence Activation"
+#~ msgstr "فعال سازی لایسنس"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Yithemes Licence Activation"
+#~ msgstr "فعال سازی کلید لایسنس Yithemes"
+
+#~ msgid ""
+#~ "Have you updated your licenses? Have you asked for an extension? Update "
+#~ "information concerning your products."
+#~ msgstr ""
+#~ "آیا لایسنس خود را به روز کرده اید؟ آیا درخواست افزودنی کرده اید؟ ،  "
+#~ "اطلاعات را بر اساس محصولات خود به روز کنید"
+
+#~ msgid "Update licence information"
+#~ msgstr "به روز رسانی اطلاعات لایسنس"
+
+#~ msgid "Products to be activated"
+#~ msgstr "محصولاتی که نیاز به فعالسازی دارند"
+
+#~ msgid "Activate"
+#~ msgstr "فعالسازی"
+
+#~ msgid "Activated"
+#~ msgstr "فعال شد"
+
+#~ msgid "Licence Key"
+#~ msgstr "کلید لایسنس"
+
+#~ msgid "Expires"
+#~ msgstr "تاریخ انقضا"
+
+#~ msgid "Remaining"
+#~ msgstr "مانده"
+
+#~ msgid "Renew"
+#~ msgstr "تمدید کردن"
+
+#~ msgid "%1s out of %2s"
+#~ msgstr "%1s از %2s"
+
+#~ msgid "Banned"
+#~ msgstr "محروم شده ( بن شده )"
+
+#~ msgid "Expired"
+#~ msgstr "منقضی شد"
+
+#~ msgid "Search for a product"
+#~ msgstr "جستجو برای یک محصول"
+
+#~ msgid "No categories."
+#~ msgstr "بدون دسته بندی."
+
+#~ msgid "+ Add New Category"
+#~ msgstr "+ افزودن دسته بندی"
+
+#~ msgid "Text Input"
+#~ msgstr "ورودی متنی"
+
+#~ msgid "Checkbox"
+#~ msgstr "چک باکس"
+
+#~ msgid "Select"
+#~ msgstr "لیست انتخاب"
+
+#~ msgid "Textarea"
+#~ msgstr "ناحیه متنی"
+
+#~ msgid "Radio Input"
+#~ msgstr "دکمه رادیویی"
+
+#~ msgid "Password Field"
+#~ msgstr "ورودی پسورد"
+
+#~ msgid "File Upload"
+#~ msgstr "آپلود فایل"
+
+#~ msgid "Theme Icon"
+#~ msgstr "آیکون قالب"
+
+#~ msgid "Custom Icon"
+#~ msgstr "آیکون دستی"
+
+#~ msgid "None"
+#~ msgstr "هیچ کدام"
+
+#~ msgid "Add field"
+#~ msgstr "افزودن فیلد"
+
+#~ msgid "Click to toggle"
+#~ msgstr "کلیک کنید"
+
+#~ msgid "Title Field"
+#~ msgstr "عنوان فیلد"
+
+#~ msgid "Insert the title for the field."
+#~ msgstr "یک عنوان برای فیلد وارد کنید"
+
+#~ msgid "Data Name"
+#~ msgstr "نام دیتا"
+
+#~ msgid ""
+#~ "REQUIRED: Field identification name to be entered into email body. "
+#~ "<strong>Note:</strong>Use only lowercase characters and underscores."
+#~ msgstr ""
+#~ "الزامی : نامک شناسایی فیلد برای استفاده درون متن ایمیل <strong> نکته : </"
+#~ "strong> فقط از کلمات لاتین کوچک استفاده کنید ( زیر خط _ مجاز است )"
+
+#~ msgid "Type field"
+#~ msgstr "نوع فیلد"
+
+#~ msgid "Select the type for this field."
+#~ msgstr "نوع این فیلد را مشخص کنید"
+
+#~ msgid "Checked"
+#~ msgstr "انتخاب شده"
+
+#~ msgid ""
+#~ "Select this option if you want this field appears as already checked."
+#~ msgstr ""
+#~ "اگر میخاهید فیلد به صورت انتخاب شده ظاهر شود این گزینه را انتخاب کنید"
+
+#~ msgid "Add options "
+#~ msgstr "افزودن گزینه ها"
+
+#~ msgid "Add option"
+#~ msgstr "افزودن گزینه"
+
+#~ msgid "Selected"
+#~ msgstr "انتخاب شده"
+
+#~ msgid "Delete option"
+#~ msgstr "حذف گزینه"
+
+#~ msgid "Error Message"
+#~ msgstr "پیام خطا"
+
+#~ msgid "Insert the error message for validation."
+#~ msgstr "پیام خطا را برای اعتبار سنجی وارد کنید"
+
+#~ msgid "Required"
+#~ msgstr "الزامی"
+
+#~ msgid "Select this option if it must be required."
+#~ msgstr "اگر میخاهید فیلد الزامی باشد این گزینه را انتخاب کنید"
+
+#~ msgid "Select this option if the email must be valid."
+#~ msgstr "اگر میخاهید ایمیل معتبر وارد شود این گزینه را انتخاب کنید"
+
+#~ msgid "Reply To"
+#~ msgstr "پاسخ به"
+
+#~ msgid "Select this if it is the email you can reply to."
+#~ msgstr "اگر میخاهید ایمیل قابل پاسخگویی باشد این گزینه را انتخاب کنید."
+
+#~ msgid "Class"
+#~ msgstr "کلاس"
+
+#~ msgid ""
+#~ "Insert additional class(es) (separated by commas) for more "
+#~ "personalization."
+#~ msgstr ""
+#~ "برای شخصی سازی میتوانید کلاس یا کلاس هایی اضافه کنید ( کلاس ها را با کاما "
+#~ "لاتین جدا کنید )"
+
+#~ msgid "Icon"
+#~ msgstr "آیکون"
+
+#~ msgid "Image preview"
+#~ msgstr "پیش نمایش تصویر"
+
+#~ msgid "Insert an icon for more personalization."
+#~ msgstr "یک آیکون برای شخصی سازی بیشتر وارد کنید"
+
+#~ msgid "Width"
+#~ msgstr "پهنا"
+
+#~ msgid "Set field length."
+#~ msgstr "پهنای فیلد را مشخص کنید"
+
+#~ msgid "Close all"
+#~ msgstr "بستن همه"
+
+#~ msgid "Expand all"
+#~ msgstr "باز کردن همه"
+
+#~ msgid "Value"
+#~ msgstr "مقدار"
+
+#~ msgid "Content of the tab. (HTML is supported)"
+#~ msgstr "محتوای تب ( html پشتیبانی می شود )"
+
+#~ msgid "Add custom product tab"
+#~ msgstr "افزودن تب محصول دستی"
+
+#~ msgid "Do you want to remove the custom tab?"
+#~ msgstr "آیا میخواهید تب دستی را حذف کنید؟"
+
+#~ msgid "(Default: %s <img src=\"%s\"/>)"
+#~ msgstr "(پیشفرض: %s <img src=\"%s\"/>)"
+
+#~ msgid "(Default: <i %s></i> )"
+#~ msgstr "(پیشفرض: <i %s></i> )"
+
+#~ msgid "Delete image"
+#~ msgstr "حذف تصویر"
+
+#~ msgid "Add Images to Gallery"
+#~ msgstr "افزودن تصاویر به گالری"
+
+#~ msgid "Add to gallery"
+#~ msgstr "افزودن به گالری"
+
+#~ msgid "Add images"
+#~ msgstr "افزودن تصاویر"
+
+#~ msgid "Delete"
+#~ msgstr "حذف"
+
+#~ msgid "Upload new images"
+#~ msgstr "آپلود تصاویر جدید"
+
+#~ msgid "Are you sure you want to remove this image?"
+#~ msgstr "مطمئنید میخواهید این تصویر را حذف کنید؟"
+
+#~ msgid "Left sidebar"
+#~ msgstr "سایدبار چپ"
+
+#~ msgid "No sidebar"
+#~ msgstr "بدون سایدبار"
+
+#~ msgid "Right sidebar"
+#~ msgstr "سایدبار راست"
+
+#~ msgid "Choose a sidebar"
+#~ msgstr "یک سایدبار انتخاب کنید"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "سایدبار چپ"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "سایدبار راست"
+
+#~ msgid "Web fonts"
+#~ msgstr "فونت های وب"
+
+#~ msgid "Google fonts"
+#~ msgstr "فونت های گوگل"
+
+#~ msgid "Reset Defaults"
+#~ msgstr "بازگشت به تنظیمات پیشفرض"
+
+#~ msgid "Google Plus"
+#~ msgstr "گوگل پلاس"
+
+#~ msgid "Ask an estimate of costs"
+#~ msgstr "درخواست پیشبینی قیمت"

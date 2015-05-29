@@ -61,8 +61,8 @@ if ( ! class_exists( 'YIT_Theme_Licence' ) ) {
 
             $this->_settings = array(
                 'parent_page' => 'yit_product_panel',
-                'page_title'  => __( 'Licence Activation', 'yit' ),
-                'menu_title'  => __( 'Licence Activation', 'yit' ),
+                'page_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
+                'menu_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
                 'capability'  => 'manage_options',
                 'page'        => 'yith_plugins_activation',
             );
@@ -104,16 +104,16 @@ if ( ! class_exists( 'YIT_Theme_Licence' ) ) {
 
             $admin_tree = array(
                     'parent_slug' => apply_filters( 'yit_licence_parent_slug', 'yit_panel'),
-                    'page_title'  => __( 'Licence Activation', 'yit' ),
-                    'menu_title'  => __( 'Licence Activation', 'yit' ),
+                    'page_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
+                    'menu_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
                     'capability'  => 'manage_options',
                     'menu_slug'   => 'yit_panel_licence',
                     'function'    => 'show_activation_panel'
                 );
 
              add_submenu_page( $admin_tree['parent_slug'],
-                sprintf( __( '%s', 'yit' ), $admin_tree['page_title'] ),
-                sprintf( __( '%s', 'yit' ), $admin_tree['menu_title'] ),
+                sprintf( __( '%s', 'yith-plugin-fw' ), $admin_tree['page_title'] ),
+                sprintf( __( '%s', 'yith-plugin-fw' ), $admin_tree['menu_title'] ),
                 $admin_tree['capability'],
                 $admin_tree['menu_slug'],
                 array( $this, $admin_tree['function'] )
