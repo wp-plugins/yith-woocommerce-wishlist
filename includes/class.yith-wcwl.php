@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.5
+ * @version 2.0.9
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -153,6 +153,12 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 if( $wishlist_id != false ){
                     $sql .= " AND `wishlist_id` = %d";
                     $sql_args[] = $wishlist_id;
+                }
+                elseif( $default_wishlist = $this->get_wishlists( array( 'user_id' => get_current_user_id(), 'is_default' => 1 ) ) ){
+                    $default_wishlist_id = $default_wishlist[0]['ID'];
+
+                    $sql .= " AND `wishlist_id` = %d";
+                    $sql_args[] = $default_wishlist_id;
                 }
                 else{
                     $sql .= " AND `wishlist_id` IS NULL";
@@ -897,7 +903,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
         public function add_rewrite_rules() {
             global $wp_query;
             $wishlist_page_id = isset( $_POST['yith_wcwl_wishlist_page_id'] ) ? $_POST['yith_wcwl_wishlist_page_id'] : get_option( 'yith_wcwl_wishlist_page_id' );
-	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
+	        $wishlist_page_id = yith_wcwl_object_id( $wishlist_page_id );
 
             if( empty( $wishlist_page_id ) ){
                 return;
@@ -942,8 +948,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
          * @since 1.0.0
          */
         public function get_wishlist_url( $action = 'view' ) {
-            $wishlist_page_id = get_option( 'yith_wcwl_wishlist_page_id' );
-	        $wishlist_page_id = function_exists( 'icl_object_id' ) ? icl_object_id( $wishlist_page_id, 'page', true ) : $wishlist_page_id;
+            global $sitepress;
+            $wishlist_page_id = yith_wcwl_object_id( get_option( 'yith_wcwl_wishlist_page_id' ) );
 
             if( get_option( 'permalink_structure' ) && ! defined( 'ICL_PLUGIN_PATH' ) ) {
 	            $wishlist_permalink = trailingslashit( get_the_permalink( $wishlist_page_id ) );
@@ -972,8 +978,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 $base_url = add_query_arg( $params, $base_url );
             }
 
-            if( defined( 'ICL_PLUGIN_PATH' ) ){
-		        $base_url = add_query_arg( 'lang', icl_get_current_language(), $base_url );
+            if( defined( 'ICL_PLUGIN_PATH' ) && $sitepress->get_current_language() != $sitepress->get_default_language() ){
+		        $base_url = add_query_arg( 'lang', $sitepress->get_current_language(), $base_url );
 	        }
 
             return apply_filters( 'yith_wcwl_wishlist_page_url', esc_url_raw( $base_url ) );
@@ -1076,6 +1082,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 	    }
 
 	    /* === FONTAWESOME FIX === */
+
 	    /**
 	     * Modernize font-awesome class, for old wishlist users
 	     *

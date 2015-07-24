@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.5
+ * @version 2.0.9
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -191,5 +191,26 @@ if( !function_exists ( 'yith_destroycookie' ) ) {
      */
     function yith_destroycookie( $name ) {
         yith_setcookie( $name, array(), time() - 3600 );
+    }
+}
+
+if( !function_exists( 'yith_wcwl_object_id' ) ){
+    /**
+     * Retrieve translated page id, if wpml is installed
+     *
+     * @param $id int Original page id
+     * @return int Translation id
+     * @since 1.0.0
+     */
+    function yith_wcwl_object_id( $id ){
+        if( function_exists( 'wpml_object_id_filter' ) ){
+            return wpml_object_id_filter( $id, 'page', true );
+        }
+        elseif( function_exists( 'icl_object_id' ) ){
+            return icl_object_id( $id, 'page', true );
+        }
+        else{
+            return $id;
+        }
     }
 }

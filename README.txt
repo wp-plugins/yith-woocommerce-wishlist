@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 4.0
-Tested up to: 4.2.1
-Stable tag: 2.0.8
+Tested up to: 4.2.3
+Stable tag: 2.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,7 @@ This plugin is 100% compatible with [WPML](http://wpml.org/?aid=24889&affiliate_
 * Persian - IRAN, ISLAMIC REPUBLIC OF
 * Portuguese - BRAZIL
 * Portuguese - PORTUGAL
+* Russian - RUSSIAN FEDERATION
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
 
@@ -84,6 +85,22 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.9 =
+
+* Added: russian translation
+* Added: WooCommerce class to wishlist view form
+* Added: spinner to plugin assets
+* Added: check on "user_logged_in" for sub-templates in wishlist-view
+* Added: WordPress 4.2.3 compatibility
+* Added: WPML 3.2.2 compatibility (removed deprecated function)
+* Added: new check on is_product_in_wishlist (for unlogged users/default wishlist)
+* Tweak: escaped urls on share template
+* Tweak: removed new line between html attributes, to improve themes compatibility
+* Fixed: WPML 3.2.2 compatibility (fix suggested by Konrad)
+* Fixed: regex used to find class attr in "Add to Cart" button
+* Fixed: usage of product_id for add_to_wishlist shortcode, when global $product is not defined
+* Fixed: icon attribute for yith_wcwl_add_to_wishlist shortcode
 
 = 2.0.8 =
 
@@ -266,6 +283,7 @@ If you have suggestions about how to improve YITH WooCommerce Wishlist, you can 
 * Persian - IRAN, ISLAMIC REPUBLIC OF
 * Portuguese - BRAZIL
 * Portuguese - PORTUGAL
+* Russian - RUSSIAN FEDERATION
 * Turkish - TURKEY
 * Ukrainian - UKRAINE
 
@@ -279,12 +297,18 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.8 =
+= 2.0.9 =
 
-* Added: support WP 4.2.2
-* Added: Persian translation
-* Added: check on cookie content
-* Added: Frequently Bought Together integration
-* Tweak: moved cookie update before first cookie usage
-* Updated: Italian translation
-* Removed: login_redirect_url variable
+* Added: russian translation
+* Added: WooCommerce class to wishlist view form
+* Added: spinner to plugin assets
+* Added: check on "user_logged_in" for sub-templates in wishlist-view
+* Added: WordPress 4.2.3 compatibility
+* Added: WPML 3.2.2 compatibility (removed deprecated function)
+* Added: new check on is_product_in_wishlist (for unlogged users/default wishlist)
+* Tweak: escaped urls on share template
+* Tweak: removed new line between html attributes, to improve themes compatibility
+* Fixed: WPML 3.2.2 compatibility (fix suggested by Konrad)
+* Fixed: regex used to find class attr in "Add to Cart" button
+* Fixed: usage of product_id for add_to_wishlist shortcode, when global $product is not defined
+* Fixed: icon attribute for yith_wcwl_add_to_wishlist shortcode

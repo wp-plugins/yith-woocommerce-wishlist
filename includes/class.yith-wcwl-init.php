@@ -4,7 +4,7 @@
  *
  * @author  Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 1.1.5
+ * @version 2.0.9
  */
 
 if ( ! defined( 'YITH_WCWL' ) ) {
@@ -234,13 +234,9 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 		 * @since 1.0.0
 		 */
 		public function add_body_class( $classes ) {
-			$wishlist_page_id = get_option( 'yith_wcwl_wishlist_page_id' );
+			$wishlist_page_id = yith_wcwl_object_id( get_option( 'yith_wcwl_wishlist_page_id' ) );
 
-			if ( is_page( $wishlist_page_id ) ||
-
-			     //WPML Compatibility
-			     defined( 'ICL_PLUGIN_PATH' ) && is_page( icl_object_id( $wishlist_page_id, 'page', false ) )
-			) {
+			if ( is_page( $wishlist_page_id ) ) {
 				$classes[] = 'woocommerce-wishlist';
 				$classes[] = 'woocommerce';
 				$classes[] = 'woocommerce-page';

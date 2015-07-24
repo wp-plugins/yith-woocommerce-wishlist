@@ -1630,7 +1630,7 @@ class YIT_CPT_Unlimited {
                     class: 'multi-uploader add-new-h2',
                     'data-uploader_title': '<?php printf( __( 'Add %s from images', 'yith-plugin-fw' ), $label_plural ) ?>',
                     'data-uploader_button_text': '<?php printf( __( 'Add %s', 'yith-plugin-fw' ), $label_plural ) ?>'
-                }).text('<?php _e( 'Add with multiupload', 'yith-plugin-fw' ) ?>');
+                }).text('<?php _e( 'Upload multiple files', 'yith-plugin-fw' ) ?>');
 
                 var spinner = $('<span />', {
                     class: 'spinner',

@@ -169,6 +169,7 @@
     padding-left: 6px;
     position: absolute;
     z-index: 2;
+    overflow: hidden;
 }
 .ie8 .yit_options select,
 .ie8 .yit-options select {

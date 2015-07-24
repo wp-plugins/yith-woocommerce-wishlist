@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $current_options = wp_parse_args( $args['value'], $args['std'] );
 $current_icon = YIT_Icon()->get_icon_data( $current_options['icon'] );
-$current_icon = YIT_Icon()->get_icon_data( $std['icon'] );
+$std_icon = YIT_Icon()->get_icon_data( $std['icon'] );
 
 $options['icon'] =  YIT_Plugin_Common::get_icon_list();
 
@@ -88,7 +88,7 @@ $options['icon'] =  YIT_Plugin_Common::get_icon_list();
         <?php if( $std['select'] == 'custom' ) : ?>
             <?php printf( __( '(Default: %s <img src="%s"/>)', 'yith-plugin-fw' ), $options['select']['custom'], $std['custom'] ) ?>
         <?php else: ?>
-            <?php printf( __( '(Default: <i %s></i> )', 'yith-plugin-fw' ), $current_icon  ) ?>
+            <?php printf( __( '(Default: <i %s></i> )', 'yith-plugin-fw' ), $std_icon  ) ?>
         <?php endif; ?>
     </div>
 

@@ -301,10 +301,14 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 		public static function add_to_wishlist( $atts, $content = null ) {
 			global $product;
 
+			if( ! isset( $product ) ){
+				$product = ( isset( $atts['product_id'] ) ) ? wc_get_product( $atts['product_id'] ) : false;
+			}
+
 			$template_part = 'button';
 
 			$label_option = get_option( 'yith_wcwl_add_to_wishlist_text' );
-			$icon_option = get_option( 'yith_wcwl_add_to_wishlist_icon' ) != 'none' ? '<i class="fa ' . get_option( 'yith_wcwl_add_to_wishlist_icon' ) . '"></i>' : '';
+			$icon_option = get_option( 'yith_wcwl_add_to_wishlist_icon' ) != 'none' ? get_option( 'yith_wcwl_add_to_wishlist_icon' ) : '';
 
 			$label = apply_filters( 'yith_wcwl_button_label', $label_option );
 			$icon = apply_filters( 'yith_wcwl_button_icon', $icon_option );
@@ -353,6 +357,8 @@ if( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 				$additional_params,
 				$atts
 			);
+
+			$atts['icon'] = ! empty( $atts['icon'] ) ? '<i class="fa ' . $atts['icon'] . '"></i>' : '';
 
 			// adds attributes list to params to extract in template, so it can be passed through a new get_template()
 			$atts['atts'] = $atts;

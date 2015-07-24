@@ -206,7 +206,7 @@ if( ! class_exists( 'YITH_WCWL_UI' ) ) {
 
             // customize
             $match = array();
-            preg_match( '/<a.*class="(.*)">.*<\/a>/', $button_html, $match );
+	        preg_match( '/<a.*class="([^"]*).*>.*<\/a>/', $button_html, $match );
 
             if( ! empty( $match ) && isset( $match[1] ) ){
                 $button_html = str_replace( $match[1], $match[1] . ' add_to_cart button alt', $button_html );

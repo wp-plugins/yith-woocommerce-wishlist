@@ -113,36 +113,13 @@
             var url = $(this).val();
             var re = new RegExp("(http|ftp|https)://[a-zA-Z0-9@?^=%&amp;:/~+#-_.]*.(gif|jpg|jpeg|png|ico)");
 
-            var preview = $(this).parent().siblings('.upload_img_preview');
+            var preview = $(this).parents().siblings('.upload_img_preview');
             if (re.test(url)) {
                 preview.html('<img src="' + url + '" style="max-width:600px; max-height:300px;" />');
             } else {
                 preview.html('');
             }
-        }).change();
-
-        //$(document).on('click', '.plugin-option .upload_button', function (e) {
-        //    var send_attachment_bkp = wp.media.editor.send.attachment;
-        //    var button = $(this);
-        //    var id = button.attr('id').replace('-button', '');
-        //    _custom_media = true;
-        //    wp.media.editor.send.attachment = function (props, attachment) {
-        //        if (_custom_media) {
-        //            if ($("#" + id).is('input[type=text]')) {
-        //                $("#" + id).val(attachment.url);
-        //            } else {
-        //                $("#" + id + '_custom').val(attachment.url);
-        //            }
-        //
-        //        } else {
-        //            return _orig_send_attachment.apply(this, [props, attachment]);
-        //        }
-        //        ;
-        //    }
-        //
-        //    wp.media.editor.open(button);
-        //    return false;
-        //});
+        }).trigger( 'change' );
 
         $( document ).on( 'click', '.plugin-option .upload_button', function(e) {
             e.preventDefault();
@@ -188,6 +165,7 @@
                 var attachment = custom_uploader.state().get( 'selection' ).first().toJSON();
 
                 $("#" + id).val( attachment.url );
+                $('.plugin-option .upload_img_url').trigger('change');
             });
 
             //Open the uploader dialog
