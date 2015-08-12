@@ -91,24 +91,39 @@ jQuery( document ).ready( function( $ ){
 
         ev.preventDefault();
 
-        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+        if( typeof $.fn.block != 'undefined' ) {
+            table.fadeTo('400', '0.6').block({message: null,
+                overlayCSS                           : {
+                    background    : 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center',
+                    backgroundSize: '16px 16px',
+                    opacity       : 0.6
+                }
+            });
+        }
 
         $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url + t.attr( 'href' ) + ' #yith-wcwl-form', {action: yith_wcwl_l10n.actions.bulk_add_to_cart_action}, function(){
-            table.stop( true ).css( 'opacity', '1' ).unblock();
 
-            $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
-                hook: 'data-rel',
-                social_tools: false,
-                theme: 'pp_woocommerce',
-                horizontal_padding: 20,
-                opacity: 0.8,
-                deeplinking: false
-            });
+            if( typeof $.fn.unblock != 'undefined' ) {
+                table.stop(true).css('opacity', '1').unblock();
+            }
+
+            if( typeof $.prettyPhoto != 'undefined' ) {
+                $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
+                    hook              : 'data-rel',
+                    social_tools      : false,
+                    theme             : 'pp_woocommerce',
+                    horizontal_padding: 20,
+                    opacity           : 0.8,
+                    deeplinking       : false
+                });
+            }
 
             checkboxes.off('change');
             checkboxes = $( '.wishlist_table tbody input[type="checkbox"]');
 
-            $( 'select.selectBox' ).selectBox();
+            if( typeof $.fn.selectBox != 'undefined' ) {
+                $('select.selectBox').selectBox();
+            }
 
             handle_wishlist_checkbox();
         } );
@@ -121,7 +136,9 @@ jQuery( document ).ready( function( $ ){
     /**
      * Adds selectbox where needed
      */
-    $( 'select.selectBox' ).selectBox();
+    if( typeof $.fn.selectBox != 'undefined' ) {
+        $('select.selectBox').selectBox();
+    }
 
     /**
      * Init js handling on wishlist table items after ajax update
@@ -130,19 +147,23 @@ jQuery( document ).ready( function( $ ){
      * @since 2.0.7
      */
     function init_handling_after_ajax(){
-        $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
-            hook: 'data-rel',
-            social_tools: false,
-            theme: 'pp_woocommerce',
-            horizontal_padding: 20,
-            opacity: 0.8,
-            deeplinking: false
-        });
+        if( typeof $.prettyPhoto != 'undefined' ) {
+            $('a[data-rel="prettyPhoto[ask_an_estimate]"]').prettyPhoto({
+                hook              : 'data-rel',
+                social_tools      : false,
+                theme             : 'pp_woocommerce',
+                horizontal_padding: 20,
+                opacity           : 0.8,
+                deeplinking       : false
+            });
+        }
 
         checkboxes.off('change');
         checkboxes = $( '.wishlist_table tbody input[type="checkbox"]');
 
-        $( 'select.selectBox' ).selectBox();
+        if( typeof $.fn.selectBox != 'undefined' ) {
+            $('select.selectBox').selectBox();
+        }
 
         handle_wishlist_checkbox();
     }
@@ -213,7 +234,9 @@ jQuery( document ).ready( function( $ ){
 
                 if( yith_wcwl_l10n.multi_wishlist && yith_wcwl_l10n.is_user_logged_in ) {
                     var wishlist_select = $( 'select.wishlist-select' );
-                    $.prettyPhoto.close();
+                    if( typeof $.prettyPhoto != 'undefined' ) {
+                        $.prettyPhoto.close();
+                    }
 
                     wishlist_select.each( function( index ){
                         var t = $(this),
@@ -297,10 +320,21 @@ jQuery( document ).ready( function( $ ){
 
         $( '#yith-wcwl-message' ).html( '&nbsp;' );
 
-        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+        if( typeof $.fn.block != 'undefined' ) {
+            table.fadeTo('400', '0.6').block({message: null,
+                overlayCSS                           : {
+                    background    : 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center',
+                    backgroundSize: '16px 16px',
+                    opacity       : 0.6
+                }
+            });
+        }
 
         $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url + ' #yith-wcwl-form', data, function(){
-            table.stop( true ).css( 'opacity', '1' ).unblock();
+
+            if( typeof $.fn.unblock != 'undefined' ) {
+                table.stop(true).css('opacity', '1').unblock();
+            }
 
             init_handling_after_ajax();
 
@@ -344,7 +378,15 @@ jQuery( document ).ready( function( $ ){
             data: data,
             dataType    : 'html',
             beforeSend: function(){
-                table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+                if( typeof $.fn.block != 'undefined' ) {
+                    table.fadeTo('400', '0.6').block({message: null,
+                        overlayCSS                           : {
+                            background    : 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center',
+                            backgroundSize: '16px 16px',
+                            opacity       : 0.6
+                        }
+                    });
+                }
             },
             success: function(res) {
                 var obj      = $(res),
@@ -401,10 +443,21 @@ jQuery( document ).ready( function( $ ){
             return;
         }
 
-        table.fadeTo( '400', '0.6' ).block({ message: null, overlayCSS: { background: 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6 } } );
+        if( typeof $.fn.block != 'undefined' ) {
+            table.fadeTo('400', '0.6').block({message: null,
+                overlayCSS                           : {
+                    background    : 'transparent url(' + yith_wcwl_l10n.ajax_loader_url + ') no-repeat center',
+                    backgroundSize: '16px 16px',
+                    opacity       : 0.6
+                }
+            });
+        }
 
         $( '#yith-wcwl-form' ).load( yith_wcwl_l10n.ajax_url + ' #yith-wcwl-form', data, function(){
-            table.stop( true ).css( 'opacity', '1' ).unblock();
+
+            if( typeof $.fn.unblock != 'undefined' ) {
+                table.stop(true).css('opacity', '1').unblock();
+            }
 
             init_handling_after_ajax();
 

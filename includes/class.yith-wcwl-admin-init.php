@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 		 * @var string
 		 * @since 1.0.0
 		 */
-		public $version = '2.0.9';
+		public $version = '2.0.10';
 
 		/**
 		 * Plugin database version
@@ -131,6 +131,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 			 */
 			global $woocommerce;
 			$is_woocommerce_2_0 = version_compare( preg_replace( '/-beta-([0-9]+)/', '', $woocommerce->version ), '2.1', '<' );
+			$is_woocommerce_2_4 = version_compare( $woocommerce->version, '2.4.0', '>=' );
 
 			$this->options = $this->_plugin_options();
 
@@ -148,7 +149,12 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 			}
 
 			// saves panel options
-			add_action( 'woocommerce_update_option_yith_wcwl_color_panel', array( $this, 'update_color_options' ) );
+			if( $is_woocommerce_2_4 ){
+				add_filter( 'woocommerce_admin_settings_sanitize_option_yith_wcwl_color_panel', array( $this, 'update_color_options' ) );
+			}
+			else{
+				add_action( 'woocommerce_update_option_yith_wcwl_color_panel', array( $this, 'update_color_options' ) );
+			}
 
 			// handles custom wc option type
 			add_action( 'woocommerce_admin_field_yith_wcwl_color_panel', array( $this, 'print_color_panel' ) );
@@ -230,7 +236,7 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 		 * @return void
 		 * @since 1.0.0
 		 */
-		public function update_color_options() {
+		public function update_color_options( $value = false ) {
 			global $pagenow;
 
 			$colors_options = array();
@@ -243,6 +249,8 @@ if ( ! class_exists( 'YITH_WCWL_Admin_Init' ) ) {
 			}
 
 			update_option( 'yith_wcwl_frontend_css_colors', maybe_serialize( $colors_options ) );
+
+			return null;
 		}
 
 		/**

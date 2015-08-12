@@ -4,7 +4,7 @@
  *
  * @author Your Inspiration Themes
  * @package YITH WooCommerce Wishlist
- * @version 2.0.9
+ * @version 2.0.10
  */
 
 if ( !defined( 'YITH_WCWL' ) ) { exit; } // Exit if accessed directly
@@ -123,10 +123,15 @@ if( !function_exists( 'yith_frontend_css_color_picker' ) ) {
      */
     function yith_frontend_css_color_picker( $name, $id, $value, $desc = '' ) {
     	global $woocommerce;
-    
-    	echo '<div class="color_box"><strong>' . $name . '</strong>
-       		<input name="' . esc_attr( $id ). '" id="' . $id . '" type="text" value="' . esc_attr( $value ) . '" class="colorpick" /> <div id="colorPickerDiv_' . esc_attr( $id ) . '" class="colorpickdiv"></div>
-        </div>';
+
+        $value = ! empty( $value ) ? $value : '#ffffff';
+
+        echo '<div  class="color_box">
+                  <table><tr><td>
+                  <strong>' . $name . '</strong>
+       		      <input name="' . esc_attr( $id ). '" id="' . $id . '" type="text" value="' . esc_attr( $value ) . '" class="colorpick colorpickpreview" style="background-color: ' . $value . '" /> <div id="colorPickerDiv_' . esc_attr( $id ) . '" class="colorpickdiv"></div>
+       		      </td></tr></table>
+       		  </div>';
     
     }
 }

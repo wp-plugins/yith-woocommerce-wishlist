@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 4.0
-Tested up to: 4.2.3
-Stable tag: 2.0.9
+Tested up to: 4.2.4
+Stable tag: 2.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,14 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.10 =
+
+* Added: Compatibility with WC 2.4.2
+* Tweak: added nonce field to wishlist-view form
+* Tweak: added yith_wcwl_custom_add_to_cart_text and yith_wcwl_ask_an_estimate_text filters
+* Tweak: added check for presence of required function in wishlist script
+* Fixed: admin colorpicker field (for WC 2.4.x compatibility)
 
 = 2.0.9 =
 
@@ -297,18 +305,10 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.9 =
+= 2.0.10 =
 
-* Added: russian translation
-* Added: WooCommerce class to wishlist view form
-* Added: spinner to plugin assets
-* Added: check on "user_logged_in" for sub-templates in wishlist-view
-* Added: WordPress 4.2.3 compatibility
-* Added: WPML 3.2.2 compatibility (removed deprecated function)
-* Added: new check on is_product_in_wishlist (for unlogged users/default wishlist)
-* Tweak: escaped urls on share template
-* Tweak: removed new line between html attributes, to improve themes compatibility
-* Fixed: WPML 3.2.2 compatibility (fix suggested by Konrad)
-* Fixed: regex used to find class attr in "Add to Cart" button
-* Fixed: usage of product_id for add_to_wishlist shortcode, when global $product is not defined
-* Fixed: icon attribute for yith_wcwl_add_to_wishlist shortcode
+* Added: Compatibility with WC 2.4.2
+* Tweak: added nonce field to wishlist-view form
+* Tweak: added yith_wcwl_custom_add_to_cart_text and yith_wcwl_ask_an_estimate_text filters
+* Tweak: added check for presence of required function in wishlist script
+* Fixed: admin colorpicker field (for WC 2.4.x compatibility)

@@ -64,10 +64,14 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
                 add_action( 'admin_init', array( $this, 'woocommerce_update_options' ) );
 	            add_filter( 'woocommerce_screen_ids', array( $this, 'add_allowed_screen_id' ) );
+                add_filter( 'woocommerce_admin_settings_sanitize_option', array( $this, 'maybe_unserialize_panel_data' ), 10, 3 );
 
                 /* Add VideoBox and InfoBox */
                 add_action( 'woocommerce_admin_field_boxinfo', array( $this, 'add_infobox' ), 10, 1 );
                 add_action( 'woocommerce_admin_field_videobox', array( $this, 'add_videobox' ), 10, 1 );
+
+                /* WooCommerce 2.4 Support */
+                add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
             }
         }
 
@@ -251,6 +255,16 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 $yit_options = $this->get_main_array_options();
                 $current_tab = $this->get_current_tab();
 
+                if( version_compare( WC()->version, '2.4.0', '>=' ) ) {
+                    if ( ! empty( $yit_options[ $current_tab ] ) ) {
+                        foreach ( $yit_options[ $current_tab ] as $option ) {
+                            if ( isset( $option['id'] ) && isset( $_POST[ $option['id'] ] ) ) {
+                                $_POST[ $option['id'] ] = maybe_serialize( $_POST[ $option['id'] ] );
+                            }
+                        }
+                    }
+                }
+
                 woocommerce_update_options( $yit_options[ $current_tab ] );
 
                 do_action( 'yit_panel_wc_after_update' );
@@ -320,7 +334,6 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                         } else {
                             add_option($value['id'], $default_value);
                         }
-
                     }
 
                 }
@@ -328,6 +341,49 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
 
         }
 
+        /**
+         * Add the woocommerce body class in plugin panel page
+         *
+         * @author Andrea Grillo <andrea.grillo@yithemes.com>
+         * @since 2.0
+         * @param $classes The body classes
+         *
+         * @return array Filtered body classes
+         */
+        public function admin_body_class( $admin_body_classes ){
+            $admin_body_classes .= ' woocommerce ';
+            return $admin_body_classes;
+        }
+
+        /**
+         * Maybe unserialize panel data
+         *
+         * @param $value     mixed  Option value
+         * @param $option    mixed  Option settings array
+         * @param $raw_value string Raw option value
+         *
+         * @return mixed Filtered return value
+         * @author Antonio La Rocca <antonio.larocca@yithemes.com>
+         * @since 2.0
+         */
+        public function maybe_unserialize_panel_data( $value, $option, $raw_value ) {
+            if( ! version_compare( WC()->version, '2.4.0', '>='  ) ) {
+                return $value;
+            }
+
+            $yit_options = $this->get_main_array_options();
+            $current_tab = $this->get_current_tab();
+
+            if( ! empty( $yit_options[ $current_tab ] ) ){
+                foreach( $yit_options[ $current_tab ] as $option_array ){
+                    if( isset( $option_array['id'] ) && isset( $option['id'] ) && $option_array['id'] == $option['id'] ){
+                        return maybe_unserialize( $value );
+                    }
+                }
+            }
+
+            return $value;
+        }
 
     }
 }

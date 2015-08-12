@@ -626,6 +626,11 @@
     color: #45bbe6;
 }
 
+/* WooCommerce 2.4 Support */
+.woocommerce table.form-table .colorpick{
+    width: 6em;
+}
+
 /* === Responsive === */
 
 @media (max-width: 767px) {}

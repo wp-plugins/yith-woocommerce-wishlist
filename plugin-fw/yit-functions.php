@@ -819,3 +819,65 @@ if ( ! function_exists( 'yit_load_js_file' ) ) {
         return $filename;
     }
 }
+
+if ( ! function_exists( 'yit_wpml_register_string' ) ) {
+    /**
+     * Register a string in wpml trnslation
+     *
+     * @param $contenxt context name
+     * @param $name string name
+     * @param $value value to translate
+     *
+     * @since  2.0.0
+     * @author Andrea Frascaspata <andrea.frascaspata@yithemes.com>
+     */
+    function yit_wpml_register_string( $contenxt , $name , $value  ) {
+        // wpml string translation
+        do_action( 'wpml_register_single_string', $contenxt, $name, $value );
+    }
+}
+
+if ( ! function_exists( 'yit_wpml_string_translate' ) ) {
+    /**
+     * Get a string translation
+     *
+     * @param $contenxt context name
+     * @param $name     string name
+     * @param $default_value    value to translate
+     *
+     * @return string the string translated
+     * @since  2.0.0
+     * @author Andrea Frascaspata <andrea.frascaspata@yithemes.com>
+     */
+    function yit_wpml_string_translate( $contenxt, $name, $default_value ) {
+        return apply_filters( 'wpml_translate_single_string', $default_value, $contenxt, $name );
+    }
+
+}
+
+if ( ! function_exists( 'yit_wpml_object_id' ) ) {
+    /**
+     * Get id of post translation in current language
+     *
+     * @param int         $element_id
+     * @param string      $element_type
+     * @param bool        $return_original_if_missing
+     * @param null|string $ulanguage_code
+     *
+     * @return int the translation id
+     * @since  2.0.0
+     * @author Antonio La Rocca <antonio.larocca@yithemes.com>
+     */
+    function yit_wpml_object_id( $element_id, $element_type = 'post', $return_original_if_missing = false, $ulanguage_code = null ) {
+        if( function_exists( 'wpml_object_id' ) ){
+            return wpml_object_id( $element_id, $element_type, $return_original_if_missing, $ulanguage_code );
+        }
+        elseif( function_exists( 'icl_object_id' ) ){
+            return icl_object_id( $element_id, $element_type, $return_original_if_missing, $ulanguage_code );
+        }
+        else{
+            return $element_id;
+        }
+    }
+
+}
