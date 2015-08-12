@@ -38,6 +38,11 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
         public $settings = array();
 
         /**
+         * @var array a setting list of parameters
+         */
+        public $wc_type = array();
+
+        /**
          * @var array
          */
         protected $_tabs_path_files;
@@ -50,6 +55,14 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          * @author   Antonio La Rocca   <antonio.larocca@yithemes.com>
          */
         public function __construct( $args = array() ) {
+
+            $this->wc_type = array(
+                'checkbox',
+                'textarea',
+                'multiselect',
+                'multi_select_countries',
+                'image_width'
+            );
 
             if ( ! empty( $args ) ) {
                 $this->settings         = $args;
@@ -258,7 +271,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 if( version_compare( WC()->version, '2.4.0', '>=' ) ) {
                     if ( ! empty( $yit_options[ $current_tab ] ) ) {
                         foreach ( $yit_options[ $current_tab ] as $option ) {
-                            if ( isset( $option['id'] ) && isset( $_POST[ $option['id'] ] ) ) {
+                            if ( isset( $option['id'] ) && isset( $_POST[ $option['id'] ] ) && isset( $option['type' ] ) && ! in_array( $option['type'], $this->wc_type ) ) {
                                 $_POST[ $option['id'] ] = maybe_serialize( $_POST[ $option['id'] ] );
                             }
                         }
@@ -367,7 +380,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          * @since 2.0
          */
         public function maybe_unserialize_panel_data( $value, $option, $raw_value ) {
-            if( ! version_compare( WC()->version, '2.4.0', '>='  ) ) {
+
+
+            if( ! version_compare( WC()->version, '2.4.0', '>='  ) || ! isset( $option['type' ] ) || in_array( $option['type'], $this->wc_type ) ) {
                 return $value;
             }
 
